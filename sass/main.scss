@@ -1,0 +1,158 @@
+@import 'normalize';
+@import 'base';
+@import 'helpers';
+@import 'media-queries';
+
+$spacing: 1.5em;
+
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+// PROFILE LAYOUT
+.profile {
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.profile__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include MQ(M) {
+        width: 55%;
+    }
+}
+
+.profile__intro {
+    
+    @include MQ(M) {
+        position: absolute;
+        bottom: 40%;
+        right: 0;
+        width: 45%;
+    }
+}
+
+.profile__social {
+    
+    @include MQ(M) {
+        position: absolute;
+        bottom: 5%;
+        right: 0;
+        width: 45%;
+    }
+}
+
+
+// PROFILE STYLING
+.profile {
+    background-color: #f8f8f2;
+    color: #2b2b17;
+    text-align: center;
+
+    @include MQ(M) {
+        text-align: left;
+    }
+}
+
+.profile__intro {
+    padding-top: $spacing;
+    font-size: 1.25em;
+
+    @include MQ(M) {
+        font-size: 1.5em;
+    }
+}
+
+.profile p {
+    padding: 0 1.5%;
+}
+
+.profile .big {
+    font-size: 1.15em;
+}
+
+.profile .name {
+    font-size: 125%;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 3px;
+}
+
+.profile__social {
+    margin-top: $spacing*1.5;
+
+    @include MQ(M) {
+        margin-top: 0;
+    }
+}
+
+
+// SOCIAL MEDIA
+ul.social-media {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: $spacing/2;
+    opacity: 0.75;
+
+
+    @include MQ(M) {
+       margin-right: $spacing; 
+    }
+}
+
+.social-media li:last-of-type {
+    margin-right: 0;
+}
+
+.social-media li:hover {
+    opacity: 0.95;
+}
+
+.social-media li svg {
+    width: 100%;
+    height: 100%;
+    max-width: 1.5em;
+
+    @include MQ(M) {
+        max-width: 1.75em;
+    }
+}
+
+// Swap images on links hover
+
+.step-1 {
+    
+    .original {
+        display: inline-block;
+    }
+
+    .on-hover {
+        display: none;
+    }
+}
+
+.step-2 {
+    
+    .original {
+        display: none;
+    }
+
+    .on-hover {
+        display: inline-block;
+    }
+}
