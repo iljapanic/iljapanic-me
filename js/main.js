@@ -1,7 +1,7 @@
 
 function resize() {
 	var heights = window.innerHeight;
-    document.getElementById("profile").style.height = heights + "px";
+    document.getElementById("splash").style.height = heights + "px";
 }
 
 resize();
