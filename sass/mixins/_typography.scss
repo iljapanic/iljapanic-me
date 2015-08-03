@@ -1,1 +1,9 @@
-// 
+// FONT-WEIGHT
+
+@mixin ultra-bold {
+	font-weight: 900; 
+} 
+
+@mixin bold {
+	font-weight: 700;
+}

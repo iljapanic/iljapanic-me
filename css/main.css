@@ -144,13 +144,20 @@ td, th {
   padding: 0; }
 
 html {
-  color: #222;
   font-size: 1em;
-  line-height: 1.4; }
+  line-height: 1.5; }
 
 body {
-  font: 16px/26px Helvetica, Helvetica Neue, Arial;
-  font-family: 'Lato', sans-serif; }
+  font-size: 1em;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: #f8f8f2;
+  color: #3e3e3d; }
+
+p {
+  font-size: 1em; }
+
+small, p.small {
+  font-size: 0.8em; }
 
 hr {
   display: block;
@@ -224,7 +231,35 @@ textarea {
   width: 100%;
   height: 100%;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  font-size: 1em; }
+  @media (min-width: 20em) and (max-width: 30em) {
+    .splash {
+      font-size: calc( 1em + 0 * ( ( 100vw - 20em) / 10 ) ); } }
+  @media (min-width: 30em) {
+    .splash {
+      font-size: 1em; } }
+
+.logo {
+  position: absolute;
+  top: 1.25em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  z-index: 1; }
+
+.logo__inner {
+  letter-spacing: 2px;
+  display: table;
+  border: 1px solid;
+  margin: 0 auto; }
+
+.logo__initials {
+  display: table-cell;
+  font-weight: 900;
+  font-size: 1.5em; }
 
 .profile {
   width: 100%;
@@ -255,15 +290,13 @@ textarea {
     width: 45%; } }
 
 .profile {
-  background-color: #f8f8f2;
-  color: #2b2b17;
   text-align: center; }
   @media only screen and (min-width: 768px) {
     .profile {
       text-align: left; } }
 
 .profile__intro {
-  padding-top: 1.5em;
+  padding-top: 1.25em;
   font-size: 1.25em; }
   @media only screen and (min-width: 768px) {
     .profile__intro {
@@ -283,7 +316,7 @@ textarea {
   margin-bottom: 3px; }
 
 .profile__social {
-  margin-top: 2.25em; }
+  margin-top: 1.875em; }
   @media only screen and (min-width: 768px) {
     .profile__social {
       margin-top: 0; } }
@@ -295,11 +328,11 @@ ul.social-media {
 
 .social-media li {
   display: inline-block;
-  margin-right: 0.75em;
+  margin-right: 0.625em;
   opacity: 0.75; }
   @media only screen and (min-width: 768px) {
     .social-media li {
-      margin-right: 1.5em; } }
+      margin-right: 1.25em; } }
 
 .social-media li:last-of-type {
   margin-right: 0; }

@@ -1,14 +1,47 @@
-
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+    font-size: ms(0);
+    line-height: 1.5;
 }
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
-    font-family: 'Lato', sans-serif;
+    font-size: ms(0);
+    font-family: $type-base, $sans-serif;
+    background-color: $brand-light;
+    color: $brand-dark;
 }
+
+p {
+    font-size: ms(0);
+}
+
+h1 {
+    
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+small, p.small {
+    font-size: ms(-1);
+}
+
 
 hr {
     display: block;
