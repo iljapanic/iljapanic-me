@@ -7,3 +7,7 @@
 @mixin bold {
 	font-weight: 700;
 }
+
+@mixin text-small {
+	font-size: ms(-1);
+}

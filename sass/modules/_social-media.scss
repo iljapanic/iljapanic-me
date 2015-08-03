@@ -1,0 +1,35 @@
+// SOCIAL MEDIA
+ul.social-media {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: $spacing/2;
+    opacity: 0.75;
+
+
+    @include MQ(M) {
+       margin-right: $spacing; 
+    }
+}
+
+.social-media li:last-of-type {
+    margin-right: 0;
+}
+
+.social-media li:hover {
+    opacity: 0.95;
+}
+
+.social-media li svg {
+    width: 100%;
+    height: 100%;
+    max-width: 1.5em;
+
+    @include MQ(M) {
+        max-width: 1.75em;
+    }
+}

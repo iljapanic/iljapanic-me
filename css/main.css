@@ -227,29 +227,21 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
-.splash {
-  width: 100%;
-  height: 100%;
-  height: 100vh;
-  position: relative;
-  font-size: 1em; }
-  @media (min-width: 20em) and (max-width: 30em) {
-    .splash {
-      font-size: calc( 1em + 0 * ( ( 100vw - 20em) / 10 ) ); } }
-  @media (min-width: 30em) {
-    .splash {
-      font-size: 1em; } }
+.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+.main-nav li {
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: auto 1.25em;
+  font-weight: 700;
+  font-size: 0.8em; }
 
-.splash .splash__logo {
-  position: absolute;
-  top: 1.25em;
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin: 0 auto;
-  z-index: 1; }
-
-.logo__inner {
+.logo .logo__inner {
   letter-spacing: 2px;
   display: table;
   border: 1px solid;
@@ -257,76 +249,79 @@ textarea {
   background-color: #3e3e3d;
   color: #f8f8f2;
   margin: 0 auto;
-  height: 3.8147em;
-  width: 3.8147em;
+  height: 3.05176em;
+  width: 3.05176em;
   cursor: pointer; }
-
-.logo__initials {
+.logo .logo__initials {
   display: table-cell;
   vertical-align: middle;
   font-weight: 900;
-  font-size: 1.5625em;
+  font-size: 1.25em;
   padding-left: 4px; }
 
 .splash {
   width: 100%;
   height: 100%;
   height: 100vh;
-  position: relative; }
-
-.splash__image {
-  position: absolute;
-  bottom: 0;
-  left: 0; }
-  @media only screen and (min-width: 768px) {
-    .splash__image {
-      width: 55%; } }
-
-@media only screen and (min-width: 768px) {
-  .splash__intro {
-    position: absolute;
-    bottom: 40%;
-    right: 0;
-    width: 45%; } }
-
-@media only screen and (min-width: 768px) {
-  .splash__social {
-    position: absolute;
-    bottom: 5%;
-    right: 0;
-    width: 45%; } }
-
-.splash {
-  text-align: center; }
+  position: relative;
+  text-align: center;
+  font-size: 1em; }
+  @media (min-width: 20em) and (max-width: 30em) {
+    .splash {
+      font-size: calc( 1em + 0.25 * ( ( 100vw - 20em) / 10 ) ); } }
+  @media (min-width: 30em) and (max-width: 45em) {
+    .splash {
+      font-size: calc( 1.25em + 0.2 * ( ( 100vw - 30em) / 15 ) ); } }
+  @media (min-width: 45em) {
+    .splash {
+      font-size: 1.45em; } }
   @media only screen and (min-width: 768px) {
     .splash {
       text-align: left; } }
+  .splash p {
+    padding: 0 1.5%; }
+  .splash .splash__header {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 1; }
+  .splash .splash__image {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    @media only screen and (min-width: 768px) {
+      .splash .splash__image {
+        width: 55%; } }
+  .splash .splash__intro {
+    padding-top: 1.25em; }
+    @media only screen and (min-width: 768px) {
+      .splash .splash__intro {
+        position: absolute;
+        bottom: 40%;
+        right: 0;
+        width: 45%; } }
+  .splash .splash__social {
+    margin-top: 1.875em; }
+    @media only screen and (min-width: 768px) {
+      .splash .splash__social {
+        position: absolute;
+        bottom: 5%;
+        right: 0;
+        width: 45%;
+        margin-top: 0; } }
 
-.splash__intro {
-  padding-top: 1.25em;
-  font-size: 1.25em; }
-  @media only screen and (min-width: 768px) {
-    .splash__intro {
-      font-size: 1.5em; } }
+.splash-1 .original {
+  display: inline-block; }
+.splash-1 .on-hover {
+  display: none; }
 
-.splash p {
-  padding: 0 1.5%; }
-
-.splash .big {
-  font-size: 1.15em; }
-
-.splash .name {
-  font-size: 125%;
-  font-weight: bold;
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 3px; }
-
-.splash__social {
-  margin-top: 1.875em; }
-  @media only screen and (min-width: 768px) {
-    .splash__social {
-      margin-top: 0; } }
+.splash-2 .original {
+  display: none; }
+.splash-2 .on-hover {
+  display: inline-block; }
 
 ul.social-media {
   list-style-type: none;
@@ -354,15 +349,5 @@ ul.social-media {
   @media only screen and (min-width: 768px) {
     .social-media li svg {
       max-width: 1.75em; } }
-
-.splash-1 .original {
-  display: inline-block; }
-.splash-1 .on-hover {
-  display: none; }
-
-.splash-2 .original {
-  display: none; }
-.splash-2 .on-hover {
-  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */

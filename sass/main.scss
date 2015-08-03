@@ -9,7 +9,6 @@
 // MIXINS //
 ///////////
 @import 'mixins/media-queries';
-@import 'mixins/typography';
 
 
 ////////////////////////
@@ -28,223 +27,46 @@ $brand-dark: shade($brand-light, 75);
 $ms-base: 1em;
 $ms-ratio: $major-third;
 $ms-range:
-  1   20em,
-  1 30em;
-
+    1 20em,
+    1.25 30em,
+    1.45 45em;
 
 // Base spacing
 $spacing: ms(1);
 
+// Media Queries
+$S: '(min-width:320px)';   
+$M: '(min-width:768px)';     
+$L: '(min-width:1024px)'; 
 
 // Font fallbacks
 $sans-serif: Helvetica, Arial, "Lucida Grande", sans-serif; // sans-serif fallback
 $serif: Garamond, Georgia, serif; // serif fallback
 
 // Font base
-$type-base: 'Lato';
-$type-header: 'Lato';
+$font-base: 'Lato';
+$font-header: 'Lato';
+
+
 
 
 
 /////////////
 // STYLES //
 ///////////
-@import 'normalize';
-@import 'base';
-@import 'helpers';
 
+// Core components
+@import 'core/normalize';
+@import 'core/base';
 
+// Helpers
+@import 'helpers/visibility';
+@import 'helpers/clearfix';
+@import 'helpers/typography';
 
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-// SPLASH
-.splash {
-    width: 100%;
-    height: 100%;
-    height: 100vh;
-    position: relative;
-    @include ms-respond(font-size, 1);
-}
-
-.splash .splash__logo {
-    position: absolute;
-    top: $spacing;
-    left: 0;
-    right: 0;
-    text-align: center;
-    margin: 0 auto;
-    z-index: 1;
-}
-
-.logo {
-    
-}
-
-.logo__inner {
-    letter-spacing: 2px;
-    display: table;
-    border: 1px solid;
-    border-radius: 50%;
-    background-color: $brand-dark;
-    color: $brand-light;
-    margin: 0 auto;
-    height: ms(6);
-    width: ms(6);
-    cursor: pointer;
-}
-
-.logo__initials {
-    display: table-cell;
-    vertical-align: middle;
-    @include ultra-bold;
-    font-size: ms(2);
-    padding-left: 4px;
-}
-
-
-// splash LAYOUT
-.splash {
-    width: 100%;
-    height: 100%;
-    height: 100vh;
-    position: relative;
-}
-
-.splash__image {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    @include MQ(M) {
-        width: 55%;
-    }
-}
-
-.splash__intro {
-    
-    @include MQ(M) {
-        position: absolute;
-        bottom: 40%;
-        right: 0;
-        width: 45%;
-    }
-}
-
-.splash__social {
-    
-    @include MQ(M) {
-        position: absolute;
-        bottom: 5%;
-        right: 0;
-        width: 45%;
-    }
-}
-
-
-// splash STYLING
-.splash {
-    text-align: center;
-
-    @include MQ(M) {
-        text-align: left;
-    }
-}
-
-.splash__intro {
-    padding-top: $spacing;
-    font-size: 1.25em;
-
-    @include MQ(M) {
-        font-size: 1.5em;
-    }
-}
-
-.splash p {
-    padding: 0 1.5%;
-}
-
-.splash .big {
-    font-size: 1.15em;
-}
-
-.splash .name {
-    font-size: 125%;
-    font-weight: bold;
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 3px;
-}
-
-.splash__social {
-    margin-top: $spacing*1.5;
-
-    @include MQ(M) {
-        margin-top: 0;
-    }
-}
-
-
-// SOCIAL MEDIA
-ul.social-media {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-media li {
-    display: inline-block;
-    margin-right: $spacing/2;
-    opacity: 0.75;
-
-
-    @include MQ(M) {
-       margin-right: $spacing; 
-    }
-}
-
-.social-media li:last-of-type {
-    margin-right: 0;
-}
-
-.social-media li:hover {
-    opacity: 0.95;
-}
-
-.social-media li svg {
-    width: 100%;
-    height: 100%;
-    max-width: 1.5em;
-
-    @include MQ(M) {
-        max-width: 1.75em;
-    }
-}
-
-// Swap images on links hover
-
-.splash-1 {
-    
-    .original {
-        display: inline-block;
-    }
-
-    .on-hover {
-        display: none;
-    }
-}
-
-.splash-2 {
-    
-    .original {
-        display: none;
-    }
-
-    .on-hover {
-        display: inline-block;
-    }
-}
+// Modules
+@import 'modules/browserupgrade';
+@import 'modules/main-nav';
+@import 'modules/logo';
+@import 'modules/splash';
+@import 'modules/social-media';

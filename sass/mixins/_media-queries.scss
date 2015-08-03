@@ -1,10 +1,3 @@
-// media queries
-
-$S: '(min-width:320px)';   
-$M: '(min-width:768px)';     
-$L: '(min-width:1024px)';  
-
-
 @mixin MQ($canvas) {
 
 	@if $canvas == S {
