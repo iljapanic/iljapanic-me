@@ -1,0 +1,13 @@
+{
+  "name": "P",
+  "version": "0.0.1",
+  "description": "Ilja A. Panic personal website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iljapanic/iljapanic-me"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "ruby-sass": "0.0.3"
+  }
+}

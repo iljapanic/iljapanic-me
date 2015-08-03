@@ -50,10 +50,23 @@
 
         @include MQ(M) {
             position: absolute;
-            bottom: 5%;
+            bottom: $spacing;
             right: 0;
             width: 45%;
             margin-top: 0;
+        }
+    }
+
+    .splash__colophon {
+
+        @include MQ(M) {
+            position: absolute;
+            bottom: $spacing;
+            right: $spacing;
+            width: 45%;
+            margin-top: 0;
+            text-align: right;
+            @include text-small;
         }
     }
 

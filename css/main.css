@@ -308,10 +308,19 @@ textarea {
     @media only screen and (min-width: 768px) {
       .splash .splash__social {
         position: absolute;
-        bottom: 5%;
+        bottom: 1.25em;
         right: 0;
         width: 45%;
         margin-top: 0; } }
+  @media only screen and (min-width: 768px) {
+    .splash .splash__colophon {
+      position: absolute;
+      bottom: 1.25em;
+      right: 1.25em;
+      width: 45%;
+      margin-top: 0;
+      text-align: right;
+      font-size: 0.8em; } }
 
 .splash-1 .original {
   display: inline-block; }
