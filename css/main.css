@@ -153,8 +153,14 @@ body {
   background-color: #f8f8f2;
   color: #3e3e3d; }
 
+a, a:visited {
+  color: #8E44AD;
+  transition: color 0.5s; }
+  a:hover, a:visited:hover {
+    color: #070308; }
+
 p {
-  font-size: 1em; }
+  font-size: 1.25em; }
 
 small, p.small {
   font-size: 0.8em; }
@@ -315,22 +321,39 @@ textarea {
   @media only screen and (min-width: 768px) {
     .splash .splash__colophon {
       position: absolute;
-      bottom: 1.25em;
-      right: 1.25em;
-      width: 45%;
+      bottom: 0.625em;
+      right: 2.5em;
       margin-top: 0;
       text-align: right;
-      font-size: 0.8em; } }
+      font-size: 0.512em;
+      width: auto;
+      min-width: 15%; } }
+  .splash .splash__colophon a {
+    color: #888885;
+    text-decoration: none; }
+    .splash .splash__colophon a:hover {
+      color: black; }
 
-.splash-1 .original {
-  display: inline-block; }
-.splash-1 .on-hover {
+.splash-1 .splash-normal {
+  display: block; }
+.splash-1 .splash-suprised {
+  display: none; }
+.splash-1 .splash-worried {
   display: none; }
 
-.splash-2 .original {
+.splash-2 .splash-normal {
   display: none; }
-.splash-2 .on-hover {
-  display: inline-block; }
+.splash-2 .splash-suprised {
+  display: block; }
+.splash-2 .splash-worried {
+  display: none; }
+
+.splash-3 .splash-normal {
+  display: none; }
+.splash-3 .splash-suprised {
+  display: none; }
+.splash-3 .splash-worried {
+  display: block; }
 
 ul.social-media {
   list-style-type: none;

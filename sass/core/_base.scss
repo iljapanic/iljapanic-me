@@ -10,8 +10,18 @@ body {
     color: $brand-dark;
 }
 
+a, a:visited {
+    color: $brand-secondary;
+    transition: color 0.5s;
+    
+    &:hover {
+        color: darken($brand-secondary, 45);
+    }
+}
+
+
 p {
-    font-size: ms(0);
+    font-size: ms(1);
 }
 
 h1 {

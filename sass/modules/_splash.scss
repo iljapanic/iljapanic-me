@@ -61,12 +61,21 @@
 
         @include MQ(M) {
             position: absolute;
-            bottom: $spacing;
-            right: $spacing;
-            width: 45%;
+            bottom: $spacing/2;
+            right: $spacing*2;
             margin-top: 0;
             text-align: right;
-            @include text-small;
+            font-size: ms(-3);
+            width: auto;
+            min-width: 15%; // hacky way to get rid of line break
+        }
+
+        a {
+            color: $brand-medium;
+            text-decoration: none;
+            &:hover {
+                color: darken($brand-medium, 75);
+            }
         }
     }
 
@@ -76,22 +85,44 @@
 // Swap images on links hover
 .splash-1 {
     
-    .original {
-        display: inline-block;
+    .splash-normal {
+        display: block;
     }
 
-    .on-hover {
+    .splash-suprised {
+        display: none;
+    }
+
+    .splash-worried {
         display: none;
     }
 }
 
 .splash-2 {
     
-    .original {
+    .splash-normal {
         display: none;
     }
 
-    .on-hover {
-        display: inline-block;
+    .splash-suprised {
+        display: block;
+    }
+
+    .splash-worried {
+        display: none;
+    }
+}
+
+.splash-3 {
+    .splash-normal {
+        display: none;
+    }
+
+    .splash-suprised {
+        display: none;
+    }
+
+    .splash-worried {
+        display: block;
     }
 }

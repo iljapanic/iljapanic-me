@@ -19,7 +19,11 @@
 $cs-primary: #f8f8f2;
 $cs-scheme: mono;
 
+$brand-primary: cs-primary();
+$brand-secondary: #8E44AD;
+
 $brand-light: cs-primary();
+$brand-medium: shade($brand-light, 45);
 $brand-dark: shade($brand-light, 75);
 
 
