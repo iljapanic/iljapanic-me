@@ -12,15 +12,21 @@ window.onresize = function() {
 
 
 window.onload = function() {
-    var elements = document.querySelectorAll('.social-media li');
+    
+    var activator = document.querySelectorAll('.social-media li');
+    var splash =  document.getElementById("splash");
 
-    for (var i in elements) {
-        if (!elements.hasOwnProperty(i)) continue;
-        elements[i].addEventListener( 'mouseover', function() {
-            document.body.className = 'step-2';
+
+    for (var i in activator) {
+        if (!activator.hasOwnProperty(i)) continue;
+        activator[i].addEventListener( 'mouseover', function() {
+            // document.body.className = 'splash-1';
+            classie.add( splash, 'splash-2' );
+            classie.remove( splash, 'splash-1' );
         })
-        elements[i].addEventListener( 'mouseout', function() {
-            document.body.className = 'step-1';
+        activator[i].addEventListener( 'mouseout', function() {
+            classie.add( splash, 'splash-1' );
+            classie.remove( splash, 'splash-2' );
         })
     }
 }

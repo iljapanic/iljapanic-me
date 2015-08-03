@@ -71,41 +71,51 @@ $type-header: 'Lato';
     @include ms-respond(font-size, 1);
 }
 
-// LOGO
-.logo {
+.splash .splash__logo {
     position: absolute;
     top: $spacing;
     left: 0;
     right: 0;
     text-align: center;
     margin: 0 auto;
-    display: block;
     z-index: 1;
+}
+
+.logo {
+    
 }
 
 .logo__inner {
     letter-spacing: 2px;
     display: table;
     border: 1px solid;
+    border-radius: 50%;
+    background-color: $brand-dark;
+    color: $brand-light;
     margin: 0 auto;
+    height: ms(6);
+    width: ms(6);
+    cursor: pointer;
 }
 
 .logo__initials {
     display: table-cell;
+    vertical-align: middle;
     @include ultra-bold;
-    font-size: 1.5em;
+    font-size: ms(2);
+    padding-left: 4px;
 }
 
 
-// PROFILE LAYOUT
-.profile {
+// splash LAYOUT
+.splash {
     width: 100%;
     height: 100%;
     height: 100vh;
     position: relative;
 }
 
-.profile__image {
+.splash__image {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -115,7 +125,7 @@ $type-header: 'Lato';
     }
 }
 
-.profile__intro {
+.splash__intro {
     
     @include MQ(M) {
         position: absolute;
@@ -125,7 +135,7 @@ $type-header: 'Lato';
     }
 }
 
-.profile__social {
+.splash__social {
     
     @include MQ(M) {
         position: absolute;
@@ -136,8 +146,8 @@ $type-header: 'Lato';
 }
 
 
-// PROFILE STYLING
-.profile {
+// splash STYLING
+.splash {
     text-align: center;
 
     @include MQ(M) {
@@ -145,7 +155,7 @@ $type-header: 'Lato';
     }
 }
 
-.profile__intro {
+.splash__intro {
     padding-top: $spacing;
     font-size: 1.25em;
 
@@ -154,15 +164,15 @@ $type-header: 'Lato';
     }
 }
 
-.profile p {
+.splash p {
     padding: 0 1.5%;
 }
 
-.profile .big {
+.splash .big {
     font-size: 1.15em;
 }
 
-.profile .name {
+.splash .name {
     font-size: 125%;
     font-weight: bold;
     display: inline-block;
@@ -170,7 +180,7 @@ $type-header: 'Lato';
     margin-bottom: 3px;
 }
 
-.profile__social {
+.splash__social {
     margin-top: $spacing*1.5;
 
     @include MQ(M) {
@@ -217,7 +227,7 @@ ul.social-media {
 
 // Swap images on links hover
 
-.step-1 {
+.splash-1 {
     
     .original {
         display: inline-block;
@@ -228,7 +238,7 @@ ul.social-media {
     }
 }
 
-.step-2 {
+.splash-2 {
     
     .original {
         display: none;
