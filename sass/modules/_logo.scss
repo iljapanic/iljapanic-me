@@ -2,6 +2,8 @@
 .logo {
     
     
+    text-align: center;
+
     .logo__inner {
         letter-spacing: 2px;
         display: table;
@@ -20,7 +22,7 @@
         vertical-align: middle;
         @include ultra-bold;
         font-size: ms(1);
-        padding-left: 4px;
+        padding-left: 3px;
     }
 
 }

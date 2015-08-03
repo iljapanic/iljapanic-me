@@ -5,14 +5,22 @@
     height: 100vh;
     position: relative;
     text-align: center;
-    @include ms-respond(font-size, 1);
+    @include ms-respond(font-size, 0);
 
     @include MQ(M) {
         text-align: left;
     }
     
     p {
-        padding: 0 1.5%;
+        // padding: 0 1.5%;
+
+        @include MQ(M) {
+            max-width: 35em;
+        }
+    }
+
+    .name {
+        @include ultra-bold;
     }
 
     .splash__header {
@@ -39,7 +47,7 @@
 
         @include MQ(M) {
             position: absolute;
-            bottom: 40%;
+            bottom: 50%;
             right: 0;
             width: 45%;
         }
