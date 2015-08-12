@@ -11,3 +11,7 @@
 @mixin text-small {
 	font-size: ms(-1);
 }
+
+@mixin uppercase {
+	text-transform: uppercase;
+}
