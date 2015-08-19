@@ -1,8 +1,4 @@
 # iljapanic-me
 Code behind my personal website
 
-## Roadmap
-
-[ ] Create sprites for cut outs
-[ ]  Integrate [Jekyll Now](https://github.com/barryclark/jekyll-now)
-[ ] much much more...
+Documentation may come some time in the future. Meanwhile, if you have any questions regarding the code shoot me an email at [hello@iljapanic.me](mailto:hello@iljapanic.me)
