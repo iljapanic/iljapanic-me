@@ -9,20 +9,20 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     
     <!-- meta information -->
-    <title>Ilja Panic</title>
+    <title>Projects | Ilja Panic</title>
     <link rel="author" href="humans.txt" />
     <meta name="description" content="Ilja Panic's personal website">
     
     <!-- Favicon -->
-    <link href="img/favicon.png" rel="shortcut icon" type="image/png"/>
-    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link href="../img/favicon.png" rel="shortcut icon" type="image/png"/>
+    <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lato:400,900,700' rel='stylesheet' type='text/css'>
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="assets/css/screen.css">
+    <link rel="stylesheet" href="../assets/css/screen.css">
     
 </head>
 <body>
@@ -39,17 +39,19 @@
             <nav class="main-nav">
             
                 <ul>
-                    <li><a href="/bio">Bio</a></li>
-                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="../bio">Bio</a></li>
+                    <li class="active">Projects</li>
                     <li class="main-nav__logo">
-                        <div class="logo">
-                            <div class="logo__inner">
-                                <span class="logo__initials">IP</span>
+                        <a href="../">
+                            <div class="logo">
+                                <div class="logo__inner">
+                                    <span class="logo__initials">IP</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
-                    <li><a href="/cv">CV</a></li>
-                    <li><strike title="Coming soon..."><a href="">Posts</a></strike></li>
+                    <li><a href="../cv">CV</a></li>
+                    <li><strike title="Coming soon...">Posts</strike></li>
                 </ul>
 
             </nav>
@@ -127,7 +129,10 @@
     
 
     <!-- Bundled JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <!-- build:js assets/js/main.js -->
+    <script type="text/javascript" src="../_js/vendor/classie.js"></script>
+    <script type="text/javascript" src="../_js/main.js"></script>
+    <!-- endbuild -->
 
     <!-- Google Analytics -->
     <script>

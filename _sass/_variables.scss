@@ -1,20 +1,3 @@
-/////////////
-// VENDOR //
-///////////
-@import 'vendor/color-schemer';
-@import 'vendor/modular-scale';
-
-
-/////////////
-// MIXINS //
-///////////
-@import 'mixins/media-queries';
-
-
-////////////////////////
-// PROJECT VARIABLES //
-//////////////////////
-
 // Colors based on Color Schemer (https://github.com/at-import/color-schemer)
 $cs-primary: #f8f8f2;
 $cs-scheme: mono;
@@ -51,27 +34,3 @@ $serif: Garamond, Georgia, serif; // serif fallback
 // Font base
 $font-base: 'Lato';
 $font-header: 'Lato';
-
-
-
-
-
-/////////////
-// STYLES //
-///////////
-
-// Core components
-@import 'core/normalize';
-@import 'core/base';
-
-// Helpers
-@import 'helpers/visibility';
-@import 'helpers/clearfix';
-@import 'helpers/typography';
-
-// Modules
-@import 'modules/browserupgrade';
-@import 'modules/main-nav';
-@import 'modules/logo';
-@import 'modules/splash';
-@import 'modules/social-media';

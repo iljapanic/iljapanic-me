@@ -15,7 +15,17 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         margin: auto $spacing;
+        cursor: pointer;
         @include bold;
         @include text-small;
+    }
+    
+    li.active {
+        border-bottom: 2px solid $brand-dark;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
     }
 }

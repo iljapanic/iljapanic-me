@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.1 - Barebones splashscreen
+## 0.0.1 - barebones splashscreen
 - welcome sentence
 - brief introduction
 - social media links
@@ -8,6 +8,5 @@
 
 
 
-
-
-
+## 0.0.2 - barebones multi-page site
+- Gulp integration
