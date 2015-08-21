@@ -1,43 +1,59 @@
-// MODULES
+/////////////////////
+// MODULES IMPORT //
+///////////////////
 
-// Global
+// Generic
 var browserSync = require('browser-sync');
 var requireDir = require('require-dir');
 
+
 // Gulp
 var gulp = require('gulp');
-var fileInclude	= require('gulp-file-include');
+
+var autoprefixer = require('gulp-autoprefixer');
+var cmq = require('gulp-combine-media-queries');
+var fileinclude	= require('gulp-file-include');
+var gulpif = require('gulp-if');
 var minifyCSS = require('gulp-minify-css');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var useref = require('gulp-useref');
+var uglify = require('gulp-uglify');
 var util = require('gulp-util');
 var watch = require('gulp-watch');
 
 
+    
 
-// VARIABLES
+////////////////////////
+// PROJECT VARIABLES //
+//////////////////////
 
 // Paths
 var path = {
 
 	publicDir: './',
 
-	htmlDir: './html',
-	html: './html/**/**/*.html',
+	assetsDir: './assets',
 
-	sassDir: './sass',
-	sass: './sass/**/**/**/*.{sass,scss}',
+	htmlDir: './_html',
+	html: './_html/**/**/*.html',
 
-	cssDir: './css',
-	css: './css/**/**.css'
+	sassDir: './_sass',
+	sass: './_sass/**/**/**/*.{sass,scss}',
+
+	cssDir: './assets/css',
+	css: './assets/css/**/**.css'
 
 };
 
 
 
-// GULP TASKS
+//////////////////////////////
+// GULP - FUNCTIONAL TASKS //
+////////////////////////////
 
 // 'browser-sync'
 //
@@ -60,10 +76,10 @@ gulp.task('browser-sync', function() {
 // 'sass'
 // 
 //	- compiles SASS into CSS
-//	- creates SASS sourcemaps (for debugging)
-//	- combines indetical media queries into a single one
+//	- creates SASS sourcemaps for easier debugging
 // 	- adds vendor prefixes
-//	- minifies the outputed CSS
+//	- combines indetical media queries
+//	- minifies the CSS
 
 gulp.task('sass', function () {
 
@@ -72,11 +88,43 @@ gulp.task('sass', function () {
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(sourcemaps.write())
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+        }))
+        .pipe(cmq())
 		.pipe(minifyCSS({keepSpecialComments: '0'}))
 		.pipe(gulp.dest(path.cssDir))
 		.pipe(browserSync.reload({stream:true}))
 
 });
+
+
+// 'html'
+//
+//	- includes all the HTML files and exports them to root
+//	- concats JS files based on building blocks in HTML
+
+gulp.task('html', function() {
+	
+	var concat = useref.assets();
+
+	return gulp.src(path.html)
+		.pipe(plumber())
+  		.pipe(fileinclude())
+  		.pipe(concat)
+  		.pipe(gulpif('*.js', uglify()))
+        .pipe(concat.restore())
+        .pipe(useref())
+		.pipe(gulp.dest(path.publicDir))
+  		.pipe(browserSync.reload({stream:true}));
+
+});
+
+
+//////////////////////////////
+// GULP - GLOBAL TASKS //
+////////////////////////////
 
 
 // 'watch'
@@ -88,14 +136,13 @@ gulp.task('sass', function () {
 gulp.task('watch', ['browser-sync'], function() {
 
 	watch(path.sass, function() { gulp.start('sass'); });
+	watch(path.html, function() { gulp.start('html'); });
 
 });
-
-
 
 
 // 'default'
 //
 //	- default set of tasks that are triggered after running 'gulp'
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'html', 'watch']);
