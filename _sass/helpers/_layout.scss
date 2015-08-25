@@ -1,0 +1,21 @@
+// wrap
+$wrap: 95%;
+$wrap-M: 48em;
+$wrap-L: 48em;
+
+.wrap {
+	margin-left: auto;
+	margin-right: auto;
+	width: $wrap;
+
+	@include MQ(M) {
+		width: $wrap-M;
+	}
+
+	@include MQ(L) {
+		width: $wrap-L;
+	}
+
+
+}
+

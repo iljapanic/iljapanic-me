@@ -1,0 +1,29 @@
+.post h1 {
+	margin-top: 0;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.post p {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	@include MQ(M) {
+		width: 85%;
+	}
+
+	@include MQ(L) {
+		width: 75%;
+	}
+}
+
+.post img {
+	width: 100%;
+}
+
+
+.post code {
+	width: 100%;
+}
