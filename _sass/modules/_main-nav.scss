@@ -15,7 +15,6 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         margin: auto $spacing;
-        cursor: pointer;
         @include bold;
         @include text-small;
     }
