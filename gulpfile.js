@@ -14,6 +14,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var cmq = require('gulp-combine-media-queries');
 var fileinclude	= require('gulp-file-include');
 var gulpif = require('gulp-if');
+var markdown = require('gulp-markdown');
 var minifyCSS = require('gulp-minify-css');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
@@ -34,17 +35,22 @@ var watch = require('gulp-watch');
 // Paths
 var path = {
 
+	// global directories
+
 	publicDir: './',
 
 	assetsDir: './assets',
 
-	htmlDir: './_html',
-	html: './_html/**/**/*.html',
+	// task-based directories
+	htmlSrc: './_html/**/**/*.html',
+	htmlDir: './',
 
-	sassDir: './_sass',
-	sass: './_sass/**/**/**/*.{sass,scss}',
+	markdownSrc: './_md/**/**/**.md',
+	markdownDir: './_html/texts',
 
-	cssDir: './assets/css',
+	sassSrc: './_sass/**/**/**/*.{sass,scss}',
+	sassDir: './assets/css',
+
 	css: './assets/css/**/**.css'
 
 };
@@ -83,7 +89,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('sass', function () {
 
-	return gulp.src(path.sass)
+	return gulp.src(path.sassSrc)
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass())
@@ -94,10 +100,25 @@ gulp.task('sass', function () {
         }))
         .pipe(cmq())
 		.pipe(minifyCSS({keepSpecialComments: '0'}))
-		.pipe(gulp.dest(path.cssDir))
+		.pipe(gulp.dest(path.sassDir))
 		.pipe(browserSync.reload({stream:true}))
 
 });
+
+
+// 'markdown'
+//
+//	- compiles Markdown into HTML partials
+gulp.task('markdown', function() {
+
+	return gulp.src(path.markdownSrc)
+		.pipe(plumber())
+		.pipe(markdown())
+		.pipe(gulp.dest(path.markdownDir))
+		.pipe(browserSync.reload({stream:true}));
+
+});
+
 
 
 // 'html'
@@ -109,17 +130,18 @@ gulp.task('html', function() {
 	
 	var concat = useref.assets();
 
-	return gulp.src(path.html)
+	return gulp.src(path.htmlSrc)
 		.pipe(plumber())
   		.pipe(fileinclude())
   		.pipe(concat)
   		.pipe(gulpif('*.js', uglify()))
         .pipe(concat.restore())
         .pipe(useref())
-		.pipe(gulp.dest(path.publicDir))
+		.pipe(gulp.dest(path.htmlDir))
   		.pipe(browserSync.reload({stream:true}));
 
 });
+
 
 
 //////////////////////////////
@@ -135,8 +157,9 @@ gulp.task('html', function() {
 
 gulp.task('watch', ['browser-sync'], function() {
 
-	watch(path.sass, function() { gulp.start('sass'); });
-	watch(path.html, function() { gulp.start('html'); });
+	watch(path.sassSrc, function() { gulp.start('sass'); });
+	watch(path.markdownSrc, function() { gulp.start('markdown'); });
+	watch(path.htmlSrc, function() { gulp.start('html'); });
 
 });
 
@@ -145,4 +168,4 @@ gulp.task('watch', ['browser-sync'], function() {
 //
 //	- default set of tasks that are triggered after running 'gulp'
 
-gulp.task('default', ['sass', 'html', 'watch']);
+gulp.task('default', ['sass', 'markdown', 'html', 'watch']);
