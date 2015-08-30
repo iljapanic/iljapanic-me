@@ -1,7 +1,7 @@
 // wrap
 $wrap: 95%;
 $wrap-M: 48em;
-$wrap-L: 48em;
+$wrap-L: 54em;
 
 .wrap {
 	margin-left: auto;
@@ -13,9 +13,37 @@ $wrap-L: 48em;
 	}
 
 	@include MQ(L) {
-		width: $wrap-L;
+		width: $wrap-M;
 	}
 
 
 }
 
+.wrap--wide {
+	margin-left: auto;
+	margin-right: auto;
+	width: $wrap;
+
+	@include MQ(M) {
+		width: $wrap-L;
+	}
+
+	@include MQ(L) {
+		width: $wrap-L;
+	}
+}
+
+
+//
+.grid-2 {
+	
+	@include MQ(M) {
+		.card {
+			width: 48%;
+			margin: $spacing 1%;
+			float: left;
+		}
+	}
+	
+
+}

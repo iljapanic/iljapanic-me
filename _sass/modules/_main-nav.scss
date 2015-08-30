@@ -21,6 +21,24 @@
         @include text-small;
     }
 
+    li.active {
+        
+        span {
+            position: relative;
+        }
+        
+        span:before  {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background-color: $brand-dark;
+        }
+
+    }
+
     a {
         position: relative;
         color: inherit;
@@ -49,25 +67,6 @@
         transform: scaleX(1);
     }
 
-
-    li.active {
-        // border-bottom: 2px solid $brand-dark;
-        a {
-            position: relative;
-        }
-        a:before  {
-            content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: -3px;
-        left: 0;
-        background-color: $brand-dark;
-        }
-
-    }
-
-
     .main-nav__logo-mobile {
         margin-bottom: $spacing;
 
@@ -83,4 +82,5 @@
             display: inline-block;
         }
     }
+
 }

@@ -48,7 +48,7 @@
 
         <ul>
             <li><a href="../bio">Bio</a></li>
-            <li class="active">Projects</li>
+            <li class="active"><span>Projects</span></li>
             <li class="main-nav__logo-list">
                 <a href="../">
                     <div class="logo">
@@ -67,12 +67,57 @@
 
       
 
-    <article class="post wrap margin-top--double clearfix">
+    <section class="wrap--wide margin-top--double clearfix">
+        
+        <article class="post">
+            
+            @@include('../texts/projects.html')
 
-        @@include('../texts/bio.html')
+        </article>
+
+        <div class="grid-2 margin-top clearfix">
+
+            <article class="card">
+                <div class="card__cover">
+                    <img src="../img/tmtd.jpg" alt="Take Me To Denmark site preview">
+                </div>
+                <h2 class="card__title">Take Me To Denmark</h2>
+                <div class="card__meta">2011 – Now</div>
+                <div class="card__body">
+                    @@include('../texts/tmtd.html')
+                </div>
+
+            </article>
+
+            <article class="card">
+                <div class="card__cover">
+                    <img src="../img/uc.jpg" alt="Urban Cultures site preview">
+                </div>
+                <h2 class="card__title">Urban Cultures</h2>
+                <div class="card__meta">2012 – Now</div>
+                <div class="card__body">
+                    @@include('../texts/uc.html')
+                </div>
+
+            </article>
+
+            <article class="card">
+                <div class="card__cover">
+                    <img src="../img/tmtd.jpg" alt="Take Me To Denmark site preview">
+                </div>
+                <h2 class="card__title">Take Me To Denmark</h2>
+                <div class="card__meta">2015 – Now</div>
+                <div class="card__body">
+                    @@include('../texts/webcrash.html')
+                </div>
+
+            </article>
+
+        </div> 
 
        
-    </article>
+       
+    </section>
             
         
 
