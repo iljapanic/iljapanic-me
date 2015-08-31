@@ -12,15 +12,15 @@ var gulp = require('gulp');
 
 var autoprefixer = require('gulp-autoprefixer');
 var cmq = require('gulp-combine-media-queries');
+var concat = require('gulp-concat');
 var fileinclude	= require('gulp-file-include');
-var gulpif = require('gulp-if');
 var markdown = require('gulp-markdown');
 var minifyCSS = require('gulp-minify-css');
 var notify = require('gulp-notify');
+var order = require('gulp-order');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var util = require('gulp-util');
 var watch = require('gulp-watch');
@@ -50,6 +50,9 @@ var path = {
 
 	sassSrc: './_sass/**/**/**/*.{sass,scss}',
 	sassDir: './assets/css',
+
+	jsSrc: './_js/**/**/**.js',
+	jsDir: './assets/js',
 
 	css: './assets/css/**/**.css'
 
@@ -128,16 +131,31 @@ gulp.task('markdown', function() {
 
 gulp.task('html', function() {
 	
-	var concat = useref.assets();
-
 	return gulp.src(path.htmlSrc)
 		.pipe(plumber())
   		.pipe(fileinclude())
-  		.pipe(concat)
-  		.pipe(gulpif('*.js', uglify()))
-        .pipe(concat.restore())
-        .pipe(useref())
 		.pipe(gulp.dest(path.htmlDir))
+  		.pipe(browserSync.reload({stream:true}));
+
+});
+
+
+// 'js'
+//
+//	- concat .js files in specific order
+//	- order is defined in the Gulpfile.js (sorry..)
+
+gulp.task('js', function(){
+
+	return gulp.src(path.jsSrc)
+		.pipe(order([
+			"vendor/classie.js",
+			"vendor/smart-underline.js",
+			"main.js"
+		]))
+		.pipe(concat("main.js"))
+		.pipe(uglify())
+		.pipe(gulp.dest(path.jsDir))
   		.pipe(browserSync.reload({stream:true}));
 
 });
@@ -159,6 +177,7 @@ gulp.task('watch', ['browser-sync'], function() {
 
 	watch(path.sassSrc, function() { gulp.start('sass'); });
 	watch(path.markdownSrc, function() { gulp.start('markdown'); });
+	watch(path.jsSrc, function() { gulp.start('js'); });
 	watch(path.htmlSrc, function() { gulp.start('html'); });
 
 });
@@ -168,4 +187,4 @@ gulp.task('watch', ['browser-sync'], function() {
 //
 //	- default set of tasks that are triggered after running 'gulp'
 
-gulp.task('default', ['sass', 'markdown', 'html', 'watch']);
+gulp.task('default', ['sass', 'markdown', 'js', 'html', 'watch']);
