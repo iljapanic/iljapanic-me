@@ -13,6 +13,7 @@ body {
 a, a:visited {
     color: $brand-secondary;
     transition: color 0.5s;
+    text-decoration: underline;
     
     &:hover {
         color: darken($brand-secondary, 45);

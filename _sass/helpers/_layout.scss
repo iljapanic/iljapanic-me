@@ -39,8 +39,8 @@ $wrap-L: 54em;
 	
 	@include MQ(M) {
 		.card {
-			width: 48%;
-			margin: $spacing 1%;
+			width: 46%;
+			margin: $spacing 2%;
 			float: left;
 		}
 	}

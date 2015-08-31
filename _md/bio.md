@@ -6,7 +6,7 @@
 
 I got lousy grades at the end of high school and didn't like the university I enrolled back home in Prague. So I made a website that helped me get admitted to an university in Copenhagen and moved to Denmark.
 
-I don't like searching in job banks and filling out long forms. So I made an online interactive CV and sent it out to bunch of agencies around Copenhagen. It landed me an internship and subsequently a job at an agency.
+I don't like searching in job banks and filling out long forms. So I made an online interactive CV and sent it out to bunch of agencies around Copenhagen. It landed me an internship and [subsequently](http://pes.com) a job at an agency.
 
 I managed to skip writing a case study for my bachelor project at a business school. I got away with writing a non-businessy paper about Information Design instead. Ohh, and I wrote it using Markdown, Gulp and other Web technologies.
 

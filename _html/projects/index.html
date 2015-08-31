@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     
     <!-- meta information -->
-    <title>Bio | Ilja A. Panic</title>
+    <title>Projects | Ilja Panic</title>
     <link rel="author" href="humans.txt" />
     <meta name="description" content="Ilja Panic's personal website">
     
@@ -69,7 +69,7 @@
 
     <section class="wrap--wide margin-top--double clearfix">
         
-        <article class="post">
+        <article class="post center-text">
             
             @@include('../texts/projects.html')
 
@@ -78,40 +78,42 @@
         <div class="grid-2 margin-top clearfix">
 
             <article class="card">
-                <div class="card__cover">
-                    <img src="../img/tmtd.jpg" alt="Take Me To Denmark site preview">
-                </div>
-                <h2 class="card__title">Take Me To Denmark</h2>
-                <div class="card__meta">2011 – Now</div>
-                <div class="card__body">
-                    @@include('../texts/tmtd.html')
-                </div>
+               
+                <header class="card__header">
+                    <h2 class="card__title">Take Me To Denmark</h2>
+                    <div class="card__meta">2011 – Now</div>
+                </header>
 
+                <div class="card__content">
+                    
+                    <div class="card__cover">
+                        <a href="http://takemetodenmark.com" target="_blank"><img src="../img/tmtd.jpg" alt="Take Me To Denmark site preview"></a>
+                    </div>
+
+                    <div class="card__body">
+                        @@include('../texts/tmtd.html')
+                    </div>
+                </div>
             </article>
+
 
             <article class="card">
-                <div class="card__cover">
-                    <img src="../img/uc.jpg" alt="Urban Cultures site preview">
+                
+                <header class="card__header">
+                    <h2 class="card__title">Urban Cultures</h2>
+                    <div class="card__meta">2012 – Now</div>
+                </header>
+                
+                <div class="card__content">
+                    <div class="card__cover">
+                        <a href="http://urbancultures.co" target="_blank"><img src="../img/uc.jpg" alt="Urban Cultures site preview"></a>
+                    </div>
+                    <div class="card__body">
+                        @@include('../texts/uc.html')
+                    </div>
                 </div>
-                <h2 class="card__title">Urban Cultures</h2>
-                <div class="card__meta">2012 – Now</div>
-                <div class="card__body">
-                    @@include('../texts/uc.html')
-                </div>
-
             </article>
 
-            <article class="card">
-                <div class="card__cover">
-                    <img src="../img/tmtd.jpg" alt="Take Me To Denmark site preview">
-                </div>
-                <h2 class="card__title">Take Me To Denmark</h2>
-                <div class="card__meta">2015 – Now</div>
-                <div class="card__body">
-                    @@include('../texts/webcrash.html')
-                </div>
-
-            </article>
 
         </div> 
 
@@ -125,11 +127,11 @@
            
     
 
-    <!-- Bundled JavaScript -->
-    <!-- build:js assets/js/main.js -->
+    <!-- JavaScript -->
     <script type="text/javascript" src="../_js/vendor/classie.js"></script>
+    <script type="text/javascript" src="../_js/vendor/smart-underline.js"></script>
     <script type="text/javascript" src="../_js/main.js"></script>
-    <!-- endbuild -->
+    
 
     <!-- Google Analytics -->
     <script>

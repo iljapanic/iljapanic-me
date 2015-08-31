@@ -1,0 +1,44 @@
+.card {
+
+	.card__header {
+		text-align: center;
+		position: relative;
+	}
+
+	.card__title {
+		font-size: ms(1);
+		margin-bottom: 0;
+	}
+
+	.card__meta {
+		font-size: ms(-1);
+		color: tint($brand-dark, 35%);
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.card__content {
+		margin-top: $spacing/2;
+	}
+	
+	.card__cover img {
+		border-radius: $radius;
+		vertical-align: middle;
+		display: block;
+		z-index: -1;
+	}
+
+	.card__cover:hover {
+		
+		content: 'Visit the site';
+		background-color: $brand-dark;
+		z-index: 99;
+
+	}
+	
+	.card__body {
+		padding: 0 $spacing;
+	}
+
+}
+
