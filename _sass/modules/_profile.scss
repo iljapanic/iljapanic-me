@@ -1,9 +1,61 @@
 .profile {
+	
+	@include MQ(M) {
+
+		.profile__image {
+			width: 30%;
+			float: left;
+		}
+
+		.profile__info {
+			width: 70%;
+			float: left;
+		}
+
+	}
+
+}
+
+.profile__title {
+	margin-bottom: 0;
+}
+
+.profile__subtitle {
 	text-align: center;
+	margin-top: $spacing/6;
+	color: $brand-medium;
 }
 
 
+.profile__image {
+	text-align: center;
+}
+
 .profile__image img {
 	border-radius: 50%;
-	border: 1px solid $brand-dark;
+	border: 3px solid tint($brand-dark, 55%);
+}
+
+.profile__info ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.profile__info li {
+	margin-top: $spacing/3;
+	font-size: ms(0);
+}
+
+.profile__info span {
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+.profile__text {
+	font-size: ms(0);
+	text-align: center;
+	border-top: 1px solid tint($brand-dark, 55%);
+	border-bottom: 1px solid tint($brand-dark, 55%);
+	padding: $spacing 0;
 }
