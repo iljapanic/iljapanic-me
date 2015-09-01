@@ -1,7 +1,7 @@
 // wrap
 $wrap: 95%;
-$wrap-M: 48em;
-$wrap-L: 54em;
+$wrap-M: 42em;
+$wrap-L: 48em;
 
 .wrap {
 	margin-left: auto;
@@ -34,7 +34,7 @@ $wrap-L: 54em;
 }
 
 
-//
+
 .grid-2 {
 	
 	@include MQ(M) {

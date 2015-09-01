@@ -11,8 +11,8 @@ $brand-dark: shade($brand-light, 75);
 
 
 // Modular scale (https://github.com/modularscale/modularscale-sass)
-$ms-base: 1em;
-$ms-ratio: $major-third;
+$ms-base: 0.95em; // 16px
+$ms-ratio: $minor-third;
 
 // Base spacing
 $spacing: ms(1);

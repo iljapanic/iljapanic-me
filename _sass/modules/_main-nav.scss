@@ -12,13 +12,17 @@
     }
 
     li {
-    	vertical-align: middle;
         display: inline-block;
+        margin: auto $spacing;
+    	vertical-align: middle;
         text-transform: uppercase;
         letter-spacing: 1px;
-        margin: auto $spacing;
-        @include bold;
-        @include text-small;
+        font-size: ms(0);
+        font-weight: 700;
+
+        @include MQ(M) {
+            font-size: ms(-2);
+        }
     }
 
     li.active {

@@ -1,6 +1,11 @@
 html {
     font-size: ms(0);
     line-height: 1.5;
+    box-sizing: border-box; // yeah.. we rolling with full on border-box!
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -8,6 +13,10 @@ body {
     font-family: $font-base, $sans-serif;
     background-color: $brand-light;
     color: $brand-dark;
+
+    @include MQ(M) {
+        font-size: ms(2);
+    }
 }
 
 a, a:visited {
@@ -33,8 +42,8 @@ p.big, .big {
     font-size: ms(1);
 }
 
-h1 {
-    
+h1 {   
+    font-size: ms(2);  
 }
 
 h2 {
