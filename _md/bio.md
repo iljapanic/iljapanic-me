@@ -10,9 +10,7 @@ I'm not a fan of job banks and long forms. So I made an interactive CV and sent 
 
 Normally, you write a case study for your bachelor project at a business school. I got away with writing a non-businessy paper about Information Design instead. To make it more interesting I wrote it using Markdown, Gulp and other Web technologies.
 
-<div>
-<img src="../img/pencil.svg">
-</div>
+---
 
 I love doing normal things in an untraditional way. I've always been like that and the Web proved to be a life-changing medium for me in this respect. It helped me contemplate my life journey they way I wanted. Now I'm using all that I've learned over the years to help make the Web work for others as well.
 
