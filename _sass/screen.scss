@@ -9,6 +9,7 @@
 // MIXINS //
 ///////////
 @import 'mixins/media-queries';
+@import 'mixins/svg-selector';
 
 
 ////////////////////////
@@ -28,6 +29,7 @@
 // Helpers
 @import 'helpers/animation';
 @import 'helpers/clearfix';
+@import 'helpers/colors';
 @import 'helpers/layout';
 @import 'helpers/typography';
 @import 'helpers/spacing';
@@ -37,6 +39,7 @@
 @import 'modules/browserupgrade';
 @import 'modules/card';
 @import 'modules/colophon';
+@import 'modules/dotted-list';
 @import 'modules/main-nav';
 @import 'modules/logo';
 @import 'modules/post';

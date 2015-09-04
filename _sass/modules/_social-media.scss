@@ -7,21 +7,15 @@ ul.social-media {
 
 .social-media li {
     display: inline-block;
-    margin-right: $spacing/2;
-    opacity: 0.75;
-
+    margin-right: $spacing/4;
 
     @include MQ(M) {
-       margin-right: $spacing; 
+       margin-right: $spacing/4; 
     }
 }
 
 .social-media li:last-of-type {
     margin-right: 0;
-}
-
-.social-media li:hover {
-    opacity: 0.95;
 }
 
 .social-media li svg {
@@ -30,6 +24,35 @@ ul.social-media {
     max-width: 1.15em;
 
     @include MQ(M) {
-        max-width: 1.25em;
+        max-width: 1.15em;
+    }
+}
+
+.social-media li {
+    
+    @include svg-selector {
+        fill: tint($brand-dark, 25%);
+        transition: fill 0.75s;
+    }
+
+}
+
+.social-media li:hover {
+    
+    @include svg-selector {
+        fill: $brand-secondary;
+        transition: fill 0.75s;
+    }
+
+}
+
+
+
+.social-media .mail {
+    font-size: ms(-1);
+    padding-left: $spacing/2;
+    &:before {
+        content: '| ';
+        padding-right: $spacing/2;
     }
 }
