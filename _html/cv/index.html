@@ -66,40 +66,33 @@
 
       
 
-    <article class="post margin-top--double clearfix">
+    <article class="margin-top--double clearfix">
         
 
-            <div class="profile clearfix">
+            <div class="profile">
                 
-                <h1 class="profile__title">Digital strategist &amp; Information designer</h1>
-                <p class="profile__subtitle">What on earth are these buzzwords? <a href="../bio">Read the bio</a> to find out</p>
-                </span>
                 
-                <div class="wrap margin-top--double clearfix">
+                @@include('../partials/profile-intro.html')
 
-                    <div class="profile__image">
-                        <img src="../img/ilja-profile.jpg">
-                    </div>
+                <div class="profile__divider"></div>
 
-                    <div class="profile__info">
-                        <ul>
-                            <li><span>Name:</span> Ilja Panić</li>
-                            <li><span>Age:</span> 24</li>
-                            <li><span>Languages:</span> Czech (native), Serbian (native), English (full proficiency), spanish (elementary)</li>
-                            <li><span>Location:</span> Copenhagen / Prague</li>
-                        </ul>
-                    </div>
+                   
+                @@include('../partials/profile-skills.html')
 
-                </div>
+                <div class="profile__divider"></div>
 
-                <div class="wrap--wide margin-top--double">
-                    
-                    <div class="profile__text">
-                        
-                    </div>
+                @@include('../partials/profile-work.html')
 
-                </div>
+                <div class="profile__divider"></div>
 
+                @@include('../partials/profile-education.html')
+                
+                <div class="profile__divider"></div>
+
+
+                @@include('../partials/profile-freetime.html')
+
+     
             </div>
 
 
@@ -109,7 +102,8 @@
             
         
 
-     @@include('../partials/colophon.html')
+    @@include('../partials/colophon.html')
+           
            
     
 
