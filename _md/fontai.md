@@ -1,0 +1,1 @@
+My role was overseeing the development of Weetr newsletter tool used mainly by clients of an IT project management network Fontai (fontai.com). I prepared a presentation slides and promo materials with pricing, collaborated with graphic designer on newsletter prototypes for prospective clients and tested out new features with the main developer.
