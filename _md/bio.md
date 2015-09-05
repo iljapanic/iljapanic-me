@@ -20,7 +20,9 @@ I write, I code, I design, I sketch, I research, I analyse. Heck, I do it all. I
 No, but now for real. I'm not a big fan of labels and job titles. They restrict what you are “allowed” to work on, they limit your potential and they give others a skewed ideas of what to expect from you. They also plague the industry with dogmas and bs arguments about who is supposed to do what and how.
 
 
-If I was asked to give myself a title it would be a **digital strategist** and an **information designer**. Not because it sounds sophisticated, but because it best describe what I do. I analyse relationships between people, information, and technology. I use the digital medium to communicate purposefully with other people by designing meaningful information artefacts. I use a variety of tools and methods to accomplish this. But the technology itself does not interest me that much. I'm interested in people and how the things we make in this virtual space fit into their everyday lives.
+If I was asked to give myself a title it would be a **digital strategist** and an **information designer**. I find it best describe what I do. I analyse relationships between people, information, and technology. I use the digital medium to communicate purposefully with other people by designing meaningful information artefacts. I use a variety of tools and methods to accomplish this. But the technology itself does not interest me that much. I'm interested in people and how the things we make in this virtual space fit into their everyday lives.
+
+I design information products, not interfaces.
 
 People come to your site to accomplish real-life goals. They did not come to play with your pixel-perfect interface or to admire your blazing-fast MEAN stack (just look at Craigslist). They are looking for information, most often in the textual form, that will help them accomplish their goals. If you can provide them with such information quickly and delight them with subtle interactions along the way you get bonus points.
 
