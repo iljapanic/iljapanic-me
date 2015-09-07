@@ -1,3 +1,3 @@
 # Things I'm Working On #
 
-Here are some of the long-term projects that I'm actively involved in. It includes both personal projects that I've started and collective projects that I contribute to. If you are working on something and think I could be of help, don't hesitate to [get in touch](mailto:hello@iljapanic.me).
+Here you will find some of the projects that I'm involved in. Client work I did was confidential for the most part. So what you see here is mostly personal and collective projects. [Get in touch](mailto:hello@iljapanic.me) if you would like my help with your project/idea or would like to get involved in some of the projects listed here.
