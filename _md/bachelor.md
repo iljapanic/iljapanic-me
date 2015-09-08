@@ -1,0 +1,5 @@
+I like to use distraction-free text editors and I got tired of using bloated word processors for writing papers. So I wrote my bachelor’s project using Markdown while also trying to create a sustainable pattern for academic writing that is compatible with the Web.
+
+This GitHub repo represents an experiment in generating academic papers written in Markdown using Gulp, Pandoc and some other tools. It takes your Markdown files and generates a semantic HTML output for use on the Web or as print-ready PDF or Word documents.
+
+The output is still far from perfect so you still need to fiddle with the output before actually handing in the paper. But the whole experiment showed me it is possible to write long form comfortably using the tools you like and have it quickly ready for both Web and print. 

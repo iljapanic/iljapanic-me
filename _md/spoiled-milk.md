@@ -1,1 +1,8 @@
-The internship at Spoiled Milk was my first full-blown professional experience where I got introduced to the hectic and messy world of agency client work. I've primarily worked on transforming designs into HTML/CSS/JS templates. I've been one of the go-to-guys for much of ad-hoc front-end tasks; jumping back-and-forth between several projects a day, smashing bugs, fixing IE8 issues, and implementing new functionality. I also coded up a lot of “responsive” email templates, so I got to see how Web used to be made and learned to hate MS Outlook even more. Occasionally, I've designed some UI concepts and prototypes. I've worked on everything from an enterprise Web app to a startup teaser page.
+- first proper experience with the hectic world of agency client work
+- worked with clients in telecommunications, finance, startups, politics, & music
+- transforming designs into HTML/CSS/JS templates
+- go-to-guy for ad-hoc front-end tasks
+- a back-and-forth between projects over the course of a week
+- “responsive” email templates (learn how the Web used to be made)
+- implement new features, smash bugs, make IE8 behave, create sprites
+- UI concepts and prototypes (occasionally)
