@@ -21,10 +21,10 @@ ul.social-media {
 .social-media li svg {
     width: 100%;
     height: 100%;
-    max-width: 1.15em;
+    max-width: 0.95em;
 
     @include MQ(M) {
-        max-width: 1.15em;
+        max-width: 0.95em;
     }
 }
 

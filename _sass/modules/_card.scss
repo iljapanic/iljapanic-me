@@ -1,5 +1,5 @@
 .card {
-	margin-bottom: $spacing*4.5;
+	margin-bottom: $spacing*3.5;
 }
 
 .card__meta {
@@ -13,6 +13,14 @@
 	a {
 		color: inherit;
 	}
+}
+
+.card__header {
+	text-align: center;
+}
+
+.card__cover {
+	margin-top: $spacing/2;
 }
 
 .card__place {
@@ -47,7 +55,29 @@
 }
 
 .card__text {
-	font-size: ms(-1);
+	margin-top: $spacing/2;
+}
+
+.card__text ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.card__text li {
+	color: tint($brand-dark, 30%);
+
+	&:before {
+		vertical-align: middle;
+		display: inline-block;
+		content: '';
+		height: 5px;
+		width: 5px;
+		border-radius: 50%;
+		margin-right: $spacing/2;
+		background-color: $brand-medium;
+	}
+
 }
 
 .card__list {
@@ -55,7 +85,6 @@
 	margin-top: $spacing/2;
 	padding: 0;
 	list-style-type: none;
-	font-size: ms(-1);
 }
 
 .card__list li {

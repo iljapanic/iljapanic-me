@@ -1,4 +1,3 @@
-My name is <span class="name">Ilja</span> and this is my little corner of the Internet.
+# Welcome online traveller!
 
-
-Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.
+My name is <span class="name">Ilja</span> and I will be your guide around these corners of the Internet. There is not much happening here at the moment. Just my Bio and a list of Projects that I'm working on. But you can expect to see new things appearing gradually over time.
