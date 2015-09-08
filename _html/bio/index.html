@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     
     <!-- meta information -->
-    <title>Bio | Ilja Panic</title>
+    <title>CV | Ilja Panic</title>
     <link rel="author" href="humans.txt" />
     <meta name="description" content="Ilja Panic's personal website">
     
@@ -48,7 +48,6 @@
 
         <ul>
             <li class="active"><span>Bio</span></li>
-            <li><a href="../cv">CV</a></li>
             <li class="main-nav__logo-list">
                 <a href="../">
                     <div class="logo">
@@ -66,17 +65,45 @@
 
       
 
-    <article class="post wrap margin-top--double clearfix">
+    <article class="margin-top--double clearfix">
+        
 
-        @@include('../texts/bio.html')
+            <div class="profile">
+                
+                
+                @@include('../partials/profile-intro.html')
 
+                <div class="profile__divider"></div>
+
+                   
+                @@include('../partials/profile-skills.html')
+
+                <div class="profile__divider"></div>
+
+                @@include('../partials/profile-work.html')
+
+                <div class="profile__divider"></div>
+
+                @@include('../partials/profile-education.html')
+                
+                <div class="profile__divider"></div>
+
+
+                @@include('../partials/profile-freetime.html')
+
+     
+            </div>
+
+
+        
        
     </article>
             
-    
-    @@include('../partials/colophon.html')
+        
 
-    
+    @@include('../partials/colophon.html')
+           
+           
     
 
     <!-- JavaScript -->

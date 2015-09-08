@@ -1,4 +1,4 @@
-- work in a freshly founded agency based in Copenhagen/Belgrade
+- a freshly founded agency based in Copenhagen/Belgrade
 - worked with clients in telecommunications & startups
 - transforming designs into HTML/CSS/JS templates
 - focused, project-based & often-remote work

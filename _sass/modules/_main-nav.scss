@@ -9,6 +9,7 @@
         margin: 0;
         padding: 0;
         width: 100%;
+        text-align: center;
     }
 
     li {
@@ -21,6 +22,7 @@
         font-weight: 700;
 
         @include MQ(M) {
+            min-width: 5em;
             font-size: ms(-2);
         }
     }
@@ -85,6 +87,7 @@
         @include MQ(M) {
             display: inline-block;
         }
+    
     }
 
 }

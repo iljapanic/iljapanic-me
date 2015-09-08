@@ -49,7 +49,6 @@
 	font-weight: 900;
 	letter-spacing: 1px;
 	font-size: ms(-2);
-	margin-bottom: 0;
 }
 
 // INTRO
@@ -134,4 +133,23 @@
 .skill-list--secondary li {
 	background-color: tint($brand-dark, 10%);
 }
+
+// Books
+.books-list {
+	margin-top: $spacing;
+	text-align: left;
+
+	@include MQ(M) {
+		
+		column-count: 2; 
+		column-gap: $spacing*1.5;
+	}
+
+}
+
+.book-author {
+	font-style: italic;
+}
+
+
 
