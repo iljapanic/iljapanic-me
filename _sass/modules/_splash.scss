@@ -26,11 +26,12 @@
     
 
     .splash__image {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        
         @include MQ(M) {
             width: 55%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
         }
     }
 
@@ -58,6 +59,8 @@
     }
 
     .splash__colophon {
+        
+        margin-top: $spacing*2;
 
         @include MQ(M) {
             position: absolute;
