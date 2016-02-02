@@ -1,9 +1,8 @@
 ---
 layout: post
-category: articles
-title:  "Design Meets Information"
-date:   2015-1-13 20:21:07
+title: Design Meets Information
 ---
+
 
 >*“Overload, clutter, and confusion are not attributes of information, they are failures of design.”*
 ><div style="text-align:right">– Tufte, from an interview in Carmichael, 2011</div>

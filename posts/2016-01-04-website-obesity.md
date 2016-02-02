@@ -1,9 +1,6 @@
 ---
 layout: post
-category: notes
-title:  "Website Obesity"
-date:   2016-01-04 11:04:01
-link: http://idlewords.com/talks/website_obesity.htm
+title: Website obesity
 ---
 
 

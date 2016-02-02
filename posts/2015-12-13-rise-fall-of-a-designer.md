@@ -1,8 +1,6 @@
 ---
 layout: post
-category: articles
-title:  "Rise (and Fall) of a Designer"
-date:   2015-12-13 21:46:04
+title: Rise and fall of a designer
 ---
 
 The rapid growth of the Internet and ever-present access to the World Wide Web has created a unique breed of a designer. You know who I am talking about. It is that bohemian-looking person sitting at your local hipster cafe sipping flat white with their headphones on, pushing pixels and making website all day long. The internet culture loves glorifying them as prodigies with e lifestyle.

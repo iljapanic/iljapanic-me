@@ -3,7 +3,7 @@ $(function() {
 	CMS.init({
 
 		// Name of your site or location of logo file ,relative to root directory (img/logo.png)
-		siteName: 'My Site',
+		siteName: 'Ilja Panic',
 
 		// Tagline for your site
 		siteTagline: 'Your site tagline',
@@ -16,7 +16,7 @@ $(function() {
 
 		// Navigation items
 		siteNavItems: [
-			{ name: 'Github', href: 'https://github.com/yourname', newWindow: false},
+			{ name: 'Github', href: 'https://github.com/iljapanic', newWindow: false},
 			{ name: 'About'}
 		],
 

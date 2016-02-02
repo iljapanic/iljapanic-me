@@ -1,9 +1,8 @@
 ---
 layout: post
-category: articles
-title:  "Future Shock & Propaganda of Progress"
-date:   2015-1-13 19:21:07
+title: Future Shock
 ---
+
 
 # Future Shock & Propaganda of Progress
 
