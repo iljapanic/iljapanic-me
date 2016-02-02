@@ -9,10 +9,10 @@ $(function() {
 		siteTagline: 'Your site tagline',
 
 		// Email address
-		siteEmail: 'your_email@example.com',
+		siteEmail: 'hello@iljapanic.me',
 
 		// Name
-		siteAuthor: 'Your Name',
+		siteAuthor: 'Ilja Panic',
 
 		// Navigation items
 		siteNavItems: [
