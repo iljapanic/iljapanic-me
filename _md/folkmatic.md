@@ -1,6 +1,0 @@
-- a freshly founded agency based in Copenhagen/Belgrade
-- worked with clients in telecommunications & startups
-- transforming designs into HTML/CSS/JS templates
-- focused, project-based & often-remote work
-- internal projects & front-end dev lead for an important client
-- iterative work with back-end dev, project manager & client

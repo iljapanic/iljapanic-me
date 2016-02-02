@@ -1,3 +1,0 @@
-The project started with my friend making interviews with people involved in arts and extreme sports and posting them on Tumblr. In 2012, he asked me for help with building a site on a custom domain. I've smushed together a server and a site running WP with an over-designed custom theme and off we went!
-
-Over the years, the project took various twists and turns ([and produced a great video series](http://underground-up.com)). In its current form, the site focuses on promoting the work of creatives that are a part of an invite-only member's collective organized by Urban Cultures. The long-term idea is to build a hand-picked worldwide network of talented individuals.
