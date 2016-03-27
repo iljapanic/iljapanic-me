@@ -1,0 +1,56 @@
+/*
+
+Kirby Ilja Panic custom theme
+
+Author: Ilja Panic
+URL:    http://iljapanic.me
+Email:  hello@iljapanic.me
+
+*/
+
+@import '_normalize';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.hexagon {
+  position: relative;
+  width: 80px; 
+  height: 46.19px;
+  background-color: #b7c96e;
+  margin: 23.09px 0;
+  border-left: solid 3px #333333;
+  border-right: solid 3px #333333;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 56.57px;
+  height: 56.57px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 8.7157px;
+}
+
+.hexagon:before {
+  top: -28.2843px;
+  border-top: solid 4.2426px #333333;
+  border-right: solid 4.2426px #333333;
+}
+
+.hexagon:after {
+  bottom: -28.2843px;
+  border-bottom: solid 4.2426px #333333;
+  border-left: solid 4.2426px #333333;
+}
+

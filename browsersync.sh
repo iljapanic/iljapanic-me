@@ -1,2 +1,2 @@
 #! /bin/sh
-browser-sync start --server --files "css/*.css, *.html"
+browser-sync start --proxy ilja.dev --files "./**/**/**/**/*.css, ./**/**/**/**/*.html, ./**/**/**/**/*.php"
