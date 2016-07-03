@@ -15,7 +15,6 @@
     color: $gray3;
     display: inline-block;
     font-size: $font-size--small;
-    font-weight: bold;
     letter-spacing: 1px;
     margin-right: $spacing/2;
     text-decoration: none;
@@ -29,7 +28,7 @@
 }
 
 @media($media-medium) {
-  
+
   .main-nav {
     text-align: right;
   }
@@ -42,13 +41,13 @@
     margin-right: 0;
     padding: $spacing/1.25 2rem;
     &:hover {
-      color: $gray2;
+      color: $gray1;
     }
   }
 
   .main-nav .active a {
     border-bottom: 0;
-    border-top: 2px solid $gray3;
-    color: $gray2;
+    border-top: 1px solid $gray1;
+    color: $gray1;
   }
 }
