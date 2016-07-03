@@ -29,6 +29,10 @@
 }
 
 @media($media-medium) {
+  
+  .main-nav {
+    text-align: right;
+  }
 
   .main-nav ul {
     border-top: 1px solid $gray4;
