@@ -1,0 +1,18 @@
+.logo {
+
+  margin-bottom: $spacing/3;
+
+  a {
+    color: $primary;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+}
+
+@media ($media-medium) {
+  .logo {
+    margin-bottom: 0;
+    padding: $spacing/1.25 2rem;
+  }
+}

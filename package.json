@@ -1,0 +1,38 @@
+{
+  "name": "iljapanic-me",
+  "version": "1.0.0",
+  "description": "iljapanic.me homepage",
+  "author": "Ilja Panic <hello@iljapanic.me>",
+  "license": "",
+  "contributors": [
+    {
+      "name": "Ilja Panic",
+      "email": "hello@iljapanic.me"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iljapanic/iljapanic-me"
+  },
+  "standard": {
+    "globals": [
+      "$",
+      "Modernizr"
+    ]
+  },
+  "devDependencies": {
+    "browser-sync": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cssnano": "*",
+    "gulp-group-css-media-queries": "*",
+    "gulp-imagemin": "*",
+    "gulp-notify": "*",
+    "gulp-nunjucks-render": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*"
+  }
+}

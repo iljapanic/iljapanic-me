@@ -1,0 +1,26 @@
+// Font based variables
+//
+// Styleguide
+
+$base-font:       'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
+$monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace !default;
+
+$heading:         $base-font !default;
+$body:            $base-font !default;
+$monospace:       $monospace-font !default;
+
+$font-size: 1.6rem !default;
+$line-height: 2.4rem !default;
+
+$font-size--small: 1.3rem !default;
+$font-size--large: 2rem !default;
+
+$spacing: $line-height;
+
+
+// font-family:'Leitura News W01';
+// font-family:'Leitura Sans W01';
+// font-family:'Avenir W01';
+// font-family:'Adelle W01';
+// font-family:'Adelle W02';
+// font-family:'Adelle Sans W01';
