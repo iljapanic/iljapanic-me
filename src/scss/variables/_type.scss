@@ -2,10 +2,11 @@
 //
 // Styleguide
 
-$base-font:       'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
+$base-font:       'Leitura Sans W01','Adelle Sans W01', 'Avenir W01', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
+$heading-font:    'Leitura News W01', serif;
 $monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace !default;
 
-$heading:         $base-font !default;
+$heading:         $heading-font !default;
 $body:            $base-font !default;
 $monospace:       $monospace-font !default;
 
