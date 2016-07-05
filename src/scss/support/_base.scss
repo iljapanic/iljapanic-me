@@ -16,12 +16,17 @@ html{
   }
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body{
   background-color: $secondary;
   box-sizing: border-box;
   color: $gray1;
   font-family: $base-font;
   font-size: $font-size;
+  font-weight: $font-weight-base;
   line-height: $line-height;
   min-height: 100%;
   position: relative;

@@ -134,18 +134,18 @@ Styleguide 1.2
 
 .wrapper{
   margin: 0 auto;
-  max-width: 960px;
+  max-width: $wrapper;
   padding: 0 2rem;
 }
 
 .wrapper-large{
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: $wrapper-large;
   padding: 0 2rem;
 }
 
 .wrapper-small{
   margin: 0 auto;
-  max-width: 640px;
+  max-width: $wrapper-small;
   padding: 0 2rem;
 }
