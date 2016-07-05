@@ -1,6 +1,8 @@
 var config = require('../config')
 
 var browserSync = require('browser-sync')
+var data = require('gulp-data')
+var fs = require('fs')
 var gulp = require('gulp')
 var handleErrors = require('../lib/handleErrors')
 var htmlmin = require('gulp-htmlmin')
@@ -13,8 +15,22 @@ var paths = {
   nunjuck: path.join(config.root.src, config.tasks.html.src)
 }
 
+var getGlobal = function (file) {
+  var dataGlobal = path.resolve(config.root.src, config.tasks.html.dataSrc, config.tasks.html.dataGlobal)
+  return JSON.parse(fs.readFileSync(dataGlobal, 'utf8'))
+}
+
+var getBooks = function (file) {
+  var dataBooks = path.resolve(config.root.src, config.tasks.html.dataSrc, config.tasks.html.dataBooks)
+  return JSON.parse(fs.readFileSync(dataBooks, 'utf8'))
+}
+
 var htmlTask = function () {
   return gulp.src(paths.src)
+    .pipe(data(getGlobal))
+    .on('error', handleErrors)
+    .pipe(data(getBooks))
+    .on('error', handleErrors)
     .pipe(nunjucksRender({
       path: [paths.nunjuck]
     }))

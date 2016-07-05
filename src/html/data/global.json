@@ -1,0 +1,8 @@
+{
+  "site": {
+    "title": "Ilja Panic",
+    "author": "Ilja Panic",
+    "description": "Ilja Panic's personal site",
+    "stylesheet": "./css/style.css"
+  }
+}

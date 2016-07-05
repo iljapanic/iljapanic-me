@@ -24,6 +24,9 @@
     "html": {
       "src": "html",
       "dest": "./",
+      "dataSrc": "html/data",
+      "dataGlobal": "global.json",
+      "dataBooks": "books.json",
       "htmlmin": {
         "collapseWhitespace": true
       },
@@ -38,7 +41,7 @@
 
     "markdown": {
       "src": "markdown",
-      "dest": "texts",
+      "dest": "text",
       "extensions": ["md", "markdown", "txt"]
     },
 
