@@ -3,31 +3,16 @@
 <head>
 
 	<meta charset="utf-8">
+
 	<!-- responsive meta -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
 	<!-- meta information -->
 	<title>{{ site.title }}</title>
-	<link rel="author" href="{{ site.author }}" />
 	<meta name="description" content="{{ site.description }}">
 
-	<!-- Favicon -->
-	<link href="./img/favicon.png" rel="shortcut icon" type="image/png"/>
-	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-
-	<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<!-- Modernizr -->
-	<script src="./js/vendor/modernizr-custom.js"></script>
-
-	<!-- Fonts.com -->
-	<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/8f9332c6-b347-420e-935e-4aed85f90a77.css"/>
-
-	<!-- stylesheets -->
-	<link rel="stylesheet" href="./css/style.css">
+	{% include "_shared/head.html" %}
 
 </head>
 
@@ -39,7 +24,7 @@
 
 	<header class="header clearfix" role="banner">
 	    {% import '_macros/main-nav.html' as nav %}
-			{{nav.active('home')}}
+			{{nav.active('bookshelf')}}
 	</header>
 
 	{% include "_shared/hero-consulting.html" %}
