@@ -1,0 +1,18 @@
+.footer {
+  background-color: $gray1;
+  color: $gray6;
+  font-size: $font-size--small;
+  margin-top: $spacing;
+  padding: $spacing 2rem $spacing/2 2rem;
+}
+
+.footer__title {
+  font-size: $font-size--large;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.colophon {
+  color: $gray3;
+}
