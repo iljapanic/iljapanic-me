@@ -19,3 +19,9 @@
 
 # Ignore node modules
 /node_modules
+
+# Ignore NPM log file
+npm-debug.log
+
+# Ignore Ulysses favorites file
+.Ulysses-favorites.plist

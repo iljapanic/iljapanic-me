@@ -1,34 +1,7 @@
 <!doctype html>
 <html class="no-js">
 <head>
-
-	<meta charset="utf-8">
-	<!-- responsive meta -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-
-	<!-- meta information -->
-	<title>{{ site.title }}</title>
-	<link rel="author" href="{{ site.author }}" />
-	<meta name="description" content="{{ site.description }}">
-
-	<!-- Favicon -->
-	<link href="./img/favicon.png" rel="shortcut icon" type="image/png"/>
-	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-
-	<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<!-- Modernizr -->
-	<script src="./js/vendor/modernizr-custom.js"></script>
-
-	<!-- Fonts.com -->
-	<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/8f9332c6-b347-420e-935e-4aed85f90a77.css"/>
-
-	<!-- stylesheets -->
-	<link rel="stylesheet" href="./css/style.css">
-
+	{% include "_shared/head.html" %}
 </head>
 
 <body>
@@ -37,26 +10,31 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<header class="header clearfix" role="banner">
-	    {% import '_macros/main-nav.html' as nav %}
-			{{nav.active('home')}}
-	</header>
 
-	{% include "_shared/hero-consulting.html" %}
+	<main class="profile" role="main">
 
-
-	<main class="main" role="main">
-		<div class="wrapper">
-			{% include "_text/consulting.html" %}
+		<div class="profile__text">
+				<div class="wrapper-small">
+					{% include "_text/intro.html" %}
+				</div>
 		</div>
+
+		<div class="profile__social">
+			{% include "_shared/social.html" %}
+		</div>
+		
+		<div class="profile__image">
+			<img src="/img/ilja-cut.png" alt="Ilja Panic" />
+		</div>
+
+
 	</main>
 
-	{% include "_shared/footer.html" %}
 
 	<!-- JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
-	<script src="./js/main.js"></script>
+	<script src="/js/main.js"></script>
 
 	<!-- Google Analytics -->
 

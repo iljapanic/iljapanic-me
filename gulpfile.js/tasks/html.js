@@ -20,16 +20,9 @@ var getGlobal = function (file) {
   return JSON.parse(fs.readFileSync(dataGlobal, 'utf8'))
 }
 
-var getBooks = function (file) {
-  var dataBooks = path.resolve(config.root.src, config.tasks.html.dataSrc, config.tasks.html.dataBooks)
-  return JSON.parse(fs.readFileSync(dataBooks, 'utf8'))
-}
-
 var htmlTask = function () {
   return gulp.src(paths.src)
     .pipe(data(getGlobal))
-    .on('error', handleErrors)
-    .pipe(data(getBooks))
     .on('error', handleErrors)
     .pipe(nunjucksRender({
       path: [paths.nunjuck]
