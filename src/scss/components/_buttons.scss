@@ -15,15 +15,13 @@ Styleguide 2.0
 */
 
 .btn{
-  background-color: $primary;
-  border: none;
+  background-color: transparent;
+  border: 2px solid $primary;
   border-radius: .2rem;
   box-sizing: border-box;
-  color: $white;
   cursor: pointer;
   display: inline-block;
-  font-family: $heading-font;
-  font-weight: 300;
+  font-weight: 500;
   height: 4.8rem;
   letter-spacing: 1px;
   line-height: 4.8rem;
@@ -39,14 +37,12 @@ Styleguide 2.0
 
   &:link,
   &:visited{
-    color: $white;
     text-decoration: none;
   }
 
   &:focus,
   &:hover {
     background-color: $primary-dark;
-    color: $white;
   }
 
   &:focus{

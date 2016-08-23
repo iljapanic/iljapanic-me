@@ -10,26 +10,44 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
+  <div class="container">
 
-	<main class="profile" role="main">
+    <main class="profile" role="main">
 
-		<div class="profile__text">
-				<div class="wrapper-small">
-					{% include "_text/intro.html" %}
-				</div>
-		</div>
+      <div class="profile__body">
+        <div class="wrapper-small">
 
-		<div class="profile__social">
-			{% include "_shared/social.html" %}
-		</div>
-		
-		<div class="profile__image">
-			<img src="/img/ilja-cut.png" alt="Ilja Panic" />
-		</div>
+					<div class="cover clearfix">
+						<div class="cover__image">
+							<img src="/img/ilja-profile.jpg" alt="Ilja Panic"/>
+						</div>
+						<div class="cover__text">
+							<p>Hello there online stranger!</p>
+							<p>My name is Ilja and I’ve been building on the Web since responsive became a thing.</p>
+						</div>
+					</div>
+
+          <div class="profile__text">
+            <article>
+              {% include "_text/intro.html" %}
+            </article>
+      		</div>
+
+      		<div class="profile__social">
+            {% include "_shared/social.html" %}
+      		</div>
+
+          <div class="profile__cv">
+            {% include "_text/cv.html" %}
+          </div>
+
+        </div>
+      </div>
+
+  	</main>
 
 
-	</main>
-
+  </div>
 
 	<!-- JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
