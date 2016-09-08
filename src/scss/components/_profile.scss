@@ -1,0 +1,24 @@
+.profile__text {
+  p {
+    font-size: $font-size--small;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.profile__social {
+  margin-top: $spacing;
+  text-align: left;
+}
+
+.profile__cv {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: $spacing*2;
+
+  p {
+    padding-bottom: 0;
+  }
+}

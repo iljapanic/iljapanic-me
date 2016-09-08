@@ -10,45 +10,44 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-  <div class="container">
 
-    <main class="profile" role="main">
 
-      <div class="profile__body">
-        <div class="wrapper-small">
+  <main class="main" role="main">
 
-					<div class="cover clearfix">
-						<div class="cover__image">
-							<img src="/img/ilja-profile.jpg" alt="Ilja Panic"/>
-						</div>
-						<div class="cover__text">
-							<p>Hello there online stranger!</p>
-							<p>My name is Ilja and I’ve been building on the Web since responsive became a thing.</p>
-						</div>
-					</div>
+    <div class="main__body">
+			<div class="wrapper-small">
 
-          <div class="profile__text">
-            <article>
-              {% include "_text/intro.html" %}
-            </article>
-      		</div>
+				<article class="profile">
+					<header class="profile__intro">
+						<h1 class="visually-hidden">Ilja Panic</h1>
+						<p>Hello there online stranger!</p>
+					</header>
 
-      		<div class="profile__social">
+          <section class="profile__text">
+            {% include "_text/intro.html" %}
+      		</section>
+
+      		<section class="profile__social">
             {% include "_shared/social.html" %}
-      		</div>
+      		</section>
 
-          <div class="profile__cv">
-            {% include "_text/cv.html" %}
-          </div>
+          <section class="profile__prompt">
 
-        </div>
-      </div>
+          </section>
+			</article>
 
-  	</main>
+			</div>
+    </div>
 
+		<div class="main__image">
+			<div class="ilja">
+				<img src="/img/ilja-cut.png" alt="Ilja Panic"/>
+			</div>
+		</div>
 
-  </div>
+	</main>
 
+	
 	<!-- JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.12.4.min.js"><\/script>')</script>

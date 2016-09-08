@@ -1,8 +1,30 @@
-Raised in the magical city of Prague, I've been living in Denmark since 2012 where I graduated from Information Management at Copenhagen Business School. During this time I've worked at two agencies, had a couple of freelance gigs and got my hands dirty with several side projects ([1][410afde3], [2][719b5ad5], [3][e68c244a]). Also, I wrote a [paper about Information Design][8d07bf5b].
+My name is Ilja, born in Yugoslavia and raised in the magical city of Prague.
+
+
+My first fully handmade website got me accepted to school in Denmark.
+
+
+
+I was fiddling with Web technologies since responsive became a thing.
+
+In 201
+
+d moved to Copenhagen in 2012.
+
+
+I loved technology since I was a kid.
+
+In 2012 it helped
+
+
+During my time in Denmark I graduated from Information Management, wrote a [paper about Information Design][8d07bf5b].
+
+
+During this time I've worked at two agencies, did some freelance gigs and got my hands dirty with several side projects ([1][410afde3], [2][719b5ad5], [3][e68c244a]).
 
 I'm passionate about design, technology, urbanism and its impact on human mind and our information society. I love going to conferences and meetups, I run on strong coffee and tasty food and I'm a late-night impulsive domain buyer.
 
-Don't hesitate to get in touch if you got an interesting project to share or just to say hi!
+Get in touch if you'd like to share your project or create something together!
 
 
   [410afde3]: http://informationbomb.net "Information Bomb"
