@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	{% include "_shared/head.html" %}
+</head>
+
+<body>
+
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+
+
+  <main class="main" role="main">
+
+    <div class="main__body">
+			<div class="wrapper-small">
+
+				<article class="profile">
+					<header class="profile__intro">
+						<h1 class="visually-hidden">Ilja Panic</h1>
+						<p>Hello there online stranger!</p>
+					</header>
+
+          <section class="profile__text">
+            {% include "_text/intro.html" %}
+      		</section>
+
+      		<section class="profile__social">
+            {% include "_shared/social.html" %}
+      		</section>
+
+          <section class="profile__prompt">
+
+          </section>
+			</article>
+
+			</div>
+    </div>
+
+		<div class="main__image">
+			<div class="ilja">
+				<img src="/img/ilja-cut.png" alt="Ilja Panic"/>
+			</div>
+		</div>
+
+	</main>
+
+	
+	<!-- JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
+	<script src="/js/main.js"></script>
+
+	<!-- Google Analytics -->
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "site": {
+    "title": "Ilja Panic",
+    "author": "Ilja Panic",
+    "description": "Personal site of Ilja Panic"
+  },
+
+  "social": {
+    "email": "mailto:hello@iljapanic.me",
+    "twitter": "https://twitter.com/iljapanic",
+    "linkedin": "https://www.linkedin.com/in/iljapanic",
+    "github": "https://github.com/iljapanic",
+    "instagram": "https://instagram.com/iljapanic/",
+    "facebook": "facebook.com/iljapanic"
+  }
+}

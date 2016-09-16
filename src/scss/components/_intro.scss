@@ -1,0 +1,23 @@
+.intro {
+  padding-top: 22.5vh;
+
+  .grid {
+    align-items: center;
+  }
+}
+
+
+.intro__picture {
+  text-align: center;
+
+  img {
+    display: inline-block;
+    transform: rotate(-0.75deg);
+  }
+}
+
+.intro__text {
+  p {
+    transform: rotate(-0.75deg);
+  }
+}
