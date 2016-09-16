@@ -2,13 +2,14 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 
   li {
-    display: inline-block;
+    display: block;
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 1px;
-    margin-right: $spacing*1.5;
+    margin: 0 auto $spacing*1.5 auto;
     text-align: center;
     text-transform: uppercase;
     width: 50%;
@@ -19,10 +20,6 @@
       max-width: 24px;
       vertical-align: middle;
     }
-
-    &:last-of-type {
-      margin-right: 0;
-    }
   }
 }
 
@@ -30,10 +27,16 @@
 @media($media-large) {
 
   .social {
+    text-align: left;
     li {
+      display: inline-block;
+      margin-right: $spacing*1.5;
       opacity: 0.85;
       transition: opacity 0.25s ease-in-out;
       width: auto;
+      &:last-of-type {
+        margin-right: 0;
+      }
       &:hover {
         opacity: 1;
       }

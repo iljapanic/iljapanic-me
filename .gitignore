@@ -10,7 +10,6 @@
 # Ignore the build directory
 /build
 
-<<<<<<< HEAD
 
 # Logs and databases #
 ######################
@@ -21,13 +20,13 @@
 
 # OS generated files #
 ######################
-=======
+
 # Ignore cache
 /.sass-cache
 /.cache
 
 # Ignore .DS_store file
->>>>>>> placeholder
+
 .DS_Store
 
 # Ignore node modules
