@@ -1,8 +1,0 @@
-- first proper experience with the hectic world of agency client work
-- worked with clients in telecommunications, finance, startups, politics, & music
-- transforming designs into HTML/CSS/JS templates
-- go-to-guy for ad-hoc front-end tasks
-- a back-and-forth between projects over the course of a week
-- “responsive” email templates (learn how the Web used to be made)
-- implement new features, smash bugs, make IE8 behave, create sprites
-- UI concepts and prototypes (occasionally)

@@ -1,5 +1,0 @@
-- overseeing the development of Weetr mailing tool
-- Weetr is primarily used by company's clients to send newsletters and service messages
-- prepared presentation slides and promo materials with pricing
-- collaborated with the graphic designer on newsletter prototypes for clients
-- tested out new features with the main developer
