@@ -70,9 +70,9 @@ $arrow-size: 3rem;
   cursor: pointer;
   z-index: 10;
   position: fixed;
-  padding: $spacing;
-  bottom: $spacing;
-  right: $spacing;
+  padding: $spacing*0.75;
+  bottom: $spacing*0.75;
+  right: $spacing*0.75;
   transition: background-color 0.35s ease-in-out;
 
   &:hover {
@@ -91,8 +91,8 @@ $arrow-size: 3rem;
   position: relative;
   transition: all 0.35s ease-in-out;
   position: fixed;
-  bottom: $spacing*6;
-  right: $spacing*3;
+  bottom: $spacing*5;
+  right: $spacing*2.5;
   min-width: 260px;
   box-shadow: 0 5px 20px rgba(0,0,0,.1);
   -webkit-font-smoothing: antialiased;
@@ -110,7 +110,7 @@ $arrow-size: 3rem;
 
 @media ($media-medium) {
   .reply {
-    bottom: $spacing*5;
+    bottom: $spacing*4;
   }
 }
 
