@@ -10,62 +10,46 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-
-
   <main class="main" role="main">
 
-    <div class="main__body">
-			<div class="wrapper-small">
 
-				<article class="profile">
-					<header class="profile__intro">
-						<h1 class="visually-hidden">Ilja Panic</h1>
-						<p>Hello there online stranger!</p>
-					</header>
+  	<article class="profile">
 
-          <section class="profile__text">
-            {% include "_text/intro.html" %}
-            <ul>
-              <li>
-                <a href="http://informationbomb.net" target="_blank">informationbomb.net</a>
-              </li>
-              <li>
-                <a href="http://takemetodenmark.com" target="_blank">takemetodenmark.com</a>
-              </li>
-              <li>
-                <a href="https://iljapanic.github.io/panic-bachelor" target="_blank">Going Beyond HCI</a>
-              </li>
-            </ul>
-      		</section>
+  		<header class="profile__intro">
+  			<h1 class="visually-hidden">Ilja Panic</h1>
+  		</header>
 
-      		<section class="profile__social">
-            {% include "_shared/social.html" %}
-      		</section>
+      <section class="profile__text">
+        <div class="bubble">
+          {% include "_text/intro.html" %}
+        </div>
+  		</section>
 
-          <section class="profile__prompt">
-
-          </section>
-			</article>
-
-			</div>
-    </div>
-
-		<div class="main__image">
-			<div class="ilja">
-				<img src="/img/ilja-cut.png" alt="Ilja Panic"/>
-			</div>
-		</div>
+      <section class="profile__image">
+        <div class="image">
+          <img src="/img/ilja-profile-100.jpg" alt="Ilja Panic" />
+        </div>
+      </section>
+      
+    </article>
 
 	</main>
 
 
-	<!-- JavaScript -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
-	<script src="/js/main.js"></script>
-
 	<!-- Google Analytics -->
+  <script async>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+    ga('create', 'UA-43693985-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+  <!-- Pepper message widget -->
+  <script async src='https://pepper.swat.io/embed.js?eyJwb3NpdGlvbiI6InJpZ2h0IiwiY29sb3IiOiJjMDM5MmIiLCJjdXN0b21Db2xvciI6dHJ1ZSwiaWNvbiI6ImJ1YmJsZSIsInByb25vdW4iOiJtZSIsImxhbmd1YWdlIjoiZW4iLCJicmFuZGVkIjpmYWxzZSwiaW50cm9UZXh0IjoiIiwiY2hhbm5lbHMiOltbInR3aXR0ZXIiLCJpbGphcGFuaWMiLCJzb2NpYWwiXSxbIm1lc3NlbmdlciIsImlsamFwYW5pYyIsInNvY2lhbCJdLFsic2t5cGUiLCJpbGphcGFuaWMiLCJzb2NpYWwiXSxbImxpbmtlZGluIiwiaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2lsamFwYW5pYyIsInNvY2lhbCJdLFsiZ2l0aHViIiwiaHR0cHM6Ly9naXRodWIuY29tL2lsamFwYW5pYyIsInNvY2lhbCJdLFsicGhvbmUiLCIrNDQwMjAzMjkwMTI2MCIsImNsYXNzaWMiXSxbImVtYWlsIiwiaGVsbG9AaWxqYXBhbmljLm1lIiwiY2xhc3NpYyJdXX0='></script>
 
 </body>
 </html>

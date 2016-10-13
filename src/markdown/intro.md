@@ -1,5 +1,13 @@
-My name is Ilja, I was born in Yugoslavia and raised in the magical city of Prague. In 2012 I made a website that got me accepted to Information Management program at Copenhagen Business School. I’ve been playing around with Web technologies ever since. During my time at university I’ve worked at two agencies, had some freelance gigs, wrote a paper about Information Design and worked on several side projects.
+Hello there online stranger!
 
-I'm passionate about design, urbanism, online culture and the impact of technology on human mind and our transition into an information society. I drink filter coffee, play basketball, cook thai and italian food, have a never-ending reading list and like to attend conferecens and meetups.
+My name is Ilja and I make things on the Web, mostly by typing front-end code and designing information architecture.
 
-Get in touch if you'd like to share your project or create something together!
+Some of my personal projects include <a href="http://informationbomb.net/" target="_blank">Information Bomb</a>, <a href="http://takemetodenmark.com" target="_blank">Take Me To Denmark</a>, <a href="http://iljapanic.me/information-design/" target="_blank">Information Design (bachelor project)</a>.
+
+I'm passionate about human-centered design, technology, urbanism, online culture and the study of the human mind. People who inspire me the most are <a href="https://en.wikipedia.org/wiki/Victor_Papanek" target="_blank">Victor Papanek</a>, <a href="https://en.wikipedia.org/wiki/Alvin_Toffler" target="_blank">Alvin Toffler</a>, <a href="https://en.wikipedia.org/wiki/Peter_Morville" target="_blank">Peter Morville</a>.
+
+I drink lots of filter coffee, play basketball, read strange books and you can usually find me wired to my laptop banging my head with headphones on.
+
+Get in touch if you'd like to create something together!
+
+
