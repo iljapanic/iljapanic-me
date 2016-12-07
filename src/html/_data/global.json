@@ -2,7 +2,7 @@
   "site": {
     "title": "Ilja Panic",
     "author": "Ilja Panic",
-    "description": "Personal site of Ilja Panic"
+    "description": "Ilja Panic's personal site"
   },
 
   "page_resume": {
@@ -11,7 +11,7 @@
   },
 
   "page_projects": {
-    "title": "Projects",
+    "title": "Work",
     "description": "Projects and work showcase"
   },
 

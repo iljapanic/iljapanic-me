@@ -1,11 +1,11 @@
 Hello there online stranger!
 
-My name is Ilja and I make things on the Web, mostly by typing front-end code, mocking up UIs and designing information architecture of sites.
+My name is Ilja and I make things on the Web, mostly by typing front-end code, mocking up UIs and designing information architecture.
 
-I made a site that got me accepted to Copenhagen Business School, wrote a paper about Information Design and I'm currently freelancing and teaching people how to make websites.
+I made a site that got me accepted to university in Denmark, wrote a paper about Information Design, worked at a couple of agencies and now I'm freelancing, teaching people how to make websites and looking for the meaning of life.
 
-I'm passionate about human-centred design, technology, urbanism, futurism, online culture and the study of the human mind. People who inspire me the most are Victor Papanek, Alvin Toffler and Peter Morville.
+I'm passionate about human-centered design, technology, urbanism, futurism, online culture and the study of the human mind. People who inspire me are Victor Papanek, Alvin Toffler, Peter Morville and Elon Musk.
 
-I drink lots of filter coffee, play basketball, read strange books and you can often find me wired to my laptop at cafe banging my head with earphones on.
+I drink lots of filter coffee, play basketball, read weird books and you can often find me at a cafe wired to my laptop banging my head to electronic music.
 
 Get in touch if you'd like to create something together!
