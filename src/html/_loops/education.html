@@ -1,0 +1,44 @@
+{% for school in education %}
+
+	<article class="item">
+
+		<!-- <header class="item__header">
+      <div class="item__meta">
+        <h3 class="item__title">{{school.programe}} <span class="item__extra">[{{school.extra}}]</span></h3>
+  			<div class="item__subtitle"><a href="{{school.url}}" target="_blank">{{school.name}}</a></div>
+        <div class="item__date">{{school.period}} | {{school.location}}</div>
+      </div>
+		</header> -->
+
+    <header class="item__header">
+      <div class="item__meta">
+
+        <div class="item__date">
+          <span class="period">{{school.period}}</span>
+        </div>
+        <h3 class="item__title">
+          {{school.programe}}
+          <span class="item__extra"> [{{school.extra}}]</span>
+        </h3>
+  			<div class="item__subtitle">
+          <a href="{{school.url}}" target="_blank">{{school.name}}</a>
+          <span class="item__location"> | {{school.location}}</span>
+        </div>
+
+      </div>
+		</header>
+
+		<div class="item__body">
+      {% if school.courses %}
+        <span class="item__list-title">Selected courses:</span>
+        <ul class="item__list item__list--block">
+          {% for course in school.courses %}
+            <li>{{ course.name }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+		</div>
+
+	</article>
+
+{% endfor %}

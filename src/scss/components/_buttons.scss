@@ -14,26 +14,28 @@ Styleguide 2.0
 
 */
 
-.btn{
-  background-color: transparent;
-  border: 2px solid $primary;
+.btn,
+a.btn {
+  background-color: $primary;
+  border: 2px solid $primary-dark;
   border-radius: .2rem;
   box-sizing: border-box;
+  color: $secondary;
   cursor: pointer;
   display: inline-block;
-  font-weight: 500;
-  height: 4.8rem;
-  letter-spacing: 1px;
-  line-height: 4.8rem;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  line-height: 1;
   max-width: 100%;
   transition-property: background-color;
   transition-duration: 200ms;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: $spacing/2 $spacing;
   text-align: center;
   text-transform: uppercase;
   user-select: none;
   width: auto;
+  text-shadow: 2px 2px 15px $primary-dark;
 
   &:link,
   &:visited{
@@ -97,10 +99,4 @@ Styleguide 2.0
     color: $link--active;
     background-color: transparent;
   }
-}
-
-[type=button],
-[type=submit],
-button{
-  @extend .btn;
 }

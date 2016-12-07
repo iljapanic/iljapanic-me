@@ -1,0 +1,15 @@
+.footer {
+  text-align: center;
+  margin-top: $spacing*4;
+  font-size: $font-size--small;
+  color: shade($secondary, 55%);
+  padding-bottom: $spacing*1.5;
+
+  p {
+    padding-bottom: 0;
+  }
+
+  .social {
+    margin: $spacing/2 auto;
+  }
+}

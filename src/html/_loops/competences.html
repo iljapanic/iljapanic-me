@@ -1,0 +1,13 @@
+<ul class="skills">
+	{% for competence in competences %}
+
+		<li>
+			{{competence.skill}}
+      <span class="indicator">
+        <span class="indicator__level w{{competence.level}}"></span>
+        <span class="indicator__base"></span>
+      </span>
+		</li>
+
+	{% endfor %}
+</ul>

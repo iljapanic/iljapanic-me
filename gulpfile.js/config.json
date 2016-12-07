@@ -14,7 +14,7 @@
 
     "css": {
       "src": "scss",
-      "dest": "css",
+      "dest": "assets/css",
       "autoprefixer": {
         "browsers": ["last 3 version"]
       },
@@ -25,17 +25,27 @@
       "src": "html",
       "dest": "./",
       "dataSrc": "html/_data",
-      "dataGlobal": "global.json",
+      "dataGlobal": "html/_data/global.json",
+      "dataCv": "html/_data/cv.json",
+      "dataProjects": "html/_data/projects.json",
+      "dataBooks": "html/_data/books.json",
+      "dataServices": "html/_data/services.json",
       "htmlmin": {
         "collapseWhitespace": true
       },
       "extensions": ["html", "njk", "json"]
     },
 
+    "include": {
+      "src": "includes",
+      "dest": "./",
+      "extensions": ["*"]
+    },
+
     "images": {
       "src": "images",
-      "dest": "img",
-      "extensions": ["jpg", "png", "svg", "gif", "jpeg"]
+      "dest": "assets/img",
+      "extensions": ["jpg", "png", "svg", "gif", "jpeg", "ico"]
     },
 
     "markdown": {
@@ -46,7 +56,7 @@
 
     "scripts": {
       "src": "javascript",
-      "dest": "js",
+      "dest": "assets/js",
       "extensions": ["js","jsx"]
     }
   }

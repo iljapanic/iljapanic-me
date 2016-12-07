@@ -1,0 +1,18 @@
+{% for service in services %}
+
+	<article class="item">
+
+		<div class="item__icon">
+			<img src="/assets/img/icons/{{ service.icon }}" alt="{{ service.name }} icon" />
+		</div>
+
+		<div class="item__body">
+			<h2 class="item__title">{{ service.name }}</h2>
+			<div class="item__text">
+				<p>{{ service.text }}</p>
+			</div>
+		</div>
+
+	</article>
+
+{% endfor %}

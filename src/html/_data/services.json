@@ -1,0 +1,29 @@
+{
+  "services": [
+    {
+      "name": "Information Architecture",
+      "icon": "service-information-architecture.svg",
+      "text": "Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit."
+    },
+    {
+      "name": "Web Design & Development",
+      "icon": "service-frontend-engineering.svg",
+      "text": "Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit."
+    },
+    {
+      "name": "UX Strategy",
+      "icon": "service-ux-strategy.svg",
+      "text": "I will analyze your product from a user’s perspective, identify problematic parts and suggest possible fixes. We will work together to devise a strategy to improve your product’s overall user experience and make it easier to use. I can also help you prototype new solutions, simplify your value proposition and align your product with your broader business goals."
+    },
+    {
+      "name": "Team Workshops",
+      "icon": "service-workshops.svg",
+      "text": "I will analyze your organization’s culture, information flows and communication patterns. Based on this research I will prepare a highly personalized workshop to develop your team’s understanding of an area you wish to improve. I focus primarily on design thinking, web development, workflow optimization and adoption of new tools and technologies."
+    },
+    {
+      "name": "Personal Mentoring",
+      "icon": "service-mentoring.svg",
+      "text": "I will teach you how to deal with information overload and establish a healthier relationship with technology in your day-to-day life. Together we will figure out what are your long-term goals and I will suggest methods, tools, life-hacks and other material that will help you get there. If your goal is to learn to code I can teach you that as well."
+    }
+  ]
+}

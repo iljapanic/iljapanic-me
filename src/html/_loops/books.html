@@ -1,0 +1,11 @@
+{% for book in books|sort(false, true, 'year') %}
+
+	<article class="item">
+    <h2 class="item__title">{{book.title}}</h2>
+		<a href="{{book.goodreads}}" target="_blank">
+			<img src="/assets/img/books/{{book.image}}">
+		</a>
+    <div class="item__meta">{{book.year}}</div>
+	</article>
+
+{% endfor %}

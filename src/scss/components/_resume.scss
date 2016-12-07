@@ -1,0 +1,190 @@
+.resume {
+
+  margin-top: $spacing*3;
+
+  @include MQ(M) {
+    display: flex;
+    flex-wrap: wrap;
+
+    .resume__main {
+      flex-basis: percentage(2/3);
+      width: percentage(2/3);
+      padding-right: $spacing*2;
+    }
+
+    .resume__sidebar {
+      flex-basis: percentage(1/3);
+      width: percentage(1/3);
+      padding-left: $spacing;
+    }
+  }
+
+  .resume__main {
+    @extend .fadeInUp;
+    animation-delay: 0.3s;
+  }
+
+  .resume__sidebar {
+    @extend .fadeInUp;
+    animation-delay: 0.45s;
+  }
+
+  .section {
+    margin-bottom: $spacing*2;
+  }
+
+  .section__title {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: $spacing/2;
+  }
+}
+
+.resume__main {
+  .item {
+    margin-bottom: $spacing*2;
+    background-color: shade($secondary, 2%);
+    border: 1px solid shade($secondary, 5%);
+    border-radius: 0.35rem;
+    padding: $spacing*0.75 $spacing $spacing $spacing;
+  }
+
+  .item__date {
+    font-size: ms(-2);
+    color: $gray3;
+  }
+
+  .item__title {
+    color: shade($gray2, 15%);
+  }
+
+  .item__extra {
+    font-size: ms(-2);
+    color: $gray3;
+    font-weight: 300;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 0.25rem;
+  }
+
+  .item__subtitle {
+    // line-height: 1.25;
+    font-size: ms(-1);
+
+    a {
+      color: $gray2;
+      font-weight: 400;
+    }
+  }
+
+  .item__location {
+    color: $gray3;
+    font-size: ms(-2);
+  }
+
+  .item__body {
+    margin-top: $spacing/4;
+    line-height: 1.5;
+    font-size: ms(-1);
+  }
+
+  .item__list-title {
+    display: inline-block;
+    font-size: ms(-1);
+    color: $gray3;
+  }
+
+  .item__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: $spacing/2;
+      font-size: ms(-2);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      color: $gray1;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .item__list.item__list--block {
+    li {
+      display: block;
+      margin-right: 0;
+      margin-top: $spacing/4;
+    }
+  }
+}
+
+.resume-extra {
+  text-align: center;
+  margin-top: $spacing;
+
+  .section {
+    margin-bottom: $spacing*2;
+  }
+
+  .section__title {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: $spacing/2;
+  }
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      font-size: ms(-1);
+      margin: 0 $spacing/2 $spacing/4 $spacing/2;
+    }
+  }
+}
+
+.skills {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: ms(-1);
+
+  li {
+    margin-bottom: $spacing/2;
+  }
+}
+
+$indicator-height: 2px;
+
+.indicator {
+  background-color: $gray5;
+  display: block;
+  height: $indicator-height;
+  position: relative;
+  width: 90%;
+  margin-top: $spacing/8;
+
+  .indicator__base {
+    height: $indicator-height;
+    left: 0;
+    position: absolute;
+  }
+
+  .indicator__level {
+    background-color: $primary-dark;
+    height: $indicator-height;
+    left: 0;
+    position: absolute;
+  }
+}

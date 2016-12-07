@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page_resume.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
+  <meta property="og:title" content="{{ page_resume.title }} | {{ site.title }}" />
+  <meta property="og:url" content="http://iljapanic.me/resume/" />
+  <meta property="og:image" content="http://iljapanic.me/assets/img/ilja-fb-share.jpg" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+
+	{% include "_shared/head.html" %}
+</head>
+
+<body>
+
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+  <div id="barba-wrapper" class="container">
+
+    <!-- HEADER -->
+  	<header class="header" role="banner">
+      {% import '_shared/main-nav.html' as nav %}
+      {{nav.active('resume')}}
+  	</header>
+  	<!-- /HEADER  -->
+
+
+
+    <main class="main fadeIn barba-container" role="main">
+
+      <!-- card -->
+      <article class="card ta-center">
+        <div class="wrapper-small">
+          <img src="{{ profile.image }}" alt="{{ profile.image_alt }}" class="card__image"/>
+          <h1 class="card__title">{{ profile.name }}</h1>
+          <div class="card__role">{{ profile.position }}</div>
+          <div class="card__description">
+            {% include "_text/profile.html" %}
+          </div>
+        </div>
+      </article>
+      <!-- /card -->
+
+      <!-- wrapper -->
+      <div class="wrapper">
+
+        <!-- resume -->
+    		<div class="resume">
+
+    			<!-- resume__main -->
+    			<div class="resume__main">
+
+    				<!-- EXPERIENCE -->
+    				<section class="section">
+    					<h2 class="section__title">Work Experience</h2>
+    					{% include "_loops/work.html" %}
+    				</section>
+    				<!-- /EXPERIENCE -->
+
+    				<!-- EDUCATION -->
+    				<section class="section">
+    					<h2 class="section__title">Education</h2>
+    					{% include "_loops/education.html" %}
+    				</section>
+    				<!-- /EDUCATION -->
+
+    			</div>
+    			<!-- /resume__main  -->
+
+    			<!-- resume__sidebar -->
+    			<div class="resume__sidebar">
+
+    				<!-- LANGUAGES -->
+    				<section class="section">
+    					<h2 class="section__title">Languages</h2>
+    					{% include "_loops/languages.html" %}
+    				</section>
+    				<!-- /LANGUAGES -->
+
+    				<!-- COMPETENCES -->
+    				<section class="section">
+    					<h2 class="section__title">Competences</h2>
+    					{% include "_loops/competences.html" %}
+    				</section>
+    				<!-- /COMPETENCES -->
+
+    				<!-- TOOLS -->
+    				<section class="section">
+    					<h2 class="section__title">Tools</h2>
+    					{% include "_loops/tools.html" %}
+    				</section>
+    				<!-- /TOOLS -->
+
+    				<!-- CERTIFICATES -->
+    				<section class="section">
+    					<h2 class="section__title">Certificates</h2>
+    					{% include "_loops/certificates.html" %}
+    				</section>
+    				<!-- /CERTIFICATES -->
+
+    			</div>
+    			<!-- /resume__sidebar -->
+
+    		</div>
+    		<!-- /resume -->
+
+      </div>
+      <!-- /wrapper -->
+
+      <div class="wrapper-small">
+        <div class="resume-extra">
+          <!-- PASSIONS -->
+          <section class="section">
+            <h2 class="section__title">Passions</h2>
+            {% include "_loops/passions.html" %}
+          </section>
+          <!-- /PASSIONS -->
+
+          <!-- GATHERINGS -->
+          <section class="section">
+            <h2 class="section__title">Gatherings</h2>
+            {% include "_loops/gatherings.html" %}
+          </section>
+          <!-- /GATHERINGS -->
+
+          {% include '_shared/booking.html' %}
+
+        </div>
+
+      </div>
+  	</main>
+
+    {% include "_shared/footer.html" %}
+    {% include "_shared/global-scripts.html" %}
+
+  </div>
+
+</body>
+</html>

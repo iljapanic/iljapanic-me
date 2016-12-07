@@ -1,9 +1,11 @@
-*{
+*,
+*:before,
+*:after {
   border: 0;
+  box-sizing: border-box;
   font: inherit;
   margin: 0;
   padding: 0;
-  text-rendering: geometricPrecision;
 }
 
 html{
@@ -14,6 +16,7 @@ html{
   @media screen and (min-width: 960px){
     font-size: 78.125%;
   }
+
 }
 
 *, *:before, *:after {
@@ -22,11 +25,10 @@ html{
 
 body{
   background-color: $secondary;
-  background-color: $gray1;
   box-sizing: border-box;
-  color: $gray1;
+  color: $gray2;
   font-family: $base-font;
-  font-size: $font-size;
+  font-size: ms(0);
   font-weight: $font-weight-base;
   line-height: $line-height;
   min-height: 100%;
@@ -39,8 +41,8 @@ h1, h2, h3, h4, h5, h6{
 }
 // 1.2, 2.4, 3.6, 4.8
 h1, h2, h3{
-  line-height: 3.6rem; // + 1.2
-  padding: 2.6rem 0 1rem; // + 2.4 + 1.2
+  // line-height: 3.6rem; // + 1.2
+  // padding: 2.6rem 0 1rem; // + 2.4 + 1.2
 }
 
 h4, h5, h6{
@@ -49,21 +51,25 @@ h4, h5, h6{
 
 h1{
   // font-size: 3.6rem;
-  font-size: 2rem;
-  text-transform: uppercase;
+  // font-size: 2rem;
+  // text-transform: uppercase;
+  font-size: ms(4);
 }
 
 h2{
   // font-size: 3.2rem;
   font-size: 1.8rem;
+  font-size: ms(3);
 }
 
 h3{
-  font-size: 2.8rem;
+  // font-size: 2.8rem;
+  font-size: ms(2);
 }
 
 h4{
   font-size: 2.0rem;
+  font-size: ms(1);
 }
 
 h5{
@@ -75,7 +81,7 @@ h6{
 }
 
 p{
-  padding-bottom: 1.2rem;
+  // padding-bottom: 1.2rem;
 }
 
 form{
@@ -144,8 +150,9 @@ a:active{
 
 img,
 video{
+  display: inline-block;
+  vertical-align: middle;
   max-width: 100%;
-  display: table;
 }
 
 hr{

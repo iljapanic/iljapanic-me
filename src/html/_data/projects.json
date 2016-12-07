@@ -1,0 +1,334 @@
+{
+  "projects": [
+    {
+      "period": "2016 – Now",
+      "name": "Web Crash Course",
+      "url": "http://webcrashcourse.org",
+      "role": "Founder & Instructor",
+      "description": "My latest endeavour. Intensive web design and development workshops for beginners. WORK IN PROGRESS",
+      "attachments" : [
+        {
+          "type": "visit site",
+          "link": "http://webcrashcourse.org"
+        }
+      ]
+    },
+    {
+      "period": "2016",
+      "name": "Holektiv",
+      "url": "http://holektiv.cz/",
+      "role": "Design & Development",
+      "description": "A minimalistic website for an artistic group Holektiv that does contemporary dance, mime, acrobatics and clownery. Some of the highlights include hero image gallery, video trailer popups, event calendar.",
+      "technology" : [
+        {
+          "name": "SCSS",
+          "link": "http://sass-lang.com/"
+        },
+        {
+          "name": "Gulp",
+          "link": "http://gulpjs.com/"
+        },
+        {
+          "name": "jQuery",
+          "link": "http://jquery.com"
+        },
+        {
+          "name": "Flickity",
+          "link": "http://flickity.metafizzy.co/"
+        },
+        {
+          "name": "Magnific Popup",
+          "link": "http://dimsemenov.com/plugins/magnific-popup/"
+        },
+        {
+          "name": "moment.js",
+          "link": "momentjs.com"
+        }
+      ],
+      "attachments" : [
+        {
+          "type": "visit site",
+          "link": "http://holektiv.cz"
+        }
+      ]
+    },
+    {
+      "period": "2015",
+      "name": "Information Design",
+      "url": "http://iljapanic.me/information-design/",
+      "role": "Research, Writing & Development",
+      "description": "An experiment in writing an academic paper using Markdown and generating a finished document using various Web technologies. The paper itself looks at the history of design approaches and examines up-and-coming fields of human-information interaction and information design. It takes methods from those fields and applies them to analyzing information needs in the context of travel.",
+      "attachments" : [
+        {
+          "type": "read abstract",
+          "link": "http://iljapanic.me/information-design/#abstract"
+        },
+        {
+          "type": "read online",
+          "link": "http://iljapanic.me/information-design/"
+        },
+        {
+          "type": "download PDF",
+          "link": "/attachments/information-design-bachelor.pdf"
+        },
+        {
+          "type": "source code",
+          "link": "https://github.com/iljapanic/panic-bachelor/"
+        }
+      ],
+      "technology" : [
+        {
+          "name": "SCSS",
+          "link": "http://sass-lang.com/"
+        },
+        {
+          "name": "Gulp",
+          "link": "http://gulpjs.com/"
+        },
+        {
+          "name": "Markdown",
+          "link": "https://daringfireball.net/projects/markdown/"
+        },
+        {
+          "name": "Pandoc",
+          "link": "http://pandoc.org/"
+        },
+        {
+          "name": "Prince",
+          "link": "http://www.princexml.com/"
+        }
+      ]
+    },
+    {
+      "period": "2012 – Now",
+      "name": "Take Me To Denmark",
+      "url": "http://takemetodenmark.com",
+      "role": "Founder & Developer",
+      "description": "I initially used the domain to get accepted to a university in Denmark. Now the site serves as a source of information for people who are interested in studying in Denmark. Frontpage uses various APIs to fetch weather, news and concerts from Denmark.",
+      "technology" : [
+        {
+          "name": "SCSS",
+          "link": "http://sass-lang.com/"
+        },
+        {
+          "name": "Gulp",
+          "link": "http://gulpjs.com/"
+        },
+        {
+          "name": "jQuery",
+          "link": "http://jquery.com"
+        },
+        {
+          "name": "Markdown",
+          "link": "https://daringfireball.net/projects/markdown/"
+        },
+        {
+          "name": "simpleWeather",
+          "link": "http://simpleweatherjs.com/"
+        },
+        {
+          "name": "jquery.rss",
+          "link": "https://github.com/sdepold/jquery-rss"
+        },
+        {
+          "name": "feedrapp",
+          "link": "https://github.com/sdepold/feedrapp"
+        },
+        {
+          "name": "Songkick API",
+          "link": "http://www.songkick.com/developer"
+        },
+        {
+          "name": "bigfoot.js",
+          "link": "http://www.bigfootjs.com/"
+        },
+        {
+          "name": "moment.js",
+          "link": "http://momentjs.com/"
+        },
+        {
+          "name": "Formspree",
+          "link": "https://formspree.io/"
+        },
+        {
+          "name": "Cutestrap",
+          "link": "https://github.com/cutestrap/cutestrap"
+        }
+      ],
+      "attachments" : [
+        {
+          "type": "visit site",
+          "link": "http://takemetodenmark.com"
+        }
+      ]
+    },
+    {
+      "period": "2015",
+      "name": "Bergs Potter",
+      "url": "http://bergspotter.com",
+      "role": "UX Design & Development",
+      "description": "A homepage redesign for a company that imports hand-made pottery from Tuscany, Italy. The redesign focused on clean presentation and light tone in order to leave plenty of space for original images to pop. Some of the highlights include on-scroll animations, interactive store locator, Instagram widget.",
+      "attachments" : [
+        {
+          "type": "visit site",
+          "link": "http//bergspotter.com"
+        },
+        {
+          "type": "wireframes",
+          "link": "/attachments/bergs-potter-homepage-wireframes[annotated].pdf"
+        }
+      ],
+      "technology" : [
+        {
+          "name": "Wordpress",
+          "link": "https://wordpress.org"
+        },
+        {
+          "name": "SCSS",
+          "link": "http://sass-lang.com/"
+        },
+        {
+          "name": "Gulp",
+          "link": "http://gulpjs.com/"
+        },
+        {
+          "name": "jQuery",
+          "link": "http://jquery.com"
+        },
+        {
+          "name": "Waypoints",
+          "link": "http://imakewebthings.com/waypoints/"
+        },
+        {
+          "name": "Flickity",
+          "link": "http://flickity.metafizzy.co/"
+        }
+      ]
+    },
+    {
+      "period": "2015",
+      "name": "Cover Letter",
+      "url": "http://iljapanic.github.io/showcase-letter/",
+      "role": "Design & Development",
+      "description": "A throwback to the era of skeuomorphism. I used the site as a cover letter for a Design Educator position. The letter and other sensitive information has been replaced with placeholder content.",
+      "attachments": [
+        {
+          "type": "visit site",
+          "link": "http://iljapanic.github.io/showcase-letter/"
+        },
+        {
+          "type": "source code",
+          "link": "https://github.com/iljapanic/showcase-letter"
+        }
+      ],
+      "technology": [
+        {
+          "name": "SCSS",
+          "link": "http://sass-lang.com/"
+        },
+        {
+          "name": "Gulp",
+          "link": "http://gulpjs.com/"
+        },
+        {
+          "name": "classie",
+          "link": "https://github.com/desandro/classie"
+        }
+      ]
+    },
+    {
+      "period": "2015",
+      "name": "Agency One-Pager",
+      "url": "http://iljapanic.github.io/showcase-agency/",
+      "role": "Design & Development",
+      "description": "A single-page agency site based on a design I did for a client. The focus is on clean presentation and subtle animations that gradually disclose the content. All the content has been replaced with placeholder texts and visuals.",
+      "attachments" : [
+        {
+          "type": "visit site",
+          "link": "http://iljapanic.github.io/showcase-agency/"
+        },
+        {
+          "type": "source code",
+          "link": "https://github.com/iljapanic/showcase-agency"
+        },
+        {
+          "type": "Vimeo API code",
+          "link": "https://github.com/iljapanic/showcase-agency/blob/master/sourceFiles/javascript/_smart-vimeo.js"
+        }
+      ],
+      "technology": [
+        {
+          "name": "SCSS",
+          "link": "http://sass-lang.com/"
+        },
+        {
+          "name": "Gulp",
+          "link": "http://gulpjs.com/"
+        },
+        {
+          "name": "jQuery",
+          "link": "http://jquery.com"
+        },
+        {
+          "name": "Vide",
+          "link": "http://vodkabears.github.io/vide/"
+        },
+        {
+          "name": "Waypoints",
+          "link": "http://imakewebthings.com/waypoints/"
+        },
+        {
+          "name": "Vimeo API",
+          "link": "https://developer.vimeo.com/"
+        }
+      ]
+    },
+    {
+      "period": "2014",
+      "name": "UndergroundUp",
+      "url": "https://urbancultures.github.io/undergroundup/",
+      "role": "Design & Development",
+      "description": "A simple microsite for an original online video series looking at different underground artists in New York City.",
+      "attachments": [
+        {
+          "type": "source code",
+          "link": "https://github.com/urbancultures/undergroundup"
+        }
+      ],
+      "technology": [
+        {
+          "name": "SCSS",
+          "link": "http://sass-lang.com/"
+        },
+        {
+          "name": "jQuery",
+          "link": "http://jquery.com"
+        },
+        {
+          "name": "Waypoints",
+          "link": "http://imakewebthings.com/waypoints/"
+        },
+        {
+          "name": "skrollr",
+          "link": "https://github.com/Prinzhorn/skrollr"
+        },
+        {
+          "name": "Vimeo API",
+          "link": "https://developer.vimeo.com/"
+        },
+        {
+          "name": "FitVid.js",
+          "link": "http://fitvidsjs.com/"
+        },
+        {
+          "name": "Instafeed.js",
+          "link": "http://instafeedjs.com/"
+        },
+        {
+          "name": "Bourbon",
+          "link": "http://bourbon.io/"
+        }
+      ]
+    }
+  ]
+}

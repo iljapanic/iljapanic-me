@@ -1,6 +1,4 @@
-// Font based variables
-//
-// Styleguide
+@import 'modular-scale';
 
 $base-font: 'Rubik', 'Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
 $heading-font: 'Rubik', 'Georgia', serif;
@@ -11,11 +9,16 @@ $body:            $base-font !default;
 $monospace:       $monospace-font !default;
 
 $font-size: 1.4rem !default;
-$line-height: 2rem !default;
+$line-height: 1.75 !default;
 $font-weight-base: 300;
-$font-weight-bold: 500;
+$font-weight-bold: 400;
 
-$font-size--small: 1.3rem !default;
+$font-size--small: 1.2rem !default;
 $font-size--large: 2rem !default;
 
-$spacing: $line-height;
+
+$ms-base: 1.4rem;
+$ms-ratio: 1.125;
+
+
+$spacing: 2rem;

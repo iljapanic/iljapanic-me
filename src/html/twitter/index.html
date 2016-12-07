@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js">
+<head>
+
+  <meta charset="utf-8">
+  <title>Twitter | Ilja Panic</title>
+  <meta name="description" content="Latest tweets by Ilja Panic">
+
+	{% include "_shared/head.html" %}
+  <link rel="stylesheet" href="/assets/css/twitter.css">
+
+</head>
+
+<body>
+
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+  <main class="main" role="main">
+    <div class="wrapper">
+      <div class="twitter-feed"></div>
+    </div>
+	</main>
+
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="/assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
+  </script>
+
+  <script src="/twitter/jquery.tweet.min.js"></script>
+  <script src="/assets/js/twitter.js"></script>
+
+  <!-- Google Analytics -->
+  <script async>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-43693985-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+</html>

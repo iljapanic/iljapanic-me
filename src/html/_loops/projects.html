@@ -1,0 +1,39 @@
+{% for project in projects %}
+
+	<article class="item">
+    <div class="item__inner">
+      <header class="item__header">
+  			<div class="item__date">{{project.period}}</div>
+  			<h2 class="item__title">
+          <a href="{{project.url}}" target="_blank">
+            {{project.name}}
+            <img src="/assets/img/icons/link-red.svg" alt="link" />
+          </a>
+        </h2>
+  			<div class="item__subtitle">{{project.role}}</div>
+  		</header>
+
+  		<div class="item__body">
+  			<p>{{project.description}}</p>
+
+        {% if project.technology %}
+          <span class="item__list-title">Built using:</span>
+          <ul class="item__list">
+            {% for technology in project.technology %}
+              <li><a href="{{ technology.link }}" target="_blank">{{ technology.name }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if project.attachments %}
+          <ul class="item__list item__attachments margin-top-1">
+            {% for attachment in project.attachments %}
+              <li><a href="{{ attachment.link }}" target="_blank">{{ attachment.type }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+  		</div>
+    </div>
+	</article>
+
+{% endfor %}

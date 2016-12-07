@@ -1,0 +1,13 @@
+<ul class="skills">
+	{% for tool in tools %}
+
+		<li>
+			{{tool.tool}}
+      <span class="indicator">
+        <span class="indicator__level w{{tool.level}}"></span>
+        <span class="indicator__base"></span>
+      </span>
+		</li>
+
+	{% endfor %}
+</ul>

@@ -1,0 +1,37 @@
+{% for work in work %}
+
+	<article class="item">
+
+		<header class="item__header">
+      <div class="item__meta">
+
+        <div class="item__date">
+          <span class="period">{{work.period}}</span>
+        </div>
+        <h3 class="item__title">
+          {{work.role}}
+          <span class="item__extra"> [{{work.extra}}]</span>
+        </h3>
+  			<div class="item__subtitle">
+          <a href="{{work.url}}" target="_blank">{{work.name}}</a>
+          <span class="item__location"> | {{work.location}}</span>
+        </div>
+      </div>
+		</header>
+
+		<div class="item__body">
+			<p>{{work.description}}</p>
+		</div>
+
+    {% if work.clients %}
+      <span class="item__list-title margin-top-1">Selected clients:</span>
+      <ul class="item__list">
+        {% for client in work.clients %}
+          <li><a href="{{ client.link }}" target="_blank">{{ client.name }}</a></li>
+        {% endfor %}
+      </ul>
+  {% endif %}
+
+	</article>
+
+{% endfor %}

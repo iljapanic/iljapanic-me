@@ -16,13 +16,41 @@ var paths = {
 }
 
 var getGlobal = function (file) {
-  var dataGlobal = path.resolve(config.root.src, config.tasks.html.dataSrc, config.tasks.html.dataGlobal)
+  var dataGlobal = path.resolve(config.root.src, config.tasks.html.dataGlobal)
   return JSON.parse(fs.readFileSync(dataGlobal, 'utf8'))
+}
+
+var getCv = function (file) {
+  var dataCv = path.resolve(config.root.src, config.tasks.html.dataCv)
+  return JSON.parse(fs.readFileSync(dataCv, 'utf8'))
+}
+
+var getProjects = function (file) {
+  var dataProjects = path.resolve(config.root.src, config.tasks.html.dataProjects)
+  return JSON.parse(fs.readFileSync(dataProjects, 'utf8'))
+}
+
+var getBooks = function (file) {
+  var dataBooks = path.resolve(config.root.src, config.tasks.html.dataBooks)
+  return JSON.parse(fs.readFileSync(dataBooks, 'utf8'))
+}
+
+var getServices = function (file) {
+  var dataServices = path.resolve(config.root.src, config.tasks.html.dataServices)
+  return JSON.parse(fs.readFileSync(dataServices, 'utf8'))
 }
 
 var htmlTask = function () {
   return gulp.src(paths.src)
     .pipe(data(getGlobal))
+    .on('error', handleErrors)
+    .pipe(data(getCv))
+    .on('error', handleErrors)
+    .pipe(data(getProjects))
+    .on('error', handleErrors)
+    .pipe(data(getBooks))
+    .on('error', handleErrors)
+    .pipe(data(getServices))
     .on('error', handleErrors)
     .pipe(nunjucksRender({
       path: [paths.nunjuck]

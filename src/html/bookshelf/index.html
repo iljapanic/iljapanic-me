@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page_bookshelf.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
+  <meta property="og:title" content="{{ page_bookshelf.title }} | {{ site.title }}" />
+  <meta property="og:url" content="http://iljapanic.me/bookshelf/" />
+  <meta property="og:image" content="http://iljapanic.me/assets/img/ilja-fb-share.jpg" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+
+	{% include "_shared/head.html" %}
+</head>
+
+<body>
+
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+  <div id="barba-wrapper" class="container scene">
+
+    <!-- HEADER -->
+  	<header class="header" role="banner">
+      {% import '_shared/main-nav.html' as nav %}
+      {{nav.active('bookshelf')}}
+  	</header>
+  	<!-- /HEADER  -->
+
+    <main class="main fadeIn barba-container" role="main">
+
+        <div class="wrapper">
+          <h1 class="visually-hidden">Bookshelf</h1>
+          <p class="fs-large ta-center">Books that inspired me and changed my world view</p>
+        </div>
+
+        <div class="wrapper-large">
+          <section class="books">
+            {% include "_loops/books.html" %}
+          </section>
+        </div>
+
+  	</main>
+
+    {% include "_shared/footer.html" %}
+    {% include "_shared/global-scripts.html" %}
+
+  </div>
+
+</body>
+</html>

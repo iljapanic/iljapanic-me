@@ -1,0 +1,108 @@
+{
+  "books": [
+
+  {
+    "title": "Future Shock",
+    "year": "1971",
+    "image": "future-shock.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/466537.Future_Shock"
+  },
+  {
+    "title": "Design For the Real World",
+    "year": "1972",
+    "image": "design-for-the-real-world.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/190560.Design_for_the_Real_World"
+  },
+  {
+    "title": "Intertwingled",
+    "year": "2014",
+    "image": "intertwingled.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/22931460-intertwingled"
+  },
+  {
+    "title": "Operating Manual For Spaceship Earth",
+    "year": "1969",
+    "image": "operating-manual.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/316362.Operating_Manual_for_Spaceship_Earth"
+  },
+  {
+    "title": "Discipline and Punish",
+    "year": "1975",
+    "image": "discipline-punish.jpeg",
+    "goodreads": "https://www.goodreads.com/book/show/80369.Discipline_and_Punish"
+  },
+  {
+    "title": "The Tyranny of Words",
+    "year": "1938",
+    "image": "tyranny-of-words.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/2343374.Tyranny_Of_Words"
+  },
+  {
+    "title": "Man's Search for Meaning",
+    "year": "1946",
+    "image": "man-search-for-meaning.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning"
+  },
+  {
+    "title": "The Breakdown of Nations",
+    "year": "1978",
+    "image": "breakdown-of-nations.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/1723464.The_Breakdown_of_Nations"
+  },
+  {
+    "title": "The Information Bomb",
+    "year": "2000",
+    "image": "information-bomb.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/203092.The_Information_Bomb"
+  },
+  {
+    "title": "The Best Interface Is No Interface",
+    "year": "2015",
+    "image": "best-interface-no-interface.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/22758923-the-best-interface-is-no-interface"
+  },
+  {
+    "title": "Brave New World Revisited",
+    "year": "1958",
+    "image": "brave-new-world-revisited.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/5481.Brave_New_World_Revisited"
+  },
+  {
+    "title": "Outliers",
+    "year": "2008",
+    "image": "outliers.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/3228917-outliers"
+  },
+  {
+    "title": "Rework",
+    "year": "2010",
+    "image": "rework.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/6732019-rework"
+  },
+  {
+    "title": "The Information Diet",
+    "year": "2011",
+    "image": "information-diet.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/12799077-the-information-diet"
+  },
+  {
+    "title": "The Green Imperative",
+    "year": "1995",
+    "image": "green-imperative.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/894758.The_Green_Imperative"
+  },
+  {
+    "title": "Designing for Emotion",
+    "year": "2011",
+    "image": "designing-for-emotion.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/12910715-designing-for-emotion"
+  },
+  {
+    "title": "The Last Question",
+    "year": "1956",
+    "image": "last-question.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/4808763-the-last-question"
+  }
+
+  ]
+}

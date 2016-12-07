@@ -1,0 +1,13 @@
+<ul class="skills">
+	{% for language in languages %}
+
+		<li>
+			{{language.language}}
+      <span class="indicator">
+        <span class="indicator__level w{{language.level}}"></span>
+        <span class="indicator__base"></span>
+      </span>
+		</li>
+
+	{% endfor %}
+</ul>

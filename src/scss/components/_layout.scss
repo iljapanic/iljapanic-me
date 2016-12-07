@@ -1,12 +1,21 @@
 .main {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  min-height: 100vh;
-  flex-wrap: wrap;
+  margin-top: $spacing*2;
 }
 
+.wrapper{
+  margin: 0 auto;
+  max-width: $wrapper;
+  padding: 0 2rem;
+}
 
-@media($media-large) {
+.wrapper-large{
+  margin: 0 auto;
+  max-width: $wrapper-large;
+  padding: 0 2rem;
+}
 
+.wrapper-small{
+  margin: 0 auto;
+  max-width: $wrapper-small;
+  padding: 0 2rem;
 }

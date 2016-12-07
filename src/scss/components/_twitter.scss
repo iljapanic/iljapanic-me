@@ -1,0 +1,24 @@
+.tweet_list {
+  text-align: center;
+  margin-top: $spacing*3;
+  font-weight: 300;
+  padding-bottom: 0;
+  padding-left: 44px + 24px;
+  padding-right: 44px + 24px;
+  // background-color: pink;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tweet_list li {
+  display: block;
+  width: 100%;
+  font-size: $font-size--large;
+  line-height: 1.5;
+  // background-color: gold;
+}
+
+.tweet_time {
+  display: none;
+}

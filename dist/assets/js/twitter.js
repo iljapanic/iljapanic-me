@@ -1,0 +1,1 @@
+!function(e){"use strict";e(document).ready(function(){e(".twitter-feed").tweet({username:"iljapanic",count:15,retweets:!1,loading_text:"loading tweets..."});new Flickity(".tweet_list",{cellAlign:"center",contain:!0,wrapAround:!0,draggable:!0,pageDots:!1,prevNextButtons:!0,autoPlay:5e3,adaptiveHeight:!0})})}(jQuery);

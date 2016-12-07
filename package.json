@@ -34,6 +34,8 @@
     "gulp-markdown": "^1.2.0",
     "gulp-notify": "*",
     "gulp-nunjucks-render": "*",
+    "gulp-obfuscate": "^0.2.9",
+    "gulp-optimize-js": "^1.1.0",
     "gulp-sass": "*",
     "gulp-sequence": "^0.4.5",
     "gulp-sourcemaps": "*",

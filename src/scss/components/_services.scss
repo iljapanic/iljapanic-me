@@ -1,0 +1,62 @@
+.services {
+
+  .item {
+    margin-top: $spacing*2;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include MQ(M) {
+      align-items: center;
+      margin-top: $spacing*1.5;
+    }
+
+    .item__icon {
+      width: percentage(1/4);
+    }
+
+    .item__body {
+      width: percentage(3/4);
+      padding-left: $spacing/2;
+    }
+  }
+
+  .item__title {
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.01rem;
+    font-size: ms(2);
+  }
+
+
+  .item__icon {
+    padding: $spacing/2;
+    img {
+      width: 100%;
+    }
+
+    @include MQ(M) {
+      padding: $spacing*1.25;
+    }
+  }
+
+}
+
+.services .item {
+  $show-numbers: true;
+
+  @if $show-numbers {
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        @extend .fadeInUp;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+}

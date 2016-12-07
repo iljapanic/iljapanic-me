@@ -5,12 +5,35 @@
     "description": "Personal site of Ilja Panic"
   },
 
+  "page_resume": {
+    "title": "Resume",
+    "description": "Resume of Ilja Panic"
+  },
+
+  "page_projects": {
+    "title": "Projects",
+    "description": "Projects and work showcase"
+  },
+
+  "page_bookshelf": {
+    "title": "Bookshelf",
+    "description": "Books I read"
+  },
+
+  "page_hire": {
+    "title": "Hire",
+    "description": "Hire Ilja Panic"
+  },
+
   "social": {
-    "email": "mailto:hello@iljapanic.me",
+    "email": "hello@iljapanic.me",
+    "email_link": "mailto:hello@iljapanic.me",
     "twitter": "https://twitter.com/iljapanic",
     "linkedin": "https://www.linkedin.com/in/iljapanic",
     "github": "https://github.com/iljapanic",
     "instagram": "https://instagram.com/iljapanic/",
-    "facebook": "facebook.com/iljapanic"
+    "facebook": "https://facebook.com/iljapanic",
+    "skype": "iljapanic",
+    "skype_link": "skype:iljapanic?chat"
   }
 }
