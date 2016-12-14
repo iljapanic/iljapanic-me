@@ -3,14 +3,19 @@
 	<article class="item">
     <div class="item__inner">
       <header class="item__header">
-  			<div class="item__date">{{project.period}}</div>
-  			<h2 class="item__title">
-          <a href="{{project.url}}" target="_blank">
-            {{project.name}}
-            <img src="/assets/img/icons/link-red.svg" alt="link" />
-          </a>
-        </h2>
-  			<div class="item__subtitle">{{project.role}}</div>
+        <div class="item__image">
+          <a href="{{project.url}}" target="_blank"><img src="/assets/img/work/{{project.image}}" alt="{{project.name}}" /></a>
+        </div>
+        <div class="item__meta">
+    			<div class="item__date">{{project.period}}</div>
+    			<h2 class="item__title">
+            <a href="{{project.url}}" target="_blank">
+              {{project.name}}
+              <img src="/assets/img/icons/link-red.svg" alt="link" />
+            </a>
+          </h2>
+    			<div class="item__subtitle">{{project.role}}</div>
+        </div>
   		</header>
 
   		<div class="item__body">
