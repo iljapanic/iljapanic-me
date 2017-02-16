@@ -198,6 +198,24 @@
     "year": "1993",
     "image": "http://res.cloudinary.com/iljapanic/image/upload/v1483965362/Cyberia.jpg",
     "goodreads": "https://www.goodreads.com/book/show/627994.Cyberia"
+  },
+  {
+    "title" : "The Image of the City",
+    "year" : "1960",
+    "image": "http://res.cloudinary.com/iljapanic/image/upload/v1487247475/647351_jjf61j.jpg",
+    "goodreads": "http://www.goodreads.com/book/show/647351.The_Image_of_the_City"
+  },
+  {
+    "title": "Information Design",
+    "year": "2000",
+    "image": "http://res.cloudinary.com/iljapanic/image/upload/c_scale,w_280/v1487247615/Information%20Design.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/336257.Information_Design"
+  },
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "year": "2014",
+    "image": "http://res.cloudinary.com/iljapanic/image/upload/c_scale,w_280/v1487247795/Sapiens:%20A%20Brief%20History%20of%20Humankind.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/23692271-sapiens"
   }
 
   ]
