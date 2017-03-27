@@ -216,6 +216,12 @@
     "year": "2014",
     "image": "http://res.cloudinary.com/iljapanic/image/upload/c_scale,w_280/v1487247795/Sapiens:%20A%20Brief%20History%20of%20Humankind.jpg",
     "goodreads": "https://www.goodreads.com/book/show/23692271-sapiens"
+  },
+  {
+    "title": "Homo Deus: A Brief History of Tomorrow",
+    "year": "2016",
+    "image": "http://res.cloudinary.com/iljapanic/image/upload/v1490609424/Homo%20Deus:%20A%20Brief%20History%20of%20Tomorrow.jpg",
+    "goodreads": "https://www.goodreads.com/book/show/28092869-homo-deus"
   }
 
   ]
