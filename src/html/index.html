@@ -20,6 +20,12 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
+  <script>
+    AOS.init({
+      once: true
+    });
+  </script>
+
   <div id="barba-wrapper" class="container">
 
     <!-- HEADER -->
@@ -32,7 +38,7 @@
     <main class="main fadeIn barba-container" role="main">
 
       <div class="wrapper-small">
-        <article class="intro">
+        <article class="intro" data-aos="fade" data-aos-duration="800">
       		<h1 class="visually-hidden">Ilja Panic</h1>
           {% include "_text/intro.html" %}
         </article>

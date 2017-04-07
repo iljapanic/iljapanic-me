@@ -188,26 +188,26 @@
   }
 }
 
-.icon-nav li {
-  $show-numbers: true;
+// .icon-nav li {
+//   $show-numbers: true;
 
-  @if $show-numbers {
-    @for $i from 1 through 3 {
-      &:nth-child(#{$i}) {
-        @extend .fadeInUp;
-      }
-    }
-  }
+//   @if $show-numbers {
+//     @for $i from 1 through 3 {
+//       &:nth-child(#{$i}) {
+//         @extend .fadeInUp;
+//       }
+//     }
+//   }
 
-  &:nth-child(1) {
-    animation-delay: 0.15s;
-  }
+//   &:nth-child(1) {
+//     animation-delay: 0.15s;
+//   }
 
-  &:nth-child(2) {
-    animation-delay: 0.3s;
-  }
+//   &:nth-child(2) {
+//     animation-delay: 0.3s;
+//   }
 
-  &:nth-child(3) {
-    animation-delay: 0.45s;
-  }
-}
+//   &:nth-child(3) {
+//     animation-delay: 0.45s;
+//   }
+// }

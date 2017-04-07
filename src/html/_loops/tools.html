@@ -2,9 +2,11 @@
 	{% for tool in tools %}
 
 		<li>
-			{{tool.tool}}
-      <span class="indicator">
-        <span class="indicator__level w{{tool.level}}"></span>
+			<span data-aos="fade" data-aos-duration="600">{{tool.tool}}</span>
+      <span class="indicator" data-aos="fade" data-aos-duration="600">
+        <span class="indicator__level w{{tool.level}}">
+          <span class="indicator__level-inner" data-aos="animate-width" data-aos-duration="800" data-aos-delay="200"></span>
+        </span>
         <span class="indicator__base"></span>
       </span>
 		</li>

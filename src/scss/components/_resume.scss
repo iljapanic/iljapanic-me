@@ -19,15 +19,6 @@
     }
   }
 
-  .resume__main {
-    @extend .fadeInUp;
-    animation-delay: 0.3s;
-  }
-
-  .resume__sidebar {
-    @extend .fadeInUp;
-    animation-delay: 0.45s;
-  }
 
   .section {
     margin-bottom: $spacing*2;
@@ -182,9 +173,17 @@ $indicator-height: 2px;
   }
 
   .indicator__level {
+    // background-color: $primary-dark;
+    height: $indicator-height;
+    left: 0;
+    position: absolute;
+  }
+
+  .indicator__level-inner {
     background-color: $primary-dark;
     height: $indicator-height;
     left: 0;
     position: absolute;
+    // width: 100%;
   }
 }

@@ -6,17 +6,11 @@
     border-radius: 50%;
     display: inline-block;
     max-width: 182px;
-
-    @extend .fadeIn;
-    animation-delay: 0.1s;
   }
 
   .card__title {
     margin-top: $spacing/2;
     margin-bottom: 0;
-
-    @extend .fadeInUp;
-    animation-delay: 0.2s;
   }
 
   .card__role {
@@ -24,13 +18,9 @@
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
-    @extend .fadeInUp;
-    animation-delay: 0.2s;
   }
 
   .card__description {
     margin-top: $spacing/2;
-    @extend .fadeInUp;
-    animation-delay: 0.3s;
   }
 }

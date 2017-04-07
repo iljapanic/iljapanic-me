@@ -2,9 +2,11 @@
 	{% for competence in competences %}
 
 		<li>
-			{{competence.skill}}
-      <span class="indicator">
-        <span class="indicator__level w{{competence.level}}"></span>
+			<span data-aos="fade" data-aos-duration="600">{{competence.skill}}</span>
+      <span class="indicator" data-aos="fade" data-aos-duration="600">
+        <span class="indicator__level w{{competence.level}}">
+          <span class="indicator__level-inner" data-aos="animate-width" data-aos-duration="800" data-aos-delay="200"></span>
+        </span>
         <span class="indicator__base"></span>
       </span>
 		</li>

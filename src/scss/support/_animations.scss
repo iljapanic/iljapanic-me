@@ -100,3 +100,14 @@
   animation-duration: 0.75s;
   animation-timing-function: ease-out;
 }
+
+
+[data-aos="animate-width"] {
+  width: 0%;
+  opacity: 0;
+  transition-property: width, opacity;
+  &.aos-animate {
+    width: 100%;
+    opacity: 1;
+  }
+}

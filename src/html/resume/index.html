@@ -17,6 +17,12 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
+  <script>
+    AOS.init({
+      once: true
+    });
+  </script>
+
   <div id="barba-wrapper" class="container">
 
     <!-- HEADER -->
@@ -28,15 +34,15 @@
 
 
 
-    <main class="main fadeIn barba-container" role="main">
+    <main class="main barba-container" role="main">
 
       <!-- card -->
       <article class="card ta-center">
         <div class="wrapper-small">
-          <img src="{{ profile.image }}" alt="{{ profile.image_alt }}" class="card__image"/>
-          <h1 class="card__title">{{ profile.name }}</h1>
-          <div class="card__role">{{ profile.position }}</div>
-          <div class="card__description">
+          <img src="{{ profile.image }}" alt="{{ profile.image_alt }}" class="card__image" data-aos="fade" data-aos-duration="800" />
+          <h1 class="card__title" data-aos="fade" data-aos-duration="800">{{ profile.name }}</h1>
+          <div class="card__role" data-aos="fade" data-aos-duration="800" data-aos-delay="200">{{ profile.position }}</div>
+          <div class="card__description" data-aos="fade" data-aos-duration="800" data-aos-delay="300">
             {% include "_text/profile.html" %}
           </div>
         </div>
@@ -54,14 +60,14 @@
 
     				<!-- EXPERIENCE -->
     				<section class="section">
-    					<h2 class="section__title">Work Experience</h2>
+    					<h2 class="section__title" data-aos="fade-right" data-aos-duration="800">Work Experience</h2>
     					{% include "_loops/work.html" %}
     				</section>
     				<!-- /EXPERIENCE -->
 
     				<!-- EDUCATION -->
     				<section class="section">
-    					<h2 class="section__title">Education</h2>
+    					<h2 class="section__title" data-aos="fade-right" data-aos-duration="800">Education</h2>
     					{% include "_loops/education.html" %}
     				</section>
     				<!-- /EDUCATION -->
@@ -74,21 +80,21 @@
 
     				<!-- LANGUAGES -->
     				<section class="section">
-    					<h2 class="section__title">Languages</h2>
+    					<h2 class="section__title" data-aos="fade-left" data-aos-duration="800">Languages</h2>
     					{% include "_loops/languages.html" %}
     				</section>
     				<!-- /LANGUAGES -->
 
     				<!-- COMPETENCES -->
     				<section class="section">
-    					<h2 class="section__title">Competences</h2>
+    					<h2 class="section__title" data-aos="fade-left" data-aos-duration="800">Competences</h2>
     					{% include "_loops/competences.html" %}
     				</section>
     				<!-- /COMPETENCES -->
 
     				<!-- TOOLS -->
     				<section class="section">
-    					<h2 class="section__title">Tools</h2>
+    					<h2 class="section__title" data-aos="fade-left" data-aos-duration="800">Tools</h2>
     					{% include "_loops/tools.html" %}
     				</section>
     				<!-- /TOOLS -->
@@ -113,14 +119,14 @@
         <div class="resume-extra">
           <!-- PASSIONS -->
           <section class="section">
-            <h2 class="section__title">Passions</h2>
+            <h2 class="section__title" data-aos="fade-up" data-aos-duration="800">Passions</h2>
             {% include "_loops/passions.html" %}
           </section>
           <!-- /PASSIONS -->
 
           <!-- GATHERINGS -->
           <section class="section">
-            <h2 class="section__title">Gatherings</h2>
+            <h2 class="section__title" data-aos="fade-up" data-aos-duration="800">Gatherings</h2>
             {% include "_loops/gatherings.html" %}
           </section>
           <!-- /GATHERINGS -->
