@@ -1,48 +1,5 @@
-{% set i=1 %}
 {% for book in books|sort(false, true, 'year') %}
-  {% set i=i+1 %}
-  {% if loop.index < 6 %}
-    {% set i = loop.index %}
-  {% elif loop.index == 6 %}
-    {% set i = 1 %}
-  {% elif loop.index == 11 %}
-    {% set i = 1 %}
-  {% elif loop.index == 16 %}
-    {% set i = 1 %}
-  {% elif loop.index == 21 %}
-    {% set i = 1 %}
-  {% elif loop.index == 26 %}
-    {% set i = 1 %}
-  {% elif loop.index == 31 %}
-    {% set i = 1 %}
-  {% elif loop.index == 36 %}
-    {% set i = 1 %}
-  {% elif loop.index == 41 %}
-    {% set i = 1 %}
-  {% elif loop.index == 46 %}
-    {% set i = 1 %}
-  {% elif loop.index == 51 %}
-    {% set i = 1 %}
-  {% elif loop.index == 56 %}
-    {% set i = 1 %}
-  {% elif loop.index == 61 %}
-    {% set i = 1 %}
-  {% elif loop.index == 66 %}
-    {% set i = 1 %}
-  {% elif loop.index == 71 %}
-    {% set i = 1 %}
-  {% elif loop.index == 76 %}
-    {% set i = 1 %}
-  {% elif loop.index == 81 %}
-    {% set i = 1 %}
-  {% elif loop.index == 86 %}
-    {% set i = 1 %}
-  {% elif loop.index == 91 %}
-    {% set i = 1 %}
-  {% elif loop.index == 101 %}
-    {% set i = 1 %}
-  {% endif %}
-	<article class="item" data-book-id="{{ loop.index }}" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ i }}00">
+	<article class="item item__book" data-book-id="{{ loop.index }}" data-aos="fade-up" data-aos-duration="800">
     <h2 class="item__title">{{book.title}}</h2>
 		<a href="{{book.goodreads}}" target="_blank">
 			<img src="{{book.image}}" alt="{{book.title}}">
@@ -50,3 +7,46 @@
     <div class="item__meta">{{book.year}}</div>
 	</article>
 {% endfor %}
+
+<script type="text/javascript">
+
+  var screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+  var screenIsMobile = screenWidth < 768;
+  var screenIsTablet = screenWidth < 1024;
+  var screenIsDesktop = screenWidth > 1024;
+
+  var bookBreakMobile = 4;
+  var bookBreakTablet = 5;
+  var bookBreakDesktop = 6;
+
+  var book = document.getElementsByClassName('item__book');
+  var bookIndex = 0;
+
+  Array.prototype.forEach.call(book, function(el, index, array) {
+    bookIndex ++;
+
+    if (screenIsMobile) {
+      if (bookIndex == bookBreakMobile) {
+        bookIndex = 1;
+      }
+      var bookDelay = bookIndex + '00';
+      el.setAttribute('data-aos-delay', bookDelay);
+    }
+    else if (screenIsTablet) {
+      if (bookIndex == bookBreakTablet) {
+        bookIndex = 1;
+      }
+      var bookDelay = bookIndex + '00';
+      el.setAttribute('data-aos-delay', bookDelay);
+    }
+    else if (screenIsDesktop) {
+      if (bookIndex == bookBreakDesktop) {
+        bookIndex = 1;
+      }
+      var bookDelay = bookIndex + '00';
+      el.setAttribute('data-aos-delay', bookDelay);
+    }
+  });
+
+</script>

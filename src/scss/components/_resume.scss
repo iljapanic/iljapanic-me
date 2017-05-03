@@ -215,7 +215,11 @@ $indicator-height: 2px;
   svg {
     vertical-align: middle;
     margin-bottom: 3px;
-    height: 14px;
+    height: 12px;
+
+    @include MQ(M) {
+      height: 14px;
+    }
 
     path {
       stroke: $primary !important;

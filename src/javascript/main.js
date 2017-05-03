@@ -17,7 +17,6 @@
 
 
     extraToggle.click( function () {
-
       var content = $(this).prev('.extra__content');
       var more = $(this).find('.more');
       var less = $(this).find('.less');
@@ -33,7 +32,6 @@
         less.hide();
         more.fadeIn();
       }
-
     });
 
   });
