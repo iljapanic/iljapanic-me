@@ -54,6 +54,9 @@ h1{
   // font-size: 2rem;
   // text-transform: uppercase;
   font-size: ms(4);
+  padding-bottom: $spacing;
+  font-weight: 600;
+  color: shade($secondary, 55%);
 }
 
 h2{
