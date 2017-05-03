@@ -39,8 +39,14 @@
       <!-- card -->
       <article class="card ta-center">
         <div class="wrapper-small">
-          <img src="{{ profile.image }}" alt="{{ profile.image_alt }}" class="card__image" data-aos="fade" data-aos-duration="800" />
-          <h1 class="card__title" data-aos="fade" data-aos-duration="800">{{ profile.name }}</h1>
+          <div class="card__header">
+            <div class="card__image">
+              <img src="{{ profile.image }}" alt="{{ profile.image_alt }}" data-aos="fade" data-aos-duration="800" />
+            </div>
+            <div class="card__headline">
+              <h1 class="card__title" data-aos="fade" data-aos-duration="800">{{ profile.name }}</h1>
+            </div>
+          </div>
           <div class="card__role" data-aos="fade" data-aos-duration="800" data-aos-delay="200">{{ profile.position }}</div>
           <div class="card__description" data-aos="fade" data-aos-duration="800" data-aos-delay="300">
             {% include "_text/profile.html" %}

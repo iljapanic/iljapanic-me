@@ -26,31 +26,39 @@
     });
   </script>
 
-  <div id="barba-wrapper" class="container">
+  <div class="hero">
 
-    <!-- HEADER -->
-  	<header class="header" role="banner">
-      {% import '_shared/main-nav.html' as nav %}
-      {{nav.active('home')}}
-  	</header>
-  	<!-- /HEADER  -->
+    <div class="hero__header">
+      <!-- HEADER -->
+    	<header class="header" role="banner">
+        {% import '_shared/main-nav.html' as nav %}
+        {{nav.active('home')}}
+    	</header>
+    	<!-- /HEADER  -->
+    </div>
 
-    <main class="main fadeIn barba-container" role="main">
+    <main class="hero__main" role="main">
 
-      <div class="wrapper-small">
-        <article class="intro" data-aos="fade" data-aos-duration="800">
-      		<h1 class="visually-hidden">Ilja Panic</h1>
-          {% include "_text/intro.html" %}
-        </article>
-      </div>
 
-      <div class="wrapper-small">
-        {% include '_shared/icon-nav.html' %}
-      </div>
+
+        <div class="hero__body">
+          <article class="hero__text">
+            <h1 class="visually-hidden">Ilja Panic</h1>
+            <div class="wrapper-small">
+              {% include "_text/intro.html" %}
+            </div>
+          </article>
+        </div>
+
+        <div class="hero__image">
+          <div class="ilja">
+            <img src="/assets/img/ilja-cut.png" alt="Ilja Panic">
+          </div>
+        </div>
 
   	</main>
 
-    {% include "_shared/footer.html" %}
+    <!-- {% include "_shared/footer.html" %} -->
     {% include "_shared/global-scripts.html" %}
 
   </div>

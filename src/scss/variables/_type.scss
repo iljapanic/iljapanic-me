@@ -1,7 +1,12 @@
 @import 'modular-scale';
 
-$base-font: 'Rubik', 'Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
-$heading-font: 'Rubik', 'Georgia', serif;
+$rubik: 'Rubik';
+$avenir: 'Avenir Next W01';
+$avenir-rounded: 'Avenir Next Rounded W01';
+
+
+$base-font: $avenir, 'Rubik', 'Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
+$heading-font: $avenir, 'Rubik', 'Georgia', serif;
 $monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace !default;
 
 $heading:         $heading-font !default;
@@ -11,7 +16,7 @@ $monospace:       $monospace-font !default;
 $font-size: 1.4rem !default;
 $line-height: 1.75 !default;
 $font-weight-base: 300;
-$font-weight-bold: 400;
+$font-weight-bold: 600;
 
 $font-size--small: 1.2rem !default;
 $font-size--large: 2rem !default;
