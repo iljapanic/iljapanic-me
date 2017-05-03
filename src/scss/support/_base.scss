@@ -87,6 +87,10 @@ p{
   // padding-bottom: 1.2rem;
 }
 
+p + p {
+  margin-top: $spacing/2;
+}
+
 form{
   padding: 2.4rem 0;
 }

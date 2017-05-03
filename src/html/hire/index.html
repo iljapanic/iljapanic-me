@@ -26,17 +26,29 @@
   	</header>
   	<!-- /HEADER  -->
 
-    <main class="main barba-container" role="main">
+    <main class="main fadeIn barba-container" role="main">
 
-      <div class="wrapper fadeIn">
-    		<h1 class="ta-center">Helping you communicate effectively in the digital space</h1>
+    		<article>
+          <div class="wrapper">
+            <h1 class="ta-center">Helping you communicate effectively in the digital space</h1>
+            <div class="fs-large ta-center">
+              {% include "_text/hire.html" %}
+            </div>
+          </div>
 
-        <section class="services margin-top-2">
-          {% include "_loops/services.html" %}
-        </section>
+          <div class="wrapper-large">
+            <section class="services margin-top-2">
+              {% include "_loops/services.html" %}
+            </section>
+          </div>
+
+          <div class="wrapper">
+            <p class="ta-center margin-top-4">I offer a personal approach and base my work on mutual understanding and respect. I am used to working both remotely and on-site with small companies, large organizations, and individuals.</p>
+          </div>
+        </article>
+
 
         {% include '_shared/booking.html' %}
-      </div>
 
   	</main>
 

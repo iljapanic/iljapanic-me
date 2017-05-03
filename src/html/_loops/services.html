@@ -2,15 +2,23 @@
 
 	<article class="item">
 
-		<div class="item__icon">
-			<img src="/assets/img/icons/{{ service.icon }}" alt="{{ service.name }} icon" />
-		</div>
+    <div class="item__header">
+  		<div class="item__icon">
+  			<img src="/assets/img/icons/{{ service.icon }}" alt="{{ service.name }} icon" />
+  		</div>
+      <h2 class="item__title">{{ service.name }}</h2>
+    </div>
 
 		<div class="item__body">
-			<h2 class="item__title">{{ service.name }}</h2>
-			<div class="item__text">
-				<p>{{ service.text }}</p>
-			</div>
+      {% if service.items %}
+			<ul class="item__list">
+          <ul class="item__list">
+            {% for item in service.items %}
+              <li>{{ item.name }}</li>
+            {% endfor %}
+          </ul>
+			</ul>
+      {% endif %}
 		</div>
 
 	</article>
