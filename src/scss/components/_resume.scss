@@ -211,4 +211,14 @@ $indicator-height: 2px;
     display: block;
     margin-top: $spacing/2;
   }
+
+  svg {
+    vertical-align: middle;
+    margin-bottom: 3px;
+    height: 14px;
+
+    path {
+      stroke: $primary !important;
+    }
+  }
 }
