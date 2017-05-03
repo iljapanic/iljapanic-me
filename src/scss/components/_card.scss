@@ -1,29 +1,19 @@
 .card {
-  // margin-top: $spacing*2;
+  margin-top: $spacing*2;
 
   .card__header {
-    display: flex;
     max-width: 65%;
     align-items: center;
     @include center-box;
     // background-color: pink;
 
-    .card__image {
-      width: percentage(1/5);
-    }
-
-    .card__headline {
-      width: percentage(4/5);
-      text-align: left;
-      padding-left: $spacing*0.75;
-    }
   }
 
   .card__image img {
     border: 3px solid tint($secondary, 50%);
     border-radius: 50%;
     display: inline-block;
-    width: 100%;
+    max-width: 112px;
   }
 
 
