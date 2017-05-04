@@ -61,20 +61,20 @@
   font-size: ms(2);
 }
 
-.fw-light{
-  font-weight: 300;
+.italic {
+  font-style: italic;
 }
 
-.fw-normal{
-  font-weight: 400;
+.fw-normal {
+  font-weight: $fw-base;
 }
 
-.fw-semibold{
-  font-weight: 600;
+.fw-medium {
+  font-weight: $fw-medium;
 }
 
-.fw-bold{
-  font-weight: 700;
+.fw-bold {
+  font-weight: $fw-bold;
 }
 
 .uppercase {

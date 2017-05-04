@@ -1,10 +1,10 @@
 {% for book in books|sort(false, true, 'year') %}
 	<article class="item item__book" data-book-id="{{ loop.index }}" data-aos="fade-up" data-aos-duration="800">
-    <h2 class="item__title">{{book.title}}</h2>
+    <div class="item__meta">{{book.year}}</div>
 		<a href="{{book.goodreads}}" target="_blank">
 			<img src="{{book.image}}" alt="{{book.title}}">
 		</a>
-    <div class="item__meta">{{book.year}}</div>
+    <h2 class="item__title">{{book.title}}</h2>
 	</article>
 {% endfor %}
 

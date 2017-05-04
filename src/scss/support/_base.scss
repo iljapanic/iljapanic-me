@@ -23,13 +23,13 @@ html{
   box-sizing: inherit;
 }
 
-body{
+body {
   background-color: $secondary;
   box-sizing: border-box;
   color: $gray2;
   font-family: $base-font;
   font-size: ms(0);
-  font-weight: $font-weight-base;
+  font-weight: $fw-base;
   line-height: $line-height;
   min-height: 100%;
   position: relative;
@@ -37,7 +37,8 @@ body{
 
 h1, h2, h3, h4, h5, h6{
   font-family: $heading;
-  font-weight: 400;
+  font-weight: $fw-heading;
+  color: $gray2;
 }
 // 1.2, 2.4, 3.6, 4.8
 h1, h2, h3{
@@ -49,24 +50,19 @@ h4, h5, h6{
   padding: 2.4rem 0;
 }
 
-h1{
-  // font-size: 3.6rem;
-  // font-size: 2rem;
-  // text-transform: uppercase;
+h1 {
   font-size: ms(4);
   padding-bottom: $spacing;
-  font-weight: 600;
+  font-weight: $fw-medium;
   color: shade($secondary, 55%);
 }
 
 h2{
-  // font-size: 3.2rem;
   font-size: 1.8rem;
   font-size: ms(3);
 }
 
 h3{
-  // font-size: 2.8rem;
   font-size: ms(2);
 }
 
@@ -250,7 +246,7 @@ i{
 strong,
 var,
 b{
-  font-weight: $font-weight-bold;
+  font-weight: $fw-bold;
 }
 
 q{
@@ -281,7 +277,7 @@ table{
   width: 100%;
 
   th{
-    font-weight: 500;
+    font-weight: $fw-bold;
     text-align: left;
   }
 

@@ -4,8 +4,6 @@
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  font-family: $avenir-rounded;
-  font-weight: 300;
 
   .nav__home,
   .nav__hire {
@@ -47,6 +45,7 @@
       letter-spacing: 0.1rem;
       color: $gray3;
       transition: all 0.75s ease-in-out;
+      font-weight: $fw-medium;
 
       &:hover,
       &:focus {
@@ -70,9 +69,8 @@
     }
 
     a {
-      font-weight: 200;
+      font-weight: $fw-medium;
       text-transform: uppercase;
-      display: inline-block;
       letter-spacing: 0.1rem;
       vertical-align: middle;
       opacity: 0.95;
@@ -84,7 +82,7 @@
       transition: all 0.35s;
 
       @include MQ(M) {
-        padding: $spacing/3 $spacing/2;
+        padding: $spacing/3 $spacing*0.75;
       }
 
       &:hover {
@@ -112,7 +110,6 @@
   ul {
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -144,7 +141,7 @@
     font-size: ms(-3);
     transition: all 0.75s ease-in-out;
     position: relative;
-    // color: #000;
+    font-weight: $fw-bold;
 
     &:before {
       content: "";
@@ -186,67 +183,3 @@
 }
 
 
-.icon-nav {
-  margin-top: $spacing*2;
-
-  ul {
-    list-style-type: none;
-    margin-left: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  li {
-    margin-top: $spacing;
-    width: percentage(1/2);
-    text-align: center;
-  }
-
-  a {
-    display: block;
-    color: $gray3;
-    opacity: 0.75;
-    transition: all 0.35s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  img {
-    width: 45%;
-  }
-
-  span {
-    display: block;
-    margin-top: $spacing/4;
-    font-size: ms(-1);
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-}
-
-// .icon-nav li {
-//   $show-numbers: true;
-
-//   @if $show-numbers {
-//     @for $i from 1 through 3 {
-//       &:nth-child(#{$i}) {
-//         @extend .fadeInUp;
-//       }
-//     }
-//   }
-
-//   &:nth-child(1) {
-//     animation-delay: 0.15s;
-//   }
-
-//   &:nth-child(2) {
-//     animation-delay: 0.3s;
-//   }
-
-//   &:nth-child(3) {
-//     animation-delay: 0.45s;
-//   }
-// }

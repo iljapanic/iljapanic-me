@@ -47,25 +47,24 @@
   }
 
   .item__title {
-    color: shade($gray2, 15%);
+    color: $gray2;
   }
 
   .item__extra {
     font-size: ms(-2);
     color: $gray3;
-    font-weight: 300;
+    font-weight: $fw-medium;
     display: inline-block;
     vertical-align: middle;
     padding-bottom: 0.25rem;
   }
 
   .item__subtitle {
-    // line-height: 1.25;
     font-size: ms(-1);
 
     a {
-      color: $gray2;
-      font-weight: 400;
+      color: $gray3;
+      font-weight: $fw-medium;
     }
   }
 
@@ -197,7 +196,7 @@ $indicator-height: 2px;
     margin-top: $spacing/4;
     text-transform: uppercase;
     font-size: ms(-2);
-    font-weight: $font-weight-bold;
+    font-weight: $fw-medium;
     cursor: pointer;
     color: rgba($primary-dark, 0.75);
     transition: all 0.05s ease-in;
