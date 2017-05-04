@@ -71,13 +71,13 @@
     }
 
     a {
-      font-weight: 300;
+      font-weight: 200;
       text-transform: uppercase;
       display: inline-block;
       letter-spacing: 0.1rem;
       vertical-align: middle;
       opacity: 0.95;
-      border: 2px solid $primary;
+      border: 1px solid $primary;
       font-size: ms(-3);
       line-height: 1;
       padding: $spacing/3 $spacing/2;
