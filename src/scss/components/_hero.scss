@@ -1,11 +1,16 @@
 .hero {
 
+  .hero__main {
+    margin-top: $spacing/2;
+  }
+
+  .hero__image {
+    margin-top: $spacing*2;
+  }
+
   @include MQ(L) {
 
     height: 100vh;
-    // background-color: pink;
-    // overflow: hidden;
-    // position: relative;
 
     .hero__header {
       height: 12vh;
@@ -14,21 +19,16 @@
     .hero__main {
       position: relative;
       display: flex;
-      // background-color: rgba(blue, 0.3);
+      margin-top: 0;
       height: 88vh;
-      align-items: stretch;
+      align-items: center;
 
       .hero__image {
+        margin-top: 0;
         width: 45%;
-        // background-color: rgba(red, 0.8);
         order: 1;
         display: flex;
         align-self: flex-end;
-        // position: absolute;
-        // bottom: 0;
-        // left: 0;
-        // height: 100%;
-        // align-items: flex-end;
       }
 
       .hero__body {
@@ -36,7 +36,7 @@
         order: 2;
         display: flex;
         align-items: center;
-        // background-color: red;
+        margin-bottom: $spacing*7;
       }
     }
   }
@@ -46,7 +46,6 @@
 .hero__image {
   img {
     display: block;
-    // background-color: pink;
     width: 95%;
     @include center-box;
   }
@@ -57,7 +56,7 @@
 
   p {
     margin-bottom: $spacing/2;
-    font-size: ms(1);
+    font-size: ms(2);
   }
 }
 
