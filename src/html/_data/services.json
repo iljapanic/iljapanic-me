@@ -48,6 +48,7 @@
     {
       "name": "Tools",
       "icon": "hire-tools.svg",
+      "split" : "true",
       "items": [
         {
           "name" : "HTML"
@@ -60,6 +61,9 @@
         },
         {
           "name" : "Gulp"
+        },
+        {
+          "name" : "Git"
         },
         {
           "name" : "Sketch"

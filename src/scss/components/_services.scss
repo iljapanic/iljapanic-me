@@ -1,14 +1,15 @@
 .services {
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-top: $spacing*3;
+
+  @include MQ(M) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .item {
     margin-bottom: $spacing*2;
     text-align: center;
-    width: percentage(1/2);
 
     @include MQ(M) {
       margin-bottom: $spacing/2;
@@ -16,18 +17,40 @@
     }
   }
 
+  .item__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .item__title {
+      padding-left: $spacing/2;
+    }
+
+    @include MQ(M) {
+      display: block;
+
+      .item__title {
+        padding-left: 0;
+      }
+    }
+  }
+
+
   .item__title {
     padding: 0;
     text-transform: uppercase;
     letter-spacing: 0.01rem;
-    font-size: ms(2);
-    margin-top: $spacing/2;
+    font-size: ms(1);
   }
 
 
   .item__icon {
-    img {
-      width: 64px;
+    @include MQ(M) {
+      margin-bottom: $spacing/2;
+
+      img {
+        width: 64px;
+      }
     }
   }
 
@@ -36,8 +59,18 @@
     margin-left: 0;
     padding: 0;
 
+    margin-top: $spacing/2;
+
     li {
       margin-top: $spacing/6;
+      margin-left: $spacing/2;
+      margin-right: $spacing/2;
+      display: inline-block;
+
+      @include MQ(M) {
+        display: block;
+        margin-right: 0;
+      }
     }
   }
 

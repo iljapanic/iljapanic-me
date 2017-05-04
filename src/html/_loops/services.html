@@ -13,7 +13,7 @@
 
 		<div class="item__body">
       {% if service.items %}
-			<ul class="item__list">
+			<ul class="item__list {% if service.split %}split-list{% endif %}">
           <ul class="item__list">
             {% for item in service.items %}
               <li>{{ item.name }}</li>
