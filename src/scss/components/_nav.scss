@@ -100,7 +100,7 @@
   }
 
   .nav__main {
-    margin-top: $spacing;
+    margin-top: $spacing*1.5;
 
     @include MQ(M) {
       margin-top: 0;
