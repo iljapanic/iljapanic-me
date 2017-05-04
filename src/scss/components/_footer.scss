@@ -4,6 +4,7 @@
   font-size: $font-size--small;
   color: shade($secondary, 55%);
   padding-bottom: $spacing*1.5;
+  overflow: hidden;
 
   p {
     padding-bottom: 0;
