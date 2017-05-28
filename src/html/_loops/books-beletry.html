@@ -1,5 +1,5 @@
-{% for book in books|sort(false, true, 'year') %}
-	<article class="item item__book" data-book-id="{{ loop.index }}" data-aos="fade-up" data-aos-duration="800">
+{% for book in booksBeletry|sort(false, true, 'year') %}
+	<article class="item item__book beletry" data-book-id="{{ loop.index }}" data-aos="fade-up" data-aos-duration="800">
     <div class="item__meta">{{book.year}}</div>
 		<a href="{{book.goodreads}}" target="_blank">
 			<img src="{{book.image}}" alt="{{book.title}}">
@@ -20,7 +20,7 @@
   var bookBreakTablet = 5;
   var bookBreakDesktop = 6;
 
-  var book = document.getElementsByClassName('item__book');
+  var book = document.getElementsByClassName('beletry');
   var bookIndex = 0;
 
   Array.prototype.forEach.call(book, function(el, index, array) {

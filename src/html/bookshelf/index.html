@@ -39,9 +39,21 @@
         </div>
 
         <div class="wrapper-large">
-          <section class="books">
-            {% include "_loops/books.html" %}
+
+          <section class="books margin-top-4">
+            <h2 class="ta-center uppercase" data-aos="fade" data-aos-duration="800">Non-Fiction</h2>
+            <div class="books-grid">
+              {% include "_loops/books-non-fiction.html" %}
+            </div>
           </section>
+
+          <section class="books margin-top-6">
+            <h2 class="ta-center uppercase" data-aos="fade" data-aos-duration="800">Beletry</h2>
+            <div class="books-grid">
+              {% include "_loops/books-beletry.html" %}
+            </div>
+          </section>
+
         </div>
 
   	</main>
