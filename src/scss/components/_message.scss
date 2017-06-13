@@ -118,7 +118,7 @@ a.message-link {
   position: fixed;
   right: $spacing/2;
   text-transform: uppercase;
-  transition: all 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out;
 
 
   svg {
@@ -164,7 +164,7 @@ a.message-link {
     .label {
       vertical-align: middle;
       position: relative;
-      top: 2px;
+      top: 1px;
     }
   }
 }

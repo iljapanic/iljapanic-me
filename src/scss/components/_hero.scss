@@ -38,14 +38,18 @@
         order: 2;
         display: flex;
         align-items: center;
-        margin-bottom: $spacing*7;
+        margin-bottom: $spacing*4;
         flex-wrap: wrap;
 
         .hero__text {
           width: 100%;
         }
 
-        .hero__contact {
+        .hero__message {
+          width: 100%;
+        }
+
+        .hero__social {
           width: 100%;
         }
       }
@@ -71,11 +75,28 @@
   }
 }
 
-.hero__contact {
-  margin-top: $spacing/2;
+.hero__message {
+  margin-top: $spacing*2.5;
   text-align: center;
 
   @include MQ(L) {
     text-align: left;
+    margin-top: $spacing*1.5;
+  }
+}
+
+.hero__social {
+  margin-top: $spacing*1.5;
+
+  .social {
+    text-align: center;
+  }
+
+  @include MQ(L) {
+    margin-top: $spacing/2;
+
+    .social {
+      text-align: left;
+    }
   }
 }

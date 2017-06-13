@@ -2,7 +2,9 @@
   'use strict';
   $(document).ready(function () {
 
-    $('.message-link').magnificPopup({
+    var messageLink = $('.message-link');
+
+    messageLink.magnificPopup({
       type: 'inline',
       midClick: true,
       removalDelay: 300,
