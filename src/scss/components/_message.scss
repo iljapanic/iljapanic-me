@@ -113,11 +113,13 @@ a.message-link {
   display: flex;
   font-size: ms(-4);
   font-weight: $fw-medium;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.1rem;
   padding: $spacing/8 $spacing/2;
   position: fixed;
   right: $spacing/2;
   text-transform: uppercase;
+  transition: all 0.35s ease-in-out;
+
 
   svg {
     vertical-align: middle;
@@ -134,6 +136,10 @@ a.message-link {
 
   &:focus {
     outline: none;
+  }
+
+  &:hover {
+    background-color: shade($primary, 15%);
   }
 
   &.message-link--inline {
@@ -157,6 +163,8 @@ a.message-link {
 
     .label {
       vertical-align: middle;
+      position: relative;
+      top: 2px;
     }
   }
 }
