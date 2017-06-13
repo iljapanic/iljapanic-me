@@ -217,7 +217,8 @@ $indicator-height: 2px;
     height: 12px;
 
     @include MQ(M) {
-      height: 14px;
+      height: 12px;
+      margin-bottom: 3px;
     }
 
     path {
