@@ -39,6 +39,15 @@
         display: flex;
         align-items: center;
         margin-bottom: $spacing*7;
+        flex-wrap: wrap;
+
+        .hero__text {
+          width: 100%;
+        }
+
+        .hero__contact {
+          width: 100%;
+        }
       }
     }
   }
@@ -62,3 +71,11 @@
   }
 }
 
+.hero__contact {
+  margin-top: $spacing/2;
+  text-align: center;
+
+  @include MQ(L) {
+    text-align: left;
+  }
+}

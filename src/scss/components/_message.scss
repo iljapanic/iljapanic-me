@@ -1,0 +1,159 @@
+.message .form {
+
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    font-size: ms(2);
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: 2px solid rgba($primary-dark, 0.35);
+    width: 100%;
+    padding-bottom: $spacing/8;
+    vertical-align:middle;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-dark;
+    }
+
+    @include placeholder {
+      color: $gray3;
+    }
+  }
+
+  textarea {
+    line-height: 1.5;
+    max-height: 480px;
+    padding-bottom: $spacing/4;
+  }
+
+  .form__item {
+    margin-bottom: $spacing*2;
+    width: 100%;
+  }
+
+  .form__split {
+    display: flex;
+
+    .form__item {
+      width: percentage(1/2);
+
+      &:first-of-type {
+        padding-right: $spacing;
+      }
+    }
+  }
+
+  .form__submit {
+    text-align: center;
+  }
+
+  .form__response {
+    margin-top: $spacing;
+    text-align: center;
+    font-size: ms(-1);
+    font-weight: $fw-medium;
+    color: $gray3;
+  }
+
+  .alert__success {
+    color: $alert-green;
+  }
+
+  .alert__error {
+    color: $alert-red;
+  }
+
+  .input-value {
+    margin-top: $spacing/4;
+    font-size: ms(-3);
+    color: $gray3;
+    transition: opacity 0.5s ease-in-out;
+
+    .value {
+      color: $gray2;
+      font-weight: $fw-medium;
+    }
+
+    &.hidden {
+      opacity: 0;
+    }
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+}
+
+
+.message-link,
+a.message-link {
+  align-items: center;
+  background-color: $primary;
+  border-radius: 1.5rem;
+  bottom: $spacing/2;
+  color: white;
+  display: flex;
+  font-size: ms(-4);
+  font-weight: $fw-medium;
+  letter-spacing: 0.05rem;
+  padding: $spacing/8 $spacing/2;
+  position: fixed;
+  right: $spacing/2;
+  text-transform: uppercase;
+
+  svg {
+    vertical-align: middle;
+    width: 14px;
+
+    path {
+      fill: rgba(white, 0.95);
+    }
+  }
+
+  .icon {
+    margin-right: $spacing/4;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.message-link--inline {
+    // width: 320px;
+    position: relative;
+    top: 0;
+    right: auto;
+    left: 0;
+    display: inline-block;
+    font-size: ms(-2);
+    padding: $spacing/4 $spacing;
+    line-height: 1;
+
+    svg {
+      width: 16px;
+    }
+
+    .icon {
+      margin-right: $spacing/3;
+    }
+
+    .label {
+      vertical-align: middle;
+    }
+  }
+}
+
+.message-popup {
+  background-color: $secondary;
+  border-radius: 0.25rem;
+  padding: $spacing $spacing*2 0 $spacing*2;
+  position: relative;
+  max-width: 640px;
+  @include center-box;
+}
+
+.mfp-close > * {
+  pointer-events: none;
+}

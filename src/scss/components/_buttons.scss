@@ -17,8 +17,8 @@ Styleguide 2.0
 .btn,
 a.btn {
   background-color: $primary;
-  border: 2px solid $primary-dark;
   border-radius: .2rem;
+  border: 2px solid $primary-dark;
   box-sizing: border-box;
   color: $secondary;
   cursor: pointer;
@@ -26,16 +26,16 @@ a.btn {
   font-weight: $fw-medium;
   letter-spacing: 0.15rem;
   line-height: 1;
-  max-width: 100%;
-  transition-property: background-color;
-  transition-duration: 200ms;
   margin: 0 auto;
+  max-width: 100%;
   padding: $spacing/2 $spacing;
   text-align: center;
+  text-shadow: 2px 2px 15px $primary-dark;
   text-transform: uppercase;
+  transition-duration: 200ms;
+  transition-property: background-color;
   user-select: none;
   width: auto;
-  text-shadow: 2px 2px 15px $primary-dark;
 
   &:link,
   &:visited{
@@ -54,6 +54,12 @@ a.btn {
   &:active{
     background-color: $primary;
   }
+}
+
+.btn--small {
+  padding: $spacing/4 $spacing/2;
+  font-size: ms(-1);
+  font-weight: $fw-base;
 }
 
 .btn--secondary{
