@@ -30,6 +30,11 @@ var getProjects = function (file) {
   return JSON.parse(fs.readFileSync(dataProjects, 'utf8'))
 }
 
+var getShowcase = function (file) {
+  var dataShowcase = path.resolve(config.root.src, config.tasks.html.dataShowcase)
+  return JSON.parse(fs.readFileSync(dataShowcase, 'utf8'))
+}
+
 var getBooks = function (file) {
   var dataBooks = path.resolve(config.root.src, config.tasks.html.dataBooks)
   return JSON.parse(fs.readFileSync(dataBooks, 'utf8'))
@@ -47,6 +52,8 @@ var htmlTask = function () {
     .pipe(data(getCv))
     .on('error', handleErrors)
     .pipe(data(getProjects))
+    .on('error', handleErrors)
+    .pipe(data(getShowcase))
     .on('error', handleErrors)
     .pipe(data(getBooks))
     .on('error', handleErrors)

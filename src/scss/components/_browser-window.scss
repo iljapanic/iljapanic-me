@@ -1,0 +1,87 @@
+$barColor: $gray6;
+$barColorDark: shade($barColor, 15%);
+$barColorLight: tint($barColor, 65%);
+$barCircleSize: 6px;
+
+$windowRadius: 4px;
+
+$circleRed: #ff4745;
+$circleYellow: #ffbe00;
+$circleGreen: #00d646;
+
+
+.browser-window {
+  border-radius: $windowRadius;
+  background-color: white;
+  overflow: hidden;
+
+  * {
+    line-height: 1;
+  }
+}
+.browser-window .top-bar {
+  display: flex;
+  align-items: center;
+  padding: $spacing/4 $spacing/2 $spacing/3 $spacing/2;
+  border-radius: $windowRadius $windowRadius 0 0;
+  // border-top: 1px solid $barColorDark;
+  // border-bottom: 1px solid $barColorDark;
+  background: $barColor;
+
+  .bar-circles,
+  .bar-spacer {
+    width: percentage(1/12);
+    // background-color: pink;
+  }
+
+  .bar-url {
+    width: percentage(11/12);
+  }
+
+}
+
+.browser-window .bar-url {
+  font-size: ms(-4);
+  padding-right: $spacing/4;
+
+  a {
+    color: $gray3;
+
+    &:hover {
+      color: $gray1;
+    }
+  }
+
+  span {
+    display: block;
+    background-color: $barColorLight;
+    width: 100%;
+    padding: $spacing/6 $spacing/4;
+    border-radius: $windowRadius/2;
+  }
+}
+
+.browser-window .bar-circles {
+  line-height: 0;
+}
+
+.browser-window .circle {
+  height: $barCircleSize;
+  width: $barCircleSize;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: $barColorLight;
+  margin-right: $spacing/12;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.browser-window .content {
+  margin: 0;
+  width: 100%;
+  border-radius: 0 0 $windowRadius $windowRadius;
+  background-color: white;
+}
+

@@ -1,0 +1,137 @@
+.showcase {
+
+  @include MQ(L) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    .item {
+      width: percentage(1/2);
+      padding: 0 $spacing;
+    }
+  }
+}
+
+
+
+.showcase {
+  .item {
+    margin-bottom: $spacing*3;
+  }
+
+  .item__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a {
+      color: inherit;
+    }
+
+    .item__title {
+      width: percentage(11/12);
+    }
+
+    .item__date {
+      width: percentage(1/12);
+      color: $gray3;
+    }
+  }
+
+  .item__date {
+    font-size: ms(-1);
+    text-align: right;
+  }
+
+  .item__preview {
+    margin-top: $spacing/2;
+
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    .img-wrap {
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        display: block;
+        z-index: 10;
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba($secondary, 0.1);
+        transition: all 0.35s ease-in-out;
+      }
+
+      &:hover:before {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .item__text {
+    margin-top: $spacing/4;
+    font-size: ms(-1);
+  }
+
+  .item__footer {
+    margin-top: $spacing/4;
+  }
+
+  .item__list {
+    display: block;
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: $spacing/2;
+      font-size: ms(-2);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      .item__list-title {
+        color: $gray1;
+        font-size: ms(-1);
+      }
+    }
+
+    a {
+      color: $gray3;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .item__attachments {
+
+    text-align: center;
+
+    li a {
+      color: $gray3;
+
+      &:before {
+        content: '[';
+        display: inline-block;
+        margin-right: $spacing/12;
+        color: $gray1;
+      }
+
+      &:after {
+        content: ']';
+        display: inline-block;
+        margin-left: $spacing/12;
+        color: $gray2;
+      }
+    }
+  }
+}

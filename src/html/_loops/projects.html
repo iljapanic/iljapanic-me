@@ -1,44 +1,74 @@
 {% for project in projects %}
 
-	<article class="item" data-aos="fade-up" data-aos-duration="800">
-    <div class="item__inner">
-      <header class="item__header">
-        <div class="item__image">
-          <a href="{{project.url}}" target="_blank"><img src="/assets/img/work/{{project.image}}" alt="{{project.name}}" /></a>
-        </div>
-        <div class="item__meta">
-    			<div class="item__date">{{project.period}}</div>
-    			<h2 class="item__title">
-            <a href="{{project.url}}" target="_blank">
-              {{project.name}}
-              <img src="/assets/img/icons/link-red.svg" alt="link" />
-            </a>
-          </h2>
-    			<div class="item__subtitle">{{project.role}}</div>
-        </div>
-  		</header>
+	<article class="item item-project size-{{ project.size }} font-{{ project.font }}" data-aos="fade-up" data-aos-duration="800">
 
+    <!-- inner -->
+    <div class="item__inner" style="background-image:url('/assets/img/projects/{{project.image}}');">
+
+      <!-- meta -->
+      <div class="item__meta">
+        <div class="item__year">{{project.period}}</div>
+        <div class="item__role">{{project.role}}</div>
+      </div>
+      <!-- /meta -->
+
+      <!-- body -->
   		<div class="item__body">
+        <h2 class="item__title">
+          <a href="{{project.url}}" target="_blank">{{project.name}}</a>
+        </h2>
   			<p>{{project.description}}</p>
-
-        {% if project.technology %}
-          <span class="item__list-title">Built using:</span>
-          <ul class="item__list">
-            {% for technology in project.technology %}
-              <li><a href="{{ technology.link }}" target="_blank">{{ technology.name }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-
-        {% if project.attachments %}
-          <ul class="item__list item__attachments margin-top-1">
-            {% for attachment in project.attachments %}
-              <li><a href="{{ attachment.link }}" target="_blank">{{ attachment.type }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
   		</div>
+      <!-- /body -->
+
+
+      <!-- footer -->
+      <footer class="item__footer">
+        <div class="item__permalink">
+          <a href="{{project.url}}" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#69696a"><path d="M7.05 22.946c-1.537 0-3.073-.584-4.243-1.754-2.34-2.34-2.34-6.146 0-8.485l3.213-3.12 1.394 1.434-3.203 3.112c-1.548 1.55-1.548 4.087.01 5.646 1.56 1.56 4.1 1.56 5.658 0l2.828-2.828c.755-.756 1.17-1.76 1.17-2.83s-.415-2.07-1.17-2.827L12 10.586l1.414-1.414.707.707c1.134 1.132 1.758 2.64 1.758 4.24s-.624 3.11-1.757 4.244l-2.827 2.828c-1.17 1.17-2.706 1.754-4.243 1.754z"/><path data-color="color-2" d="M10.586 14.828l-.707-.707C8.745 12.99 8.12 11.48 8.12 9.88s.624-3.11 1.757-4.244l2.827-2.828c2.34-2.34 6.146-2.34 8.485 0 2.34 2.34 2.34 6.146 0 8.485l-3.213 3.12-1.395-1.434 3.203-3.112c1.55-1.55 1.55-4.087-.01-5.646-1.56-1.56-4.098-1.56-5.657 0L11.294 7.05c-.755.756-1.17 1.76-1.17 2.83s.415 2.07 1.17 2.827l.707.707-1.414 1.414z"/></g></svg>
+            <span>Visit site</span>
+          </a>
+        </div>
+      </footer>
+      <!-- /footer -->
+
     </div>
+    <!-- /inner -->
 	</article>
 
 {% endfor %}
+
+<script type="text/javascript">
+
+  var screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+  var screenIsMobile = screenWidth < 768;
+  var screenIsDesktop = screenWidth > 1024;
+
+  var projectBreakMobile = 1;
+  var projectBreakDesktop = 3;
+
+  var project = document.getElementsByClassName('size-half');
+  var projectIndex = 0;
+
+  Array.prototype.forEach.call(project, function(el, index, array) {
+    projectIndex ++;
+
+    if (screenIsMobile) {
+      if (projectIndex == projectBreakMobile) {
+        projectIndex = 1;
+      }
+      var projectDelay = projectIndex + '50';
+      el.setAttribute('data-aos-delay', projectDelay);
+    }
+    else if (screenIsDesktop) {
+      if (projectIndex == projectBreakDesktop) {
+        projectIndex = 1;
+      }
+      var projectDelay = projectIndex + '50';
+      el.setAttribute('data-aos-delay', projectDelay);
+    }
+  });
+
+</script>

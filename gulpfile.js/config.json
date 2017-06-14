@@ -28,6 +28,7 @@
       "dataGlobal": "html/_data/global.json",
       "dataCv": "html/_data/cv.json",
       "dataProjects": "html/_data/projects.json",
+      "dataShowcase": "html/_data/showcase.json",
       "dataBooks": "html/_data/books.json",
       "dataServices": "html/_data/services.json",
       "htmlmin": {

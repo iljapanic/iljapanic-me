@@ -1,91 +1,186 @@
+$project-item-radius: 0.35rem;
+$project-item-spacing: $spacing/2;
+$project-item-border: 0;
+
 .projects {
 
-  .item {
-    margin-bottom: $spacing*3;
-    background-color: shade($secondary, 3%);
-    border: 1px solid shade($secondary, 8%);
-    border-radius: 0.35rem;
-  }
+  @include MQ(L) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
 
-  .item__date {
-    font-size: ms(-2);
-    color: $gray3;
-    line-height: 1;
-  }
-
-  .item__title a {
-    color: $gray2;
-    color: shade($gray2, 15%);
-
-    &:hover {
-      color: $primary;
-    }
-
-    &:hover img {
-      opacity: 1;
-    }
-  }
-
-  .item__image {
-    z-index: -1;
-
-    img {
+    .size-full {
       width: 100%;
-      border-top-left-radius: 0.35rem;
-      border-top-right-radius: 0.35rem;
+      padding: $project-item-spacing;
+    }
+
+    .size-half {
+      width: percentage(1/2);
+      font-size: ms(-1);
+      padding: $project-item-spacing;
     }
   }
 
-  .item__title img {
-    padding-bottom: 0.35rem;
-    display: inline-block;
-    max-width: 22px;
-    vertical-align: middle;
-    opacity: 0.75;
-    transition: opacity 0.35s ease-in-out;
+  .item {
+    // margin-bottom: $project-item-spacing;
   }
 
-  .item__subtitle {
-    line-height: 1;
-    font-size: ms(-1);
+  .item.font-light {
+    color: white;
+    text-shadow: 1px 0px 2px $gray1;
+    .item__meta {
+      color: $gray4;
+    }
+
+    .item__title a {
+      color: $gray6;
+    }
+
+    .item__permalink svg path {
+      fill: $gray4;
+    }
+  }
+
+  .item.font-dark {
+    color: $gray1;
+    text-shadow: 1px 0px 2px $gray6;
+    .item__meta {
+      color: $gray3;
+    }
+
+    .item__title a {
+      color: $gray2;
+    }
+
+    .item__permalink svg path {
+      fill: $gray3;
+    }
+  }
+}
+
+.projects .item__inner {
+  align-items: center;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: $project-item-radius;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 100%;
+  transition: all 0.35s ease-in-out;
+  z-index: 1;
+
+  .item__meta,
+  .item__body,
+  .item__footer {
+    width: 100%;
   }
 
   .item__meta {
-    padding: $spacing $spacing 0 $spacing;
+    align-self: flex-start;
   }
+
+  .item__footer {
+    align-self: flex-end;
+  }
+}
+
+
+.projects .item__inner:before {
+  display: block;
+  border-radius: $project-item-radius;
+  border: $project-item-border;
+  overflow: hidden;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.projects .item.font-light .item__inner:before {
+  background-color: rgba($gray1, 0.5);
+}
+
+.projects .item.font-dark .item__inner:before {
+  background-color: rgba($gray6, 0.75);
+}
+
+
+.projects .item__meta {
+  display: flex;
+  align-items: center;
+  padding: $spacing/2 $spacing/2;
+
+  .item__year,
+  .item__role {
+    width: percentage(1/2);
+    font-weight: $fw-medium;
+    line-height: 1;
+    font-size: ms(-3);
+  }
+
+  .item__year {
+    text-align: left;
+  }
+
+  .item__role {
+    text-align: right;
+  }
+}
+
+.projects .item {
 
   .item__body {
-    margin-top: $spacing*0.75;
-    line-height: 1.5;
-    font-size: ms(-1);
-    padding: 0 $spacing $spacing $spacing;
+    padding: $spacing*2 $spacing*2;
   }
 
-  .item__list-title {
-    display: inline-block;
-    margin-top: $spacing/2;
-    color: $gray3;
-  }
-
-  .item__list {
-    list-style-type: none;
-    margin-left: 0;
-    padding: 0;
-
-    li {
-      display: inline-block;
-      margin-right: $spacing/2;
-      font-size: ms(-2);
-
-      &:last-of-type {
-        margin-right: 0;
-      }
+  @include MQ(L) {
+    &.size-full .item__body {
+      padding: $spacing*2.5 $spacing*4;
     }
 
-    a {
-      color: $gray1;
-      &:hover {
-        color: $primary;
+    &.size-half .item__body {
+      padding: $spacing*2 $spacing*2;
+    }
+  }
+}
+
+.projects .item__permalink {
+  padding: $spacing/3 $spacing/3;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    line-height: 1;
+    color: inherit;
+
+    span {
+      vertical-align: middle;
+      text-transform: uppercase;
+      font-size: ms(-3);
+      font-weight: $fw-medium;
+      display: inline-block;
+      margin-left: $spacing/12;
+      letter-spacing: 0.1rem;
+    }
+
+    svg {
+      vertical-align: middle;
+      width: 14px;
+      opacity: 0.85;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      color: $primary;
+
+      svg {
+        opacity: 1;
       }
     }
   }
