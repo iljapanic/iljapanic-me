@@ -46,7 +46,7 @@
         }
       ],
       "size": "half",
-      "font": "dark"
+      "font": "light"
     },
     {
       "period": "2015",
@@ -74,7 +74,7 @@
         }
       ],
       "size": "full",
-      "font": "dark"
+      "font": "light"
     }
   ]
 }

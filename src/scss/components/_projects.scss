@@ -28,8 +28,13 @@ $project-item-border: 0;
   .item.font-light {
     color: white;
     text-shadow: 1px 0px 2px $gray1;
+
     .item__meta {
       color: $gray4;
+    }
+
+    .item__title {
+      margin-bottom: $spacing/8;
     }
 
     .item__title a {
@@ -42,7 +47,7 @@ $project-item-border: 0;
   }
 
   .item.font-dark {
-    color: $gray1;
+    color: black;
     text-shadow: 1px 0px 2px $gray6;
     .item__meta {
       color: $gray3;
