@@ -120,7 +120,7 @@
 }
 
 .resume-extra {
-  text-align: center;
+  text-align: left;
   margin-top: $spacing;
 
   .section {
@@ -142,7 +142,12 @@
     li {
       display: inline-block;
       font-size: ms(-1);
-      margin: 0 $spacing/2 $spacing/4 $spacing/2;
+      margin-bottom: $spacing/4;
+      margin-right: $spacing;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 }
