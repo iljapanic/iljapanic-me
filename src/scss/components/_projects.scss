@@ -4,10 +4,18 @@ $project-item-border: 0;
 
 .projects {
 
+  .item {
+    margin-bottom: $spacing*2;
+  }
+
   @include MQ(L) {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+
+    .item {
+      margin-bottom: 0;
+    }
 
     .size-full {
       width: 100%;
@@ -19,10 +27,6 @@ $project-item-border: 0;
       font-size: ms(-1);
       padding: $project-item-spacing;
     }
-  }
-
-  .item {
-    // margin-bottom: $project-item-spacing;
   }
 
   .item.font-light {
