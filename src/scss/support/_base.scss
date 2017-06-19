@@ -36,7 +36,7 @@ body {
   position: relative;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
   font-family: $heading;
   font-weight: $fw-heading;
   color: $gray2;
@@ -54,8 +54,9 @@ h4, h5, h6{
 h1 {
   font-size: ms(4);
   padding-bottom: $spacing;
-  font-weight: $fw-medium;
-  color: shade($secondary, 55%);
+  font-weight: $fw-bold;
+  letter-spacing: 0.05rem;
+  color: shade($secondary, 50%);
 }
 
 h2{

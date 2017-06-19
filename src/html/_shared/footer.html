@@ -1,7 +1,21 @@
-<a href="#message-popup" class="message-link mfp-inline" data-aos="fade" data-aos-duration="800" data-aos-delay="1000" data-aos-anchor-placement="bottom-bottom">
-  <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#444" d="M12 1C5.4 1 0 5.5 0 11s5.4 10 12 10c1 0 2-.1 3-.3l5.6 2.2c.1 0 .2.1.4.1s.4-.1.6-.2c.3-.2.4-.6.4-.9l-.5-4.7c1.6-1.8 2.5-3.9 2.5-6.1C24 5.5 18.6 1 12 1z"/></svg></span>
-  <span>Message Me</span>
-</a>
+<footer class="footer" role="contentinfo">
+
+  <div class="footer__contact" data-aos="fade-right" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom">
+    <a href="mailto:hello@iljapanic.me" target="_blank">hello@iljapanic.me</a>
+  </div>
+
+  <div class="footer__social" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" data-aos-anchor-placement="bottom-bottom">
+    {% include '_shared/social.html' %}
+  </div>
+
+  <div class="footer__message" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" data-aos-anchor-placement="bottom-bottom">
+    <a href="#message-popup" class="message-link mfp-inline">
+      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#444" d="M12 1C5.4 1 0 5.5 0 11s5.4 10 12 10c1 0 2-.1 3-.3l5.6 2.2c.1 0 .2.1.4.1s.4-.1.6-.2c.3-.2.4-.6.4-.9l-.5-4.7c1.6-1.8 2.5-3.9 2.5-6.1C24 5.5 18.6 1 12 1z"/></svg></span>
+      <span class="label">Message Me</span>
+    </a>
+  </div>
+
+</footer>
 
 <div id="message-popup" class="message-popup mfp-hide">
   <div class="message-popup__close">
@@ -11,16 +25,3 @@
   </div>
   {% include '_shared/message.html' %}
 </div>
-
-<footer class="footer" role="contentinfo">
-
-  <div class="colophon" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom">
-
-    <p>Feel free to get in touch</p>
-
-    {% include '_shared/social.html' %}
-
-    <p>I'm always up to discuss ideas for interesting projects</p>
-  </div>
-
-</footer>

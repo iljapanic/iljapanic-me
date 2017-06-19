@@ -108,26 +108,31 @@ a.message-link {
   align-items: center;
   background-color: $primary;
   border-radius: 1.5rem;
-  bottom: $spacing/2;
   color: white;
-  display: flex;
-  font-size: ms(-4);
+  display: inline-block;
+  font-size: ms(-5);
   font-weight: $fw-medium;
   letter-spacing: 0.1rem;
-  padding: $spacing/8 $spacing/2;
-  position: fixed;
-  right: $spacing/2;
+  padding: $spacing/12 $spacing/2;
   text-transform: uppercase;
   transition: background-color 0.35s ease-in-out;
-  z-index: 100;
 
 
   svg {
     vertical-align: middle;
-    width: 14px;
+    width: 12px;
 
     path {
       fill: rgba(white, 0.95);
+    }
+  }
+
+  .label {
+    position: relative;
+    top: 1px;
+
+    @include MQ(M) {
+      top: 2px;
     }
   }
 

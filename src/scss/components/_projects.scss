@@ -1,4 +1,4 @@
-$project-item-radius: 0.35rem;
+$project-item-radius: 1.5rem;
 $project-item-spacing: $spacing/2;
 $project-item-border: 0;
 
@@ -67,15 +67,25 @@ $project-item-border: 0;
   }
 }
 
+.projects .item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  .item__inner {
+    width: 100%;
+  }
+
+}
+
 .projects .item__inner {
-  align-items: center;
+  align-items: normal;
   background-position: 50% 50%;
   background-size: cover;
   border-radius: $project-item-radius;
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  height: 100%;
   transition: all 0.35s ease-in-out;
   z-index: 1;
 
@@ -85,12 +95,21 @@ $project-item-border: 0;
     width: 100%;
   }
 
+  .item__body {
+    background-color: pink;
+
+    // align-self: flex-start;
+
+  }
+
   .item__meta {
     align-self: flex-start;
+    background-color: purple;
   }
 
   .item__footer {
     align-self: flex-end;
+    background-color: blue;
   }
 }
 
