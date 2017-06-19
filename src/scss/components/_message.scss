@@ -119,6 +119,7 @@ a.message-link {
   right: $spacing/2;
   text-transform: uppercase;
   transition: background-color 0.35s ease-in-out;
+  z-index: 100;
 
 
   svg {
