@@ -1,4 +1,4 @@
-$project-item-radius: 1.5rem;
+$project-item-radius: 0.35rem;
 $project-item-spacing: $spacing/2;
 $project-item-border: 0;
 
@@ -31,10 +31,10 @@ $project-item-border: 0;
 
   .item.font-light {
     color: white;
-    text-shadow: 1px 0px 2px $gray1;
+    text-shadow: 0px 0px 1px $gray1;
 
     .item__meta {
-      color: $gray4;
+      color: $gray5;
     }
 
     .item__title {
@@ -79,7 +79,7 @@ $project-item-border: 0;
 }
 
 .projects .item__inner {
-  align-items: normal;
+  align-items: stretch;
   background-position: 50% 50%;
   background-size: cover;
   border-radius: $project-item-radius;
@@ -89,6 +89,7 @@ $project-item-border: 0;
   transition: all 0.35s ease-in-out;
   z-index: 1;
 
+
   .item__meta,
   .item__body,
   .item__footer {
@@ -96,20 +97,19 @@ $project-item-border: 0;
   }
 
   .item__body {
-    background-color: pink;
-
-    // align-self: flex-start;
+    // background-color: pink;
+    align-self: stretch;
 
   }
 
   .item__meta {
     align-self: flex-start;
-    background-color: purple;
+    // background-color: purple;
   }
 
   .item__footer {
     align-self: flex-end;
-    background-color: blue;
+    // background-color: blue;
   }
 }
 
@@ -147,7 +147,7 @@ $project-item-border: 0;
   .item__year,
   .item__role {
     width: percentage(1/2);
-    font-weight: $fw-medium;
+    font-weight: $fw-base;
     line-height: 1;
     font-size: ms(-3);
   }

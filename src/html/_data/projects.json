@@ -6,7 +6,7 @@
       "url": "http://citydesigner.org",
       "role": "Founder & Curator",
       "image": "preview-citydesigner.jpg",
-      "description": "Site for curating information to help improve understanding of design challenges posed by a modern urban environment. The long-term ambition is to create a learning platform for engaging the public on how to design better cities for everyone, by everyone.",
+      "description": "Site curating information for improving understanding of design challenges posed by a modern urban environment. The long-term ambition is to create a learning platform for engaging the public on how to design better cities for everyone, by everyone.",
       "attachments" : [
         {
           "type": "visit site",
@@ -22,7 +22,7 @@
       "url": "http://webcrashcourse.org",
       "image": "preview-wcc.jpg",
       "role": "Founder & Instructor",
-      "description": "My latest endeavour. Intensive web design and development workshops for beginners. WORK IN PROGRESS",
+      "description": "Intensive web development workshops for beginners. The idea is to get a person who has never seen code to publish their website on GitHub Pages in a single 4-hour sitting. The focus is on shipping rather than nuts and bolts of web development. The project is currently work in progress.",
       "attachments" : [
         {
           "type": "visit site",
