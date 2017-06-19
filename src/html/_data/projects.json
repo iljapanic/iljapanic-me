@@ -2,22 +2,6 @@
   "projects": [
     {
       "period": "2017 – Now",
-      "name": "Web Crash Course",
-      "url": "http://webcrashcourse.org",
-      "image": "preview-wcc.jpg",
-      "role": "Founder & Instructor",
-      "description": "My latest endeavour. Intensive web design and development workshops for beginners. WORK IN PROGRESS",
-      "attachments" : [
-        {
-          "type": "visit site",
-          "link": "http://webcrashcourse.org"
-        }
-      ],
-      "size": "full",
-      "font": "light"
-    },
-    {
-      "period": "2017 – Now",
       "name": "City Designer",
       "url": "http://citydesigner.org",
       "role": "Founder & Curator",
@@ -29,8 +13,24 @@
           "link": "https://citydesigner.org"
         }
       ],
-      "size": "half",
+      "size": "full",
       "font": "dark"
+    },
+    {
+      "period": "2017 – Now",
+      "name": "Web Crash Course",
+      "url": "http://webcrashcourse.org",
+      "image": "preview-wcc.jpg",
+      "role": "Founder & Instructor",
+      "description": "My latest endeavour. Intensive web design and development workshops for beginners. WORK IN PROGRESS",
+      "attachments" : [
+        {
+          "type": "visit site",
+          "link": "http://webcrashcourse.org"
+        }
+      ],
+      "size": "half",
+      "font": "light"
     },
     {
       "period": "2012 – 2015",

@@ -39,16 +39,6 @@
     </div>
     <!-- /preview -->
 
-    <!-- extra -->
-    {% if project.attachments %}
-      <ul class="item__list item__attachments">
-        {% for attachment in project.attachments %}
-          <li><a href="{{ attachment.link }}" target="_blank">{{ attachment.type }}</a></li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-    <!-- /extra -->
-
     <!-- body -->
     <div class="item__body">
       <!-- text -->
@@ -61,6 +51,15 @@
 
     <!-- footer -->
     <div class="item__footer">
+      <!-- extra -->
+      {% if project.attachments %}
+        <ul class="item__list item__attachments">
+          {% for attachment in project.attachments %}
+            <li><a href="{{ attachment.link }}" target="_blank">{{ attachment.type }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <!-- /extra -->
       <!-- tech -->
       {% if project.technology %}
         <ul class="item__list item__list--inline">

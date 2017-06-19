@@ -75,12 +75,12 @@
   }
 
   .item__text {
-    margin-top: $spacing/4;
+    margin-top: $spacing/2;
     font-size: ms(-1);
   }
 
   .item__footer {
-    margin-top: $spacing/4;
+    margin-top: $spacing/8;
   }
 
   .item__list {
@@ -114,7 +114,7 @@
 
   .item__attachments {
 
-    text-align: center;
+    // text-align: center;
 
     li a {
       color: $gray3;
