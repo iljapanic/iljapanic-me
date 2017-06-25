@@ -8,6 +8,7 @@ var gulp = require('gulp')
 var handleErrors = require('../lib/handleErrors')
 var path = require('path')
 var sass = require('gulp-sass')
+var uncss = require('gulp-uncss')
 var sourcemaps = require('gulp-sourcemaps')
 
 var paths = {

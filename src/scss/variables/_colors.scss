@@ -3,13 +3,13 @@
 // Styleguide
 
 // primary colors
-$primary: #C0392B !default;
-$primary-dark: darken($primary, 5%) !default;
-$secondary: #f9f9f3 !default;
-$secondary-dark: darken($secondary, 5%) !default;
+$primary: #718792 !default;
+$primary-dark: shade($primary, 5%);
+$primary-light: tint($primary, 55%);
+$primary-lighter: tint($primary, 85%);
+
 
 $link: #4076D4 !default;
-$link: $primary;
 $link--visited: #9140D4 !default;
 $link--visited: $link;
 $link--hover: darken($link, 5%) !default;
@@ -26,8 +26,23 @@ $gray4: #cdcdce !default;
 $gray5: #dededf !default;
 $gray6: #efeff0 !default;
 
+
+
+$gray: #777870;
+
+$gray-light: tint($gray, 25%);
+$gray-lighter: tint($gray, 50%);
+$gray-lightest: tint($gray, 75%);
+
+$gray-dark: shade($gray, 25%);
+$gray-darker: shade($gray, 50%);
+$gray-darkest: shade($gray, 75%);
+
+
 $white: #ffffff !default;
 
+$status-green: #44fea5;
+$highlight: #fffd6f;
 
 $alert-green: #26A65B;
 $alert-red: #9a001a;

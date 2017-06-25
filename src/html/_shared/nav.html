@@ -1,0 +1,41 @@
+{% macro active(activePage) %}
+<nav role="navigation" class="nav">
+
+  <div class="nav__home">
+    <a href="/" class="nav__link {%if activePage == 'home' %}active{% endif %}">
+      iljapanic
+      <span class="breadcrumb">
+      {%if activePage == 'projects' %} | <span data-aos="fade" data-aos-duration="300">Projects</span>{% endif %}
+      {%if activePage == 'resume' %} | <span data-aos="fade" data-aos-duration="300">Resume</span>{% endif %}
+      {%if activePage == 'bookshelf' %} | <span data-aos="fade" data-aos-duration="300">Bookshelf</span>{% endif %}
+      {%if activePage == 'hire' %} | <span data-aos="fade" data-aos-duration="300">Hire</span>{% endif %}
+      </span>
+    </a>
+  </div>
+
+  <div class="nav__main">
+    <ul>
+      <li>
+        <a href="/resume" class="nav__link {%if activePage == 'resume' %}active{% endif %}">
+          <span>Resume</span>
+        </a>
+      </li>
+      <li>
+        <a href="/projects" class="nav__link {%if activePage == 'projects' %}active{% endif %}">
+          <span>Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="/bookshelf" class="nav__link {%if activePage == 'bookshelf' %}active{% endif %}">
+          <span>Bookshelf</span>
+        </a>
+      </li>
+      <li>
+        <a href="/hire" class="nav__link {%if activePage == 'hire' %}active{% endif %}">
+          <span>Hire me</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endmacro %}

@@ -1,21 +1,30 @@
+.container {
+  border: 6px solid $primary-light;
+  background-color: white;
+
+  @include mq-desktop {
+    border: 32px solid $primary-light;
+  }
+}
+
 .main {
-  margin-top: $spacing*2;
+
+  padding: 0 $spacing;
+
+  @include mq-tablet {
+    padding-left: 18%;
+    padding-right: 5%;
+  }
 }
 
 .wrapper{
-  margin: 0 auto;
   max-width: $wrapper;
-  padding: 0 2rem;
 }
 
-.wrapper-large{
-  margin: 0 auto;
+.wrapper-large {
   max-width: $wrapper-large;
-  padding: 0 2rem;
 }
 
-.wrapper-small{
-  margin: 0 auto;
+.wrapper-small {
   max-width: $wrapper-small;
-  padding: 0 2rem;
 }

@@ -2,32 +2,33 @@
 
 $avenir: 'Avenir Next W01';
 $avenir-rounded: 'Avenir Next Rounded W01';
+$leitura: 'Leitura News W01'; // 300, 400, 600, 700
+
+$garamond1: 'Garamond Premier W01';
+$garamond2: 'Garamond Premier W01 Disp';
+$garamond3: 'Garamond Premier W01 Capt';
 
 
-$base-font: $avenir, 'Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
+$base-font: $avenir, 'Helvetica Neue', 'Verdana', sans-serif;
 $heading-font: $avenir, 'Georgia', serif;
-$monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace !default;
+$monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace;
 
-$heading: $heading-font !default;
-$body: $base-font !default;
-$monospace: $monospace-font !default;
-
-$font-size: 1.4rem !default;
-$line-height: 1.75 !default;
+$body: $base-font;
+$heading: $heading-font;
+$monospace: $monospace-font;
 
 $fw-base: 300;
-$fw-medium: 600;
+$fw-medium: 500;
 $fw-bold: 700;
 
-$fw-heading: 600;
+$fw-heading: 500;
+$fw-h1: 300;
 
 
-$font-size--small: 1.2rem !default;
-$font-size--large: 2rem !default;
+$ms-base: 1.6rem;
+$ms-ratio: 1.25;
 
-
-$ms-base: 1.4rem;
-$ms-ratio: 1.125;
-
+$line-height: 1.6;
+$line-height-heading: 1.35;
 
 $spacing: 2rem;

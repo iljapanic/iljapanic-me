@@ -1,20 +1,17 @@
 <!doctype html>
 <html class="no-js">
 <head>
-
   <meta charset="utf-8">
-  <title>{{ site.title }}</title>
+  <title>{{ site.title }} | {{ page_projects.title }}</title>
   <meta name="description" content="{{ site.description }}">
 
-  <meta property="og:title" content="{{ site.title }}" />
-  <meta property="og:url" content="http://iljapanic.me/" />
+  <meta property="og:title" content="{{ page_projects.title }} | {{ site.title }}" />
+  <meta property="og:url" content="http://iljapanic.me/projects/" />
 
 	{% include "_shared/head.html" %}
-
-
 </head>
 
-<body class="home">
+<body>
 
 	<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -28,40 +25,35 @@
 
   <div id="top" class="container shadow">
 
-
     <!-- HEADER -->
   	<header class="header" role="banner">
       {% import '_shared/nav.html' as nav %}
-      {{nav.active('home')}}
+      {{nav.active('projects')}}
   	</header>
   	<!-- /HEADER  -->
 
-    <!-- MAIN -->
     <main class="main" role="main">
 
-      <article>
-        <h1 data-aos="fade" data-aos-duration="800">Building the Web<br />one line at a time</h1>
-        <div class="frontpage">
-          <div class="frontpage__text fs-large" data-aos="fade" data-aos-duration="800" data-aos-delay="100">
-            <div class="wrapper">
-              {% include "_text/intro.html" %}
-            </div>
-          </div>
-        </div>
-      </article>
+      <h1 data-aos="fade" data-aos-duration="800">Sites and personal projects</h1>
+      <section class="projects margin-top-4">
+        {% include "_loops/projects.html" %}
+      </section>
+
+      <h2 class="margin-top-8 uppercase letter-spacing" data-aos="fade" data-aos-duration="800">Work showcase</h2>
+      <section class="showcase margin-top-6">
+        {% include "_loops/showcase.html" %}
+      </section>
 
   	</main>
-    <!-- /MAIN -->
 
-    <div class="margin-top-6">
+    <div class="margin-top-4">
       {% include '_shared/booking.html' %}
     </div>
 
     {% include "_shared/footer.html" %}
+    {% include "_shared/global-scripts.html" %}
 
   </div>
-
-  {% include "_shared/global-scripts.html" %}
 
 </body>
 </html>

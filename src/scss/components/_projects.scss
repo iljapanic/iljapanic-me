@@ -1,68 +1,22 @@
-$project-item-radius: 0.35rem;
-$project-item-spacing: $spacing/2;
+$project-item-radius: 0.5rem;
+$project-item-spacing: $spacing*2;
 $project-item-border: 0;
 
 .projects {
 
   .item {
-    margin-bottom: $spacing*2;
+    margin-top: $spacing*2;
   }
 
-  @include MQ(L) {
+  @include mq-desktop {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
 
     .item {
-      margin-bottom: 0;
-    }
-
-    .size-full {
-      width: 100%;
-      padding: $project-item-spacing;
-    }
-
-    .size-half {
+      margin-top: $project-item-spacing;
       width: percentage(1/2);
-      font-size: ms(-1);
-      padding: $project-item-spacing;
-    }
-  }
-
-  .item.font-light {
-    color: white;
-    text-shadow: 0px 0px 1px $gray1;
-
-    .item__meta {
-      color: $gray5;
-    }
-
-    .item__title {
-      margin-bottom: $spacing/8;
-    }
-
-    .item__title a {
-      color: $gray6;
-    }
-
-    .item__permalink svg path {
-      fill: $gray4;
-    }
-  }
-
-  .item.font-dark {
-    color: black;
-    text-shadow: 1px 0px 2px $gray6;
-    .item__meta {
-      color: $gray3;
-    }
-
-    .item__title a {
-      color: $gray2;
-    }
-
-    .item__permalink svg path {
-      fill: $gray3;
+      padding-right: $project-item-spacing;
     }
   }
 }
@@ -80,15 +34,35 @@ $project-item-border: 0;
 
 .projects .item__inner {
   align-items: stretch;
-  background-position: 50% 50%;
-  background-size: cover;
+  border: 1px solid $primary-light;
   border-radius: $project-item-radius;
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  transition: all 0.35s ease-in-out;
   z-index: 1;
+  transition: all .5s cubic-bezier(.77,0,.175,1);
 
+  a {
+    color: $primary;
+  }
+
+
+  &:hover {
+    background-color: tint($primary-light, 99%);
+    border-color: shade($primary-light, 10%);
+
+    a {
+      color: $primary-dark;
+
+      &:hover {
+        color: $link;
+      }
+    }
+
+    .item__meta {
+      color: $gray;
+    }
+  }
 
   .item__meta,
   .item__body,
@@ -97,45 +71,17 @@ $project-item-border: 0;
   }
 
   .item__body {
-    // background-color: pink;
     align-self: stretch;
 
   }
 
   .item__meta {
     align-self: flex-start;
-    // background-color: purple;
   }
 
   .item__footer {
     align-self: flex-end;
-    // background-color: blue;
   }
-}
-
-
-.projects .item__inner:before {
-  display: block;
-  border-radius: $project-item-radius;
-  border: $project-item-border;
-  overflow: hidden;
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-}
-
-.projects .item.font-light .item__inner:before {
-  background-color: rgba($gray1, 0.5);
-}
-
-.projects .item.font-dark .item__inner:before {
-  background-color: rgba($gray6, 0.75);
 }
 
 
@@ -143,13 +89,16 @@ $project-item-border: 0;
   display: flex;
   align-items: center;
   padding: $spacing/2 $spacing/2;
+  color: $gray-light;
+  transition: all .5s cubic-bezier(.77,0,.175,1);
 
   .item__year,
   .item__role {
     width: percentage(1/2);
     font-weight: $fw-base;
     line-height: 1;
-    font-size: ms(-3);
+    font-size: ms(-2);
+    letter-spacing: 0.025rem;
   }
 
   .item__year {
@@ -162,53 +111,49 @@ $project-item-border: 0;
 }
 
 .projects .item {
-
   .item__body {
-    padding: $spacing*2 $spacing*2;
+    padding: $spacing $spacing*2 $spacing*2 $spacing*2;
   }
 
-  @include MQ(L) {
-    &.size-full .item__body {
-      padding: $spacing*2.5 $spacing*4;
-    }
-
-    &.size-half .item__body {
-      padding: $spacing*2 $spacing*2;
-    }
+  .item__text {
+    margin-top: $spacing/2;
+    font-size: ms(-1);
   }
-}
 
-.projects .item__permalink {
-  padding: $spacing/3 $spacing/3;
-  text-align: center;
+  .item__footer {
+    padding: 0 $spacing/2 $spacing/2 $spacing/2;
+    text-align: center;
 
-  a {
-    display: inline-block;
-    line-height: 1;
-    color: inherit;
-
-    span {
-      vertical-align: middle;
-      text-transform: uppercase;
+    a {
       font-size: ms(-3);
-      font-weight: $fw-medium;
-      display: inline-block;
-      margin-left: $spacing/12;
+      text-transform: uppercase;
       letter-spacing: 0.1rem;
+      font-weight: $fw-bold;
+      color: $gray-light;
+
+      &:hover {
+        color: $link;
+
+        svg {
+          transform: translateX(1px);
+        }
+
+        svg path {
+          stroke: $link;
+        }
+      }
     }
 
     svg {
       vertical-align: middle;
-      width: 14px;
-      opacity: 0.85;
-      transition: all 0.2s ease-in-out;
-    }
-
-    &:hover {
-      color: $primary;
-
-      svg {
-        opacity: 1;
+      position: relative;
+      bottom: 2px;
+      width: 18px;
+      margin-left: -4px;
+      transition: all 0.35s ease-in-out;
+      stroke-width: 2;
+      path {
+        stroke: $gray-light;
       }
     }
   }

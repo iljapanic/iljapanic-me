@@ -2,14 +2,6 @@
 
 	<article class="item" data-aos="fade-right" data-aos-duration="800">
 
-		<!-- <header class="item__header">
-      <div class="item__meta">
-        <h3 class="item__title">{{school.programe}} <span class="item__extra">[{{school.extra}}]</span></h3>
-  			<div class="item__subtitle"><a href="{{school.url}}" target="_blank">{{school.name}}</a></div>
-        <div class="item__date">{{school.period}} | {{school.location}}</div>
-      </div>
-		</header> -->
-
     <header class="item__header">
       <div class="item__meta">
 
@@ -18,11 +10,11 @@
         </div>
         <h3 class="item__title">
           {{school.programe}}
-          <span class="item__extra"> [{{school.extra}}]</span>
+          <span class="item__extra"> ({{school.extra}})</span>
         </h3>
   			<div class="item__subtitle">
           <a href="{{school.url}}" target="_blank">{{school.name}}</a>
-          <span class="item__location"> | {{school.location}}</span>
+          <span class="item__location">({{school.location}})</span>
         </div>
 
       </div>
@@ -30,24 +22,25 @@
 
     <div class="extra">
 
-
       <div class="extra__content">
     		<div class="item__body">
           {% if school.courses %}
-            <span class="item__list-title">Selected courses:</span>
-            <ul class="item__list item__list--block">
-              {% for course in school.courses %}
-                <li>{{ course.name }}</li>
-              {% endfor %}
-            </ul>
+            <div class="courses">
+              <ul class="courses__list">
+                {% for course in school.courses %}
+                  <li>{{ course.name }}</li>
+                {% endfor %}
+              </ul>
+            </div>
           {% endif %}
     		</div>
       </div>
 
       <div class="extra__toggle">
-        <span class="more">Show selected courses<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M2 7l10 10L22 7"/></svg></span>
-        <span class="less">Hide selected courses<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M22 17L12 7 2 17"/></svg></span>
+        <span class="more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#444" stroke-linecap="square" stroke-miterlimit="10"><path d="M12.5 2.5v20M22.5 12.5h-20"/></g></svg> Selected Courses</span>
+        <span class="less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#444" stroke-linecap="square" stroke-miterlimit="10" d="M22.5 12.5h-20"/></svg> Selected Courses</span>
       </div>
+
     </div>
 
 	</article>

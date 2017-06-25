@@ -15,63 +15,52 @@
 
     <!-- preview -->
     <div class="item__preview">
-      <div class='browser-window'>
-        <!-- bar -->
-        <div class='top-bar'>
-          <div class='bar-circles'>
-             <div class="circle circle-red"></div>
-             <div class="circle circle-yellow"></div>
-             <div class="circle circle-green"></div>
-          </div>
-          <div class="bar-url">
-            <span><a href="{{project.url}}" target="_blank">{{project.url}}</a></span>
-          </div>
+      <a href="{{project.url}}" target="_blank">
+        <div class="img-wrap">
+          <img src="/assets/img/work/{{project.image}}" alt="{{project.name}}" />
         </div>
-        <!-- /bar -->
-        <div class='content'>
-          <a href="{{project.url}}" target="_blank">
-            <div class="img-wrap">
-              <img src="/assets/img/work/{{project.image}}" alt="{{project.name}}" />
-            </div>
-          </a>
-        </div>
-      </div>
+      </a>
     </div>
     <!-- /preview -->
 
-    <!-- body -->
-    <div class="item__body">
-      <!-- text -->
-      <div class="item__text">
-        <p>{{project.description}}</p>
-      </div>
-      <!-- /text -->
-    </div>
-    <!-- /body -->
+    <!-- extra -->
+    <div class="extra">
 
-    <!-- footer -->
-    <div class="item__footer">
-      <!-- extra -->
-      {% if project.attachments %}
-        <ul class="item__list item__attachments">
-          {% for attachment in project.attachments %}
-            <li><a href="{{ attachment.link }}" target="_blank">{{ attachment.type }}</a></li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      <!-- /extra -->
-      <!-- tech -->
-      {% if project.technology %}
-        <ul class="item__list item__list--inline">
-            <li><span class="item__list-title">Tools:</span></li>
-          {% for technology in project.technology %}
-            <li><a href="{{ technology.link }}" target="_blank">{{ technology.name }}</a></li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      <!-- /tech -->
+      <!-- extra__content -->
+      <div class="extra__content">
+        <!-- body -->
+        <div class="item__body">
+          <!-- text -->
+          <div class="item__text">
+            <p>{{project.description}}</p>
+          </div>
+          <!-- /text -->
+        </div>
+        <!-- /body -->
+
+        <!-- footer -->
+        <div class="item__footer">
+          <!-- tech -->
+          {% if project.technology %}
+            <div class="item__list-title">Tools:</div>
+            <ul class="item__list item__list--inline">
+              {% for technology in project.technology %}
+                <li><a href="{{ technology.link }}" target="_blank">{{ technology.name }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          <!-- /tech -->
+        </div>
+        <!-- /footer -->
+      </div>
+      <!-- /extra__content -->
+
+      <div class="extra__toggle">
+        <span class="more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#444" stroke-linecap="square" stroke-miterlimit="10"><path d="M12.5 2.5v20M22.5 12.5h-20"/></g></svg> Details</span>
+        <span class="less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#444" stroke-linecap="square" stroke-miterlimit="10" d="M22.5 12.5h-20"/></svg> Details</span>
+      </div>
     </div>
-    <!-- /footer -->
+    <!-- /extra -->
   </article>
 
 {% endfor %}
@@ -84,7 +73,7 @@
   var screenIsDesktop = screenWidth > 1024;
 
   var showcaseBreakMobile = 1;
-  var showcaseBreakDesktop = 3;
+  var showcaseBreakDesktop = 4;
 
   var showcase = document.getElementsByClassName('item-showcase');
   var showcaseIndex = 0;

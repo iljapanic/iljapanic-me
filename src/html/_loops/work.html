@@ -8,15 +8,22 @@
         <div class="item__date">
           <span class="period">{{work.period}}</span>
         </div>
-        <h3 class="item__title">
-          {{work.role}}
-          <span class="item__extra"> [{{work.extra}}]</span>
-        </h3>
+        <h3 class="item__title">{{work.role}}</h3>
   			<div class="item__subtitle">
           <a href="{{work.url}}" target="_blank">{{work.name}}</a>
-          <span class="item__location"> | {{work.location}}</span>
+          <span class="item__location">({{work.location}})</span>
         </div>
       </div>
+      {% if work.clients %}
+        <div class="client">
+          <span class="client__title">Selected clients:</span>
+          <ul class="client__list">
+            {% for client in work.clients %}
+              <li><a href="{{ client.link }}" target="_blank">{{ client.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
 		</header>
 
     <div class="extra">
@@ -25,20 +32,11 @@
     		<div class="item__body">
     			<p>{{work.description}}</p>
     		</div>
-
-        {% if work.clients %}
-          <span class="item__list-title margin-top-1">Selected clients:</span>
-          <ul class="item__list">
-            {% for client in work.clients %}
-              <li><a href="{{ client.link }}" target="_blank">{{ client.name }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
       </div>
 
       <div class="extra__toggle">
-        <span class="more">Show more information<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M2 7l10 10L22 7"/></svg></span>
-        <span class="less">Show less information<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M22 17L12 7 2 17"/></svg></span>
+        <span class="more"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#444" stroke-linecap="square" stroke-miterlimit="10"><path d="M12.5 2.5v20M22.5 12.5h-20"/></g></svg> Description</span>
+        <span class="less"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#444" stroke-linecap="square" stroke-miterlimit="10" d="M22.5 12.5h-20"/></svg> Description</span>
       </div>
 
     </div>

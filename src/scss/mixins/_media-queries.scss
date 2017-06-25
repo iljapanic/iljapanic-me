@@ -1,24 +1,35 @@
-@mixin MQ($canvas) {
+@mixin mq-tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
 
-	@if $canvas == S {
-		@media only screen and #{$S} { @content; } 
-	}
-	@else if $canvas == M {
-		@media only screen and #{$M} { @content; } 
-	}
-	@else if $canvas == L {
-		@media only screen and #{$L} { @content; } 
-	}
+@mixin mq-desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin mq-hd {
+  @media (min-width: #{$hd-width}) {
+    @content;
+  }
 }
 
 @mixin retina {
-	@media
-	only screen and (-webkit-min-device-pixel-ratio: 2),
-	only screen and (min--moz-device-pixel-ratio: 2),
-	only screen and (-o-min-device-pixel-ratio: 2/1),
-	only screen and (min-device-pixel-ratio: 2),
-	only screen and (min-resolution: 192dpi),
-	only screen and (min-resolution: 2dppx) {
-		@content;
-	}
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
 }

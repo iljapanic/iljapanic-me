@@ -1,0 +1,153 @@
+
+<form id="proposal-form" method="POST" class="form">
+
+  <legend class="visually-hidden">Apply to work with me</legend>
+
+  <!-- TYPE -->
+  <div class="form__item">
+    <label>How can I help you?</label>
+
+    <div class="form__radio">
+      <input id="proposal-type-1" type="radio" name="type-of-proposal" value="consult" />
+      <label for="proposal-type-1">Consult on a project/product</label>
+    </div>
+
+    <div class="form__radio">
+      <input id="proposal-type-2" type="radio" name="type-of-proposal" value="design-and-develop" />
+      <label for="proposal-type-2">Design and develop a project</label>
+    </div>
+
+    <div class="form__radio">
+      <input id="proposal-type-3" type="radio" name="type-of-proposal" value="workshop" />
+      <label for="proposal-type-3">Organize a workshop for my team/company</label>
+    </div>
+
+    <div class="form__radio">
+      <input id="proposal-type-4" type="radio" name="type-of-proposal" value="teach" />
+      <label for="proposal-type-4">Teach me something</label>
+    </div>
+
+    <div class="form__radio">
+      <input id="proposal-type-5" type="radio" name="type-of-proposal" value="else" />
+      <label for="proposal-type-5">Something else (please elaborate bellow)</label>
+    </div>
+
+  </div>
+  <!-- /TYPE -->
+
+  <!-- DESCRIPTION -->
+  <div class="form__item">
+    <label for="proposal-description">Tell me more about your project<div class="label-note">What do you do? Who are your customers? How do you make money?</label>
+    <textarea id="proposal-description" name="proposal-description" placeholder="" rows="6" required></textarea>
+  </div>
+  <!-- /DESCRIPTION -->
+
+  <!-- GOALS -->
+  <div class="form__item">
+    <label for="proposal-goals">What are you looking to achieve?</label>
+    <textarea id="proposal-goals" name="proposal-goals" placeholder="" rows="6" required></textarea>
+  </div>
+  <!-- /GOALS -->
+
+  <!-- TIMELINE -->
+  <div class="form__item">
+    <label for="proposal-timeline">What is the timeline for this project?</label>
+    <input id="proposal-timeline" type="text" name="proposal-timeline" placeholder="1 month? 3 months? No timeline?" required>
+  </div>
+  <!-- /TIMELINE -->
+
+  <!-- BUDGET -->
+  <div class="form__item">
+    <label for="proposal-budget">What is your budget for this project?<div class="label-note">Leave blank if you don't have a budget</div></label>
+    <input id="proposal-budget" type="text" name="proposal-budget" placeholder="">
+  </div>
+  <!-- /BUDGET -->
+
+  <!-- BUDGET -->
+  <div class="form__item">
+    <label for="proposal-location">Where are you located?</label>
+    <input id="proposal-location" type="text" name="proposal-location" placeholder="" required>
+  </div>
+  <!-- /BUDGET -->
+
+  <!-- COOPERATION -->
+  <div class="form__item">
+    <label>How do you prefer to collaborate with me?</label>
+
+    <div class="form__radio">
+      <input id="collaboration-type-1" type="radio" name="type-of-collaboration" value="full-remote" />
+      <label for="collaboration-type-1">full remote</label>
+    </div>
+
+    <div class="form__radio">
+      <input id="collaboration-type-2" type="radio" name="type-of-collaboration" value="full-onsite" />
+      <label for="collaboration-type-2">full on-site</label>
+    </div>
+
+    <div class="form__radio">
+      <input id="collaboration-type-3" type="radio" name="type-of-collaboration" value="part-onsite+part-remote" />
+      <label for="collaboration-type-3">part on-site + part remote</label>
+    </div>
+
+    <div class="form__radio">
+      <input id="collaboration-type-4" type="radio" name="type-of-collaboration" value="no-preference" />
+      <label for="collaboration-type-4">no preference</label>
+    </div>
+
+  </div>
+  <!-- /COOPERATION -->
+
+  <!-- ADDITIONAL -->
+  <div class="form__item">
+    <label for="proposal-additional">Anything else you'd like to add?<div class="label-note">Feel free to type as much or as little as you like.</div></label>
+    <textarea id="proposal-additional" name="proposal-additional" placeholder="" rows="6"></textarea>
+  </div>
+  <!-- /ADDITIONAL -->
+
+  <!-- NAME -->
+  <div class="form__item">
+    <label for="proposal-name">Your name</label>
+    <input id="proposal-name" type="text" name="name" placeholder="your name" required>
+  </div>
+  <!-- /NAME -->
+
+  <!-- EMAIL -->
+  <div class="form__item">
+    <label for="proposal-email">Your email</label>
+    <input id="proposal-email" type="email" name="_replyto" placeholder="your email" required>
+  </div>
+  <!-- /EMAIL -->
+
+  <!-- HONEYPOT -->
+  <input type="text" name="_gotcha" style="display:none" />
+  <!-- /HONEYPOT -->
+
+  <!-- SUBMIT -->
+  <div class="form__submit">
+    <input type="submit" value="Send Your Proposal" class="btn">
+  </div>
+  <!-- /SUBMIT -->
+
+  <!-- RESPONSE -->
+  <div class="form__response">
+    <div class="alert">
+      <div class="alert__loading">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        Sending
+      </div>
+      <div class="alert__success">
+        Thank you for your interest in working with me.<br>
+        I usually take 2-3 days to reply.
+      </div>
+      <div class="alert__error">
+        There was an error with sending the message.<br>Please try again.
+      </div>
+    </div>
+  </div>
+  <!-- /RESPONSE -->
+
+</form>

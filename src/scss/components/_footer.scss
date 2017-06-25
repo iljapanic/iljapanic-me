@@ -1,16 +1,10 @@
 .footer {
   text-align: center;
-  padding: $spacing*4 $spacing/2 $spacing $spacing/2;
-  font-size: $font-size--small;
-  color: shade($secondary, 45%);
+  padding: $spacing*4 $spacing*2 $spacing $spacing*2;
   overflow: hidden;
 
-  p {
-    padding-bottom: 0;
-  }
-
-  @include MQ(L) {
-    padding: $spacing*4 $spacing/2 $spacing/2 $spacing/2;
+  @include mq-desktop {
+    padding: $spacing*4 $spacing*2 $spacing/2 $spacing*2;
   }
 }
 
@@ -20,21 +14,62 @@
   align-items: center;
 
   .footer__contact {
-    width: percentage(1/3);
+    width: percentage(1/2);
     text-align: left;
+    order: 2;
+  }
+
+  .footer__top {
+    width: percentage(1/1);
+    text-align: center;
+    margin-bottom: $spacing/2;
+    order: 1;
   }
 
   .footer__social {
-    width: percentage(1/3);
-    text-align: center;
+    width: percentage(1/2);
+    text-align: right;
+    order: 3;
   }
 
-  .footer__message {
-    width: percentage(1/3);
-    text-align: right;
+  @include mq-tablet {
+    .footer__contact {
+      width: percentage(1/3);
+      text-align: left;
+      order: 1;
+    }
+
+    .footer__top {
+      width: percentage(1/3);
+      text-align: center;
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    .footer__social {
+      width: percentage(1/3);
+      order: 3;
+      text-align: right;
+    }
   }
 }
 
 .footer__contact a {
   color: inherit;
+  font-size: ms(-2);
+  color: $gray-light;
+  letter-spacing: 0.05rem;
+
+  &:hover {
+    color: $gray-darkest;
+  }
+}
+
+.footer__top svg path {
+  fill: $gray-lighter;
+  transition: fill 0.25s ease-in-out;
+}
+
+.footer__top a:hover svg path {
+  fill: $gray-dark;
 }

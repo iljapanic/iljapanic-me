@@ -2,7 +2,7 @@
 <html class="no-js">
 <head>
   <meta charset="utf-8">
-  <title>{{ page_resume.title }} | {{ site.title }}</title>
+  <title>{{ site.title }} | {{ page_resume.title }}</title>
   <meta name="description" content="{{ site.description }}">
 
   <meta property="og:title" content="{{ page_resume.title }} | {{ site.title }}" />
@@ -23,134 +23,90 @@
     });
   </script>
 
-  <div id="barba-wrapper" class="container">
+  <div id="top" class="container shadow">
 
     <!-- HEADER -->
   	<header class="header" role="banner">
-      {% import '_shared/main-nav.html' as nav %}
+      {% import '_shared/nav.html' as nav %}
       {{nav.active('resume')}}
   	</header>
   	<!-- /HEADER  -->
 
+    <main class="main" role="main">
 
-
-    <main class="main barba-container" role="main">
-
-      <!-- card -->
-      <article class="card ta-center">
-        <div class="wrapper-small">
-          <div class="card__header">
-            <div class="card__image">
-              <img src="{{ profile.image }}" alt="{{ profile.image_alt }}" data-aos="fade" data-aos-duration="800" />
-            </div>
-            <div class="card__headline">
-              <h1 class="card__title" data-aos="fade" data-aos-duration="800">{{ profile.name }}</h1>
-            </div>
-          </div>
-          <div class="card__role" data-aos="fade" data-aos-duration="800" data-aos-delay="200">{{ profile.position }}</div>
-          <div class="card__description" data-aos="fade" data-aos-duration="800" data-aos-delay="300">
+      <article>
+        <h1 data-aos="fade" data-aos-duration="800">Information Architect &amp;<br/>Web Developer</h1>
+        <div class="wrapper">
+          <div class="fs-large" data-aos="fade" data-aos-duration="800" data-aos-delay="200">
             {% include "_text/profile.html" %}
           </div>
         </div>
       </article>
-      <!-- /card -->
 
-      <!-- wrapper -->
-      <div class="wrapper">
+      <!-- resume -->
+  		<div class="resume">
 
-        <!-- resume -->
-    		<div class="resume">
+  			<!-- resume__main -->
+  			<div class="resume__main">
 
-    			<!-- resume__main -->
-    			<div class="resume__main">
+  				<!-- EXPERIENCE -->
+  				<section class="section">
+  					<h2 class="section__title" data-aos="fade-right" data-aos-duration="800">Work Experience</h2>
+  					{% include "_loops/work.html" %}
+  				</section>
+  				<!-- /EXPERIENCE -->
 
-    				<!-- EXPERIENCE -->
-    				<section class="section">
-    					<h2 class="section__title" data-aos="fade-right" data-aos-duration="800">Work Experience</h2>
-    					{% include "_loops/work.html" %}
-    				</section>
-    				<!-- /EXPERIENCE -->
+  				<!-- EDUCATION -->
+  				<section class="section">
+  					<h2 class="section__title" data-aos="fade-right" data-aos-duration="800">Education</h2>
+  					{% include "_loops/education.html" %}
+  				</section>
+  				<!-- /EDUCATION -->
 
-    				<!-- EDUCATION -->
-    				<section class="section">
-    					<h2 class="section__title" data-aos="fade-right" data-aos-duration="800">Education</h2>
-    					{% include "_loops/education.html" %}
-    				</section>
-    				<!-- /EDUCATION -->
+  			</div>
+  			<!-- /resume__main  -->
 
-    			</div>
-    			<!-- /resume__main  -->
+  			<!-- resume__sidebar -->
+  			<div class="resume__sidebar">
 
-    			<!-- resume__sidebar -->
-    			<div class="resume__sidebar">
+  				<!-- LANGUAGES -->
+  				<section class="section">
+  					<h2 class="section__title" data-aos="fade-left" data-aos-duration="800">Languages</h2>
+  					{% include "_loops/languages.html" %}
+  				</section>
+  				<!-- /LANGUAGES -->
 
-    				<!-- LANGUAGES -->
-    				<section class="section">
-    					<h2 class="section__title" data-aos="fade-left" data-aos-duration="800">Languages</h2>
-    					{% include "_loops/languages.html" %}
-    				</section>
-    				<!-- /LANGUAGES -->
+  				<!-- COMPETENCES -->
+  				<section class="section">
+  					<h2 class="section__title" data-aos="fade-left" data-aos-duration="800">Competences</h2>
+  					{% include "_loops/competences.html" %}
+  				</section>
+  				<!-- /COMPETENCES -->
 
-    				<!-- COMPETENCES -->
-    				<section class="section">
-    					<h2 class="section__title" data-aos="fade-left" data-aos-duration="800">Competences</h2>
-    					{% include "_loops/competences.html" %}
-    				</section>
-    				<!-- /COMPETENCES -->
+  				<!-- TOOLS -->
+  				<section class="section">
+  					<h2 class="section__title" data-aos="fade-left" data-aos-duration="800">Tools</h2>
+  					{% include "_loops/tools.html" %}
+  				</section>
+  				<!-- /TOOLS -->
 
-    				<!-- TOOLS -->
-    				<section class="section">
-    					<h2 class="section__title" data-aos="fade-left" data-aos-duration="800">Tools</h2>
-    					{% include "_loops/tools.html" %}
-    				</section>
-    				<!-- /TOOLS -->
+  			</div>
+  			<!-- /resume__sidebar -->
 
-    				<!-- CERTIFICATES -->
-    				<!-- <section class="section">
-    					<h2 class="section__title">Certificates</h2>
-    					{% include "_loops/certificates.html" %}
-    				</section> -->
-    				<!-- /CERTIFICATES -->
+  		</div>
+  		<!-- /resume -->
 
-    			</div>
-    			<!-- /resume__sidebar -->
-
-    		</div>
-    		<!-- /resume -->
-
-      </div>
-      <!-- /wrapper -->
-
-
-      <div class="wrapper">
-        <div class="resume-extra">
-          <!-- PASSIONS -->
-          <section class="section">
-            <h2 class="section__title" data-aos="fade-up" data-aos-duration="800">Passions</h2>
-            {% include "_loops/passions.html" %}
-          </section>
-          <!-- /PASSIONS -->
-
-          <!-- GATHERINGS -->
-          <section class="section">
-            <h2 class="section__title" data-aos="fade-up" data-aos-duration="800">Gatherings</h2>
-            {% include "_loops/gatherings.html" %}
-          </section>
-          <!-- /GATHERINGS -->
-
-        <div class="margin-top-6">
-          {% include '_shared/booking.html' %}
-        </div>
-
-        </div>
-
-      </div>
   	</main>
 
+    <div class="margin-top-4">
+      {% include '_shared/booking.html' %}
+    </div>
+
     {% include "_shared/footer.html" %}
-    {% include "_shared/global-scripts.html" %}
 
   </div>
+
+  {% include "_shared/global-scripts.html" %}
 
 </body>
 </html>

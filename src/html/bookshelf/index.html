@@ -2,7 +2,7 @@
 <html class="no-js">
 <head>
   <meta charset="utf-8">
-  <title>{{ page_bookshelf.title }} | {{ site.title }}</title>
+  <title>{{ site.title }} | {{ page_bookshelf.title }}</title>
   <meta name="description" content="{{ site.description }}">
 
   <meta property="og:title" content="{{ page_bookshelf.title }} | {{ site.title }}" />
@@ -23,38 +23,33 @@
     });
   </script>
 
-  <div id="barba-wrapper" class="container scene">
+  <div id="top" class="container shadow">
 
     <!-- HEADER -->
   	<header class="header" role="banner">
-      {% import '_shared/main-nav.html' as nav %}
+      {% import '_shared/nav.html' as nav %}
       {{nav.active('bookshelf')}}
   	</header>
   	<!-- /HEADER  -->
 
-    <main class="main barba-container" role="main">
+    <main class="main" role="main">
 
-        <div class="wrapper">
-          <h1 class="ta-center" data-aos="fade" data-aos-duration="800">Books that inspired me and shaped my world view</h1>
-        </div>
 
-        <div class="wrapper-large">
+        <h1 data-aos="fade" data-aos-duration="800">Books that inspired me &amp;<br />shaped my world view</h1>
 
-          <section class="books margin-top-4">
-            <h2 class="ta-center uppercase" data-aos="fade" data-aos-duration="800">Non-Fiction</h2>
-            <div class="books-grid">
-              {% include "_loops/books-non-fiction.html" %}
-            </div>
-          </section>
+        <section class="books margin-top-6">
+          <h2 class="uppercase letter-spacing" data-aos="fade" data-aos-duration="800">Non-Fiction</h2>
+          <div class="books-grid">
+            {% include "_loops/books-non-fiction.html" %}
+          </div>
+        </section>
 
-          <section class="books margin-top-6">
-            <h2 class="ta-center uppercase" data-aos="fade" data-aos-duration="800">Beletry</h2>
-            <div class="books-grid">
-              {% include "_loops/books-beletry.html" %}
-            </div>
-          </section>
-
-        </div>
+        <section class="books margin-top-8">
+          <h2 class="uppercase letter-spacing" data-aos="fade" data-aos-duration="800">Beletry</h2>
+          <div class="books-grid">
+            {% include "_loops/books-beletry.html" %}
+          </div>
+        </section>
 
   	</main>
 

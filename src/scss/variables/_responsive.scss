@@ -1,9 +1,7 @@
-$S: '(min-width:320px)';
-$M: '(min-width:768px)';
-$L: '(min-width:1024px)';
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$hd-width: 1920px;
 
-// $wrapper: 880px;
-$wrapper: 72rem;
-// $wrapper-small: 720px;
-$wrapper-small: 56rem;
-$wrapper-large: 1240px;
+$wrapper: 64rem;
+$wrapper-small: 48rem;
+$wrapper-large: 72rem;

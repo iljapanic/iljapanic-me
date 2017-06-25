@@ -2,7 +2,7 @@
 <html class="no-js">
 <head>
   <meta charset="utf-8">
-  <title>{{ page_hire.title }} | {{ site.title }}</title>
+  <title>{{ site.title }} | {{ page_hire.title }}</title>
   <meta name="description" content="{{ site.description }}">
 
   <meta property="og:title" content="{{ page_hire.title }} | {{ site.title }}" />
@@ -23,38 +23,50 @@
     });
   </script>
 
-  <div id="barba-wrapper" class="container scene">
+  <div id="top" class="container shadow">
 
     <!-- HEADER -->
   	<header class="header" role="banner">
-      {% import '_shared/main-nav.html' as nav %}
+      {% import '_shared/nav.html' as nav %}
       {{nav.active('hire')}}
   	</header>
   	<!-- /HEADER  -->
 
-    <main class="main fadeIn barba-container" role="main">
-
-    		<article>
-          <div class="wrapper">
-            <h1 class="ta-center" data-aos="fade-up" data-aos-duration="800">Helping you communicate effectively in the digital space</h1>
-            <div class="fs-large ta-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              {% include "_text/hire.html" %}
-            </div>
+    <main class="main" role="main">
+  		<article>
+        <div class="wrapper">
+          <h1 data-aos="fade" data-aos-duration="800">I can help you communicate effectively in the digital space</h1>
+        </div>
+        <div class="wrapper">
+          <div class="fs-large ta-justify" data-aos="fade" data-aos-duration="800" data-aos-delay="200">
+            {% include "_text/hire.html" %}
           </div>
+        </div>
+      </article>
 
-          <div class="wrapper">
-            <section class="services margin-top-2">
-              {% include "_loops/services.html" %}
-            </section>
+      <section class="wrapper margin-top-8">
+        <div class="services">
+          {% include "_loops/services.html" %}
+        </div>
+      </section>
+
+      <section class="margin-top-6" data-aos="fade" data-aos-duration="800">
+
+        <div class="wrapper">
+          <h2>Lets work together!</h2>
+          <div class="fs-large margin-top-2">
+            <p>Please fill out this form and I’ll get back to you as quickly as I can.<br/>I usually take 2-3 days to reply.</p>
+            <p>As you fill out the form,  write in as many details as you can about your project. I’ll be able to get back with a better reply if you give me more information.</p>
           </div>
+        </div>
 
-          <div class="wrapper">
-            <p class="ta-center margin-top-6" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom">I offer a personal approach and base my work on mutual understanding and respect. I am used to working both remotely and on-site with small companies, large organizations, and individuals.</p>
+        <div class="wrapper-small">
+          <div class="apply margin-top-4">
+            {% include "_shared/form.html" %}
           </div>
-        </article>
+        </div>
 
-
-        {% include '_shared/booking.html' %}
+      </section>
 
   	</main>
 
