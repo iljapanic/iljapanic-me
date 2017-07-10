@@ -203,11 +203,11 @@
     },
     {
       "skill": "Front-end Development",
-      "level": "75"
+      "level": "80"
     },
     {
       "skill": "UI Design",
-      "level": "50"
+      "level": "55"
     },
     {
       "skill": "Content Strategy",
@@ -234,7 +234,7 @@
     },
     {
       "tool": "JavaScript",
-      "level": "40"
+      "level": "50"
     },
     {
       "tool": "jQuery",
@@ -242,7 +242,7 @@
     },
     {
       "tool": "React.js",
-      "level": "15"
+      "level": "25"
     },
     {
       "tool": "Gulp",
@@ -250,11 +250,11 @@
     },
     {
       "tool": "Wordpress",
-      "level": "80"
+      "level": "90"
     },
     {
       "tool": "Git",
-      "level": "75"
+      "level": "80"
     },
     {
       "tool": "Sketch",
