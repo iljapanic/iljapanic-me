@@ -1,0 +1,105 @@
+[
+	{
+	  "period": "April 2017 - October 2017",
+	  "name": "Copenhagen Business School",
+	  "url": "http://www.cbs.dk/",
+	  "location": "Copenhagen",
+	  "role": "Research Assistant",
+	  "extra": "external",
+	  "description": "Assisting associate professor with processing and generating a network map of Information Management researchers."
+	},
+	{
+	  "period": "September 2015 – Now",
+	  "name": "iljapanic.me",
+	  "url": "http://iljapanic.me",
+	  "location": "Prague - Copenhagen",
+	  "role": "Web Developer & UX Consultant",
+	  "extra": "freelance",
+	  "description": "Web development and product UX for retailers, agencies, startups and artists.",
+	  "clients" : [
+	    {
+	      "name": "Momondo",
+	      "link": "https://momondo.com"
+	    },
+	    {
+	      "name": "Quadric",
+	      "link": "http://quadric.net/"
+	    },
+	    {
+	      "name": "Bergs Potter",
+	      "link": "http://bergspotter.com"
+	    },
+	    {
+	      "name": "Holektiv",
+	      "link": "http://holektiv.cz"
+	    }
+	  ]
+	},
+	{
+	  "period": "January 2015 – June 2015",
+	  "name": "Folkmatic",
+	  "image": "/img/work/folkmatic.png",
+	  "url": "http://folkmatic.com",
+	  "location": "Copenhagen",
+	  "role": "Front-End Developer",
+	  "extra": "part-time",
+	  "description": "Project-based development for clients in telecommunications, politics and startups. Front-end lead for a core client and occasional UI design.",
+	  "clients": [
+	    {
+	      "name": "TDC",
+	      "link": "https://tdc.dk/"
+	    },
+	    {
+	      "name": "Radikale",
+	      "link": "https://radikale.dk"
+	    },
+	    {
+	      "name": "Juke",
+	      "link": "https://juke.com/"
+	    },
+	    {
+	      "name": "Squirl",
+	      "link": "http://www.squirl.co/"
+	    }
+	  ]
+	},
+	{
+	  "period": "October 2014 – January 2015",
+	  "name": "Spoiled Milk",
+	  "image": "/img/work/spoiled-milk.png",
+	  "url": "http://spoiledmilk.com",
+	  "location": "Copenhagen",
+	  "role": "Front-End Development Intern",
+	  "extra": "full-time",
+	  "description": "Front-end development for clients in telecommunications, finance and startups. Various ad-hoc assignments, responsive email templates, prototyping, UI design.",
+	  "clients": [
+	    {
+	      "name": "Autonomous",
+	      "link": "http://www.autonomous.com/"
+	    },
+	    {
+	      "name": "N+1 Singer",
+	      "link": "http://www.n1singer.com/"
+	    },
+	    {
+	      "name": "CDO",
+	      "link": "http://copenhagendesigneroutlet.dk/en/"
+	    },
+	    {
+	      "name": "Zolokal",
+	      "link": "http://zolokal.com/"
+	    }
+	  ]
+	},
+	{
+	  "period": "May 2011 – August 2011",
+	  "name": "Fontai",
+	  "image": "/img/work/fontai.png",
+	  "url": "http://fontai.com",
+	  "location": "Prague",
+	  "role": "Assistant Project Manager",
+	  "extra": "freelance",
+	  "description": "Overseeing the development of an internal mailing tool used by agency's clients. Prepared pricing model, promo materials, presentations, newsletter prototypes. Collaboration with designers and developers."
+	}
+]
+

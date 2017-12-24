@@ -1,0 +1,22 @@
+// sane border-box
+*
+  box-sizing border-box
+  margin 0
+  padding 0
+
+a:link,
+a:visited
+	color: inherit
+
+a:link
+	text-decoration: underline
+	text-decoration-skip: ink
+	color: inherit
+	transition: all 0.15s $quad-easing
+
+a:hover
+	color: $site-color
+
+::selection
+	background: $selection
+

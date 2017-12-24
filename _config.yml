@@ -1,0 +1,62 @@
+#==============================
+# General site config
+#==============================
+
+title: iljapanic
+author: Ilja Panic
+email: hello@iljapanic.com
+description: Personal site of Ilja A. Panic
+url: https://iljapanic.me
+repo: https://github.com/iljapanic/iljapanic-me
+timezone: Europe/Prague
+
+twitter: https://twitter.com/iljapanic
+linkedin: https://www.linkedin.com/in/iljapanic/
+instagram: https://instagram.com/iljapanic/
+github: https://github.com/iljapanic
+
+#==============================
+# Build config
+#==============================
+
+permalink: /blog/:year/:title/
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-typogrify
+
+gem:
+  - jekyll-figure
+
+#==============================
+# Exclude/Include
+#==============================
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - gulpfile.js
+  - assets_src
+  - yarn.lock
+  - src_images
+  - src_assets
+  - src_books
+
+
+#==============================
+# custom collections
+#==============================
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:year/:title/
+  links:
+    output: true
+    permalink: /links/:year/:title/

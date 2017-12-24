@@ -1,0 +1,46 @@
+{
+  // testing stylintrc, real default is in core/
+  "blocks": false,
+  "brackets": false,
+  "colons": "always",
+  "colors": {
+    "expect": "always"
+  },
+  "commaSpace": "always",
+  "commentSpace": "always",
+  "cssLiteral": "never",
+  "depthLimit": 4,
+  "duplicates": false,
+  "efficient": "always",
+  "exclude": [],
+  "extendPref": false,
+  "globalDupe": false,
+  "groupOutputByFile": true,
+  "indentPref": false,
+  "leadingZero": "always",
+  "maxErrors": false,
+  "maxWarnings": false,
+  "mixed": true,
+  "namingConvention": "lowercase-dash",
+  "namingConventionStrict": false,
+  "none": "always",
+  "noImportant": true,
+  "parenSpace": "never",
+  "placeholders": "always",
+  "prefixVarsWithDollar": "always",
+  "quotePref": "single",
+  "reporterOptions": {
+    "columns": ["lineData", "severity", "description", "rule"],
+    "columnSplitter": "  ",
+    "showHeaders": false,
+    "truncate": true
+  },
+  "semicolons": "never",
+  "sortOrder": false,
+  "stackedProperties": "never",
+  "trailingWhitespace": "never",
+  "universal": "always",
+  "valid": true,
+  "zeroUnits": "never",
+  "zIndexNormalize": false
+}

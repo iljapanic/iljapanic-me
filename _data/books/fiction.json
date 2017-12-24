@@ -1,0 +1,100 @@
+[
+	{
+		"title": "Brave New World",
+		"year": "1932",
+		"author": "Aldous Huxley",
+		"image": "Brave-New-World.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/5129.Brave_New_World"
+	},
+	{
+		"title": "Nineteen Eighty-Four",
+		"year": "1949",
+		"author": "George Orwell",
+		"image": "Nineteen-Eighty-Four.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/5470.1984"
+	},
+	{
+		"title": "Roadside Picnic",
+		"year": "1972",
+		"author": " Arkady Strugatsky & Boris Strugatsky",
+		"image": "Roadside-Picnic.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/331256.Roadside_Picnic"
+	},
+	{
+		"title": "The Hitchhiker's Guide to the Galaxy",
+		"year": "1979",
+		"author": "Douglas Adams",
+		"image": "The-Hitchhikers-Guide-to-the-Galaxy.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/386162.The_Hitchhiker_s_Guide_to_the_Galaxy"
+	},
+	{
+		"title": "The Ocean at the End of the Lane",
+		"year": "2013",
+		"author": "Neil Gaiman",
+		"image": "The-Ocean-at-the-End-of-the-Lane.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/15783514-the-ocean-at-the-end-of-the-lane"
+	},
+	{
+		"title": "The Book of Illusions",
+		"year": "2002",
+		"author": "Paul Auster",
+		"image": "The-Book-of-Illusions.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/84357.The_Book_of_Illusions"
+	},
+	{
+		"title": "The Trial",
+		"year": "1925",
+		"author": "Franz Kafka",
+		"image": "The-Trial.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/17690.The_Trial"
+	},
+	{
+		"title": "The Cement Garden",
+		"year": "1978",
+		"author": "Ian McEwan",
+		"image": "The-Cement-Garden.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/9957.The_Cement_Garden"
+	},
+	{
+		"title": "The Road",
+		"year": "2006",
+		"author": "Cormac McCarthy",
+		"image": "The-Road.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/6288.The_Road"
+	},
+	{
+		"title": "Doppler",
+		"year": "2004",
+		"author": "Erlend Loe",
+		"image": "Doppler.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/1156439.Doppler"
+	},
+	{
+		"title": "Winter Journal",
+		"year": "2011",
+		"author": "Paul Auster",
+		"image": "Winter-Journal.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/18103523-winter-journal"
+	},
+	{
+		"title": "Into The Wild",
+		"year": "1996",
+		"author": "Jon Krakauer",
+		"image": "Into-The-Wild.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/1845.Into_the_Wild"
+	},
+	{
+		"title": "Ready Player One",
+		"year": "2011",
+		"author": "Ernest Cline",
+		"image": "Ready-Player-One.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/9969571-ready-player-one"
+	},
+	{
+		"title": "A Clockwork Orange",
+		"year": "1962",
+		"author": "Anthony Burgess",
+		"image": "A-Clockwork-Orange.jpg",
+		"goodreads": "https://www.goodreads.com/book/show/227463.A_Clockwork_Orange"
+	}
+]

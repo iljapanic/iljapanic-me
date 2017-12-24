@@ -1,0 +1,95 @@
+$pad = $spacing*0.5
+$pad-desktop = $spacing*2
+
+// header
+.header
+	padding: $spacing $pad
+	position: sticky
+	width: 100%
+	top: 0
+	left: 0
+	right: 0
+	z-index: 10
+
+	.header__nav .nav
+		margin-top: $spacing*0.75
+
+	+large()
+		grid()
+		align-items: center
+		padding: $spacing $pad-desktop
+
+		.header__title
+			cell(2, 12)
+
+		.header__subtitle
+			cell(5,12)
+
+		.header__nav
+			cell(5, 12)
+
+		.header__nav .nav
+			margin-top: 0
+
+
+.header.header--bg
+	padding: 0 $pad $spacing*0.5 $pad
+
+	.header__nav .nav
+		margin-top: 0
+
+	+large()
+		padding: $spacing*0.15 $pad
+
+		.header__nav .nav
+			margin-top: 0
+
+
+// main
+.container
+	padding: 0 $pad
+	margin-top: $spacing*5
+
+
+	+large()
+		grid()
+		padding: $spacing*0.2 $pad
+
+		.main
+			cell(7, 12)
+			cell-offset(2)
+
+		.main.main--wide
+			cell(9,12)
+
+// footer
+.footer
+
+	padding: $spacing $pad
+	text-align: center
+
+	.footer__colophon
+		margin-top: $spacing
+
+
+	+large()
+		grid()
+		align-items: center
+		padding: $spacing $pad
+
+		.footer__colophon
+			cell(2,12)
+			cell-offset(2,12)
+			text-align: left
+			// margin-top: 0
+			order: -1
+
+		.footer__social
+			cell(5, 12)
+			text-align: right
+
+.footer.footer--wide
+	+large()
+		.footer__social
+			cell(7,12) // +2
+

@@ -1,0 +1,13 @@
+<footer class="footer {% if current[1] == 'bookshelf' %}footer--wide{% endif %}" role="contentinfo">
+
+	<div class="footer__social">
+		{% include social.html %}
+	</div>
+
+	<div class="footer__colophon">
+		<script>document.write((new Date()).getFullYear())</script> - iljapanic.com
+	</div>
+
+</footer>
+
+<script type="text/javascript" src="{{ "/assets/js/bundle.js" | relative_url }}"></script>

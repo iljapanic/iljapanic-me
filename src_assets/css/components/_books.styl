@@ -1,0 +1,47 @@
+.books .item a
+	text-decoration: none
+	&:hover img
+		opacity: 0.65
+
+
+.books .item img
+	border: 1px solid rgba($gray, 0.15)
+	transition: all 0.2s $quad-easing
+	width: 100%
+
+
+.books .item__title
+	font-family: $sans
+	font-size: 0.75rem
+	color: $gray-dark
+	line-height: 1.4
+	margin-top: $spacing*0.15
+	padding: 0
+
+.books .item__author
+	font-family: $sans
+	font-size: 0.7rem
+	line-height: 1.4
+	margin-top: $spacing*0.15
+	color: $gray
+
+.books
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	align-items: baseline
+	margin-top: $spacing
+
+	.item
+		width: percentage(1/3)
+		padding-right: $spacing*0.75
+		margin-bottom: $spacing*2
+
+		+medium()
+			width: percentage(1/4)
+
+		+large()
+			width: percentage(1/5)
+
+		+xlarge()
+			width: percentage(1/7)

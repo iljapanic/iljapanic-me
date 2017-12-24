@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="main">
+
+	<h1 class="page-heading">Links</h1>
+
+	{{ content }}
+
+	{% for link in site.links %}
+		<article>
+			{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+			<span class="post-meta">{{ link.date | date: date_format }}</span>
+
+			<h2>
+				<a class="post-link" target="_blank" href="{{ link.link }}">{{ link.title | escape }}</a>
+			</h2>
+
+		 {{ link.content | markdownify }}
+		</article>
+	{% endfor %}
+
+</div>

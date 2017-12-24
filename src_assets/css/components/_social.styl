@@ -1,0 +1,39 @@
+.social ul
+	align-items: center
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	line-height: 1
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+	+large()
+		display: block
+
+.social li
+	display: inline-block
+	margin: 0
+	line-height: 1
+
+	+large()
+		margin-right: $spacing*.75
+		&:last-of-type
+			margin-right: 0
+
+.social a
+	color: $gray-dark
+	letter-spacing: $letter-spacing
+	text-decoration: none
+
+.social .twitter a:hover
+	color: $twitter
+
+.social .instagram a:hover
+	color: $instagram
+
+.social .linkedin a:hover
+	color: $linkedin
+
+.social .github a:hover
+	color: $github
