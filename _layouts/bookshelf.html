@@ -2,27 +2,31 @@
 layout: default
 ---
 
-<div class="main main--wide">
+<div class="page-bookshelf">
 
-	<h1 class="page-title">Bookshelf</h1>
+	<h1 class="page-title hidden" itemprop="name headline">Bookshelf</h1>
 
-	<section>
-		<h2>Non-Fiction</h2>
-		<div class="books books--non-fiction">
-			{% assign books_non_fiction = site.data.books.nonFiction | sort: 'year') %}
-			{% for book in books_non_fiction %}
-		  <article class="item">
-		  	<a href="{{book.goodreads}}" target="_blank">
-			    <div class="item__image">
-						<img src="{{ "/images/books-blur/" | relative_url }}{{book.image}}" data-echo="{{ "/images/books/" | relative_url }}{{book.image}}" alt="{{book.title}}">
-					</div>
-				  <h2 class="item__title">{{book.title | escape}}</h2>
-				  <div class="item__author">{{book.author | escape}}</div>
-			  </a>
-		  </article>
-			{% endfor %}
-		</div>
+	<section class="bookshelf">
+			<h2>Non-Fiction</h2>
+			<div class="books books--non-fiction">
+				{% assign books_non_fiction = site.data.books.nonFiction | sort: 'year') %}
+				{% for book in books_non_fiction %}
+				<article class="item">
+					<a href="{{book.goodreads}}" target="_blank">
+						<div class="item__image">
+							<img src="{{ "/images/books-blur/" | relative_url }}{{book.image}}" data-echo="{{ "/images/books/" | relative_url }}{{book.image}}" alt="{{book.title}}">
+						</div>
+						<div class="item__meta">
+							<h2 class="item__title">{{book.title | escape}}</h2>
+							<div class="item__author">{{book.author | escape}}</div>
+						</div>
+					</a>
+				</article>
+				{% endfor %}
+			</div>
 	</section>
+
+	<hr class="double">
 
 	<section>
 		<h2>Fiction</h2>
@@ -34,8 +38,10 @@ layout: default
 			    <div class="item__image">
 						<img src="{{ "/images/books-blur/" | relative_url }}{{book.image}}" alt="{{book.title}}" data-echo="{{ "/images/books/" | relative_url }}{{book.image}}">
 					</div>
-				  <h2 class="item__title">{{book.title | escape}}</h2>
-				  <div class="item__author">{{book.author | escape}}</div>
+					<div class="item__meta">
+						<h2 class="item__title">{{book.title | escape}}</h2>
+						<div class="item__author">{{book.author | escape}}</div>
+					</div>
 			  </a>
 		  </article>
 			{% endfor %}
@@ -49,10 +55,7 @@ layout: default
 <script>
 	echo.init({
     offset: 0,
-    throttle: 25,
-    unload: false,
-    callback: function (element, op) {
-      console.log(element, 'has been', op + 'ed')
-    }
+    throttle: 15,
+    unload: false
   });
 </script>

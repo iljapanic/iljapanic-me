@@ -8,22 +8,6 @@
 	  <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 	</div>
 
-
-	<div class="header__subtitle">
-		<div id="fixed-title" class="fixed-title fixed-title--hidden">
-			{% assign current = page.url | downcase | split: '/' %}
-
-			{% if current[1] == 'blog' %}
-				{{ page.title | escape }}
-			{% endif %}
-			{% if current[1] == 'notes' %}
-				{{ page.title | escape }}
-			{% endif %}
-			&nbsp;
-
-		</div>
-	</div>
-
   <div id="main-nav" class="header__nav">
     {% include main-nav.html %}
   </div>

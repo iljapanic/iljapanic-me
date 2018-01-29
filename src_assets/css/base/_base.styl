@@ -1,22 +1,44 @@
-// sane border-box
-*
-  box-sizing border-box
-  margin 0
-  padding 0
+html
+	box-sizing border-box
+
+*,
+*:before,
+*:after
+	box-sizing inherit
+	margin 0
+	padding 0
+
+body
+	margin 0 $spacing*0.25
+	-webkit-font-smoothing antialiased
+	text-size-adjust auto
 
 a:link,
 a:visited
-	color: inherit
+	color inherit
 
 a:link
-	text-decoration: underline
-	text-decoration-skip: ink
-	color: inherit
-	transition: all 0.15s $quad-easing
+	text-decoration underline
+	text-decoration-skip ink
+	color inherit
+	transition all 0.15s $quad-easing
 
 a:hover
-	color: $site-color
+	color $site-color
 
-::selection
-	background: $selection
+selection
+	background $selection
 
+img
+	max-width 100%
+
+hr
+	display block
+	height 1px
+	// width 55%
+	border 0
+	border-top $separator
+	margin $spacing 0
+	padding 0
+	&.double
+		margin $spacing*2 0

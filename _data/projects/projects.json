@@ -1,0 +1,51 @@
+[
+	{
+		"period": "2017 – Now",
+		"name": "City Designer",
+		"url": "http://citydesigner.org",
+		"role": "Founder & Curator",
+		"image": "preview-citydesigner.jpg",
+		"description": "Site curating information for improving understanding of design challenges posed by a modern urban environment. The long-term ambition is to create a learning platform for engaging the public on how to design better cities for everyone, by everyone.",
+		"attachments" : [
+			{
+				"type": "visit site",
+				"link": "https://citydesigner.org"
+			}
+		],
+		"size": "full",
+		"font": "dark"
+	},
+	{
+		"period": "2017 – Now",
+		"name": "Web Crash Course",
+		"url": "http://webcrashcourse.org",
+		"image": "preview-wcc.jpg",
+		"role": "Founder & Instructor",
+		"description": "Intensive web development workshops for beginners. The idea is to get a person who has never seen code to publish their website on GitHub Pages in a single 4-hour sitting. The focus is on shipping rather than nuts and bolts of web development. The project is currently work in progress.",
+		"attachments" : [
+			{
+				"type": "visit site",
+				"link": "http://webcrashcourse.org"
+			}
+		],
+		"size": "half",
+		"font": "light"
+	},
+	{
+		"period": "2012 – 2015",
+		"name": "Take Me To Denmark",
+		"url": "http://takemetodenmark.com",
+		"role": "Founder & Developer",
+		"image": "preview-tmtd.jpg",
+		"description": "I initially used the domain to get accepted to a university in Denmark. Now the site serves as a source of information for people who are interested in studying in Denmark. Frontpage uses various APIs to fetch weather, news and concerts from Denmark.",
+		"attachments" : [
+			{
+				"type": "visit site",
+				"link": "http://takemetodenmark.com"
+			}
+		],
+		"size": "half",
+		"font": "light"
+	}
+]
+

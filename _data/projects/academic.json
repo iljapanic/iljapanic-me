@@ -1,0 +1,59 @@
+[
+	{
+		"period": "2017",
+		"name": "(Not So) Smart City",
+		"url": "http://iljapanic.me/information-design/",
+		"role": "Research, Writing & Development",
+		"image": "preview-information-design.jpg",
+		"description": "An experiment in writing an academic paper using Markdown and generating a finished document using various Web technologies. The paper itself looks at the history of design approaches and examines up-and-coming fields of human-information interaction and information design. It takes methods from those fields and applies them to analyzing information needs in the context of travel.",
+		"attachments" : [
+			{
+				"type": "read abstract",
+				"link": "http://iljapanic.me/information-design/#abstract"
+			},
+			{
+				"type": "read online",
+				"link": "http://iljapanic.me/information-design/"
+			},
+			{
+				"type": "download PDF",
+				"link": "/attachments/information-design-bachelor.pdf"
+			},
+			{
+				"type": "source code",
+				"link": "https://github.com/iljapanic/panic-bachelor/"
+			}
+		],
+		"size": "full",
+		"font": "light"
+	},
+	{
+		"period": "2015",
+		"name": "Going Beyond HCI",
+		"url": "http://iljapanic.me/information-design/",
+		"role": "Research, Writing & Development",
+		"image": "preview-information-design.jpg",
+		"description": "An experiment in writing an academic paper using Markdown and generating a finished document using various Web technologies. The paper itself looks at the history of design approaches and examines up-and-coming fields of human-information interaction and information design. It takes methods from those fields and applies them to analyzing information needs in the context of travel.",
+		"attachments" : [
+			{
+				"type": "read abstract",
+				"link": "http://iljapanic.me/information-design/#abstract"
+			},
+			{
+				"type": "read online",
+				"link": "http://iljapanic.me/information-design/"
+			},
+			{
+				"type": "download PDF",
+				"link": "/attachments/information-design-bachelor.pdf"
+			},
+			{
+				"type": "source code",
+				"link": "https://github.com/iljapanic/panic-bachelor/"
+			}
+		],
+		"size": "full",
+		"font": "light"
+	}
+]
+

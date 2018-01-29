@@ -1,0 +1,32 @@
+
+@supports (display:grid)
+	+medium()
+		.projects
+			display grid
+			margin-top $spacing*2
+			grid-gap $spacing
+			grid-template-columns auto $body
+			&:first-of-type
+				margin-top 0
+
+			.projects__sidebar
+				text-align left
+				h2
+					margin-top 0
+					font-family $sans
+					text-transform uppercase
+					font-weight $fw-bold
+					font-size $sans-large
+					letter-spacing $letter-spacing
+
+			.projects__main
+				.item
+					// margin-bottom $spacing*2
+				h3:first-of-type
+					margin-top 0
+
+			.projects__sidebar
+				// background pink
+
+			// .projects__main
+			// 	background gold

@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+<article class="page-projects">
+
+		<h1 class="post-title hidden" itemprop="name headline">Projects</h1>
+
+		{% comment %} Projects {% endcomment %}
+		<section class="projects">
+
+			<div class="projects__sidebar">
+				<h2>Projects</h2>
+			</div>
+
+			<div class="projects__main">
+
+				{% for project in site.data.projects.projects %}
+				<article class="item">
+					<div class="item__image">
+						<img src="{{ "/images/books-blur/" | relative_url }}{{book.image}}" data-echo="{{ "/images/books/" | relative_url }}{{book.image}}" alt="{{book.title}}">
+					</div>
+					<div class="item__meta">
+						<h3 class="item__title">{{project.name | escape}}</h3>
+						<p class="item__description">{{project.description | escape}}</p>
+					</div>
+				</article>
+				{% endfor %}
+
+			</div>
+		</section>
+
+		<hr>
+
+		{% comment %} Academic {% endcomment %}
+		<section class="projects">
+
+			<div class="projects__sidebar">
+				<h2>Academic</h2>
+			</div>
+
+			<div class="projects__main">
+
+				{% for project in site.data.projects.academic %}
+				<article class="item">
+					<div class="item__image">
+
+					</div>
+					<div class="item__meta">
+						<h3 class="item__title">{{project.name | escape}}</h3>
+						<p class="item__description">{{project.description | escape}}</p>
+					</div>
+				</article>
+				{% endfor %}
+
+			</div>
+		</section>
+
+		<hr>
+
+		{% comment %} Showcase {% endcomment %}
+		<section class="projects">
+
+			<div class="projects__sidebar">
+				<h2>Showcase</h2>
+			</div>
+
+			<div class="projects__main">
+
+				{% for project in site.data.projects.showcase %}
+				<article class="item">
+					<div class="item__image">
+
+					</div>
+					<div class="item__meta">
+						<h3 class="item__title">{{project.name | escape}}</h3>
+						<p class="item__description">{{project.description | escape}}</p>
+					</div>
+				</article>
+				{% endfor %}
+
+			</div>
+		</section>
+
+
+</article>
