@@ -1,3 +1,38 @@
+.projects .item
+	margin-bottom $spacing*2
+
+	&:last-of-type
+		margin-bottom 0
+
+	.item__period
+		font-family $sans
+		font-size $sans-small
+		vertical-align middle
+		margin-left $spacing*0.25
+		color $gray
+
+	.item__action
+		margin-top $spacing*0.35
+
+	.item__action a
+		font-family $sans
+		font-weight 600
+		font-size $sans-base
+		text-decoration none
+
+	.item__description
+		margin-top $spacing*0.25
+		margin-bottom 0
+
+.projects__showcase .item
+	img
+		vertical-align middle
+		border-radius 0.1rem
+	.item__title
+		margin-top 0
+		margin-bottom $spacing*0.35
+		font-family $sans
+		font-size $sans-base
 
 @supports (display:grid)
 	+medium()
@@ -5,7 +40,8 @@
 			display grid
 			margin-top $spacing*2
 			grid-gap $spacing
-			grid-template-columns auto $body
+			grid-template-columns 10rem auto
+			// grid-template-columns auto $body
 			&:first-of-type
 				margin-top 0
 
@@ -19,14 +55,12 @@
 					font-size $sans-large
 					letter-spacing $letter-spacing
 
-			.projects__main
-				.item
-					// margin-bottom $spacing*2
+			.projects__projects,
+			.projects__academic
 				h3:first-of-type
 					margin-top 0
 
-			.projects__sidebar
-				// background pink
-
-			// .projects__main
-			// 	background gold
+			.projects__showcase
+				display grid
+				grid-gap $spacing
+				grid-template-columns repeat(2, 1fr)

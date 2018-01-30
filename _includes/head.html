@@ -1,26 +1,30 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+	<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <meta name="author" content="{{ site.author }}">
+	<meta name="author" content="{{ site.author }}">
 
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+	<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
-  <script type="text/javascript" src="//fast.fonts.net/jsapi/92b7df95-25f5-4d90-91b2-b109535082d3.js"></script>
+	<script type="text/javascript" src="//fast.fonts.net/jsapi/92b7df95-25f5-4d90-91b2-b109535082d3.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Spectral:200,300,400,400i,500,600,700" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43693985-11"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500,600|Proza+Libre:400,400i,600,600i" rel="stylesheet">
-
-
+		gtag('config', 'UA-43693985-11');
+	</script>
 
 </head>

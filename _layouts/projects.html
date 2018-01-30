@@ -13,16 +13,19 @@ layout: default
 				<h2>Projects</h2>
 			</div>
 
-			<div class="projects__main">
+			<div class="projects__main projects__projects">
 
 				{% for project in site.data.projects.projects %}
 				<article class="item">
-					<div class="item__image">
-						<img src="{{ "/images/books-blur/" | relative_url }}{{book.image}}" data-echo="{{ "/images/books/" | relative_url }}{{book.image}}" alt="{{book.title}}">
-					</div>
+					{% comment %} <div class="item__image">
+						<img src="{{ "/images/projects/" | relative_url }}{{project.image}}" data-echo="{{ "/images/projects/" | relative_url }}{{project.image}}" alt="{{project.name}}">
+					</div> {% endcomment %}
 					<div class="item__meta">
-						<h3 class="item__title">{{project.name | escape}}</h3>
+						<h3 class="item__title">{{project.name | escape}} <span class="item__period">{{ project.period }}</span></h3>
 						<p class="item__description">{{project.description | escape}}</p>
+						<div class="item__action">
+							<a href="{{project.url}}" target="_blank">{{project.action}}</a>
+						</div>
 					</div>
 				</article>
 				{% endfor %}
@@ -30,7 +33,7 @@ layout: default
 			</div>
 		</section>
 
-		<hr>
+		<hr class="double">
 
 		{% comment %} Academic {% endcomment %}
 		<section class="projects">
@@ -39,16 +42,16 @@ layout: default
 				<h2>Academic</h2>
 			</div>
 
-			<div class="projects__main">
+			<div class="projects__main projects__academic">
 
 				{% for project in site.data.projects.academic %}
 				<article class="item">
-					<div class="item__image">
-
-					</div>
 					<div class="item__meta">
-						<h3 class="item__title">{{project.name | escape}}</h3>
+						<h3 class="item__title">{{project.name | escape}} <span class="item__period">{{ project.period }}</span></h3>
 						<p class="item__description">{{project.description | escape}}</p>
+						<div class="item__action">
+							<a href="{{project.url}}" target="_blank">{{project.action}}</a>
+						</div>
 					</div>
 				</article>
 				{% endfor %}
@@ -56,7 +59,7 @@ layout: default
 			</div>
 		</section>
 
-		<hr>
+		<hr class="double">
 
 		{% comment %} Showcase {% endcomment %}
 		<section class="projects">
@@ -65,16 +68,18 @@ layout: default
 				<h2>Showcase</h2>
 			</div>
 
-			<div class="projects__main">
+			<div class="projects__main projects__showcase">
 
 				{% for project in site.data.projects.showcase %}
 				<article class="item">
-					<div class="item__image">
-
-					</div>
 					<div class="item__meta">
-						<h3 class="item__title">{{project.name | escape}}</h3>
-						<p class="item__description">{{project.description | escape}}</p>
+						<h3 class="item__title">{{project.name | escape}} <span class="item__period">{{ project.period }}</span></h3>
+						{% comment %} <p class="item__description">{{project.description | escape}}</p> {% endcomment %}
+					</div>
+					<div class="item__image">
+						<a href="{{project.url}}" target="_blank">
+							<img src="{{ "/images/showcase/" | relative_url }}{{project.image}}" data-echo="{{ "/images/showcase/" | relative_url }}{{project.image}}" alt="{{project.name}}">
+						</a>
 					</div>
 				</article>
 				{% endfor %}

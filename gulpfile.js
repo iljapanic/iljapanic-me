@@ -106,9 +106,10 @@ gulp.task('scripts:vendor', function() {
 // images
 gulp.task('images', function() {
 	return gulp.src(['./src_images/**/*.{png,gif,svg,jpeg,jpg,JPG,JPEG}'])
-	.pipe(imagemin({verbose: true}))
-	.on('error', handleErrors)
-	.pipe(gulp.dest('./images'))
+		.pipe(imagemin({verbose: true}))
+		.on('error', handleErrors)
+		.pipe(gulp.dest('./images'))
+		browserSync.reload;
 });
 
 // resize books images
@@ -182,10 +183,11 @@ gulp.task('jekyll-serve', function() {
 	});
 	gulp.watch('./src_assets/css/**/**/**/*.styl', ['styles']);
 	gulp.watch('./src_assets/js/**/**/**/*.js', ['scripts']);
+	gulp.watch(['src_images/**/**/**/*', '!src_images/books/', '!src_images/books-blur/'], ['images']);
 	gulp.watch('_site/**/**/**/*.*').on('change', browserSync.reload);
 	gulp.watch('_data/**/**/**/*.json').on('change', browserSync.reload);
 });
 
 // group tasks
-gulp.task('default', ['jekyll-build', 'jekyll-serve', 'styles', 'scripts']);
+gulp.task('default', ['jekyll-build', 'jekyll-serve', 'styles', 'scripts', 'images']);
 gulp.task('build', ['styles', 'jekyll-build-once']);

@@ -15,16 +15,13 @@ body
 
 a:link,
 a:visited
-	color inherit
-
-a:link
 	text-decoration underline
 	text-decoration-skip ink
-	color inherit
+	color $site-color
 	transition all 0.15s $quad-easing
 
 a:hover
-	color $site-color
+	color shade($site-color, 50%)
 
 selection
 	background $selection
