@@ -74,7 +74,7 @@ gulp.task('styles', function() {
 });
 
 // scripts
-gulp.task('scripts', ['scripts:vendor'], function() {
+gulp.task('scripts', ['scripts:vendor', 'scripts:books'], function() {
 
 	var b = browserify({
 		entries: ['./src_assets/js/app.js'],
@@ -82,44 +82,63 @@ gulp.task('scripts', ['scripts:vendor'], function() {
 	});
 
 	return b.bundle()
-		.pipe(source('bundle.js'))
-		.pipe(buffer())
-		.pipe(sourcemaps.init())
-		.pipe(optimizejs())
-		.on('error', handleErrors)
-		.pipe(uglify())
-		.on('error', handleErrors)
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./assets/js'))
-		browserSync.reload;
+	.pipe(source('app.js'))
+	.pipe(buffer())
+	.pipe(sourcemaps.init())
+	.pipe(optimizejs())
+	.on('error', handleErrors)
+	.pipe(uglify())
+	.on('error', handleErrors)
+	.pipe(sourcemaps.write('./'))
+	.pipe(gulp.dest('./assets/js'))
+	browserSync.reload;
 });
 
 gulp.task('scripts:vendor', function() {
-	return gulp.src(['./src_assets/js/vendor/echo.js'])
-		.pipe(optimizejs())
-		.on('error', handleErrors)
-		.pipe(uglify())
-		.on('error', handleErrors)
-		.pipe(gulp.dest('./assets/js/vendor'))
+	return gulp.src(['./src_assets/js/vendor/*.js'])
+	.pipe(optimizejs())
+	.on('error', handleErrors)
+	.pipe(uglify())
+	.on('error', handleErrors)
+	.pipe(gulp.dest('./assets/js/vendor'))
+});
+
+gulp.task('scripts:books', function() {
+	var b = browserify({
+		entries: ['./src_assets/js/books.js'],
+		debug: true
+	});
+
+	return b.bundle()
+	.pipe(source('books.js'))
+	.pipe(buffer())
+	.pipe(sourcemaps.init())
+	.pipe(optimizejs())
+	.on('error', handleErrors)
+	.pipe(uglify())
+	.on('error', handleErrors)
+	.pipe(sourcemaps.write('./'))
+	.pipe(gulp.dest('./assets/js'))
+	browserSync.reload;
 });
 
 // images
 gulp.task('images', function() {
 	return gulp.src(['./src_images/**/*.{png,gif,svg,jpeg,jpg,JPG,JPEG}'])
-		.pipe(imagemin({verbose: true}))
-		.on('error', handleErrors)
-		.pipe(gulp.dest('./images'))
-		browserSync.reload;
+	.pipe(imagemin())
+	.on('error', handleErrors)
+	.pipe(gulp.dest('./images'))
+	browserSync.reload;
 });
 
 // resize books images
 gulp.task('books', function() {
 	return gulp.src(['./src_books/*.{png,gif,svg,jpeg,jpg,JPG,JPEG}'])
 	.pipe(imageresize({
-			imageMagick: true,
-			width : 280, // max width
-			crop : false,
-			upscale : false
+		imageMagick: true,
+		width : 280, // max width
+		crop : false,
+		upscale : false
 	}))
 	.on('error', handleErrors)
 	.pipe(gulp.dest('./src_images/books'))
@@ -151,24 +170,24 @@ gulp.task('buildSite', shell.task('jekyll build --incremental'));
 // html
 gulp.task('html', ['buildSite'], function() {
 	return gulp.src('./_site/**/**/**/**/**/*.html')
-		.pipe(htmlmin({
-			collapseWhitespace: true,
-			removeComments: true
-		}))
-		.on('error', handleErrors)
-		// .pipe(htmllint({}, htmllintReporter))
-		// .on('error', handleErrors)
-		.pipe(gulp.dest('_site'));
+	.pipe(htmlmin({
+		collapseWhitespace: true,
+		removeComments: true
+	}))
+	.on('error', handleErrors)
+	// .pipe(htmllint({}, htmllintReporter))
+	// .on('error', handleErrors)
+	.pipe(gulp.dest('_site'));
 });
 
 function htmllintReporter(filepath, issues) {
-		if (issues.length > 0) {
-				issues.forEach(function (issue) {
-						gutil.log(gutil.colors.cyan('[gulp-htmllint] ') + gutil.colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ') + gutil.colors.red('(' + issue.code + ') ' + issue.msg));
-				});
+	if (issues.length > 0) {
+		issues.forEach(function (issue) {
+			gutil.log(gutil.colors.cyan('[gulp-htmllint] ') + gutil.colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ') + gutil.colors.red('(' + issue.code + ') ' + issue.msg));
+		});
 
-				process.exitCode = 1;
-		}
+		process.exitCode = 1;
+	}
 }
 
 // jekyll

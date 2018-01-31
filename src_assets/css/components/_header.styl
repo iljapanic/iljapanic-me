@@ -3,18 +3,23 @@ $header-shadow = 0px 1px 4px -2px rgba(0,0,0,.15)
 
 .header
 	transition $header-transition
+	position sticky
+	top 0
+	background-color rgba($bg-color, 0.98)
+	z-index 10
+	padding $spacing*1.5 0 $spacing 0
 	// border-bottom 1px solid $gray-medium
 
 	ul
-		font-size $sans-base
+		font-size $small-font
 
 	a
 		text-decoration none
 		font-family $sans
-		font-weight $fw-sans
-		letter-spacing $letter-spacing
+		// font-weight $fw-sans
+		// letter-spacing $letter-spacing
 		color $gray-dark
-		font-size $sans-base
+		font-size $small-font
 		transition $header-transition
 		line-height 1
 
@@ -29,19 +34,12 @@ a.site-title
 		text-align left
 
 // on-scroll
-// .header.header--bg
-// 	background-color rgba(#ffffff, 0.97)
-// 	box-shadow $header-shadow
-// 	a
-// 		font-size $sans-small
-// 		color $gray
+.header.header--scroll
+	// box-shadow $header-shadow
+	border-bottom 1px solid $gray-medium
+	padding $spacing*0.5 0
+	a
+		font-size $micro-font
+		color $gray
 
-// 	.header__title
-// 		// display none
-// 		transform scale(0)
-// 		+large()
-// 			transform scale(1)
-
-
-// nav
 

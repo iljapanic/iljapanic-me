@@ -1,47 +1,55 @@
 // typography
-$root-size = 13px;
-$root-size-desktop = 19px;
-$base-size = 1.4rem
-$base-line-height = 2rem
+$base-font-size = 24 // in px
+$base-line-height = 1.55
+$leading = $base-line-height * 1rem
+$scale = 1.125
 
-$h1-size = 3.2rem
-$h2-size = 2.2rem
-$h3-size = 1.7rem
+$root-size = ($base-font-size / 16 * 100%)
 
-$font-large = 1.8rem
-$font-small = 1rem
+$h1-size = (1.35 * $scale * 1rem)
+$h1-line-height = (1.5 * $leading)
 
-$sans-base = 1rem
-$sans-small = 0.8rem
-$sans-large = 1.2rem
+$h2-size = (1.25 * $scale * 1rem)
+$h2-line-height = (1 * $leading)
 
-$letter-spacing = .05em
+$h3-size = 1.15 * $scale * 1rem
+$h3-line-height = (1 * $leading)
 
-$fw-base = 200
-$fw-medium = 500
-$fw-bold = 600
-$fw-sans = 300
-$fw-sans-bold = 600
+$h4-size = ($scale * 0.9) * 1rem
+$h4-line-height = (1 * $leading)
 
+$micro-font = $scale * 0.65rem
+$small-font = $scale * 0.75rem
+$large-font = $scale * 1.15rem
 
-// font-family: 'Cormorant Garamond', serif;
-// font-family: 'Proza Libre', sans-serif;
+$letter-spacing = .03rem
 
+// font
 $serif-fallback = Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif
 $sans-serif-fallback = 'Gill Sans MT', Calibri, sans-serif
 
-$serif = 'Monotype Garamond W01', $serif-fallback
-$sans = 'Avenir Next W01' $sans-serif-fallback
+$serif = 'Leitura News W01', $serif-fallback
+$sans = 'Freight Sans W01', $sans-serif-fallback
 $monospace = 'Input Mono', 'Source Code Pro', 'Monaco', monospace
 
+$fw-base = 300
+$fw-medium = 400
+$fw-bold = 500
 
-// sizing
-// $body-width = 1600px
-$wrap = 52rem
-$body = 36rem
-$paragraph = 46rem
-$spacing = 2rem
+$fw-heading = 300
 
+
+// spacing
+$wrap = 42rem
+$body = 32rem
+$paragraph = 28rem
+$spacing = $leading
+
+// media queries
+$bp-s = 40rem // max
+$bp-m = 60rem // min
+$bp-l = 75rem // min
+$bp-xl = 90rem // min
 
 // colors
 $site-color = #C0392B
@@ -62,14 +70,6 @@ $github = #171515
 $rss = #f26522
 
 $separator = 1px solid $gray-medium
-
-
-// media queries
-$bp-s = 40rem // max
-$bp-m = 60rem // min
-$bp-l = 75em // min
-$bp-xl = 90em // min
-
 
 // animation
 $quad-easing = cubic-bezier(0.455, 0.030, 0.515, 0.955)

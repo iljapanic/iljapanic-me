@@ -7,23 +7,10 @@ layout: default
 	<h1 class="page-title hidden" itemprop="name headline">Bookshelf</h1>
 
 	<section class="bookshelf">
-			<h2>Non-Fiction</h2>
-			<div class="books books--non-fiction">
-				{% assign books_non_fiction = site.data.books.nonFiction | sort: 'year') %}
-				{% for book in books_non_fiction %}
-				<article class="item">
-					<a href="{{book.goodreads}}" target="_blank">
-						<div class="item__image">
-							<img src="{{ "/images/books-blur/" | relative_url }}{{book.image}}" data-echo="{{ "/images/books/" | relative_url }}{{book.image}}" alt="{{book.title}}">
-						</div>
-						<div class="item__meta">
-							<h2 class="item__title">{{book.title | escape}}</h2>
-							<div class="item__author">{{book.author | escape}}</div>
-						</div>
-					</a>
-				</article>
-				{% endfor %}
-			</div>
+		<h2 class="hug">Non-Fiction</h2>
+		<div class="books books--non-fiction">
+			{% include books-non-fiction.html %}
+		</div>
 	</section>
 
 	<hr class="double">
@@ -31,31 +18,10 @@ layout: default
 	<section>
 		<h2>Fiction</h2>
 		<div class="books books--fiction">
-			{% assign books_fiction = site.data.books.fiction | sort: 'year') %}
-			{% for book in books_fiction %}
-		  <article class="item">
-		  	<a href="{{book.goodreads}}" target="_blank">
-			    <div class="item__image">
-						<img src="{{ "/images/books-blur/" | relative_url }}{{book.image}}" alt="{{book.title}}" data-echo="{{ "/images/books/" | relative_url }}{{book.image}}">
-					</div>
-					<div class="item__meta">
-						<h2 class="item__title">{{book.title | escape}}</h2>
-						<div class="item__author">{{book.author | escape}}</div>
-					</div>
-			  </a>
-		  </article>
-			{% endfor %}
+			{% include books-fiction.html %}
 		</div>
 	</section>
 
 </div>
 
-
-<script src="{{ "/assets/js/vendor/echo.js" | relative_url }}"></script>
-<script>
-	echo.init({
-    offset: 0,
-    throttle: 15,
-    unload: false
-  });
-</script>
+<script src="{{ "/assets/js/books.js" | relative_url }}"></script>

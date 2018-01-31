@@ -1,0 +1,14 @@
+{% assign books_non_fiction = site.data.books.nonFiction | sort: 'year') %}
+{% for book in books_non_fiction %}
+<article class="item item--book" data-aos="fade-up" data-aos-duration="800">
+	<a href="{{book.goodreads}}" target="_blank">
+		<div class="item__image">
+			<img src="{{ "/images/books-blur/" | relative_url }}{{book.image}}" data-echo="{{ "/images/books/" | relative_url }}{{book.image}}" alt="{{book.title}}">
+		</div>
+		<div class="item__meta">
+			<h2 class="item__title">{{book.title | escape}}</h2>
+			<div class="item__author">{{book.author | escape}}</div>
+		</div>
+	</a>
+</article>
+{% endfor %}
