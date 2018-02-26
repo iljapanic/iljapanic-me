@@ -15,8 +15,8 @@ function delayBookAnimation(bookClassName) {
 
 	var bookBreakSmall = 2 + 1;
 	var bookBreakMedium = 3 + 1;
-	var bookBreakLarge = 4 + 1;
-	var bookBreakXLarge = 5 + 1;
+	var bookBreakLarge = 5 + 1;
+	var bookBreakXLarge = 6 + 1;
 
 	var book = document.getElementsByClassName(bookClassName);
 	var bookIndex = 0;
