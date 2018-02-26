@@ -1,0 +1,21 @@
+.theme-toggle
+  background none
+  border none
+  display inline-block
+  cursor pointer
+  outline none
+
+  svg path
+    fill $gray
+    transition all 0.35s ease-in-out
+
+  &:hover svg path
+    fill $gray-dark
+
+
+.dark .theme-toggle
+  svg path
+    fill $gray-light
+
+  &:hover svg path
+    fill $gray-lightest
