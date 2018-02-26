@@ -1,0 +1,60 @@
+$header-transition = all $theme-transition-duration $theme-transition-easing
+$header-shadow = 0px 1px 4px -2px rgba(0,0,0,.15)
+
+.header
+  transition $header-transition
+  position sticky
+  top 0
+  background-color rgba($bg, 0.98)
+  z-index 10
+  padding $spacing*0.75 $spacing*0.5
+  // border-bottom 1px solid $gray-medium
+  ul
+    font-size $small-font
+
+  a
+    text-decoration none
+    font-family $sans
+    color $gray-dark
+    font-size $small-font
+    transition $header-transition
+    line-height 1
+
+.dark .header
+  background-color rgba($bg-dark, 0.98)
+
+a.site-title
+  display block
+  color $gray
+
+.header__title
+  transition $header-transition
+  text-align center
+  +medium()
+    text-align left
+
+// on-scroll
+.header.header--scroll
+  // box-shadow $header-shadow
+  border-bottom 1px solid $gray-medium
+  padding $spacing*0.5 0
+  a
+    font-size $micro-font
+    color $gray
+
+
+// layout
+@supports (display:grid)
+  +medium()
+    // HEADER
+    .header
+      display grid
+      grid-gap $spacing
+      grid-template-columns 1fr 4fr 1fr
+      grid-template-rows 1fr
+
+      .header__nav
+        text-align center
+
+      .header__menu
+        text-align right

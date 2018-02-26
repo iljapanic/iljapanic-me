@@ -2,96 +2,99 @@
 layout: default
 ---
 
+<div class="wrap">
 
-<article class="page-bio">
+  <article class="page-bio">
 
-	<h1 class="post-title hidden" itemprop="name headline">Bio</h1>
+    <h1 class="post-title hidden" itemprop="name headline">Bio</h1>
 
-	<section class="bio">
+    <section class="bio">
 
-		<div class="bio__sidebar">
-			<div class="bio__image">
-				<img src="{{ "/assets/img/iljapanic.JPG" | relative_url }}">
-			</div>
-			<div class="bio__email">
-				<h2>Contact</h2>
-				<a href="mailto:{{site.email}}">{{site.email}}</a>
-			</div>
-			<div class="bio__social">
-				<h2>Social</h2>
-				{% include social.html %}
-			</div>
-		</div>
+      <div class="bio__sidebar">
+        <div class="bio__image">
+          <img src="{{ "/assets/img/iljapanic.JPG" | relative_url }}">
+        </div>
+        <div class="bio__email">
+          <h2>Contact</h2>
+          <a href="mailto:{{site.email}}">{{site.email}}</a>
+        </div>
+        <div class="bio__social">
+          <h2>Social</h2>
+          {% include social.html %}
+        </div>
+      </div>
 
-		<div class="bio__main">
-			{{ content }}
-		</div>
+      <div class="bio__main">
+        {{ content }}
+      </div>
 
-	</section>
+    </section>
 
-	<hr>
+    <hr>
 
-	<section class="resume">
+    <section class="resume">
 
-		<!-- resume - main -->
-		<div class="resume__main">
+      <!-- resume - main -->
+      <div class="resume__main">
 
-			<!-- work -->
-			<section class="work">
-				<h2>Experience</h2>
-				{% include resume-work.html %}
-			</section>
+        <!-- work -->
+        <section class="work">
+          <h2>Experience</h2>
+          {% include resume-work.html %}
+        </section>
 
-			<!-- education -->
-			<section class="education">
-				<h2>Education</h2>
-				{% include resume-education.html %}
-			</section>
+        <!-- education -->
+        <section class="education">
+          <h2>Education</h2>
+          {% include resume-education.html %}
+        </section>
 
-		</div>
+      </div>
 
-		<!-- resume - sidebar -->
-		<div class="resume__sidebar">
+      <!-- resume - sidebar -->
+      <div class="resume__sidebar">
 
-			<!-- language -->
-			<section class="language">
-				<h2>Language</h2>
-				<ul class="skill-list">
-					{% for language in site.data.bio.languages %}
-						<li class="item">
-							{{language.language}}
-						</li>
-					{% endfor %}
-				</ul>
-			</section>
+        <!-- language -->
+        <section class="language">
+          <h2>Language</h2>
+          <ul class="skill-list">
+            {% for language in site.data.bio.languages %}
+              <li class="item">
+                {{language.language}}
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
 
-			<!-- skills -->
-			<section class="skills">
-				<h2>Competences</h2>
-				<ul class="skill-list">
-					{% for skill in site.data.bio.skills %}
-						<li class="item">
-							{{skill.skill}}
-						</li>
-					{% endfor %}
-				</ul>
-			</section>
+        <!-- skills -->
+        <section class="skills">
+          <h2>Competences</h2>
+          <ul class="skill-list">
+            {% for skill in site.data.bio.skills %}
+              <li class="item">
+                {{skill.skill}}
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
 
-			<!-- tools -->
-			<section class="skills">
-				<h2>Tools</h2>
-				<ul class="skill-list">
-					{% for tool in site.data.bio.tools %}
-						<li class="item">
-							{{tool.tool}}
-						</li>
-					{% endfor %}
-				</ul>
-			</section>
+        <!-- tools -->
+        <section class="skills">
+          <h2>Tools</h2>
+          <ul class="skill-list">
+            {% for tool in site.data.bio.tools %}
+              <li class="item">
+                {{tool.tool}}
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
 
-		</div>
+      </div>
 
-	</section>
+    </section>
 
 
-</article>
+  </article>
+
+</div>

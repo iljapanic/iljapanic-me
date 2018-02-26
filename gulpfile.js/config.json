@@ -1,0 +1,45 @@
+{
+
+  "publicDir": "./_site/",
+
+  "data" : {
+    "watch": "./_data/**/**/*.json"
+  },
+
+  "jekyll" : {
+    "watch": "_site/**/**/**/*.html",
+    "watchData": "_data/**/**/**/*.json"
+  },
+
+  "css": {
+    "src": "./_assets/stylus/style.styl",
+    "dest": "./assets/css/",
+    "lint": "./assets/css/*.css",
+    "watch": "./_assets/stylus/**/**/*.styl"
+  },
+
+  "js": {
+    "src": "./_assets/js/**/*.js",
+    "dest": "./assets/js/",
+    "watch": "./_assets/js/**/*.js"
+  },
+
+  "images": {
+    "src": "./_images/**/**/*.{png,gif,svg,jpeg,jpg,JPG,JPEG}",
+    "dest": "./images/",
+    "watch": "./_images/**/**/*.{png,gif,svg,jpeg,jpg,JPG,JPEG}"
+  },
+
+  "books": {
+    "src": "./_books/*.{png,gif,svg,jpeg,jpg,JPG,JPEG}",
+    "dest": "./images/books/",
+    "watch": "./_books/*.{png,gif,svg,jpeg,jpg,JPG,JPEG}"
+  },
+
+  "include": {
+    "src": "[./_assets/include/**/**/**/**, !_assets/include/**/**/**/.DS_Store]",
+    "dest": "./_site/",
+    "watch": "./_assets/include/**/**/**/**"
+  }
+
+}

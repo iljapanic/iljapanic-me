@@ -9,6 +9,7 @@ description: Personal site of Ilja A. Panic
 url: https://iljapanic.me
 repo: https://github.com/iljapanic/iljapanic-me
 timezone: Europe/Prague
+ga: UA-43693985-11
 
 twitter: https://twitter.com/iljapanic
 linkedin: https://www.linkedin.com/in/iljapanic/
@@ -41,12 +42,12 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - package.json
-  - gulpfile.js
-  - assets_src
+  - gulpfile.js/
   - yarn.lock
-  - src_images
-  - src_assets
-  - src_books
+  - _assets/
+  - _images/
+  - _data/
+  - _books
 
 
 #==============================

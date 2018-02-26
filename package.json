@@ -4,40 +4,32 @@
   "description": "Building blocks of my personal website",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iljapanic/iljapanic-me.git"
+    "url": "https://github.com/iljapanic/"
   },
   "author": "Ilja Panic",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/iljapanic/iljapanic-me/issues"
   },
-  "homepage": "https://github.com/iljapanic/iljapanic-me#readme",
+  "homepage": "https://iljapanic.com",
   "devDependencies": {
-    "browser-sync": "*",
-    "browserify": "^14.5.0",
-    "del": "^3.0.0",
-    "gulp": "*",
-    "gulp-cssnano": "*",
-    "gulp-group-css-media-queries": "*",
-    "gulp-htmllint": "^0.0.14",
+    "browser-sync": "^2.23.6",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-image-resize": "^0.13.0",
-    "gulp-imagemin": "^4.0.0",
-    "gulp-jimp": "^1.2.8",
-    "gulp-notify": "*",
-    "gulp-optimize-js": "*",
-    "gulp-postcss": "^7.0.0",
-    "gulp-shell": "*",
-    "gulp-sourcemaps": "*",
-    "gulp-stylus": "^2.6.0",
-    "gulp-uglify": "*",
-    "gulp-util": "*",
-    "lost": "^8.2.0",
-    "postcss-cssnext": "^3.0.2",
-    "s-grid": "^1.2.1",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {
-    "gulp-htmlmin": "^3.0.0"
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-shell": "^0.6.5",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "path": "^0.12.7",
+    "postcss-cssnext": "^3.1.0",
+    "require-dir": "^1.0.0"
   }
 }

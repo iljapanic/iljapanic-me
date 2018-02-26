@@ -1,0 +1,54 @@
+// main
+// .container
+// 	margin-left auto
+// 	margin-right auto
+// 	max-width $wrap
+
+.wrap
+  margin-left auto
+  margin-right auto
+  max-width $wrap
+
+.wrap-l
+  margin-left auto
+  margin-right auto
+  max-width $wrap-l
+
+.main
+  margin-top $spacing*1.5
+
+// header
+
+// footer
+.footer
+  text-align center
+  margin-top $spacing*2
+  padding-top $spacing
+  padding-bottom $spacing
+
+
+@supports (display:grid)
+
+    // BIO
+    .bio
+      display grid
+      grid-gap $spacing*1.5
+      grid-template-columns auto $paragraph
+
+      // .bio__main
+      // 	background red
+
+      // .bio__sidebar
+      // 	background aqua
+
+    // RESUME
+    .resume
+      display grid
+      grid-gap $spacing
+      grid-template-columns $paragraph auto
+
+      // .resume__main
+      // 	background red
+
+      // .resume__sidebar
+      // 	background aqua

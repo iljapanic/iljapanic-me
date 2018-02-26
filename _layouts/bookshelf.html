@@ -2,26 +2,28 @@
 layout: default
 ---
 
-<div class="page-bookshelf">
+<div class="wrap-l">
+  <div class="page-bookshelf">
 
-	<h1 class="page-title hidden" itemprop="name headline">Bookshelf</h1>
+      <h1 class="page-title hidden" itemprop="name headline">Bookshelf</h1>
 
-	<section class="bookshelf">
-		<h2 class="hug">Non-Fiction</h2>
-		<div class="books books--non-fiction">
-			{% include books-non-fiction.html %}
-		</div>
-	</section>
+      <section>
+        <h2 class="hug">Non-Fiction</h2>
+        <div class="books books--non-fiction">
+          {% include books-non-fiction.html %}
+        </div>
+      </section>
 
-	<hr class="double">
+      <hr class="double">
 
-	<section>
-		<h2>Fiction</h2>
-		<div class="books books--fiction">
-			{% include books-fiction.html %}
-		</div>
-	</section>
+      <section>
+        <h2>Fiction</h2>
+        <div class="books books--fiction">
+          {% include books-fiction.html %}
+        </div>
+      </section>
 
+  </div>
 </div>
 
 <script src="{{ "/assets/js/books.js" | relative_url }}"></script>

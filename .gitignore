@@ -1,5 +1,7 @@
-# Ignore Jekyll generated files
+# Ignore Jekyll/Gulp generated files
 _site
+assets
+images
 
 # Ignore caches and logs
 .sass-cache
@@ -19,3 +21,4 @@ _config_local.yml
 
 # Ignore npm stuff
 node_modules/
+
