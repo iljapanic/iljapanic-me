@@ -18,16 +18,17 @@ layout: default
       <div class="l-split">
         <div class="about__sidebar">
           <div class="about__image">
-            <img src="{{ "/images/ilja-profile.JPG" | relative_url }}">
+            <img src="{{ "/images/spinner.gif" | relative_url }}" data-echo="{{ "/images/ilja-profile.JPG" | relative_url }}">
           </div>
-          {% comment %} <div class="bio__email">
-            <h2 class="side-title">Contact</h2>
+          <h2 class="side-title">Contact</h2>
+          <div class="about__contact">
             <a href="mailto:{{site.email}}">{{site.email}}</a>
           </div>
-          <div class="bio__social">
-            <h2 class="side-title">Social</h2>
-            {% include social.html %}
-          </div> {% endcomment %}
+
+          <h2 class="side-title">Work Availability</h2>
+          <p class="about__projects">
+            Open for new projects starting September 2018
+          </p>
         </div>
         {% comment %} bio {% endcomment %}
         <div class="about__main">

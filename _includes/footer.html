@@ -7,3 +7,8 @@
 </footer>
 
 <script type="text/javascript" src="{{ "/assets/js/main.js" | relative_url }}"></script>
+
+
+{% if current[1] == 'projects' %}
+  <script type="text/javascript" src="{{ "/assets/js/projects.js" | relative_url }}"></script>
+{% endif %}
