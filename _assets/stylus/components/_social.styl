@@ -1,39 +1,41 @@
-.social ul
-	align-items: center
-	display: flex
-	flex-wrap: wrap
-	justify-content: space-between
-	line-height: 1
-	list-style-type: none
-	margin: 0
-	padding: 0
-
-	+large()
-		display: block
+ul.social
+  list-style-type: none
+  margin: 0
+  padding: 0
 
 .social li
-	display: inline-block
-	margin: 0
-	line-height: 1
-
-	+large()
-		margin-right: $spacing*.75
-		&:last-of-type
-			margin-right: 0
+  display: inline-block
+  margin: 0
+  margin-right: $spacing*0.175
+  &:last-of-type
+    margin-right: 0
 
 .social a
-	color: $gray-dark
-	letter-spacing: $letter-spacing
-	text-decoration: none
+  color: $gray-dark
+  letter-spacing: $letter-spacing
+  text-decoration: none
 
-.social .twitter a:hover
-	color: $twitter
+  svg
+    vertical-align middle
+    width 14px
 
-.social .instagram a:hover
-	color: $instagram
+  svg path,
+  svg circle
+    fill $gray-dark
+    transition fill 0.25s ease-in-out
 
-.social .linkedin a:hover
-	color: $linkedin
+.social .email a:hover svg path
+  fill $gray-light
 
-.social .github a:hover
-	color: $github
+.social .twitter a:hover svg path
+  fill $twitter
+
+.social .instagram a:hover svg path,
+.social .instagram a:hover svg circle
+  fill $instagram
+
+.social .linkedin a:hover svg path
+  fill $linkedin
+
+.social .github a:hover svg path
+  fill $github

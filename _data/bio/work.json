@@ -1,17 +1,8 @@
 [
-	{
-	  "period": "April 2017 - October 2017",
-	  "name": "Copenhagen Business School",
-	  "url": "http://www.cbs.dk/",
-	  "location": "Copenhagen",
-	  "role": "Research Assistant",
-	  "extra": "external",
-	  "description": "Assisting associate professor with processing and generating a network map of Information Management researchers."
-	},
-	{
+  {
 	  "period": "September 2015 – Now",
-	  "name": "iljapanic.me",
-	  "url": "http://iljapanic.me",
+	  "name": "iljapanic.com",
+	  "url": "http://iljapanic.com",
 	  "location": "Prague - Copenhagen",
 	  "role": "Web Developer & UX Consultant",
 	  "extra": "freelance",
@@ -34,6 +25,15 @@
 	      "link": "http://holektiv.cz"
 	    }
 	  ]
+	},
+	{
+	  "period": "April 2017 - October 2017",
+	  "name": "Copenhagen Business School",
+	  "url": "http://www.cbs.dk/",
+	  "location": "Copenhagen",
+	  "role": "Research Assistant",
+	  "extra": "external",
+	  "description": "Assisting associate professor with processing and generating a network map of Information Management researchers."
 	},
 	{
 	  "period": "January 2015 – June 2015",

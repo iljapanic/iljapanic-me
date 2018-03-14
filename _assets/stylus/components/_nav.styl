@@ -1,43 +1,21 @@
 .nav
-	list-style-type none
-	padding 0
-	margin 0
+  list-style-type none
+  padding 0
+  margin 0
 
 .nav ul
-	display flex
-	flex-wrap wrap
-	align-items center
-	justify-content space-between
-	width 100%
-	margin 0
-	padding 0
-	line-height 1
-	text-align center
-
-	+medium()
-		display block
+  width 100%
+  margin 0
+  padding 0
 
 .nav li
-	display inline-block
-	margin 0
-	line-height 1
-	line-height 1
+  margin 0 $spacing*0.5 0 0
+  display inline-block
 
-	+medium()
-		margin-right $spacing
-		&:last-of-type
-			margin-right 0
+  +medium()
+    display block
+    margin $spacing*0.5 0
 
 .nav .active a
-	color $site-color
-	font-weight $fw-medium
-	text-stroke 4px solid red
-
-// a cheeky hack so nav items don't move around when active item is bold
-.nav a:before
-	display block
-	content attr(title)
-	font-weight $fw-medium
-	height 0
-	overflow hidden
-	visibility hidden
+  color $site-color
+  font-weight $fw-medium

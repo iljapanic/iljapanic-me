@@ -4,17 +4,14 @@
 		"name": "UCL",
 		"url": "https://www.ucl.ac.uk/prospective-students/graduate/taught/degrees/smart-cities-urban-analytics-msc",
 		"location": "London",
-		"programme": "Smart Cities & Urban Analytics",
-		"extra": "MSc"
+		"programme": "Smart Cities & Urban Analytics (MSc)"
 	},
 	{
 		"period": "2012 – 2015",
 		"name": "Copenhagen Business School",
-		"image": "/img/education/cbs.png",
 		"url": "https://www.cbs.dk/en/study/bachelor/ba-in-information-management",
 		"location": "Copenhagen",
-		"programme": "Information Management",
-		"extra": "BA",
+		"programme": "Information Management (BA)",
 		"courses": [
 			{
 				"name": "Business Models for UX Design of Social Media Smartphone Apps"
@@ -45,11 +42,9 @@
 	{
 		"period": "2011 – 2012",
 		"name": "University of Economics",
-		"image": "/img/education/vse.jpg",
 		"url": "http://kit.vse.cz/english/study/b-informatics/",
 		"location": "Prague",
-		"programme": "Applied Informatics",
-		"extra": "1 year",
+		"programme": "Applied Informatics (1 year)",
 		"courses": [
 			{
 				"name": "Introduction to Programming (JAVA)"

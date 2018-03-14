@@ -1,17 +1,17 @@
 var themeToggle = document.querySelector('.theme-toggle');
-var bodyEl = document.body;
+var htmlEl = document.getElementsByTagName( 'html' )[0];
 
 // set light theme
 function setLight() {
-  bodyEl.classList.remove('dark');
-  bodyEl.classList.add('light');
+  htmlEl.classList.remove('dark');
+  htmlEl.classList.add('light');
   localStorage.setItem('theme', 'light');
 }
 
 // set dark theme
 function setDark() {
-  bodyEl.classList.remove('light');
-  bodyEl.classList.add('dark');
+  htmlEl.classList.remove('light');
+  htmlEl.classList.add('dark');
   localStorage.setItem('theme', 'dark');
 }
 
@@ -29,7 +29,7 @@ checkTheme();
 
 
 function changeTheme() {
-  if (bodyEl.classList.contains('light')) {
+  if (htmlEl.classList.contains('light')) {
     setDark();
   }
   else {

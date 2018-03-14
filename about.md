@@ -1,11 +1,11 @@
 ---
-layout: bio
-title: Bio
-permalink: /bio/
+layout: about
+title: About
+permalink: /about/
 group: 'navigation'
 ---
 
-My name is Ilja Panic. I'm a designer and technologist currently based in London where I'm doing my master's in Smart Cities & Urban Analytics.
+My name is Ilja Panic. I'm a designer and technologist from Prague and currently based in London where I'm doing a degree in Smart Cities & Urban Analytics.
 
 In 2012, I got fed up with a university in my hometown of Prague so I've made a website takemetodenmark.com that got me accepted to a business school in Copenhagen. I've worked as a front-end developer at two digital agencies during the studies there.
 

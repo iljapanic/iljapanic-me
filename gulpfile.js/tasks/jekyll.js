@@ -32,7 +32,6 @@ gulp.task('jekyll-serve', function() {
       baseDir: config.publicDir
     }
   })
-  watch(config.data.watch, function() { gulp.start('html'); });
 	watch(config.css.watch, function() { gulp.start('css'); });
 	watch(config.js.watch, function() { gulp.start('js'); });
   watch([config.images.watch], function() { gulp.start('images'); });

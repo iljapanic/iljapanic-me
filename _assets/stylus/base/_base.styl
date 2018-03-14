@@ -1,149 +1,114 @@
-// inspired by https://github.com/devinhunt/typebase.css
+/* inspired by https://github.com/devinhunt/typebase.css */
 
+/* Basic setup */
 *
   box-sizing border-box
   margin 0
   padding 0
 
 html
-  font-family $serif
+  background-color $bg-dark
+  font-family $sans
+  font-size $base-size-mobile
+  font-weight $fw-base
   -webkit-font-smoothing antialiased
   text-size-adjust auto
-  font-size $root-size
+
+  +medium()
+    font-size $base-size
 
 body
-  font-family $sans
-  padding 0 $spacing*0.25
   background-color $bg
-  -webkit-font-smoothing antialiased
-  text-size-adjust auto
-  transition $theme-transition
-
-body.dark
-  background-color $bg-dark
-  color $text-light
-
-// headings
-
-h1,
-h2,
-h3,
-h4
-  margin-top $leading
-  margin-bottom 0
-  line-height $leading
-  font-family $serif
-  font-weight $fw-heading
-  color tint($text-color, 10%)
-  transition $theme-transition
-
-
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4
-  color tint($text-light, 10%)
-
-h1
-  font-size $h1-size
-  line-height $h1-line-height
-  margin-top (1 * $leading)
-  margin-bottom (0.5 * $leading)
-
-h2
-  font-size $h2-size
-  line-height $h2-line-height
-  margin-top (2 * $leading)
-
-h3
-  font-size $h3-size
-  line-height $h3-line-height
-
-h4
-  font-size $h4-size
-  line-height $h4-line-height
-  margin-top (1 * $leading)
-  margin-bottom (0.25 * $leading)
 
 /* Copy & Lists */
 p
   line-height $leading
-  margin-top $leading
+  margin-top $leading*0.5
+  font-size 1rem
   margin-bottom 0
-
-h1 + p,
-h2 + p,
-h3 + p
-  margin-top 0.5 * $leading
-
-h4 + p
-  margin-top 0
-
 
 ul,
 ol
-  margin-top $leading*0.5
-  margin-bottom $leading*0.5
-  padding-left $leading
+  margin-top $leading
+  margin-bottom $leading
   li
-    margin-bottom $leading*0.25
-    &:last-of-type
-      margin-bottom 0
+    line-height $leading
 
-li
-  line-height $leading
-
+  ul,
+  ol
+    margin-top 0
+    margin-bottom 0
 
 blockquote
   line-height $leading
   margin-top $leading
   margin-bottom $leading
-  padding 0 $leading*0.75
-  p
-    font-style italic
-  div
-    font-size 0.9rem
 
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family $sans
+  margin-top $leading
+  margin-bottom 0
+  line-height $leading
+  font-weight $fw-heading
+  color tint($text-color, 25%)
+
+h1
+  font-size 3 * $scale * 1rem
+  line-height 3 * $leading
+  margin-top 2 * $leading
+
+h2
+  font-size 2 * $scale * 1rem
+  line-height 2 * $leading
+  margin-top 2 * $leading
+
+h3
+  font-size 1 * $scale * 1rem
+
+h4
+  font-size ($scale/2) * 1rem
+
+h5
+  font-size ($scale/3) * 1rem
+
+h6
+  font-size ($scale/4) * 1rem
+
+.side-title
+  font-size $small
+  font-weight $fw-bold
+  margin 0
+  line-height 1.45
+  text-transform uppercase
+  letter-spacing $letter-spacing
+
+  span
+    display block
+    font-size $micro
+    text-transform none
+    margin-top $spacing*0.15
+    color $gray
+
+/* Images, links, etc. */
 hr
   display block
   height 1px
   border 0
   border-top $separator
-  margin $spacing 0
+  margin $spacing*1.25 0
   padding 0
   &.double
     margin $spacing*2 0
 
 img
   max-width 100%
-
-figure
-  // background rgba(pink, 0.25)
-  margin $leading*1.5 $leading*0.5
-  text-align center
-  figcaption
-    margin-top $leading*0.5
-    font-size 0.85rem
-    line-height 1.65
-    font-style italic
-
-/* Tables */
-
-table
-  margin-top $leading
-  border-spacing  0px
-  border-collapse collapse
-
-td,
-th
-  padding 0
-  line-height $base-line-height * $base-font-size - 0px
-
-/* Code blocks */
-
-code
-  vertical-align bottom
-
 
 a:link,
 a:visited
@@ -155,18 +120,33 @@ a:visited
 a:hover
   color shade($site-color, 50%)
 
-selection
-  background $selection
+::selection
+  background rgba(tint($site-color, 50%), 0.5)
 
+/* Tables */
 
+table
+  margin-top $leading
+  border-spacing  0px
+  border-collapse collapse
 
-/* Leading paragraph text */
+td,
+th
+  padding 0
+  line-height $baseLineHeight * $baseFontSize - 0px
+
+/* Code blocks */
+
+code
+  // Forces text to constrain to the line-height. Not ideal, but works.
+  vertical-align bottom
+
+/* $leading paragraph text */
 
 .lead
-  font-size $scale * 1rem
+  font-size $large-size
 
-/* Hug the block above you */
+/* Hug a the block above you */
 
 .hug
   margin-top 0
-

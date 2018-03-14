@@ -4,59 +4,40 @@ layout: default
 
 <article class="page-projects wrap">
 
-		<h1 class="post-title hidden" itemprop="name headline">Projects</h1>
+		<header class="headline">
+      <h1 class="headline__title" itemprop="name headline">Projects</h1>
+      <p class="headline__subtitle">Experiments, ideas and work showcase</p>
+    </header>
+
+    <hr>
 
 		{% comment %} Projects {% endcomment %}
 		<section class="projects">
+      <div class="l-split">
 
-			<div class="projects__sidebar">
-				<h2>Projects</h2>
-			</div>
+        <div class="projects__sidebar">
+          <h2 class="side-title">Personal Projects</h2>
+        </div>
 
-			<div class="projects__main projects__projects">
+        <div class="projects__main projects__projects">
 
-				{% for project in site.data.projects.projects %}
-				<article class="item">
-					{% comment %} <div class="item__image">
-						<img src="{{ "/images/projects/" | relative_url }}{{project.image}}" data-echo="{{ "/images/projects/" | relative_url }}{{project.image}}" alt="{{project.name}}">
-					</div> {% endcomment %}
-					<div class="item__meta">
-						<h3 class="item__title">{{project.name | escape}} <span class="item__period">{{ project.period }}</span></h3>
-						<p class="item__description">{{project.description | escape}}</p>
-						<div class="item__action">
-							<a href="{{project.url}}" target="_blank">{{project.action}}</a>
-						</div>
-					</div>
-				</article>
-				{% endfor %}
+          {% for project in site.data.projects.projects %}
+          <article class="item">
+            {% comment %} <div class="item__image">
+              <img src="{{ "/images/projects/" | relative_url }}{{project.image}}" data-echo="{{ "/images/projects/" | relative_url }}{{project.image}}" alt="{{project.name}}">
+            </div> {% endcomment %}
+            <div class="item__meta">
+              <h3 class="item__title">{{project.name | escape}} <span class="item__period">{{ project.period }}</span></h3>
+              <p class="item__description">{{project.description | escape}}</p>
+              <div class="item__action">
+                <a href="{{project.url}}" target="_blank">{{project.action}}</a>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
 
-			</div>
-		</section>
-
-		<hr class="double">
-
-		{% comment %} Academic {% endcomment %}
-		<section class="projects">
-
-			<div class="projects__sidebar">
-				<h2 data-aos="fade-in-up" data-aos-duration="3000">Academic</h2>
-			</div>
-
-			<div class="projects__main projects__academic">
-
-				{% for project in site.data.projects.academic %}
-				<article class="item">
-					<div class="item__meta">
-						<h3 class="item__title">{{project.name | escape}} <span class="item__period">{{ project.period }}</span></h3>
-						<p class="item__description">{{project.description | escape}}</p>
-						<div class="item__action">
-							<a href="{{project.url}}" target="_blank">{{project.action}}</a>
-						</div>
-					</div>
-				</article>
-				{% endfor %}
-
-			</div>
+        </div>
+      </div>
 		</section>
 
 		<hr class="double">
@@ -64,27 +45,33 @@ layout: default
 		{% comment %} Showcase {% endcomment %}
 		<section class="projects">
 
-			<div class="projects__sidebar">
-				<h2>Showcase</h2>
-			</div>
+      <div class="l-split">
 
-			<div class="projects__main projects__showcase">
+        <div class="projects__sidebar">
+          <h2 class="side-title">Work Showcase</h2>
+        </div>
 
-				{% for project in site.data.projects.showcase %}
-				<article class="item">
-					<div class="item__meta">
-						<h3 class="item__title">{{project.name | escape}} <span class="item__period">{{ project.period }}</span></h3>
-						{% comment %} <p class="item__description">{{project.description | escape}}</p> {% endcomment %}
-					</div>
-					<div class="item__image">
-						<a href="{{project.url}}" target="_blank">
-							<img src="{{ "/images/showcase/" | relative_url }}{{project.image}}" data-echo="{{ "/images/showcase/" | relative_url }}{{project.image}}" alt="{{project.name}}">
-						</a>
-					</div>
-				</article>
-				{% endfor %}
+        <div class="projects__main projects__showcase">
 
-			</div>
+          {% for project in site.data.projects.showcase %}
+          <article id="{{ project.name | slugify }}" class="item">
+            <div class="item__meta">
+              <h3 class="item__title">{{project.name | escape}} <span class="item__period">{{ project.period }}</span></h3>
+            </div>
+            <div class="item__image">
+              <a href="{{project.url}}" target="_blank">
+                <img src="{{ "/images/showcase/" | relative_url }}{{project.image}}" data-echo="{{ "/images/showcase/" | relative_url }}{{project.image}}" alt="{{project.name}}">
+              </a>
+            </div>
+            <div class="item__body">
+              <p id="{{ project.name | slugify }}-description" class="item__description">{{project.description | escape}}</p>
+              <a class="toggle" href="#{{ project.name | slugify }}-description">Details</a>
+            </div>
+          </article>
+          {% endfor %}
+
+        </div>
+      </div>
 		</section>
 
 

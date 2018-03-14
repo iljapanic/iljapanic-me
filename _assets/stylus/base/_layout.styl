@@ -1,8 +1,14 @@
-// main
-// .container
-// 	margin-left auto
-// 	margin-right auto
-// 	max-width $wrap
+.main
+  padding $top-space $top-space*0.5
+
+  +medium()
+    padding $top-space $top-space
+
+.header
+  padding $top-space*0.5
+
+  +medium()
+    padding $top-space
 
 .wrap
   margin-left auto
@@ -14,41 +20,14 @@
   margin-right auto
   max-width $wrap-l
 
-.main
-  margin-top $spacing*1.5
-
-// header
-
-// footer
-.footer
-  text-align center
-  margin-top $spacing*2
-  padding-top $spacing
-  padding-bottom $spacing
-
-
 @supports (display:grid)
-
-    // BIO
-    .bio
+  +medium()
+    .l-container
       display grid
-      grid-gap $spacing*1.5
-      grid-template-columns auto $paragraph
+      grid-template-columns $sidebar auto // l-sidebar + l-main
 
-      // .bio__main
-      // 	background red
-
-      // .bio__sidebar
-      // 	background aqua
-
-    // RESUME
-    .resume
+  +large()
+    .l-split
       display grid
-      grid-gap $spacing
-      grid-template-columns $paragraph auto
-
-      // .resume__main
-      // 	background red
-
-      // .resume__sidebar
-      // 	background aqua
+      grid-template-columns $split auto
+      grid-gap $spacing*1.25

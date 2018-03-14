@@ -2,28 +2,30 @@
 layout: default
 ---
 
-<div class="wrap-l">
-  <div class="page-bookshelf">
 
-      <h1 class="page-title hidden" itemprop="name headline">Bookshelf</h1>
+<article class="page-bookshelf wrap">
 
-      <section>
-        <h2 class="hug">Non-Fiction</h2>
-        <div class="books books--non-fiction">
-          {% include books-non-fiction.html %}
-        </div>
-      </section>
+    <header class="headline">
+      <h1 class="headline__title" itemprop="name headline">Bookshelf</h1>
+      <p class="headline__subtitle">Personal influences and inspiration</p>
+    </header>
 
-      <hr class="double">
+    <hr>
 
-      <section>
-        <h2>Fiction</h2>
-        <div class="books books--fiction">
-          {% include books-fiction.html %}
-        </div>
-      </section>
+    <section>
+      <h2 class="side-title hug">Non-Fiction</h2>
+      <div class="books books--non-fiction">
+        {% include books-non-fiction.html %}
+      </div>
+    </section>
 
-  </div>
-</div>
+    <hr class="double">
 
-<script src="{{ "/assets/js/books.js" | relative_url }}"></script>
+    <section>
+      <h2 class="side-title">Fiction</h2>
+      <div class="books books--fiction">
+        {% include books-fiction.html %}
+      </div>
+    </section>
+
+</article>

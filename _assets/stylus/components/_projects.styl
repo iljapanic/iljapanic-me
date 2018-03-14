@@ -1,62 +1,73 @@
 .projects .item
-	margin-bottom $spacing*2
+  margin-bottom $spacing*2
 
-	&:last-of-type
-		margin-bottom 0
+  &:last-of-type
+    margin-bottom 0
 
-	.item__period
-		font-family $sans
-		vertical-align middle
-		margin-left $spacing*0.25
-		color $gray
+  .item__title
+    font-weight $fw-bold
 
-	.item__action
-		margin-top $spacing*0.5
+  .item__period
+    font-size $micro
+    vertical-align middle
+    margin-left $spacing*0.25
+    color $gray
 
-	.item__action a
-		font-family $sans
-		font-weight 600
-		text-decoration none
+  .item__action
+    margin-top $spacing*0.5
 
-	.item__description
-		margin-top $spacing*0.5
-		margin-bottom 0
+  .item__action a
+    font-weight $fw-medium
+    text-decoration none
+    font-size $small
 
-.projects__showcase .item
-	img
-		vertical-align middle
-		border-radius 0.1rem
-	.item__title
-		margin-top 0
-		margin-bottom $spacing*0.35
-		font-family $sans
+  .item__description
+    margin-top $spacing*0.25
+    margin-bottom 0
+
+.projects .projects__showcase .item
+  margin-bottom 0
+
+  img
+    vertical-align middle
+    border-radius 0.1rem
+    border 1px solid $gray-light
+  .item__title
+    margin-top 0
+    margin-bottom $spacing*0.35
+    font-size $base
+  .item__description
+    font-size $micro
+    line-height 1.7
 
 @supports (display:grid)
-	+medium()
-		.projects
-			display grid
-			margin-top $spacing*2
-			grid-gap $spacing
-			grid-template-columns 12rem auto
-			// grid-template-columns auto $body
-			&:first-of-type
-				margin-top 0
+  +medium()
+    .projects__projects,
+    .projects__academic
+      h3:first-of-type
+        margin-top 0
 
-			.projects__sidebar
-				text-align left
-				h2
-					margin-top 0
-					font-family $sans
-					text-transform uppercase
-					font-weight $fw-bold
-					letter-spacing $letter-spacing
+    .projects__showcase
+      display grid
+      grid-gap $spacing*1.5
+      grid-template-columns repeat(2, 1fr)
 
-			.projects__projects,
-			.projects__academic
-				h3:first-of-type
-					margin-top 0
 
-			.projects__showcase
-				display grid
-				grid-gap $spacing
-				grid-template-columns repeat(2, 1fr)
+.projects__showcase
+  .item__description
+    display none
+    height 0
+    overflow hidden
+    transition height 350ms ease-in-out
+  .item__description.is-visible
+    display block
+    height auto
+  .toggle
+    display inline-block
+    text-decoration none
+    margin-top $spacing*0.25
+    font-size $small
+  .item__description + .toggle:before
+    content '+ '
+  .item__description.is-visible + .toggle:before
+    content '- '

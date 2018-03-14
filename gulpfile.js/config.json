@@ -37,8 +37,8 @@
   },
 
   "include": {
-    "src": "[./_assets/include/**/**/**/**, !_assets/include/**/**/**/.DS_Store]",
-    "dest": "./_site/",
+    "src": "./_assets/include/**/**/**/**",
+    "dest": "./",
     "watch": "./_assets/include/**/**/**/**"
   }
 

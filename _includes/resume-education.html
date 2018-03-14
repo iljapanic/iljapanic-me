@@ -1,14 +1,9 @@
 <div class="resume-list">
 	{% for education in site.data.bio.education %}
 		<article class="item">
-	  	<div class="item__date">
-				{{education.period}}
-	  	</div>
+      <div class="item__date">{{education.period}}</div>
 	  	<h3 class="item__title">
 		  	{{education.programme | escape}}
-		  	<span class="item__title-extra">
-					({{education.extra}})
-		  	</span>
 		  </h3>
 		  <div class="item__subtitle">
 		  	<a href="{{education.url}}" target="_blank">{{education.name | escape}}</a>
