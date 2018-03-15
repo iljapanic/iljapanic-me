@@ -1,14 +1,10 @@
-# Ignore Jekyll/Gulp generated files
+# Ignore Jekyll build directory
 _site
-assets
-images
 
 # Ignore caches and logs
 .sass-cache
 .asset-cache/
 .bundle/
-Gemfile.lock
-.ruby-version
 
 # Ignore junk files
 .DS_Store
