@@ -34,20 +34,14 @@
     align-items baseline
     // margin-top $spacing
 
-    .item // 2 books
-      width 48% // 2*48 = 96%, 4/1 = 4%
+    .item // 3 books
+      width 30.83% // 3*30.83 = 92.5%, 7.5/2 = 3.75%
+      margin-right 3.75%
       margin-top $spacing
-      margin-right 4%
       &:nth-of-type(2n)
-        margin-right 0
-
-      +medium() // 3 books
-        width 30.83% // 3*30.83 = 92.5%, 7.5/2 = 3.75%
         margin-right 3.75%
-        &:nth-of-type(2n)
-          margin-right 3.75%
-        &:nth-of-type(3n)
-          margin-right 0
+      &:nth-of-type(3n)
+        margin-right 0
 
       +large() // 5 books
         width 17% // 5*17 = 85%, 15/4 = 3.75%
@@ -60,17 +54,3 @@
           margin-right 3.75%
         &:nth-of-type(5n)
           margin-right 0
-
-      // +xlarge() // 7 books
-      //   width 14% // 6*14 = 84%, 16/6 = 2,666666667%
-      //   margin-right 2.666666667%
-      //   &:nth-of-type(2n)
-      //     margin-right 2.666666667%
-      //   &:nth-of-type(3n)
-      //     margin-right 2.666666667%
-      //   &:nth-of-type(4n)
-      //     margin-right 2.666666667%
-      //   &:nth-of-type(5n)
-      //     margin-right 2.666666667%
-      //   &:nth-of-type(6n)
-      //     margin-right 0
