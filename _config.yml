@@ -26,8 +26,6 @@ markdown: kramdown
 plugins:
   - jekyll-typogrify
 
-gem:
-  - jekyll-figure
 
 #==============================
 # Exclude/Include
@@ -46,7 +44,7 @@ exclude:
   - _assets/
   - _images/
   - _data/
-  - _books
+  - _books/
   - _temp/
 
 

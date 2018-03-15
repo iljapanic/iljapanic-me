@@ -1,23 +1,17 @@
 <head>
 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }} – {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="author" content="{{ site.author }}">
 
-	<title>{% if page.title %}{{ page.title | escape }} – {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-
-	<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-
-	<meta name="author" content="{{ site.author }}">
-
-	<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-
-	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
 
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}" />
   <meta property="og:type" content="article" />
@@ -25,19 +19,17 @@
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
   <meta property="og:image" content="{{ '/images/iljapanic.jpg' | absolute_url }}" />
 
-	{% comment %} <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}"> {% endcomment %}
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
-	<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/92b7df95-25f5-4d90-91b2-b109535082d3.css"/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43693985-11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43693985-11"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', '{{ site.ga }}');
-	</script>
+    gtag('config', '{{ site.ga }}');
+  </script>
 
   <script type="text/javascript" src="//fast.fonts.net/jsapi/92b7df95-25f5-4d90-91b2-b109535082d3.js"></script>
 
