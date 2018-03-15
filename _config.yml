@@ -6,8 +6,8 @@ title: Ilja Panic
 author: Ilja Panic
 email: ilja@iljapanic.com
 description: Personal site of Ilja A. Panic
-url: https://iljapanic.me
-repo: https://github.com/iljapanic/iljapanic-me
+url: https://iljapanic.com
+repo: https://github.com/iljapanic/iljapanic-com
 timezone: Europe/Prague
 ga: UA-43693985-11
 
@@ -24,7 +24,7 @@ permalink: /blog/:year/:title/
 markdown: kramdown
 
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-typogrify
 
 gem:
@@ -48,16 +48,17 @@ exclude:
   - _images/
   - _data/
   - _books
+  - _temp/
 
 
 #==============================
 # custom collections
 #==============================
 
-collections:
-  notes:
-    output: true
-    permalink: /notes/:year/:title/
-  links:
-    output: true
-    permalink: /links/:year/:title/
+# collections:
+#   notes:
+#     output: true
+#     permalink: /notes/:year/:title/
+#   links:
+#     output: true
+#     permalink: /links/:year/:title/
