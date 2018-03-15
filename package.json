@@ -1,15 +1,15 @@
 {
-  "name": "iljapanic-me",
+  "name": "iljapanic-com",
   "version": "1.0.0",
   "description": "Building blocks of my personal website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iljapanic/"
+    "url": "https://github.com/iljapanic/iljapanic-com/"
   },
   "author": "Ilja Panic",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iljapanic/iljapanic-me/issues"
+    "url": "https://github.com/iljapanic/iljapanic-com/issues"
   },
   "homepage": "https://iljapanic.com",
   "devDependencies": {
@@ -30,6 +30,7 @@
     "gulp-watch": "^5.0.0",
     "path": "^0.12.7",
     "postcss-cssnext": "^3.1.0",
-    "require-dir": "^1.0.0"
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1"
   }
 }

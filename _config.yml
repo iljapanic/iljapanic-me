@@ -24,7 +24,6 @@ permalink: /blog/:year/:title/
 markdown: kramdown
 
 plugins:
-  # - jekyll-feed
   - jekyll-typogrify
 
 gem:
