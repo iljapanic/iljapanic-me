@@ -26,14 +26,13 @@
     margin-bottom 0
 
 .projects .projects__showcase .item
-  margin-bottom 0
 
   img
     vertical-align middle
     border-radius 0.1rem
     border 1px solid $gray-light
   .item__title
-    margin-top 0
+    margin-top $spacing
     margin-bottom $spacing*0.35
     font-size $base
   .item__description
@@ -47,10 +46,14 @@
       h3:first-of-type
         margin-top 0
 
-    .projects__showcase
+    .projects .projects__showcase
       display grid
       grid-gap $spacing*1.5
       grid-template-columns repeat(2, 1fr)
+      .item
+        margin 0
+        .item__title
+          margin-top 0
 
 
 .projects__showcase
@@ -65,8 +68,11 @@
   .toggle
     display inline-block
     text-decoration none
-    margin-top $spacing*0.25
+    margin-top $spacing*0.5
     font-size $small
+    +medium()
+      margin-top $spacing*0.25
+      font-size $micro
   .item__description + .toggle:before
     content '+ '
   .item__description.is-visible + .toggle:before
