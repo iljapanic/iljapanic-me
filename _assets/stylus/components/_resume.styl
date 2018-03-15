@@ -37,15 +37,15 @@
 
 .clients
   list-style-type none
-  margin 0
+  margin $spacing 0 0 0
   padding 0
   display flex
-  flex-wrap wrap
+  flex-wrap no-wrap
   align-items center
-  flex-wrap wrap
 
-  &:nth-of-type(2)
-    margin-top $spacing*0.75
+  +medium()
+    &:nth-of-type(1)
+      margin-top 0
 
 
   li
@@ -66,30 +66,50 @@
     transition all 0.25s ease-in-out
     width 100%
 
-  .momondo
-    width 142px
-
+  // 1st row
   .quadric
-    width 112px
+    width 45%
 
   .tdc
-    width 48px
+    width 20%
 
   .radikale
-    width 112px
+    width 40%
 
+  // 2nd row
   .juke
-    width 72px
-
+    width 70%
   .n1singer
-    width 124px
     margin-top -10px
-
   .squirl
-    width 112px
-
+    width 90%
   .bergs
-    width 72px
+    width 65%
+
+  +medium()
+    .momondo
+      width 142px
+
+    .quadric
+      width 112px
+
+    .tdc
+      width 48px
+
+    .radikale
+      width 112px
+
+    .juke
+      width 72px
+
+    .n1singer
+      width 124px
+
+    .squirl
+      width 112px
+
+    .bergs
+      width 72px
 
 
 // TOOLS
