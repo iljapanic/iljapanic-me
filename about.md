@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About
+excerpt: hola I'm about page
 permalink: /about/
 group: 'navigation'
 ---
