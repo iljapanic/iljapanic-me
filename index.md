@@ -1,11 +1,10 @@
 ---
 layout: home
 ---
+Hello there online stranger.
 
-Hello there online stranger!
+My name is Ilja and I welcome you to my little corner of the Web.
 
-My name is Ilja and I make things on the Web.
+I study technology and its role in society. I’m interested in a range of themes revolving around information design, HCI, computational ethics, information behavior and ubiquitous computing.
 
-I'm passionate about technology, information design, urbanism, futurism, new media and intricacies of the human mind. I drink lots of filter coffee, play basketball, read strange books and listen to excentric music.
-
-Get in touch if you'd like to create something together!
+I like to drink black coffee, play basketball, listen to eccentric music and read dense books.
