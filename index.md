@@ -3,7 +3,7 @@ layout: home
 ---
 Hello there online stranger.
 
-My name is Ilja and I welcome you to my little corner of the Web.
+My name is Ilja. Welcome to my little corner of the Web.
 
 I’m an avid student of technology and its role in society. I’m interested in a range of themes revolving around information design, HCI, computational ethics, information behaviour and ubiquitous computing.
 
