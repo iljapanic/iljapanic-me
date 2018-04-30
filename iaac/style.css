@@ -1,0 +1,165 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  color: #333;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 780px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+/* Copy & Lists */
+p {
+  line-height: 1.6rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+p.headline {
+  font-size: 1.414rem;
+  line-height: 2.15rem;
+  max-width: 780px;
+}
+
+p.note {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+  color: #888;
+  max-width: none;
+}
+
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+ul li,
+ol li {
+  line-height: 1.5rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+blockquote {
+  line-height: 1.6rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #dd6464;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #f1f1f1;
+  margin: 4.5rem auto;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 0.707rem;
+  margin-top: 1.5rem;
+}
+h2 {
+  font-size: 1.614rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+h3 {
+  font-size: 1.114rem;
+  line-height: 1.7rem;
+  font-weight: 400;
+}
+
+h3 span.subtitle {
+  color: #555;
+  font-size: 1.014rem;
+}
+
+h3 span.year {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+h
+
+h4 {
+  font-size: 0.707rem;
+}
+
+/* custom styles */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* list view */
+
+.list .item {
+  margin-top: 4.5rem;
+}
+
+.list .item p,
+.list .item blockquote {
+  max-width: 720px;
+}
+
+@media (min-width: 1400px) {
+  .list .item__body {
+    display: flex;
+    align-items: center;
+    margin-top: 0.75rem;
+  }
+
+  .list .item__body blockquote {
+    margin-left: 4.5rem;
+  }
+}
