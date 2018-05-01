@@ -208,7 +208,7 @@ h4 {
 /* clients */
 .clients {
 	list-style-type: none;
-	margin: 1.5rem 0 0 0;
+	margin: 2rem 0 0 0;
 	padding: 0;
 	display: flex;
 	flex-wrap: nowrap;
@@ -216,7 +216,7 @@ h4 {
 }
 
 .clients li {
-	margin-right: 1.5rem;
+	margin-right: 2rem;
 }
 
 .clients li:last-of-type {
@@ -243,36 +243,36 @@ h4 {
 
 .clients .momondo {
   /* width: 20px; */
-  width: 220px;
+  width: 150px;
 }
 
 .clients .quadric {
   /* width: 45%; */
-  width: 180px;
+  width: 120px;
 }
 
 .clients .tdc {
   /* width: 20%; */
-  width: 75px;
+  width: 55px;
 }
 
 .clients .radikale {
   /* width: 40%; */
-  width: 220px;
+  width: 160px;
 }
 
 .clients .juke {
   /* width: 70%; */
   margin-top: 10px;
-  width: 140px;
+  width: 110px;
 }
 
 .clients .n1singer {
-  margin-top: -10px;
-  width: 220px;
+  margin-top: -5px;
+  width: 160px;
 }
 
 .clients .squirl {
-  width: 180px;
+  width: 140px;
 }
 
