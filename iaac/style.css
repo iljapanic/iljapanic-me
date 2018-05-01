@@ -125,7 +125,13 @@ h3 span.year {
   color: #aaa;
 }
 
-h
+h3 span.year-small {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
 
 h4 {
   font-size: 0.707rem;
@@ -209,6 +215,10 @@ h4 {
 .grid .item h3 {
   margin-top: 0.75rem;
   font-size: 1.05rem;
+}
+
+.grid .item__body p {
+  margin-top: 0.25rem;
 }
 
 .grid .item__cover img {
