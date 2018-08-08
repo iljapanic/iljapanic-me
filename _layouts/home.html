@@ -1,37 +1,112 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+--- layout: default ---
 
-  {% include head.html %}
+<div class="wrap">
 
-  <body>
+  <article class="page-bio">
 
-  	<div class="l-container">
+    <header class="headline">
+      <h1 class="headline__title" itemprop="name headline">About</h1>
+      <p class="headline__subtitle">Bio, r&eacute;sum&eacute; and contact information</p>
+    </header>
 
-      <div class="l-sidebar">
-        {% include header.html %}
-      </div>
+    <hr>
 
-      <div class="l-main">
+    <section class="bio">
 
-        <main class="main" aria-label="Content">
-          <div class="page-home wrap">
-            <h1 class="page-title hug">Welcome</h1>
-            <div class="intro">
-              {{ content }}
-            </div>
-            <img src="/images/spinner.gif" data-echo="images/home.jpg">
-            <p class="work-in-progress">This site is work in progress. Some parts may be unfinished, sound sloppy or work strangely in older browsers. Feedback and suggestions are appreciated.</p>
+      <div class="l-split">
+        <div class="about__sidebar">
+          <div class="about__image">
+            <img src="{{ " /images/spinner.gif " | relative_url }}" data-echo="{{ " /images/iljapanic.jpg " | relative_url }}">
           </div>
-        </main>
+          <h2 class="side-title">Contact</h2>
+          <div class="about__contact">
+            <a href="mailto:{{site.email}}">{{site.email}}</a>
+          </div>
 
-        {% include footer.html %}
-
+          <h2 class="side-title">Work Availability</h2>
+          <p class="about__projects">
+            Open for new projects starting September 2018
+          </p>
+        </div>
+        {% comment %} bio {% endcomment %}
+        <div class="about__main">
+          {{ content }}
+        </div>
       </div>
 
-		</div>
+    </section>
 
-  </body>
+    <hr class="double">
 
-</html>
+    <section class="resume">
+
+      <div class="l-split">
+        <div class="resume__side">
+          <h2 class="side-title">Work Experience</h2>
+        </div>
+        {% comment %} work {% endcomment %}
+        <div class="resume__main">
+          {% include resume-work.html %}
+        </div>
+      </div>
+
+      <hr class="double">
+
+      <div class="l-split">
+        <div class="resume__side">
+          <h2 class="side-title">Clients
+            <span>Freelance and agency work</span>
+          </h2>
+        </div>
+        {% comment %} clients {% endcomment %}
+        <div class="resume__main">
+          {% include resume-clients.html %}
+        </div>
+      </div>
+
+      <hr class="double">
+
+      <div class="l-split">
+        <div class="resume__side">
+          <h2 class="side-title">Education</h2>
+        </div>
+        {% comment %} education {% endcomment %}
+        <div class="resume__main">
+          {% include resume-education.html %}
+        </div>
+      </div>
+
+      <hr class="double">
+
+      <div class="l-split">
+        <div class="resume__side">
+          <h2 class="side-title">Tools</h2>
+        </div>
+        {% comment %} tools {% endcomment %}
+        <div class="resume__main">
+          {% include resume-tools.html %}
+        </div>
+      </div>
+
+      <hr class="double">
+
+      <div class="l-split">
+        <div class="resume__side">
+          <h2 class="side-title">Competences</h2>
+        </div>
+        <div class="resume__main">
+          <ul class="skills">
+            {% for skill in site.data.bio.skills %}
+            <li class="item">
+              {{skill.skill}}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
 
 
+  </article>
+
+</div>

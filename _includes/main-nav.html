@@ -1,28 +1,28 @@
 {% assign current = page.url | downcase | split: '/' %}
 
 <nav class="nav">
-	<ul class="nav nav--main">
-<!-- 	  <li {% if current[1] == 'blog' %}class='active'{% endif %}>
+  <ul class="nav nav--main">
+    <!-- 	  <li {% if current[1] == 'blog' %}class='active'{% endif %}>
 	  	<a href='/blog'>Blog</a>
 	  </li> -->
-<!-- 	  <li {% if current[1] == 'notes' %}class='active'{% endif %}>
+    <!-- 	  <li {% if current[1] == 'notes' %}class='active'{% endif %}>
 	  	<a href='/notes'>Notes</a>
 	  </li> -->
-	  <li {% if current[1] == 'about' %}class='active'{% endif %}>
+    <!-- <li {% if current[1] == 'about' %}class='active'{% endif %}>
 	  	<a href='/about' title="About">About</a>
-	  </li>
-    <li {% if current[1] == 'writing' %}class='active'{% endif %}>
-	  	<a href='/writing' title="Writing">Writing</a>
-	  </li>
-<!-- 	  <li {% if current[1] == 'projects' %}class='active'{% endif %}>
+	  </li> -->
+    <li {% if current[1]=='writing' %}class='active' {% endif %}>
+      <a href='/writing' title="Writing">Writing</a>
+    </li>
+    <!-- 	  <li {% if current[1] == 'projects' %}class='active'{% endif %}>
 	  	<a href='/projects'>Projects</a>
 	  </li> -->
-	  <li {% if current[1] == 'projects' %}class='active'{% endif %}>
-	  	<a href='/projects' title="Projects">Projects</a>
-	  </li>
-	  <li {% if current[1] == 'bookshelf' %}class='active'{% endif %}>
-	  	<a href='/bookshelf' title="Bookshelf">Bookshelf</a>
-	  </li>
+    <li {% if current[1]=='projects' %}class='active' {% endif %}>
+      <a href='/projects' title="Projects">Projects</a>
+    </li>
+    <li {% if current[1]=='bookshelf' %}class='active' {% endif %}>
+      <a href='/bookshelf' title="Bookshelf">Bookshelf</a>
+    </li>
 
-	</ul>
+  </ul>
 </nav>

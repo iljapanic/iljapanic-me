@@ -47,6 +47,9 @@ exclude:
   - _books/
   - _temp/
 
+include:
+  - _redirects
+
 
 #==============================
 # custom collections
