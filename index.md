@@ -3,14 +3,10 @@ layout: about
 title: About
 ---
 
-My name is Ilja Panic. I'm a designer and technologist from Prague and currently based in London where I'm doing a degree in Smart Cities & Urban Analytics.
+My name is Ilja Panic. I'm a designer and technologist from Prague currently based in Barcelona.
 
-In 2012, I made a website takemetodenmark.com that got me accepted to a business school in Copenhagen. During my studies there I've worked as a front-end developer at two digital agencies.
+I'm an avid student of emerging technologies and its role in society. I’m researching a range of themes revolving around information design, HCI, computational ethics, information behaviour and ubiquitous computing.
 
-After earning a degree in Information Management in 2015, I've set up a solo freelance business specialising in Web Development, Information Architecture and UX Design.
-
-After two years of freelancing, I've moved to London in the autumn of 2017 to pursue a master's degree at UCL and to connect with one of the world's most vibrant cities.
-
-I'm an avid student of technology and its role in society. I’m interested in a range of themes revolving around information design, HCI, computational ethics, information behaviour and ubiquitous computing.
+I run a solo freelance company specialising in Web development and advising clients with their UX strategy.
 
 Don't hesitate to get in touch. I'm always on a lookout for exciting projects and interesting people to collaborate with.
