@@ -3,11 +3,9 @@ layout: about
 title: About
 ---
 
-My name is Ilja Panic. I'm a designer and technologist from Prague currently based in Barcelona.
+My name is Ilja, I'm a designer and technologist from Prague currently based in Barcelona.
 
-I'm an avid student of emerging technologies and its role in society. I research a wide range of themes revolving around ubiquitous computing, information design, human-computer interaction, computational ethics, information behaviour.
-
-I run a solo company specialising in Web development and advising clients with their UX strategy.
+I'm an avid student of emerging technologies and its role in society. I research a wide range of themes related to ubiquitous computing, information design, human-computer interaction, computational ethics, and information behaviour. I also run a solo company specialising in Web development and advising clients with their UX strategy.
 
 I love coffee, books and vinyl.
 
