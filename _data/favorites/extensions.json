@@ -125,7 +125,8 @@
   {
     "name": "File Icon for GitHub, GitLab and Bitbucket",
     "url": "https://chrome.google.com/webstore/detail/file-icon-for-github-gitl/ficfmibkjjnpogdcfhfokmihanoldbfe",
-    "category": "dev"
+    "category": "dev",
+    "note": "add some color to your repos"
   },
   {
     "name": "JSONView",
@@ -136,12 +137,14 @@
   {
     "name": "VisBug",
     "url": "https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc",
-    "category": "dev"
+    "category": "dev",
+    "note": "a set of tools to check site design and layout"
   },
   {
     "name": "Typography Inspector",
     "url": "https://chrome.google.com/webstore/detail/typography-inspector/mbbnlbimlnfachlfnjnolpehiimhbjjm",
-    "category": "dev"
+    "category": "dev",
+    "note": "minimalistic typography helper"
   },
   {
     "name": "WhatRuns",
