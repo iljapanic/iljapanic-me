@@ -56,7 +56,7 @@
   {
     "name": "HTTPS Everywhere",
     "url": "https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp",
-    "note": "stay safe kids",
+    "note": "for secure connections whenever possible",
     "category": "privacy"
   },
   {
@@ -68,17 +68,18 @@
 
 
 
-  {
-    "name": "Evernote Web Clipper",
-    "url": "https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc",
-    "category": "organize",
-    "note": "great tool if you use Evernote"
-  },
+
   {
     "name": "Toby",
     "url": "https://chrome.google.com/webstore/detail/toby-for-chrome/hddnkoipeenegfoeaoibdmnaalmgkpip",
     "category": "organize",
     "note": "organize tabs into workspaces"
+  },
+  {
+    "name": "Evernote Web Clipper",
+    "url": "https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc",
+    "category": "organize",
+    "note": "great tool if you use Evernote"
   },
   {
     "name": "Tab Snooze",
