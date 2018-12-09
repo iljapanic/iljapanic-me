@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Magnet",
+    "url": "http://magnet.crowdcafe.com/",
+    "price": "$0.99",
+    "note": "absolute must-have for organising your workspace"
+  },
+  {
+    "name": "BeardedSpice",
+    "url": "https://beardedspice.github.io/",
+    "price": "FREE",
+    "note": "control SoundCloud and Youtube with media keys"
+  },
+  {
+    "name": "Bartender",
+    "url": "https://www.macbartender.com/",
+    "price": "$15",
+    "note": "declutter your menu bar"
+  },
+  {
+    "name": "RescueTime",
+    "url": "https://www.rescuetime.com/",
+    "price": "FREE",
+    "note": "track how you spend time, get neat weekly reports"
+  },
+  {
+    "name": "Alfred",
+    "url": "https://www.alfredapp.com/",
+    "price": "FREE / £19",
+    "note": "Spotlight on steroids"
+  },
+  {
+    "name": "BeFocused",
+    "url": "https://xwavesoft.com/be-focused-pro-for-iphone-ipad-mac-os-x.html",
+    "price": "FREE",
+    "note": "minimalistic timer for task (Pomodoro method)"
+  },
+  {
+    "name": "Wattagio",
+    "url": "https://wattagio.com/",
+    "price": "$9.99",
+    "note": "battery assistant"
+  },
+  {
+    "name": "LittleSnitch",
+    "url": "https://www.obdev.at/products/littlesnitch/index.html",
+    "price": "45€",
+    "note": "monitor and control network connections"
+  },
+  {
+    "name": "iStat Menus",
+    "url": "https://bjango.com/mac/istatmenus/",
+    "price": "$12.09",
+    "note": "monitor computer resource usage"
+  },
+  {
+    "name": "gfxCardStatus",
+    "url": "https://gfx.io/",
+    "price": "FREE",
+    "note": "switch between integrated and discrete graphics card (MB Pro)"
+  }
+]
+

@@ -1,0 +1,150 @@
+[
+  {
+    "name": "News Feed Eradicator for Facebook",
+    "url": "https://chrome.google.com/webstore/detail/news-feed-eradicator-for/fjcldmjmjhkklehbacihaiopjklihlgg",
+    "note": "keep your sanity",
+    "category": "look"
+  },
+
+  {
+    "name": "SearchPreview",
+    "url": "https://chrome.google.com/webstore/detail/searchpreview/hcjdanpjacpeeppdjkppebobilhaglfo",
+    "note": "indispensible",
+    "category": "look"
+  },
+
+  {
+    "name": "Refined Twitter",
+    "url": "https://chrome.google.com/webstore/detail/refined-twitter/nlfgmdembofgodcemomfeimamihoknip",
+    "note": "better UI for Twitter",
+     "category": "look"
+  },
+
+  {
+    "name": "Wikiwand",
+    "url": "https://chrome.google.com/webstore/detail/wikiwand-wikipedia-modern/emffkefkbkpkgpdeeooapgaicgmcbolj",
+    "note": "make Wikipedia modern and readable",
+     "category": "look"
+  },
+  {
+    "name": "View Image",
+    "url": "https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk",
+    "note": "re-implements the Google's 'View Image' button",
+    "category": "look"
+  },
+  {
+    "name": "Mercury Reader",
+    "url": "https://chrome.google.com/webstore/detail/mercury-reader/oknpjjbmpnndlpmnhmekjpocelpnlfdi",
+    "note": "distraction-free reading, great for exporting articles as PDFs",
+    "category": "look"
+  },
+
+
+
+  {
+    "name": "uBlock Origin",
+    "url": "https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm",
+    "note": "AdBlocker that doesn't sell your data",
+    "category": "privacy"
+  },
+  {
+    "name": "DuckDuckGo Privacy Essentials",
+    "url": "https://chrome.google.com/webstore/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg",
+    "category": "privacy"
+  },
+  {
+    "name": "HTTPS Everywhere",
+    "url": "https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp",
+    "note": "stay safe kids",
+    "category": "privacy"
+  },
+  {
+    "name": "Ugly Email",
+    "url": "https://chrome.google.com/webstore/detail/ugly-email/ldgiafaliifpknmgofiifianlnbgflgj",
+    "note": "stop e-mail trackers",
+    "category": "privacy"
+  },
+
+
+
+  {
+    "name": "Evernote Web Clipper",
+    "url": "https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc",
+    "category": "organize"
+  },
+  {
+    "name": "Toby",
+    "url": "https://chrome.google.com/webstore/detail/toby-for-chrome/hddnkoipeenegfoeaoibdmnaalmgkpip",
+    "category": "organize"
+  },
+  {
+    "name": "Tab Snooze",
+    "url": "https://chrome.google.com/webstore/detail/tab-snooze/pdiebiamhaleloakpcgmpnenggpjbcbm",
+    "note": "delegate to your future self",
+    "category": "organize"
+  },
+  {
+    "name": "Pinboard Plus",
+    "url": "https://chrome.google.com/webstore/detail/pinboard-plus/mphdppdgoagghpmmhodmfajjlloijnbd",
+    "note": "neat UI layer for Pinboard",
+    "category": "organize"
+  },
+
+
+
+  {
+    "name": "The Great Suspender",
+    "url": "https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg",
+    "note": "makes your computer run faster by suspending inactive tabs"
+  },
+  {
+    "name": "Web Scrobbler",
+    "url": "https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm",
+    "note": "scrobbls Soundcloud and Youtube music to last.fm",
+    "category": "misc"
+  },
+  {
+    "name": "Grammarly",
+    "url": "https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen",
+    "note": "better spell-checking",
+    "category": "misc"
+  },
+
+  {
+    "name": "Awesome Screenshot",
+    "url": "https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj",
+    "note": "full page screenshots",
+    "category": "misc"
+  },
+
+
+
+  {
+    "name": "File Icon for GitHub, GitLab and Bitbucket",
+    "url": "https://chrome.google.com/webstore/detail/file-icon-for-github-gitl/ficfmibkjjnpogdcfhfokmihanoldbfe",
+    "category": "dev"
+  },
+  {
+    "name": "JSONView",
+    "url": "https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc",
+    "note": "make JSON pretty again",
+    "category": "dev"
+  },
+  {
+    "name": "VisBug",
+    "url": "https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc",
+    "category": "dev"
+  },
+  {
+    "name": "Typography Inspector",
+    "url": "https://chrome.google.com/webstore/detail/typography-inspector/mbbnlbimlnfachlfnjnolpehiimhbjjm",
+    "category": "dev"
+  },
+  {
+    "name": "WhatRuns",
+    "url": "https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip",
+    "note": "see what's under the hood",
+    "category": "dev"
+  }
+]
+

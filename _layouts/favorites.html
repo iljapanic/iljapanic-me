@@ -1,0 +1,147 @@
+---
+layout: default
+---
+
+<div class="page-projects wrap">
+
+		<header class="headline">
+      <h1 class="headline__title" itemprop="name headline">Favorites</h1>
+      <p class="headline__subtitle">A selection of tools and resources</p>
+    </header>
+
+    <hr>
+
+
+
+		<section class="favorites">
+      <div class="l-split">
+
+        <div class="favorites__sidebar">
+          <h2 class="side-title">Newsletters</h2>
+          <!-- <p class="site-subtitle">I rely on curated mailing list for majority of my online reading</p> -->
+        </div>
+
+        <div class="favorites__main">
+
+          {% for item in site.data.favorites.newsletters %}
+          <article class="item {% if item.featured %}item--featured{% endif %}">
+            <h3 class="item__title"><a href="{{item.url}}" target="_blank">{{item.name | escape}}</a> {% if item.note %} <span>{{item.note}}</span>{% endif %}</h3>
+
+
+          </article>
+          {% endfor %}
+
+        </div>
+
+      </div>
+		</section>
+
+    <hr class="double">
+
+    <section class="favorites">
+        <div class="l-split">
+
+          <div class="favorites__sidebar">
+            <h2 class="side-title">Podcasts</h2>
+          </div>
+
+          <div class="favorites__main">
+
+            {% for item in site.data.favorites.podcasts %}
+            <article class="item {% if item.featured %}item--featured{% endif %}">
+              <h3 class="item__title"><a href="{{item.url}}" target="_blank">{{item.name | escape}}</a> {% if item.note %} <span>({{item.note}})</span>{% endif %}</h3>
+
+
+            </article>
+            {% endfor %}
+
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="double">
+
+      <section class="favorites">
+          <div class="l-split">
+
+            <div class="favorites__sidebar">
+              <h2 class="side-title">Mac OS utilities</h2>
+            </div>
+
+            <div class="favorites__main">
+
+              {% for item in site.data.favorites.macTools %}
+              <article class="item {% if item.featured %}item--featured{% endif %}">
+                <h3 class="item__title"><a href="{{item.url}}" target="_blank">{{item.name | escape}}</a> {% if item.note %} <span>{{item.note}}</span>{% endif %}</h3>
+
+              </article>
+              {% endfor %}
+
+            </div>
+
+          </div>
+        </section>
+
+        <hr class="double">
+
+
+      <section class="favorites">
+          <div class="l-split">
+
+            <div class="favorites__sidebar">
+              <h2 class="side-title">Chrome extensions</h2>
+            </div>
+
+            <div class="favorites__main">
+
+              <h3 class="subtitle">Look and feel</h3>
+              {% for item in site.data.favorites.extensions %}
+                {% if item.category == "look" %}
+                <article class="item">
+                  <h4 class="item__title"><a href="{{item.url}}" target="_blank">{{item.name | escape}}</a> {% if item.note %} <span>{{item.note}}</span>{% endif %}</h4>
+                </article>
+                {% endif %}
+              {% endfor %}
+
+              <h3 class="subtitle">Privacy and security</h3>
+              {% for item in site.data.favorites.extensions %}
+                {% if item.category == "privacy" %}
+                <article class="item">
+                  <h4 class="item__title"><a href="{{item.url}}" target="_blank">{{item.name | escape}}</a> {% if item.note %} <span>{{item.note}}</span>{% endif %}</h4>
+                </article>
+                {% endif %}
+              {% endfor %}
+
+              <h3 class="subtitle">Organization</h3>
+              {% for item in site.data.favorites.extensions %}
+                {% if item.category == "organize" %}
+                <article class="item">
+                  <h4 class="item__title"><a href="{{item.url}}" target="_blank">{{item.name | escape}}</a> {% if item.note %} <span>{{item.note}}</span>{% endif %}</h4>
+                </article>
+                {% endif %}
+              {% endfor %}
+
+              <h3 class="subtitle">Misc.</h3>
+              {% for item in site.data.favorites.extensions %}
+                {% if item.category == "misc" %}
+                <article class="item">
+                  <h4 class="item__title"><a href="{{item.url}}" target="_blank">{{item.name | escape}}</a> {% if item.note %} <span>{{item.note}}</span>{% endif %}</h4>
+                </article>
+                {% endif %}
+              {% endfor %}
+
+              <h3 class="subtitle">Development and design</h3>
+              {% for item in site.data.favorites.extensions %}
+                {% if item.category == "dev" %}
+                <article class="item">
+                  <h4 class="item__title"><a href="{{item.url}}" target="_blank">{{item.name | escape}}</a> {% if item.note %} <span>{{item.note}}</span>{% endif %}</h4>
+                </article>
+                {% endif %}
+              {% endfor %}
+
+            </div>
+
+          </div>
+        </section>
+</div>

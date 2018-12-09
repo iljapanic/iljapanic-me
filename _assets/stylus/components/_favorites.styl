@@ -1,0 +1,31 @@
+.favorites .subtitle
+  font-weight $fw-bold
+  margin-top: $spacing*1.5
+
+
+.favorites .item
+  margin-bottom $spacing
+
+  &:last-of-type
+    margin-bottom 0
+
+  a
+    text-decoration none
+
+  h3, h4
+    font-size 1rem
+    line-height 1.5
+    margin-top $spacing*0.5
+
+  h3 span,
+  h4 span
+    color $gray
+    font-size $micro
+    display block
+
+
+@supports (display:grid)
+  +medium()
+    .favorites
+      h3:first-of-type
+        margin-top 0
