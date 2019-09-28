@@ -4,16 +4,16 @@
     "url": "https://www.exponentialview.co/podcast/"
   },
   {
-    "name": "The Disruptors",
-    "url": "https://disruptors.fm/"
-  },
-  {
     "name": "Waking Up Podcast",
     "url": "https://samharris.org/podcast/"
   },
   {
     "name": "99% Invisible",
     "url": "https://99percentinvisible.org/"
+  },
+  {
+    "name": "The Joe Rogan Experience",
+    "url": "http://podcasts.joerogan.net/"
   },
   {
     "name": "The Time Ferriss Show",
@@ -24,12 +24,12 @@
     "url": "https://hurryslowly.co/"
   },
   {
-    "name": "Future Thinkers",
-    "url": "https://futurethinkers.org/"
-  },
-  {
     "name": "Between Worlds",
     "url": "http://www.mike-walsh.com/betweenworlds"
+  },
+  {
+    "name": "Future Thinkers",
+    "url": "https://futurethinkers.org/"
   },
   {
     "name": "The Urbanist",
@@ -38,6 +38,9 @@
   {
     "name": "Failed Architecture",
     "url": "https://failedarchitecture.com/podcast/"
+  },
+  {
+    "name": "The Disruptors",
+    "url": "https://disruptors.fm/"
   }
 ]
-

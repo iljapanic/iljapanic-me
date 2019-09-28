@@ -1,17 +1,15 @@
 [
   {
     "period": "2018 – 2019",
-    "name": "IAAC",
-    "url":
-      "https://iaac.net/educational-programmes/master-design-emergent-futures/",
+    "name": "Institute for Advanced Architecture of Catalonia",
+    "url": "https://iaac.net/educational-programmes/master-design-emergent-futures/",
     "location": "Barcelona",
     "programme": "Design for Emergent Futures (MDEF)"
   },
   {
     "period": "2017 – 2018",
     "name": "UCL",
-    "url":
-      "https://www.ucl.ac.uk/prospective-students/graduate/taught/degrees/smart-cities-urban-analytics-msc",
+    "url": "https://www.ucl.ac.uk/prospective-students/graduate/taught/degrees/smart-cities-urban-analytics-msc",
     "location": "London",
     "programme": "Smart Cities & Urban Analytics (MSc)"
   },
