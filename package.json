@@ -17,7 +17,7 @@
     "child_process": "^1.0.2",
     "del": "^3.0.0",
     "fs": "^0.0.1-security",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-cssnano": "^2.1.2",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-image-resize": "^0.13.0",
