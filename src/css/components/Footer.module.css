@@ -1,0 +1,19 @@
+.footer {
+  padding: 7rem 0 1.5rem 0;
+}
+
+.license {
+  margin-top: 1rem;
+}
+
+.licenseImage {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.subscribe {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+}

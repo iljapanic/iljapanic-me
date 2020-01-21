@@ -1,0 +1,55 @@
+@import '../utils/variables.css';
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.nav ul li:last-of-type {
+  margin-right: 0;
+}
+
+.nav a,
+.nav a:visited {
+  color: var(--gray-600);
+  display: inline-block;
+  line-height: 1;
+  padding: 0.15rem 0.25rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.25s ease-in;
+  z-index: 10;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 50%,
+    var(--gray-300) 50%,
+    var(--gray-300)
+  );
+  background-position: 100% 0;
+  background-size: 200% 100%;
+}
+
+.nav a:hover {
+  color: var(--gray-900);
+  background-position: 0 0;
+}
+
+.active,
+.nav a.active {
+  color: var(--gray-100);
+  background-color: var(--gray-900);
+  background-position: 100% 0;
+}
+
+.active:hover,
+.nav a.active:hover {
+  background-color: var(--gray-800);
+}

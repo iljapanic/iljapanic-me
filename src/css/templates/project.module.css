@@ -1,0 +1,106 @@
+@import '../utils/variables.css';
+
+.item {
+  margin: 1.5rem auto 0 auto;
+  max-width: 780px;
+  background-color: white;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 0 10px 0px rgba(var(--gray-200), 0.35);
+  transition: all 0.25s ease-in-out;
+}
+
+.body {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.title {
+  margin-bottom: 0.35rem;
+}
+
+.author {
+  font-size: var(--font-small);
+  opacity: 0.85;
+}
+
+.notes {
+  margin-top: 0.75rem;
+}
+
+/* author list */
+
+.authorList span::after {
+  content: ', ';
+}
+
+.authorList span:last-child::after {
+  content: '';
+}
+
+/* footer - date and link */
+.footer {
+  margin-top: 1.5rem;
+}
+
+.date {
+  margin-top: 1.25rem;
+  color: var(--gray-500);
+  font-size: var(--font-tiny);
+}
+
+.link {
+  margin-top: 1rem;
+}
+
+/* blockquote */
+.item blockquote,
+.itemModal blockquote {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.item blockquote p,
+.itemModal blockquote p {
+  color: var(--gray-600);
+  font-style: italic;
+}
+
+.item blockquote p:before,
+.itemModal blockquote p:before {
+  content: '“';
+}
+
+.item blockquote p:after,
+.itemModal blockquote p:after {
+  content: '”';
+}
+
+/* border radius for hero */
+.item iframe,
+.item video,
+.item .hero img,
+.itemModal iframe,
+.itemModal video,
+.itemModal .hero img {
+  border-top-left-radius: var(--radius-card);
+  border-top-right-radius: var(--radius-card);
+}
+
+.item video:focus,
+.itemModal video:focus {
+  outline: none;
+  border: none;
+}
+
+/* make video responsive */
+
+.videoWrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

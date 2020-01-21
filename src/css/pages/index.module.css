@@ -1,0 +1,62 @@
+@import '../utils/variables.css';
+
+.intro {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.15rem;
+}
+
+.introInner {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15rem;
+}
+
+.introArrow {
+  text-align: center;
+  width: 100%;
+  margin-top: -20rem;
+}
+
+.logo svg {
+  max-width: 100%;
+}
+
+@media (--desktop) {
+  .logo svg {
+    width: 500px;
+  }
+  .introInner {
+    margin-bottom: 5rem;
+  }
+  .introArrow {
+    text-align: center;
+    width: 100%;
+    margin-top: -2rem;
+  }
+}
+
+.intro p {
+  margin: 0;
+}
+
+.play {
+  background-color: none;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  border-color: var(--gray-300);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.play:hover {
+  background-color: var(--gray-100);
+}
+
+.references {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
