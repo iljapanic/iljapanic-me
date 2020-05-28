@@ -8,7 +8,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Feed" />
       <section className="container">
-        <h1 className="text-center">About</h1>
+        <h1 className="text-center">References</h1>
+        icons of each category
       </section>
     </Layout>
   )

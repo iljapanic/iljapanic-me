@@ -1,12 +1,11 @@
-import React from 'react';
-import { Link } from 'gatsby-plugin-modal-routing';
+import React from 'react'
 
-import css from '../css/components/Footer.module.css';
-
-class Footer extends React.Component {
-  render() {
-    return <footer className={`ta-center ${css.footer}`}>Ilja Panic 2019</footer>;
-  }
+const Footer = () => {
+  return (
+    <header className="py-2 px-4 text-center md:py-12">
+      Ilja Panic | 2020
+    </header>
+  )
 }
 
-export default Footer;
+export default Footer

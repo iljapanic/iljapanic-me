@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="125px" viewBox="0 0 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>favicon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="favicon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon">
+            <circle id="bg-oval" fill="#0F43A9" cx="62.5" cy="62.5" r="62.5"></circle>
+            <g id="knedlin_K-02" transform="translate(18.000000, 34.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                <path d="M0.44,56.87 C33.44,27.87 53.84,9.07 53.84,2.67 C53.90781,1.75537391 53.3225904,0.919345837 52.44,0.67 C45.04,-2.13 35.64,20.87 35.64,43.87 C35.64,43.87 37.24,31.07 46.64,24.67 C47.8088787,23.8243941 49.1989174,23.3378806 50.64,23.27 C51.2602061,23.2004654 51.8801747,23.402584 52.3402266,23.8242983 C52.8002785,24.2460125 53.055443,24.8460993 53.04,25.47 C53.04,28.27 49.44,33.07 40.44,33.87 C36.24,34.27 33.24,31.67 36.24,31.67 C38.24,31.67 42.91,32.67 47.84,38.47 C64.84,58.47 86.11,33.65 88.45,23.47" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

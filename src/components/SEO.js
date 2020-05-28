@@ -1,100 +1,98 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+/**
+ * SEO component that queries for data with
+ *  Gatsby's useStaticQuery React hook
+ *
+ * See: https://www.gatsbyjs.org/docs/use-static-query/
+ */
 
-import favicon from '../images/favicon.png';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  title,
+  keywords,
+  previewUrl,
+  canonical,
+}) {
+  const metaTitle = title
+  const metaKeywords = keywords
+  const metaDescription = description
+  const metaPreviewUrl = previewUrl
+  const metaCanonical = canonical
+
   return (
-    <StaticQuery
-      query={detailsQuery}
-      render={data => {
-        const metaDescription = description || data.site.siteMetadata.description;
-        const metaTitle = title || data.site.siteMetadata.title;
-        return (
-          <Helmet
-            htmlAttributes={{
-              lang
-            }}
-            title={metaTitle}
-            meta={[
-              {
-                name: 'description',
-                content: metaDescription
-              },
-              {
-                property: `og:title`,
-                content: metaTitle
-              },
-              {
-                property: `og:description`,
-                content: metaDescription
-              },
-              {
-                property: `og:type`,
-                content: `website`
-              },
-              {
-                name: `twitter:card`,
-                content: `summary`
-              },
-              {
-                name: `twitter:creator`,
-                content: data.site.siteMetadata.author
-              },
-              {
-                name: `twitter:title`,
-                content: metaTitle
-              },
-              {
-                name: `twitter:description`,
-                content: metaDescription
-              }
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `)
-                    }
-                  : []
-              )
-              .concat(meta)}
-          >
-            <meta name="image" content={favicon} />
-            <link rel="icon" type="image/png" href={favicon} />
-          </Helmet>
-        );
+    <Helmet
+      htmlAttributes={{
+        lang,
       }}
+      title={metaTitle}
+      // titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s`}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          name: `author`,
+          content: 'Ilja Panic',
+        },
+        {
+          name: `keywords`,
+          content: metaKeywords,
+        },
+        {
+          property: `og:title`,
+          content: metaTitle,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: metaPreviewUrl,
+        },
+        {
+          property: `og:url`,
+          content: metaCanonical,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:title`,
+          content: metaTitle,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ].concat(meta)}
     />
-  );
+  )
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: []
-};
+  description: ``,
+}
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
-};
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+}
 
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
-    }
-  }
-`;
-
-export default SEO;
+export default SEO

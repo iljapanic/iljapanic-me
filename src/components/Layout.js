@@ -1,23 +1,24 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Header from './header'
+import Footer from './footer'
+import '../css/index.css'
 
-// components
-import Header from './Header';
-import Footer from './Footer';
+const Layout = ({ children }) => {
+  return (
+    <>
+      <header>
+        <Header />
+      </header>
+      <main className="py-6">{children}</main>
 
-// global css
-import '../css/utils/reset.css';
-import '../css/utils/base.css';
-import '../css/utils/helpers.css';
-import '../css/utils/gutenberg.css';
+      <Footer />
+    </>
+  )
+}
 
-import css from '../css/components/Layout.module.css';
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
-const Layout = ({ children }) => (
-  <>
-    <Header />
-    <main>{children}</main>
-    <Footer />
-  </>
-);
-
-export default Layout;
+export default Layout

@@ -1,23 +1,29 @@
-import React from 'react';
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-
-class ServicesPage extends React.Component {
-  constructor() {
-    super();
-  }
-
-  render() {
-    return (
-      <Layout>
-        <SEO title="Services" />
-        <section>
-          <h1 className="ta-center">Services</h1>
-        </section>
-      </Layout>
-    );
-  }
+const IndexPage = ({ data }) => {
+  return (
+    <Layout>
+      <SEO title="Feed" />
+      <section className="container">
+        <h1 className="text-center">Services</h1>
+      </section>
+    </Layout>
+  )
 }
 
-export default ServicesPage;
+export const query = graphql`
+  query {
+    illustration: file(relativePath: { eq: "hero.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+export default IndexPage

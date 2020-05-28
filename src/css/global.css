@@ -1,0 +1,57 @@
+body {
+  @apply font-sans text-gray-900 bg-white transition-all duration-300;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  @apply text-gray-100 bg-gray-900 transition-all duration-300;
+}
+
+/* headings */
+h1 {
+  @apply text-5xl;
+}
+
+.side-title {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+h3 {
+  @apply text-3xl;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply mb-4 tracking-tight font-sans;
+}
+
+/* body text */
+
+p {
+  @apply mb-3 tracking-normal;
+}
+
+a {
+  @apply transition border-b border-transparent text-primary-600;
+}
+
+a:hover {
+  @apply border-primary-400 text-primary-500;
+}
+
+@screen md {
+  h2 {
+    @apply text-4xl;
+  }
+  p {
+    @apply text-base;
+  }
+}

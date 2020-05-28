@@ -1,158 +1,94 @@
-require(`dotenv`).config({
-  path: `.env.${process.env.NODE_ENV}`
-});
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
-    title: `Ilja Panic`,
-    description: `designing for the web and beyond`,
-    author: `@iljapanic`
+    siteUrl: `https://iljapanic.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [
-          require(`postcss-import`),
-          require(`postcss-custom-media`),
-          require(`postcss-css-variables`),
-          require(`postcss-hexrgba`),
-          require(`postcss-color-function`),
-          require(`postcss-calc`),
-          require(`autoprefixer`)
-        ]
-      }
-    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images/`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `text`,
-        path: `${__dirname}/src/text/`
-      }
+        name: `Ilja Panic`,
+        short_name: `iljapanic`,
+        start_url: `/`,
+        background_color: `#0F43A9`,
+        theme_color: `#0F43A9`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: `${__dirname}/src/images`,
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [
+          require(`postcss-import`),
+          require(`tailwindcss`)(`./tailwind.config.js`),
+          require(`autoprefixer`),
+          require(`cssnano`),
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: [`src/css/index.css`],
+      },
     },
     {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
+        concurrency: 5,
         tables: [
           {
-            baseId: process.env.AIRTABLE_BASE_ID_LIBRARY,
-            tableName: `authors`,
-            tableView: `sorted`,
-            queryName: `authors`,
-            tableLinks: [`books`]
-          },
-          {
-            baseId: process.env.AIRTABLE_BASE_ID_LIBRARY,
-            tableName: `tags`,
-            tableView: `tagsBooks`,
-            queryName: `tagsBooks`,
-            tableLinks: [`books`]
-          },
-          {
-            baseId: process.env.AIRTABLE_BASE_ID_LIBRARY,
+            baseId: process.env.AIRTABLE_BASE_LIBRARY,
             tableName: `books`,
             tableView: `published`,
             queryName: `books`,
             mapping: { cover: `fileNode` },
-            tableLinks: [`authors`]
+            tableLinks: [`authors`, `tags`],
           },
           {
-            baseId: process.env.AIRTABLE_BASE_ID_FEED,
-            tableName: `tags`,
+            baseId: process.env.AIRTABLE_BASE_LIBRARY,
+            tableName: `authors`,
             tableView: `sorted`,
-            queryName: `tagsFeed`,
-            mapping: { notes: `text/markdown` },
-            tableLinks: [`feed`]
+            queryName: `authors`,
+            tableLinks: [`books`],
           },
           {
-            baseId: process.env.AIRTABLE_BASE_ID_FEED,
-            tableName: `feed`,
-            tableView: `published`,
-            queryName: `feed`,
-            mapping: { notes: `text/markdown` },
-            tableLinks: [`tags`]
-          },
-          {
-            baseId: process.env.AIRTABLE_BASE_ID_FAVORITES,
+            baseId: process.env.AIRTABLE_BASE_LIBRARY,
             tableName: `tags`,
-            tableView: `sorted`,
-            queryName: `tagsFavorites`,
-            tableLinks: [`newsletters`, `podcasts`, `mac`, `chrome`, `websites`]
+            tableView: `tagsBooks`,
+            queryName: `tagsBooks`,
+            tableLinks: [`books`],
           },
-          {
-            baseId: process.env.AIRTABLE_BASE_ID_FAVORITES,
-            tableName: `newsletters`,
-            tableView: `published`,
-            queryName: `newsletters`,
-            tableLinks: [`tags`]
-          },
-          {
-            baseId: process.env.AIRTABLE_BASE_ID_FAVORITES,
-            tableName: `podcasts`,
-            tableView: `published`,
-            queryName: `podcasts`,
-            tableLinks: [`tags`]
-          },
-          {
-            baseId: process.env.AIRTABLE_BASE_ID_FAVORITES,
-            tableName: `mac`,
-            tableView: `published`,
-            queryName: `mac`,
-            tableLinks: [`tags`]
-          },
-          {
-            baseId: process.env.AIRTABLE_BASE_ID_FAVORITES,
-            tableName: `chrome`,
-            tableView: `published`,
-            queryName: `chrome`,
-            tableLinks: [`tags`]
-          },
-          {
-            baseId: process.env.AIRTABLE_BASE_ID_FAVORITES,
-            tableName: `websites`,
-            tableView: `published`,
-            queryName: `websites`,
-            tableLinks: [`tags`]
-          }
-        ]
-      }
+        ],
+      },
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        custom: {
-          families: ['Inter', 'Inter var'],
-          urls: ['https://rsms.me/inter/inter.css']
-        },
-        typekit: {
-          id: 'kgn3qha'
-        }
-      }
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-              rel: null
-            }
-          }
-        ]
-      }
-    }
-  ]
-};
+  ],
+}
