@@ -2,14 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Headline from '../components/headline'
 
-const IndexPage = ({ data }) => {
+const ToolboxPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Feed" />
       <section className="container">
-        <h1 className="text-center">References</h1>
-        icons of each category
+        <Headline
+          title="Toolbox"
+          headline="Tools and references for better thinking"
+        />
       </section>
     </Layout>
   )
@@ -27,4 +30,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default ToolboxPage

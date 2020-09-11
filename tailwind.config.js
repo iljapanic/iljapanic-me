@@ -1,10 +1,16 @@
 module.exports = {
   theme: {
     darkSelector: '.dark',
-    container: {
+    container: (theme) => ({
       center: true,
-      padding: '1.5rem',
-    },
+      padding: {
+        default: theme('spacing.4'),
+        sm: theme('spacing.6'),
+        md: theme('spacing.24'),
+        lg: theme('spacing.32'),
+        xl: theme('spacing.40'),
+      },
+    }),
     fontSize: {
       '2xs': '0.625rem',
       xs: '0.75rem',
@@ -22,6 +28,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
+          'Inter',
           'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -38,6 +45,7 @@ module.exports = {
         ],
         serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
         mono: [
+          // 'IBM Plex Mono',
           'Menlo',
           'Monaco',
           'Consolas',
@@ -98,6 +106,9 @@ module.exports = {
         '7xs': '3rem',
         '8xs': '2rem',
       },
+      opacity: {
+        '90': '0.9',
+      },
     },
   },
   variants: {
@@ -108,10 +119,28 @@ module.exports = {
       'dark-even',
       'dark-odd',
     ],
-    borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
+    borderColor: ['dark', 'dark-focus', 'dark-focus-within', 'hover'],
     boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-focus'],
     margin: ['responsive', 'last', 'first'],
     textColor: ['dark', 'dark-hover', 'dark-active', 'dark-placeholder'],
   },
-  plugins: [require('@tailwindcss/ui'), require('tailwindcss-dark-mode')()],
+  plugins: [
+    require('@tailwindcss/ui'),
+    require('tailwindcss-dark-mode')(),
+    require('tailwindcss-modularscale')({
+      sizes: [
+        { size: 'xs', value: -2 },
+        { size: 'sm', value: -1 },
+        { size: 'base', value: 0 },
+        { size: 'lg', value: 1 },
+        { size: 'xl', value: 2 },
+        { size: '2xl', value: 3 },
+        { size: '3xl', value: 4 },
+        { size: '4xl', value: 5 },
+      ],
+      base: 1.1,
+      ratio: 1.2,
+      unit: 'rem',
+    }),
+  ],
 }

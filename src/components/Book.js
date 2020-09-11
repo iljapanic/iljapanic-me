@@ -1,16 +1,27 @@
 import React from 'react'
 import Img from 'gatsby-image'
+// import Notation from '../utilities/notation'
 
-const Book = ({ title, year, url, featured, authors, cover }) => {
-  const author = authors.map((author, i) => (
+const Book = ({ title, year, url, featured, authors, cover, tags }) => {
+  const allAuthors = authors.map((author, i) => (
     <span key={i}>
       {i > 0 && ', '}
       {author.data.first_name} {author.data.last_name}
     </span>
   ))
 
+  var allTags = ''
+
+  if (tags !== null) {
+    allTags = tags.map((tag, i) => (
+      <li key={i} className="font-medium text-xs text-gray-500 mb-1">
+        #{tag.data.tag}
+      </li>
+    ))
+  }
+
   return (
-    <article className="max-w-sm grid grid-cols-2 gap-4">
+    <article>
       <div>
         <a href={url} target="_blank" rel="noopener noreferrer">
           <Img fluid={cover} className="shadow mt-2" />
@@ -22,8 +33,10 @@ const Book = ({ title, year, url, featured, authors, cover }) => {
             {title}
           </a>
         </h3>
-        <div className="text-sm text-gray-600">{author}</div>
+
+        <div className="text-sm text-gray-600">{allAuthors}</div>
         <span className="text-xs text-gray-500">{year}</span>
+        {/* <ul className="mt-4">{allTags}</ul> */}
       </div>
     </article>
   )

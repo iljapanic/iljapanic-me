@@ -1,0 +1,25 @@
+.article {
+  @apply opacity-90;
+}
+
+.article:hover {
+  @apply opacity-100;
+}
+
+.article-link {
+  @apply block;
+}
+
+.article-link:hover {
+  @apply no-underline border-transparent;
+}
+
+.article-cover {
+  @apply transition-all duration-300;
+  filter: grayscale(80%) contrast(65%);
+}
+
+.article:hover .article-cover {
+  @apply transition-all duration-300;
+  filter: grayscale(20%) contrast(85%);
+}

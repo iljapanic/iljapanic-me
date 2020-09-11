@@ -7,11 +7,8 @@ import '../css/index.css'
 const Layout = ({ children }) => {
   return (
     <>
-      <header>
-        <Header />
-      </header>
-      <main className="py-6">{children}</main>
-
+      <Header />
+      <main>{children}</main>
       <Footer />
     </>
   )

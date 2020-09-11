@@ -7,7 +7,9 @@
 @import 'tailwindcss/utilities';
 
 /* custom components */
+@import './components/button.css';
 @import './components/header.css';
+@import './components/article.css';
 
 /* custom utilities */
 @import './utilities.css';

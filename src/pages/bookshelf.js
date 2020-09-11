@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Book from '../components/book'
+import Headline from '../components/headline'
 
 const Bookshelf = ({ data }) => {
   const nonFiction = data.nonFiction.edges.map((item) => {
@@ -41,27 +42,32 @@ const Bookshelf = ({ data }) => {
     )
   })
 
+  const bookGridClasses =
+    'grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 xl:grid-cols-4'
+
   return (
     <Layout>
       <SEO title="Bookshelf" />
 
       <div className="container">
-        <h1 className="side-title text-xl transform -rotate-90 fixed left-0">
-          Books I've enjoyed reading over the years
-        </h1>
+        <Headline
+          title="Bookshelf"
+          headline="Books that shaped my thinking over the years"
+        />
 
         {/* non-fiction */}
         <section>
           <h2>Non-fiction</h2>
           <p>
-            Various books that shaped my thinking over the years. Broadly
-            related to design, power, culture and techno-social systems.
+            Books that shaped my thinking. Broadly related to design, power,
+            culture and techno-social systems.
           </p>
 
-          <div className="lg:grid lg:grid-cols-2 lg:gap-12 xl:grid-cols-3">
-            {nonFiction}
-          </div>
+          <div className={bookGridClasses}>{nonFiction}</div>
         </section>
+
+        {/* separator */}
+        <hr className="my-20" />
 
         {/* fiction */}
         <section>
@@ -71,9 +77,7 @@ const Bookshelf = ({ data }) => {
             fiction.
           </p>
 
-          <div className="lg:grid lg:grid-cols-2 lg:gap-12 xl:grid-cols-3">
-            {fiction}
-          </div>
+          <div className={bookGridClasses}>{fiction}</div>
         </section>
       </div>
     </Layout>

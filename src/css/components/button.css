@@ -1,0 +1,12 @@
+.btn {
+  @apply inline-flex no-underline border items-center py-2 px-4 border-gray-800 text-gray-800 uppercase rounded-sm tracking-wide font-medium;
+}
+
+.btn-rounded {
+  @apply rounded-md;
+}
+
+/* dark mode adjustments */
+.dark .btn {
+  @apply border-gray-200 text-gray-100;
+}

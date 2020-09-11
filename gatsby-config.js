@@ -3,6 +3,7 @@ require('dotenv').config({
 })
 
 module.exports = {
+  pathPrefix: '/',
   siteMetadata: {
     siteUrl: `https://iljapanic.com`,
   },
@@ -14,11 +15,57 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-feed-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/articles`,
+        name: `articles`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/notes`,
+        name: `notes`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        options: {
+          gatsbyRemarkPlugins: [
+            `gatsby-remark-autolink-headers`,
+            `gatsby-remark-smartypants`,
+            `gatsby-remark-embed-video`,
+            `gatsby-remark-responsive-iframe`,
+            `gatsby-remark-relative-images`,
+            {
+              resolve: 'gatsby-remark-external-links',
+              options: {
+                target: '_blank',
+                rel: null,
+              },
+            },
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 1024,
+                showCaptions: true,
+                backgroundColor: 'transparent',
+                quality: 85,
+              },
+            },
+          ],
+        },
       },
     },
     {
