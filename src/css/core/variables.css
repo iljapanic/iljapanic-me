@@ -1,0 +1,87 @@
+:root {
+  /* TYPOGRAPHY */
+  --font-sans: 'National 2';
+  --font-serif: 'Tiempos';
+  --font-size-1: 1rem;
+  --font-size-2: calc(var(--scale) * var(--font-size-1));
+  --font-size-3: calc(var(--scale) * var(--font-size-2));
+  --font-size-4: calc(var(--scale) * var(--font-size-3));
+  --font-size-5: calc(var(--scale) * var(--font-size-4));
+  --font-size-6: calc(var(--scale) * var(--font-size-5));
+
+  --scale: 1.125;
+  --size-base: clamp(100%, 2.5vw, 125%);
+  --size-h4: calc(var(--scale) * var(--size-base)); /* 1 */
+  --size-h3: calc(var(--scale) * var(--size-h4)); /* 2 */
+  --size-h2: calc(var(--scale) * var(--size-h3)); /* 3 */
+  --size-h1: calc(var(--scale) * var(--size-h2)); /* 4 */
+  --size-small: 0.9em;
+  --size-large: 1.1em;
+  --size-xs: 0.8em;
+
+  /* --scale: 1.125;
+  --size-base: clamp(100%, 2.5vw, 125%);
+  --size-h1: 2.5rem;
+  --size-h2: 2rem;
+  --size-h3: 1.5rem;
+  --size-h4: 1.15rem; */
+
+  --line-height-base: calc(1ex / 0.37);
+
+  --fw-light: 300;
+  --fw-base: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* --size-h1: clamp(1.5rem, 4vw, 3rem); */
+
+  /* SPACING */
+  --spacing-xs: calc(var(--line-height-base) * 0.15);
+  --spacing-s: calc(var(--line-height-base) * 0.5);
+  --spacing: calc(var(--line-height-base) * 1);
+  --spacing-m: calc(var(--line-height-base) * 1.5);
+  --spacing-l: calc(var(--line-height-base) * 2);
+  --spacing-xl: calc(var(--line-height-base) * 3);
+  --spacing-xxl: calc(var(--line-height-base) * 4);
+  --spacing-xxxl: calc(var(--line-height-base) * 5);
+  /* --spacing-xxl: calc(0.5rem + 4vw); */
+
+  /* GRID */
+  --grid-spec: minmax(0, 1fr) minmax(auto, 54ch) minmax(0, 1fr);
+  --grid-gap: var(--spacing-s);
+
+  /* COLORS */
+  --color-base: #252425;
+  --color-secondary: #949089;
+  --color-dim: #c4c2be;
+  --color-faint: #ececeb;
+  --color-bg: #fff;
+  --color-bg-transparent: #fffffff8;
+  --color-accent: #9a2e22;
+  --color-accent-tint: #ae584e;
+  --color-accent-shade: #7b251b;
+  --color-highlight: rgba(255, 255, 0, 0.25);
+
+  /* MISC. */
+  --radius: 0.1rem;
+
+  /* ANIMATION */
+  --easing: cubic-bezier(0.47, 0, 0.745, 0.715);
+  --theme-transition: all 0.35s var(--easing);
+}
+
+.dark {
+  --color-base: #fff;
+  --color-secondary: #949089;
+  --color-dim: #424142;
+  --color-bg: #252425;
+  --color-bg-transparent: #252425f8;
+}
+
+/* SELECTORS */
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+/* MEDIA QUERIES */
+@custom-media --small (max-width: 60rem);
+@custom-media --medium (min-width: 70rem);
+@custom-media --large (min-width: 90rem);

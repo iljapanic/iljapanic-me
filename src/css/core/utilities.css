@@ -1,0 +1,200 @@
+/* CONTAINER - GRID */
+.container {
+  padding: 0 var(--spacing-s);
+}
+
+@media (--medium) {
+  .container {
+    display: grid;
+    grid-template-columns: var(--grid-spec);
+    grid-gap: var(--grid-gap);
+    padding: 0;
+  }
+  .content-column {
+    grid-column: 2/3;
+  }
+}
+
+/* MARGIN - TOP */
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-xs {
+  margin-top: var(--spacing-xs);
+}
+
+.mt-s {
+  margin-top: var(--spacing-s);
+}
+
+.mt {
+  margin-top: var(--spacing);
+}
+
+.mt-m {
+  margin-top: var(--spacing-l);
+}
+
+.mt-l {
+  margin-top: var(--spacing-l);
+}
+
+.mt-xl {
+  margin-top: var(--spacing-xl);
+}
+
+.mt-xxl {
+  margin-top: var(--spacing-xxl);
+}
+
+.mt-xxxl {
+  margin-top: var(--spacing-xxxl);
+}
+
+/* MARGIN - BOTTOM */
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-xs {
+  margin-bottom: var(--spacing-xs);
+}
+
+.mb-s {
+  margin-bottom: var(--spacing-s);
+}
+
+.mb {
+  margin-bottom: var(--spacing);
+}
+
+.mb-m {
+  margin-bottom: var(--spacing-m);
+}
+
+.mb-l {
+  margin-bottom: var(--spacing-l);
+}
+
+.mb-xl {
+  margin-bottom: var(--spacing-xl);
+}
+
+.mb-l {
+  margin-bottom: var(--spacing-xxl);
+}
+
+/* MARGIN - RIGHT */
+.mr-0 {
+  margin-right: 0;
+}
+
+.mr-xs {
+  margin-right: var(--spacing-xs);
+}
+
+.mr-s {
+  margin-right: var(--spacing-s);
+}
+
+.mr {
+  margin-right: var(--spacing);
+}
+
+.mr-m {
+  margin-right: var(--spacing-l);
+}
+
+.mr-l {
+  margin-right: var(--spacing-l);
+}
+
+.mr-xl {
+  margin-right: var(--spacing-xl);
+}
+
+.mr-l {
+  margin-right: var(--spacing-xxl);
+}
+
+/* TEXT */
+.no-underline {
+  text-decoration: none;
+}
+
+.fw-base {
+  font-weight: var(--fw-base);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.sans {
+  font-family: var(--font-sans);
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.base {
+  font-size: var(--size-base);
+}
+
+.small {
+  font-size: var(--size-small);
+}
+
+.large {
+  font-size: var(--size-large);
+}
+
+/* COLORS */
+.color-base {
+  color: var(--color-base);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.color-dim {
+  color: var(--color-dim);
+}
+
+.color-faint {
+  color: var(--color-dim);
+}
+
+/* ANCHOR - only show */
+.anchor {
+  margin-left: 0.5rem;
+  opacity: 0;
+}
+
+:--headings:hover .anchor {
+  opacity: 1;
+}
+
+.anchor svg {
+  display: inline-block;
+}
+
+.anchor {
+  display: none;
+}
+
+.post .anchor {
+  display: inline-block;
+}
+
+/* embeds */
+.gatsby-resp-iframe-wrapper {
+  margin: var(--spacing) auto;
+}

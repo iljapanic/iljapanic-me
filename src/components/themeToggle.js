@@ -4,9 +4,6 @@ import IconSun from '../images/icons/sun.svg'
 import IconMoon from '../images/icons/moon.svg'
 
 const ThemeToggle = () => {
-  const iconClass =
-    'h-4 w-4 stroke-current fill-current transition-opacity absolute right-0'
-
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }) => (
@@ -20,24 +17,20 @@ const ThemeToggle = () => {
           onKeyDown={() => {
             toggleTheme(theme === 'dark' ? 'light' : 'dark')
           }}
-          className="h-4 w-4 block focus:outline-none"
+          className="theme-switcher"
         >
           <span aria-hidden="true">
-            <span className="relative">
+            <span>
               <IconSun
                 className={`${
-                  theme === 'dark'
-                    ? 'opacity-100 ease-in duration-200'
-                    : 'opacity-0 ease-out duration-100'
-                } ${iconClass} text-sun`}
+                  theme === 'dark' ? 'visible' : 'hidden'
+                } icon sun`}
               />
 
               <IconMoon
                 className={`${
-                  theme === 'light'
-                    ? 'opacity-100 ease-in duration-200'
-                    : 'opacity-0 ease-out duration-100'
-                } ${iconClass} text-moon`}
+                  theme === 'light' ? 'visible' : 'hidden'
+                } icon moon`}
               />
             </span>
           </span>

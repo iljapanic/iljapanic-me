@@ -5,6 +5,9 @@ require('dotenv').config({
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
+    title: 'Ilja Panić',
+    description: 'Ilja is a design technologist researching complex systems.',
+    author: '@iljapanic',
     siteUrl: `https://iljapanic.com`,
   },
   plugins: [
@@ -16,6 +19,30 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-feed-mdx`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['National 2, Tiempos'],
+          urls: ['/fonts/fonts.css'],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://iljapanic.com`,
+        noQueryString: true,
+        noHash: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,6 +60,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/src/talks`,
+        name: `talks`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -41,31 +75,54 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        options: {
-          gatsbyRemarkPlugins: [
-            `gatsby-remark-autolink-headers`,
-            `gatsby-remark-smartypants`,
-            `gatsby-remark-embed-video`,
-            `gatsby-remark-responsive-iframe`,
-            `gatsby-remark-relative-images`,
-            {
-              resolve: 'gatsby-remark-external-links',
-              options: {
-                target: '_blank',
-                rel: null,
-              },
-            },
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 1024,
-                showCaptions: true,
-                backgroundColor: 'transparent',
-                quality: 85,
-              },
-            },
-          ],
+        defaultLayouts: {
+          default: require.resolve('./src/components/layoutDefault.js'),
         },
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-embed-video`,
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-relative-images`,
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              isIconAfterHeader: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: null,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              showCaptions: true,
+              backgroundColor: 'transparent',
+              linkImagesToOriginal: false,
+              quality: 85,
+            },
+          },
+          // {
+          //   resolve: `@raae/gatsby-remark-oembed`,
+          //   options: {
+          //     usePrefix: ['embed', 'video', 'oembed'],
+          //     providers: {
+          //       include: ['Twitter', 'SpeakerDeck', 'Vimeo', 'YouTube'],
+          //       settings: {
+          //         // Ex. Show all Twitter embeds with the dark theme
+          //         // Twitter: { theme: 'dark' },
+          //         // Ex. Hide all Instagram comments by default
+          //         // Instagram: { hidecaption: true },
+          //       },
+          //     },
+          //   },
+          // },
+        ],
       },
     },
     {
@@ -93,17 +150,12 @@ module.exports = {
       options: {
         postCssPlugins: [
           require(`postcss-import`),
-          require(`tailwindcss`)(`./tailwind.config.js`),
-          require(`autoprefixer`),
+          require(`postcss-preset-env`)({
+            stage: 1,
+            importFrom: './src/css/core/variables.css',
+          }),
           require(`cssnano`),
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        tailwind: true,
-        purgeOnly: [`src/css/index.css`],
       },
     },
     {

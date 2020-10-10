@@ -2,12 +2,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Article from '../components/article'
+import ArticlePreview from '../components/articlePreview'
 import Headline from '../components/headline'
 
-const ArticlesPage = ({ data }) => {
+const ArticlesPage = ({ data, location }) => {
   const articles = data.articles.nodes.map((node, index) => (
-    <Article
+    <ArticlePreview
       title={node.frontmatter.title}
       headline={node.frontmatter.headline}
       date={node.frontmatter.date}
@@ -20,15 +20,17 @@ const ArticlesPage = ({ data }) => {
   ))
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Articles" />
-      <div className="container">
-        <Headline
-          title="Articles"
-          headline="Papers and essays written over the course of several studies"
-        />
-        <section className="mt-12 max-w-2xl">{articles}</section>
-      </div>
+      <section className="container">
+        <div className="content-column">
+          <Headline
+            title="Articles"
+            headline="Papers and essays written during various studies"
+          />
+          {articles}
+        </div>
+      </section>
     </Layout>
   )
 }

@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import Note from '../components/Note'
 import Headline from '../components/headline'
 
-const NotesPage = ({ data }) => {
+const NotesPage = ({ data, location }) => {
   const notes = data.notes.nodes.map((node, index) => (
     <Note
       title={node.frontmatter.title}
@@ -16,7 +16,7 @@ const NotesPage = ({ data }) => {
   ))
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Notes" />
       <div className="container">
         <Headline title="Notes" headline="Short mussings and writings" />

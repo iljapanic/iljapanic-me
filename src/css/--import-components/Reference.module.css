@@ -1,0 +1,24 @@
+@import '../utils/variables.css';
+
+.body {
+  line-height: 1.45;
+  font-size: var(--font-small);
+}
+
+.title a .name {
+  color: var(--color-link);
+}
+
+.title a .authorList {
+  color: var(--gray-600);
+}
+
+/* author list */
+
+.authorList span::after {
+  content: ', ';
+}
+
+.authorList span:last-child::after {
+  content: '';
+}

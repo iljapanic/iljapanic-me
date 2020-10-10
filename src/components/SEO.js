@@ -9,20 +9,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
-function SEO({
-  description,
-  lang,
-  meta,
-  title,
-  keywords,
-  previewUrl,
-  canonical,
-}) {
+function SEO({ description, lang, meta, title, keywords, previewUrl }) {
   const metaTitle = title
   const metaKeywords = keywords
   const metaDescription = description
   const metaPreviewUrl = previewUrl
-  const metaCanonical = canonical
 
   return (
     <Helmet
@@ -30,8 +21,8 @@ function SEO({
         lang,
       }}
       title={metaTitle}
-      // titleTemplate={`%s | ${site.siteMetadata.title}`}
-      titleTemplate={`%s`}
+      defaultTitle={`Ilja Panić`}
+      titleTemplate={`%s — Ilja Panić`}
       meta={[
         {
           name: `description`,
@@ -39,7 +30,7 @@ function SEO({
         },
         {
           name: `author`,
-          content: 'Ilja Panic',
+          content: 'Ilja Panić',
         },
         {
           name: `keywords`,
@@ -61,10 +52,7 @@ function SEO({
           property: `og:image`,
           content: metaPreviewUrl,
         },
-        {
-          property: `og:url`,
-          content: metaCanonical,
-        },
+
         {
           name: `twitter:card`,
           content: `summary`,
@@ -85,7 +73,6 @@ function SEO({
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
 }
 
 SEO.propTypes = {

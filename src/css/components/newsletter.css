@@ -1,0 +1,15 @@
+.newsletter {
+  max-width: 36rem;
+}
+
+.newsletter.newsletter-small {
+  max-width: 28rem;
+}
+
+.newsletter-inputs {
+  /* display: flex;
+  align-items: stretch; */
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: var(--spacing);
+}

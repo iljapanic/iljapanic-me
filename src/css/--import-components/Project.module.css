@@ -1,0 +1,45 @@
+@import '../utils/variables.css';
+
+.project {
+  display: block;
+  background-color: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-card);
+  color: var(--gray-900);
+  box-shadow: 0 0 10px 0px rgba(var(--gray-200), 0.35);
+  transition: all 0.05s ease-in-out;
+  margin-bottom: 1.5rem;
+  color: var(--gray-800);
+}
+
+.project:hover {
+  background-color: var(--gray-900);
+  color: white;
+  border-color: var(--gray-100);
+}
+
+.project img {
+  width: 100%;
+  border-top-left-radius: var(--radius-card);
+  border-top-right-radius: var(--radius-card);
+}
+
+.title {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.project a {
+  color: inherit;
+}
+
+.body {
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+.description {
+  font-size: var(--font-micro);
+  margin-bottom: 0;
+}

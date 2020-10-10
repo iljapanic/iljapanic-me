@@ -2,10 +2,10 @@ import React from 'react'
 
 const Headline = ({ title, headline }) => {
   return (
-    <div>
-      <h1 className="mb-1">{title}</h1>
-      <p className="ms-lg">{headline}</p>
-    </div>
+    <header>
+      <h1 className="mb-0 mt-0">{title}</h1>
+      <p className="color-secondary h4 mt-xs">{headline}</p>
+    </header>
   )
 }
 

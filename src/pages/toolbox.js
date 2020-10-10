@@ -4,9 +4,9 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Headline from '../components/headline'
 
-const ToolboxPage = ({ data }) => {
+const ToolboxPage = ({ data, location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Feed" />
       <section className="container">
         <Headline

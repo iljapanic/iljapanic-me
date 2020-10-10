@@ -1,0 +1,20 @@
+.post {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* .post {
+  display: grid;
+  grid-template-columns: var(--grid-spec);
+  grid-gap: var(--grid-gap);
+}
+
+.post article {
+  grid-column: 2/3;
+}
+
+@media (--small) {
+  .post {
+    grid-template-columns: 1fr;
+  }
+} */

@@ -1,12 +1,31 @@
+button,
 .btn {
-  @apply inline-flex no-underline border items-center py-2 px-4 border-gray-800 text-gray-800 uppercase rounded-sm tracking-wide font-medium;
+  display: inline-block;
+  background-color: var(--color-accent);
+  border-radius: var(--radius);
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.35s var(--easing);
 }
 
-.btn-rounded {
-  @apply rounded-md;
+button:hover,
+.btn:hover {
+  background-color: var(--color-accent-shade);
 }
 
-/* dark mode adjustments */
-.dark .btn {
-  @apply border-gray-200 text-gray-100;
+/* small */
+button.btn-small,
+.btn.btn-small {
+  padding: 0.25rem 0.5rem;
+  font-size: var(--size-xs);
+}
+
+/* flush-left */
+.btn.flush-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }

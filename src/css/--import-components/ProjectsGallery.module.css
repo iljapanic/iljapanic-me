@@ -1,0 +1,10 @@
+@import '../utils/variables.css';
+
+@media (--desktop) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2.5rem;
+  }
+}

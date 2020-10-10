@@ -10,32 +10,37 @@ const Book = ({ title, year, url, featured, authors, cover, tags }) => {
     </span>
   ))
 
-  var allTags = ''
+  // var allTags = ''
 
-  if (tags !== null) {
-    allTags = tags.map((tag, i) => (
-      <li key={i} className="font-medium text-xs text-gray-500 mb-1">
-        #{tag.data.tag}
-      </li>
-    ))
-  }
+  // if (tags !== null) {
+  //   allTags = tags.map((tag, i) => (
+  //     <li key={i} className="font-medium text-xs text-gray-500 mb-1">
+  //       #{tag.data.tag}
+  //     </li>
+  //   ))
+  // }
 
   return (
-    <article>
-      <div>
+    <article className="mt book">
+      <div className="image">
         <a href={url} target="_blank" rel="noopener noreferrer">
-          <Img fluid={cover} className="shadow mt-2" />
+          <Img fluid={cover} />
         </a>
       </div>
       <div>
-        <h3 className="text-base leading-tight mt-2 mb-0 font-medium">
-          <a href={url} target="_blank" rel="noopener noreferrer">
+        <h3 className="sans small mt-s">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline color-base"
+          >
             {title}
           </a>
         </h3>
 
-        <div className="text-sm text-gray-600">{allAuthors}</div>
-        <span className="text-xs text-gray-500">{year}</span>
+        <div className="small mt-0 color-secondary">{allAuthors}</div>
+        {/* <span className="text-xs text-gray-500">{year}</span> */}
         {/* <ul className="mt-4">{allTags}</ul> */}
       </div>
     </article>

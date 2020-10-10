@@ -3,9 +3,9 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Feed" />
       <section className="container">
         <h1 className="text-center">Services</h1>

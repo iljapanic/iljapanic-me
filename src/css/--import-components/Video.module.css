@@ -1,0 +1,25 @@
+@import '../utils/variables.css';
+
+.video {
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+.label {
+  text-align: center;
+  font-size: var(--font-small);
+  color: var(--gray-600);
+  margin-top: 0.5rem;
+}
+
+/* make video responsive */
+.videoWrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

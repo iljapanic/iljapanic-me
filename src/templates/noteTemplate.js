@@ -2,17 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
-import dayjs from 'dayjs'
+// import dayjs from 'dayjs'
 import SEO from '../components/seo'
 
-export default function articleTemplate({ data }) {
+export default function articleTemplate({ data, location }) {
   const { mdx } = data
-  const siteUrl = data.site.siteMetadata.siteUrl
-  const today = dayjs().format('MMMM DD YYYY')
+  // const siteUrl = data.site.siteMetadata.siteUrl
+  // const today = dayjs().format('MMMM DD YYYY')
   const { frontmatter, body } = mdx
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title={frontmatter.title} />
       <article className="container">
         <header>

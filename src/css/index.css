@@ -1,15 +1,20 @@
-/* purgecss start ignore */
-@import 'tailwindcss/base';
-@import './global.css';
-@import 'tailwindcss/components';
-/* purgecss end ignore */
-
-@import 'tailwindcss/utilities';
+@import './core/variables.css';
+@import './core/reset.css';
+@import './core/base.css';
+@import './core/utilities.css';
+@import './core/form.css';
 
 /* custom components */
+/* @import './components/article.css'; */
+@import './components/accordion.css';
 @import './components/button.css';
+@import './components/books.css';
+@import './components/cv.css';
+@import './components/footer.css';
 @import './components/header.css';
-@import './components/article.css';
+@import './components/newsletter.css';
+@import './components/post.css';
+@import './components/theme.css';
 
-/* custom utilities */
-@import './utilities.css';
+/* moleculs */
+@import './molecules/quote.css';

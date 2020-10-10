@@ -1,0 +1,122 @@
+body {
+  background-color: var(--color-bg);
+  color: var(--color-base);
+  font-family: var(--font-sans);
+  font-size: var(--size-base);
+  font-weight: var(--fw-base);
+  text-rendering: optimizeLegibility;
+  transition: var(--theme-transition);
+  padding-top: var(--spacing-xxxl);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (--small) {
+  body {
+    padding-top: 8rem;
+  }
+}
+
+:--headings {
+  font-family: var(--font-serif);
+  font-weight: var(--fw-medium);
+}
+
+h1,
+.h1 {
+  font-size: var(--size-h1);
+  line-height: calc(1ex / 0.42);
+  margin-top: 0;
+  margin-bottom: 0;
+  /* margin-bottom: var(--spacing-s); */
+}
+
+h2,
+.h2 {
+  font-size: var(--size-h2);
+  line-height: calc(1ex / 0.42);
+  margin-top: calc(1ex / 0.42);
+}
+
+h3,
+.h3 {
+  font-size: var(--size-h3);
+  line-height: calc(1ex / 0.38);
+  margin-top: calc(1ex / 0.38);
+  margin-bottom: 0;
+}
+
+h4,
+.h4 {
+  font-size: var(--size-h4);
+  line-height: calc(1ex / 0.37);
+  margin-top: calc(1ex / 0.37);
+  margin-bottom: 0;
+}
+
+p {
+  line-height: var(--line-height-base);
+  margin-top: var(--spacing);
+}
+
+a {
+  color: var(--color-secondary);
+  transition: all 0.15s var(--easing);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+article a {
+  text-decoration: underline;
+}
+
+article ul {
+  list-style-type: disc;
+  margin-left: 1.5em;
+  margin-top: var(--spacing-s);
+}
+
+article li {
+  margin-top: 0.5em;
+}
+
+article blockquote {
+  padding-left: 0.75em;
+  color: var(--color-secondary);
+  border-left: 2px solid var(--color-dim);
+}
+
+article figcaption {
+  text-align: center;
+  margin-top: var(--spacing-s);
+  font-weight: var(--fw-medium);
+}
+
+img,
+iframe {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+strong,
+b {
+  font-weight: var(--fw-bold);
+}
+
+hr {
+  width: 100%;
+  margin: var(--spacing-l) auto;
+  border-top: 1px solid var(--color-faint);
+}
+
+::selection {
+  background-color: var(--color-highlight);
+}
+
+@supports (font-size-adjust: 1) {
+  article {
+    font-size-adjust: 0.5;
+  }
+}

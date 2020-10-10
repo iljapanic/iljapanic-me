@@ -3,6 +3,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const articleTemplate = path.resolve(`./src/templates/articleTemplate.js`)
   const noteTemplate = path.resolve(`./src/templates/noteTemplate.js`)
+  const talkTemplate = path.resolve(`./src/templates/talkTemplate.js`)
   const result = await graphql(`
     {
       articles: allMdx(
@@ -29,6 +30,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+      talks: allMdx(
+        filter: { fileAbsolutePath: { regex: "/(talks)/.*\\\\.mdx$/" } }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
     }
   `)
   // Handle errors
@@ -40,14 +53,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: node.frontmatter.path,
       component: articleTemplate,
-      context: {}, // additional data can be passed via context
+      context: {},
     })
   })
   result.data.notes.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: noteTemplate,
-      context: {}, // additional data can be passed via context
+      context: {},
+    })
+  })
+  result.data.talks.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: talkTemplate,
+      context: {},
     })
   })
 }

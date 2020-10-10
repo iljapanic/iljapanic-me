@@ -5,4 +5,4 @@
  */
 
 require('typeface-inter')
-require('typeface-ibm-plex-mono')
+require('typeface-libre-baskerville')

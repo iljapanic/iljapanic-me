@@ -1,0 +1,33 @@
+@custom-selector :--inputs
+  input[type='text'],
+  input[type='email'],
+  input[type='password'];
+
+:--inputs {
+  background-color: var(--color-bg);
+  transition: var(--theme-transition);
+  border: 1px solid var(--color-secondary);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius);
+  width: 100%;
+  display: block;
+}
+
+:--inputs.bare {
+  background-color: var(--color-bg);
+  transition: var(--theme-transition);
+  border: none;
+  border-bottom: 1px solid 1px solid var(--color-secondary);
+  padding: 0.15rem 0;
+  border-radius: 0;
+}
+
+:--inputs::placeholder {
+  color: var(--color-dim);
+}
+
+/* flushed */
+:--inputs.flush-right {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

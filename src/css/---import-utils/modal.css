@@ -1,0 +1,54 @@
+@import '../utils/variables.css';
+
+.modalOverlay {
+  background: rgba(var(--gray-300), 0.85);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  position: absolute;
+  overflow: auto;
+  outline: none;
+  width: 720px;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem);
+  background-color: white;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--gray-200);
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 0 10px 0px rgba(var(--gray-600), 0.2);
+  transition: all 0.25s ease-in-out;
+}
+
+.closeModal {
+  text-align: right;
+  position: fixed;
+  top: 1.5rem;
+  right: 2.5rem;
+  z-index: 9999;
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.subscribe {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+}
+
+.ReactModal__Body--open .subscribe {
+  display: none !important;
+  visibility: hidden;
+}

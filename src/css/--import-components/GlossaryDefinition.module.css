@@ -1,0 +1,37 @@
+@import '../utils/variables.css';
+
+a.item {
+  display: block;
+  background-color: white;
+  border: 1px solid var(--gray-200);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-card);
+  color: var(--gray-900);
+  box-shadow: 0 0 10px 0px rgba(var(--gray-200), 0.35);
+  transition: all 0.15s ease-in-out;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+@media (--desktop) {
+  a.item {
+    margin-bottom: 0;
+  }
+}
+
+.item:hover {
+  background-color: var(--gray-900);
+  color: white;
+  border-color: var(--gray-100);
+}
+
+.term:focus {
+  outline: none;
+}
+
+.definition,
+.definition p {
+  /* display: inline; */
+  /* margin-top: 0; */
+  font-size: var(--font-small);
+}
