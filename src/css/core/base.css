@@ -61,7 +61,7 @@ p {
 
 a {
   color: var(--color-secondary);
-  transition: all 0.15s var(--easing);
+  transition: var(--transition-all);
 }
 
 a:hover {

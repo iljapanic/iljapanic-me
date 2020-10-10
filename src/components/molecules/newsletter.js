@@ -5,7 +5,7 @@ const Newsletter = ({ type, size }) => {
     return (
       <div
         className={`newsletter newsletter-plain mt ${
-          size == 'small' && 'newsletter-small'
+          size === 'small' && 'newsletter-small'
         }`}
       >
         <form
@@ -22,7 +22,7 @@ const Newsletter = ({ type, size }) => {
               id="bd-email"
               placeholder="first name"
               className={`newsletter-name bare mr-s ${
-                size == 'small' && 'small'
+                size === 'small' && 'small'
               }`}
             ></input>
             <input
@@ -31,11 +31,11 @@ const Newsletter = ({ type, size }) => {
               id="bd-email"
               placeholder="your email"
               className={`newsletter-email bare mr-s ${
-                size == 'small' && 'small'
+                size === 'small' && 'small'
               }`}
             ></input>
             <input
-              className={`btn ${size == 'small' && 'btn-small'}`}
+              className={`btn ${size === 'small' && 'btn-small'}`}
               type="submit"
               value="Stay updated"
             ></input>

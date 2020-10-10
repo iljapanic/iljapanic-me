@@ -54,7 +54,7 @@
   --color-base: #252425;
   --color-secondary: #949089;
   --color-dim: #c4c2be;
-  --color-faint: #ececeb;
+  --color-faint: #f5f5f4;
   --color-bg: #fff;
   --color-bg-transparent: #fffffff8;
   --color-accent: #9a2e22;
@@ -62,11 +62,18 @@
   --color-accent-shade: #7b251b;
   --color-highlight: rgba(255, 255, 0, 0.25);
 
+  --color-twitter: #1dcaff;
+  --color-linkedin: #007bb5;
+  --color-github: #171515;
+  --color-instagram: #cd486b;
+  --color-rss: #f26522;
+
   /* MISC. */
   --radius: 0.1rem;
 
   /* ANIMATION */
   --easing: cubic-bezier(0.47, 0, 0.745, 0.715);
+  --transition-all: all 0.15s var(--easing);
   --theme-transition: all 0.35s var(--easing);
 }
 
@@ -74,6 +81,7 @@
   --color-base: #fff;
   --color-secondary: #949089;
   --color-dim: #424142;
+  --color-faint: #2e2c2e;
   --color-bg: #252425;
   --color-bg-transparent: #252425f8;
 }

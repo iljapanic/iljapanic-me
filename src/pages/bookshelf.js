@@ -56,11 +56,6 @@ const Bookshelf = ({ data, location }) => {
           {/* non-fiction */}
           <section>
             <h2>Non-fiction</h2>
-            <p>
-              Books that shaped my thinking. Broadly related to design, power,
-              culture and techno-social systems.
-            </p>
-
             <div className="books">{nonFiction}</div>
           </section>
 
@@ -70,11 +65,6 @@ const Bookshelf = ({ data, location }) => {
           {/* fiction */}
           <section>
             <h2>Fiction</h2>
-            <p>
-              A selection of my favorite novels. Mostly sci-fi and psychological
-              fiction.
-            </p>
-
             <div className="books">{fiction}</div>
           </section>
         </div>

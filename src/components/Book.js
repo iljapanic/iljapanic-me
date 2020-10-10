@@ -39,7 +39,7 @@ const Book = ({ title, year, url, featured, authors, cover, tags }) => {
           </a>
         </h3>
 
-        <div className="small mt-0 color-secondary">{allAuthors}</div>
+        <div className="xs mt-0 color-secondary">{allAuthors}</div>
         {/* <span className="text-xs text-gray-500">{year}</span> */}
         {/* <ul className="mt-4">{allTags}</ul> */}
       </div>

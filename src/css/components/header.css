@@ -13,6 +13,7 @@
   transition: var(--theme-transition);
   z-index: 100;
   transform: translateY(0);
+  border-bottom: 1px solid transparent;
 }
 
 .header.shadow {
