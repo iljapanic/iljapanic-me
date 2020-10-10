@@ -20,6 +20,12 @@ module.exports = {
     `gatsby-plugin-dark-mode`,
     // `gatsby-plugin-feed-mdx`,
     {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `iljapanic.com`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
