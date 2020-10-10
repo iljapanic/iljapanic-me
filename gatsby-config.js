@@ -18,7 +18,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-dark-mode`,
-    `gatsby-plugin-feed-mdx`,
+    // `gatsby-plugin-feed-mdx`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
