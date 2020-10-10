@@ -1,9 +1,0 @@
-@import '../utils/variables.css';
-
-@media (--desktop) {
-  .references {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
-  }
-}
