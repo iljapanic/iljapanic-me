@@ -8,6 +8,7 @@ const Newsletter = ({ type, size }) => {
           // action="https://buttondown.email/api/emails/embed-subscribe/iljapanic"
           // target="popupwindow"
           // onsubmit="window.open('https://buttondown.email/iljapanic', 'popupwindow')"
+          name="newsletter"
           method="POST"
           data-netlify="true"
           className="embeddable-buttondown-form form"
