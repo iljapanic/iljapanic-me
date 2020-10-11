@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import SEO from '../components/seo'
 import Headline from '../components/headline'
+import { FaFacebookF, FaGlobe } from 'react-icons/fa'
 
 export default function talkTemplate({ data, location }) {
   const { mdx } = data
@@ -17,6 +18,7 @@ export default function talkTemplate({ data, location }) {
         title={`${meta.title} [${meta.language}]`}
         description={`${meta.headline} | ${meta.location}`}
         keywords={`talk, presentation, ${keywordsString}`}
+        coverUrl={meta.cover.childImageSharp.fixed.src}
       />
       <div className="container">
         <article className="content-column post">
@@ -32,7 +34,33 @@ export default function talkTemplate({ data, location }) {
                 {meta.location}
               </a>
             </div>
-            <Headline title={`${meta.title}`} headline={meta.headline} />
+            <Headline
+              title={`${meta.title} ${meta.language && `[${meta.language}]`}`}
+              headline={meta.headline}
+            />
+
+            <div
+              className={
+                (meta.facebookUrl || meta.locationUrl) && `mt pill-cloud`
+              }
+            >
+              {meta.locationUrl && (
+                <a href={meta.locationUrl} className="pill">
+                  <FaGlobe /> Venue website
+                </a>
+              )}
+
+              {meta.facebookUrl && (
+                <a
+                  href={meta.facebookUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="pill facebook"
+                >
+                  <FaFacebookF /> Facebook event
+                </a>
+              )}
+            </div>
           </header>
           <MDXRenderer>{body}</MDXRenderer>
         </article>
@@ -51,8 +79,16 @@ export const pageQuery = graphql`
         headline
         location
         locationUrl
+        facebookUrl
         language
         keywords
+        cover {
+          childImageSharp {
+            fixed(width: 1200) {
+              src
+            }
+          }
+        }
       }
     }
   }

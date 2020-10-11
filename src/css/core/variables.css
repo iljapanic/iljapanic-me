@@ -66,10 +66,12 @@
   --color-linkedin: #007bb5;
   --color-github: #171515;
   --color-instagram: #cd486b;
+  --color-facebook: #3b5998;
   --color-rss: #f26522;
 
   /* MISC. */
   --radius: 0.1rem;
+  --radius-xl: 0.45rem;
 
   /* ANIMATION */
   --easing: cubic-bezier(0.47, 0, 0.745, 0.715);

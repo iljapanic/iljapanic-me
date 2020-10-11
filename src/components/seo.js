@@ -10,9 +10,17 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 function SEO({ description, lang, meta, title, keywords, previewUrl }) {
-  const metaTitle = title
-  const metaKeywords = keywords
-  const metaDescription = description
+  var metaTitle
+  if (title) {
+    metaTitle = title
+  }
+
+  var metaKeywords =
+    'Ilja Panić, creative technologist, design technologist, portfolio, resume'
+  if (keywords) {
+    metaKeywords = keywords
+  }
+  metaDescription = description
   const metaPreviewUrl = previewUrl
 
   return (
