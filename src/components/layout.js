@@ -12,15 +12,12 @@ import CV from './cv'
 const shortcodes = { Quote, Headline, Newsletter, CV }
 
 const Layout = ({ children, location }) => {
-  const pathname = location.pathname
-
   return (
     <>
       <Header />
       <main>
         <MDXProvider components={shortcodes}>{children}</MDXProvider>
       </main>
-      {/* {pathname !== '/' && <Footer />} */}
       <Footer />
     </>
   )

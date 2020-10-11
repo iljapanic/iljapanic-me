@@ -4,11 +4,9 @@ import Layout from '../components/layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import SEO from '../components/seo'
 import Headline from '../components/headline'
-import dayjs from 'dayjs'
 
 export default function talkTemplate({ data, location }) {
   const { mdx } = data
-  // const siteUrl = data.site.siteMetadata.siteUrl
   const body = mdx.body
   const meta = mdx.frontmatter
   const keywordsString = meta.keywords.join(', ')
@@ -55,11 +53,6 @@ export const pageQuery = graphql`
         locationUrl
         language
         keywords
-      }
-    }
-    site {
-      siteMetadata {
-        siteUrl
       }
     }
   }

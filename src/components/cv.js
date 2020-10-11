@@ -31,7 +31,6 @@ export default function CV() {
       className="mt"
       allowMultipleExpanded={true}
       allowZeroExpanded={true}
-      className="mt-l"
     >
       <Item title="Work highlights">
         <Work />

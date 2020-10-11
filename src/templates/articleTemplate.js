@@ -12,9 +12,9 @@ export default function articleTemplate({ data, location }) {
   const today = dayjs().format('MMMM DD YYYY')
   const { frontmatter, body } = mdx
   const keywordsString = frontmatter.keywords.join(', ')
-  const keywords = frontmatter.keywords.map((keyword, index) => (
-    <li>#{keyword}</li>
-  ))
+  // const keywords = frontmatter.keywords.map((keyword, index) => (
+  //   <li>#{keyword}</li>
+  // ))
 
   return (
     <Layout location={location}>
@@ -62,7 +62,7 @@ export const pageQuery = graphql`
       #   depth
       # )
       frontmatter {
-        date(formatString: "DD MMMM YYYY")
+        date(formatString: "MMMM YYYY")
         path
         title
         headline
