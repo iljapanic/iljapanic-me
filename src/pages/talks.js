@@ -2,20 +2,19 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import ArticlePreview from '../components/articlePreview'
+import TalkPreview from '../components/talkPreview'
 import Headline from '../components/headline'
 
-const ArticlesPage = ({ data, location }) => {
-  const articles = data.articles.nodes.map((node, index) => (
-    <ArticlePreview
+const TalksPage = ({ data, location }) => {
+  const talks = data.talks.nodes.map((node, index) => (
+    <TalkPreview
       title={node.frontmatter.title}
       headline={node.frontmatter.headline}
       date={node.frontmatter.date}
-      abstract={node.frontmatter.abstract}
-      keywords={node.frontmatter.keywords}
       path={node.frontmatter.path}
-      affiliation={node.frontmatter.affiliation}
-      timeToRead={node.timeToRead}
+      location={node.frontmatter.location}
+      locationUrl={node.frontmatter.locationUrl}
+      language={node.frontmatter.language}
     />
   ))
 
@@ -25,10 +24,10 @@ const ArticlesPage = ({ data, location }) => {
       <section className="container">
         <div className="content-column">
           <Headline
-            title="Articles"
-            headline="Papers and essays written during various studies"
+            title="Talks"
+            headline="Recordings and notes from presentations"
           />
-          {articles}
+          {talks}
         </div>
       </section>
     </Layout>
@@ -37,20 +36,23 @@ const ArticlesPage = ({ data, location }) => {
 
 export const query = graphql`
   query {
-    articles: allMdx(
-      filter: { fileAbsolutePath: { regex: "/(articles)/.*\\\\.mdx$/" } }
+    talks: allMdx(
+      filter: { fileAbsolutePath: { regex: "/(talks)/.*\\\\.mdx$/" } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
         frontmatter {
+          date(formatString: "DD MMMM YYYY")
+          path
           title
           headline
-          date(formatString: "MMMM YYYY")
-          path
+          location
+          locationUrl
+          language
         }
       }
     }
   }
 `
 
-export default ArticlesPage
+export default TalksPage

@@ -8,8 +8,7 @@ import dayjs from 'dayjs'
 
 export default function talkTemplate({ data, location }) {
   const { mdx } = data
-  const siteUrl = data.site.siteMetadata.siteUrl
-  const today = dayjs().format('MMMM DD YYYY')
+  // const siteUrl = data.site.siteMetadata.siteUrl
   const body = mdx.body
   const meta = mdx.frontmatter
   const keywordsString = meta.keywords.join(', ')
@@ -24,10 +23,18 @@ export default function talkTemplate({ data, location }) {
       <div className="container">
         <article className="content-column post">
           <header>
-            <div className="color-dim">{meta.date}</div>
+            <div className="color-dim">
+              <time dateTime={meta.date}>{meta.date}</time> at{' '}
+              <a
+                href={meta.locationUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="no-underline color-dim"
+              >
+                {meta.location}
+              </a>
+            </div>
             <Headline title={`${meta.title}`} headline={meta.headline} />
-            {meta.location}
-            {meta.locationUrl}
           </header>
           <MDXRenderer>{body}</MDXRenderer>
         </article>
@@ -39,10 +46,6 @@ export const pageQuery = graphql`
   query($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
       body
-      # headings(
-      #   value
-      #   depth
-      # )
       frontmatter {
         date(formatString: "DD MMMM YYYY")
         path
@@ -53,7 +56,6 @@ export const pageQuery = graphql`
         language
         keywords
       }
-      timeToRead
     }
     site {
       siteMetadata {
