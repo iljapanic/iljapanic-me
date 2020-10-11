@@ -18,8 +18,8 @@ const Newsletter = ({ type, size }) => {
           <div className="newsletter-inputs">
             <input
               type="text"
-              name="firstName"
-              id="bd-email"
+              name="first_name"
+              id="first_name"
               placeholder="first name"
               className={`newsletter-name bare mr-s ${
                 size === 'small' && 'small'
