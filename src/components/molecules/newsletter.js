@@ -10,7 +10,8 @@ const Newsletter = ({ type, size }) => {
           // onsubmit="window.open('https://buttondown.email/iljapanic', 'popupwindow')"
           name="newsletter"
           method="POST"
-          data-netlify="true"
+          action="https://getform.io/f/7dfc159a-6596-4876-b9b7-1bc04da0c2a4"
+          // data-netlify="true"
           className="embeddable-buttondown-form form"
         >
           <div className="newsletter-inputs">
