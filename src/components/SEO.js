@@ -20,7 +20,7 @@ function SEO({ description, lang, meta, title, keywords, previewUrl }) {
   if (keywords) {
     metaKeywords = keywords
   }
-  metaDescription = description
+  const metaDescription = description
   const metaPreviewUrl = previewUrl
 
   return (
