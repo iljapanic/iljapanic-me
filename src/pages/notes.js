@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Note from '../components/Note'
+import Note from '../components/note'
 import Headline from '../components/headline'
 
 const NotesPage = ({ data, location }) => {
