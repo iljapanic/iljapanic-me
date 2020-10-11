@@ -5,10 +5,11 @@ const Newsletter = ({ type, size }) => {
     return (
       <div className={`newsletter newsletter-plain mt`}>
         <form
-          action="https://buttondown.email/api/emails/embed-subscribe/iljapanic"
-          method="post"
-          target="popupwindow"
-          onsubmit="window.open('https://buttondown.email/iljapanic', 'popupwindow')"
+          // action="https://buttondown.email/api/emails/embed-subscribe/iljapanic"
+          // target="popupwindow"
+          // onsubmit="window.open('https://buttondown.email/iljapanic', 'popupwindow')"
+          method="POST"
+          data-netlify="true"
           className="embeddable-buttondown-form form"
         >
           <div className="newsletter-inputs">
@@ -31,7 +32,7 @@ const Newsletter = ({ type, size }) => {
               type="submit"
               value="Stay updated"
             ></input>
-            <input type="hidden" value="1" name="embed"></input>
+            {/* <input type="hidden" value="1" name="embed"></input> */}
           </div>
         </form>
       </div>
