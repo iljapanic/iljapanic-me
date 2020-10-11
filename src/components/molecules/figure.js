@@ -10,4 +10,4 @@ const Figure = ({ image, caption }) => {
   )
 }
 
-export default Quote
+export default Figure

@@ -7,9 +7,40 @@
 }
 
 .newsletter-inputs {
-  /* display: flex;
-  align-items: stretch; */
   display: grid;
-  grid-template-columns: 1fr 2fr auto;
-  gap: var(--spacing);
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--spacing-s);
+  align-items: flex-end;
+}
+
+.newsletter-name {
+  grid-column: 1/3;
+}
+
+.newsletter-email {
+  grid-column: 3/7;
+}
+
+.newsletter-submit {
+  grid-column: 2/6;
+  margin-top: var(--spacing-s);
+}
+
+@media (--medium) {
+  .newsletter-inputs {
+    grid-template-columns: 1fr 2fr auto;
+  }
+
+  .newsletter-name {
+    grid-column: 1/2;
+  }
+
+  .newsletter-email {
+    grid-column: 2/3;
+  }
+
+  .newsletter-submit {
+    grid-column: 3/4;
+    margin-top: 0;
+  }
 }

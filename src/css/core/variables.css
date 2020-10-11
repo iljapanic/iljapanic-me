@@ -1,7 +1,7 @@
 :root {
   /* TYPOGRAPHY */
-  --font-sans: 'National 2';
-  --font-serif: 'Tiempos';
+  --font-sans: 'National 2', system-ui, sans-serif;
+  --font-serif: 'Tiempos', serif;
   --font-size-1: 1rem;
   --font-size-2: calc(var(--scale) * var(--font-size-1));
   --font-size-3: calc(var(--scale) * var(--font-size-2));

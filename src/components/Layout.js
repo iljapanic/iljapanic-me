@@ -20,7 +20,8 @@ const Layout = ({ children, location }) => {
       <main>
         <MDXProvider components={shortcodes}>{children}</MDXProvider>
       </main>
-      {pathname !== '/' && <Footer />}
+      {/* {pathname !== '/' && <Footer />} */}
+      <Footer />
     </>
   )
 }

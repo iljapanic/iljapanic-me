@@ -8,6 +8,7 @@ button,
   color: white;
   padding: 0.5rem 0.75rem;
   line-height: 1;
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.35s var(--easing);
 }

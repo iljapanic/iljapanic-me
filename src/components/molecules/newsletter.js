@@ -3,11 +3,7 @@ import React from 'react'
 const Newsletter = ({ type, size }) => {
   if (type === 'plain') {
     return (
-      <div
-        className={`newsletter newsletter-plain mt ${
-          size === 'small' && 'newsletter-small'
-        }`}
-      >
+      <div className={`newsletter newsletter-plain mt`}>
         <form
           action="https://buttondown.email/api/emails/embed-subscribe/iljapanic"
           method="post"
@@ -21,21 +17,17 @@ const Newsletter = ({ type, size }) => {
               name="first_name"
               id="first_name"
               placeholder="first name"
-              className={`newsletter-name bare mr-s ${
-                size === 'small' && 'small'
-              }`}
+              className={`newsletter-name bare mr-s`}
             ></input>
             <input
               type="email"
               name="email"
               id="bd-email"
               placeholder="your email"
-              className={`newsletter-email bare mr-s ${
-                size === 'small' && 'small'
-              }`}
+              className={`newsletter-email bare mr-s`}
             ></input>
             <input
-              className={`btn ${size === 'small' && 'btn-small'}`}
+              className={`newsletter-submit btn`}
               type="submit"
               value="Stay updated"
             ></input>

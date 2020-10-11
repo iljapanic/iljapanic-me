@@ -23,6 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-plausible`,
       options: {
         domain: `iljapanic.com`,
+        customDomain: `stats.iljapanic.com`,
       },
     },
     {
@@ -134,11 +135,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ilja Panic`,
+        name: `Ilja Panić`,
         short_name: `iljapanic`,
         start_url: `/`,
-        background_color: `#0F43A9`,
-        theme_color: `#0F43A9`,
+        background_color: `#9a2e22`,
+        theme_color: `#9a2e22`,
         display: `minimal-ui`,
         icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
       },

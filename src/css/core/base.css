@@ -64,6 +64,10 @@ a {
   transition: var(--transition-all);
 }
 
+a[href^='mailto:']::before {
+  content: '✉️ ';
+}
+
 a:hover {
   color: var(--color-accent);
 }
