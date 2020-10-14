@@ -45,7 +45,12 @@ export default function talkTemplate({ data, location }) {
               }
             >
               {meta.locationUrl && (
-                <a href={meta.locationUrl} className="pill">
+                <a
+                  href={meta.locationUrl}
+                  className="pill"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaGlobe /> Venue website
                 </a>
               )}
