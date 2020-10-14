@@ -76,7 +76,9 @@
   /* ANIMATION */
   --easing: cubic-bezier(0.47, 0, 0.745, 0.715);
   --transition-all: all 0.15s var(--easing);
-  --theme-transition: all 0.35s var(--easing);
+  --theme-transition-duration: 0.35s;
+  --theme-transition: background var(--theme-transition-duration) var(--easing),
+    color var(--theme-transition-duration) var(--easing);
 }
 
 .dark {
