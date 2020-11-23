@@ -28,14 +28,7 @@ const Footer = () => {
           </div>
 
           <p className="xs color-dim mt-xxl">
-            Written, designed and developed by Ilja Panić using{' '}
-            <a
-              href="https://www.gatsbyjs.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Gatsby
-            </a>
+            Written, designed and developed by Ilja Panić
           </p>
           {/* <p className="xs color-dim mt-s">
             Type from{' '}
