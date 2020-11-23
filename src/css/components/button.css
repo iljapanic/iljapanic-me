@@ -11,11 +11,13 @@ button,
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.35s var(--easing);
+  text-decoration: none;
 }
 
 button:hover,
 .btn:hover {
   background-color: var(--color-accent-shade);
+  color: white;
 }
 
 /* small */
@@ -24,6 +26,15 @@ button.btn-small,
   padding: 0.25rem 0.5rem;
   font-size: var(--size-xs);
 }
+
+
+/* large */
+button.btn-large,
+.btn.btn-large {
+  padding: 0.75rem 1rem;
+  font-size: 1.15rem;
+}
+
 
 /* flush-left */
 .btn.flush-left {
