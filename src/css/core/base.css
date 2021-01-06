@@ -62,6 +62,7 @@ p {
 a {
   color: var(--color-secondary);
   transition: var(--transition-all);
+  cursor: pointer;
 }
 
 a[href^='mailto:']::before {

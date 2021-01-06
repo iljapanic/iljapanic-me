@@ -3,7 +3,7 @@ import { FaTwitter, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
 
 const Social = () => {
   return (
-    <div class="social">
+    <div className="social">
       <a
         href="https://instagram.com/iljapanic/"
         target="_blank"

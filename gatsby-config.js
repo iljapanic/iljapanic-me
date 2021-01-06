@@ -15,10 +15,21 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-dark-mode`,
     // `gatsby-plugin-feed-mdx`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [
+          `/music`,
+          `/notes/*`,
+          `/feed/*`,
+          `/favorites/*`,
+          `/services/*`,
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-plausible`,
       options: {
