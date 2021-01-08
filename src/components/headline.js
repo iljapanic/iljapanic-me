@@ -4,7 +4,7 @@ const Headline = ({ title, headline }) => {
   return (
     <header>
       <h1 className="mb-0 mt-0">{title}</h1>
-      <p className="color-secondary h4 mt-xs">{headline}</p>
+      {headline && <p className="color-secondary h4 mt-xs">{headline}</p>}
     </header>
   )
 }

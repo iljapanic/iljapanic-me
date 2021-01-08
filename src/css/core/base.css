@@ -107,7 +107,7 @@ iframe {
 
 strong,
 b {
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-medium);
 }
 
 hr {
