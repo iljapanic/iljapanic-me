@@ -27,6 +27,8 @@ module.exports = {
           `/feed/*`,
           `/favorites/*`,
           `/services/*`,
+          `/projects/*`,
+          `/portfolio/*`,
         ],
       },
     },
@@ -80,6 +82,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/talks`,
         name: `talks`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/projects`,
+        name: `projects`,
       },
     },
     {
