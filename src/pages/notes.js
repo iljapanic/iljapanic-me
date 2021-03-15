@@ -18,10 +18,12 @@ const NotesPage = ({ data, location }) => {
   return (
     <Layout location={location}>
       <SEO title="Notes" />
-      <div className="container">
-        <Headline title="Notes" headline="Short mussings and writings" />
-        <section className="mt-12 max-w-2xl">{notes}</section>
-      </div>
+      <section className="container">
+        <div className="content-column">
+          <Headline title="Notes" headline="Short mussings and writings" />
+          {notes}
+        </div>
+      </section>
     </Layout>
   )
 }

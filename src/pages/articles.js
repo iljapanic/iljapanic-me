@@ -38,7 +38,7 @@ const ArticlesPage = ({ data, location }) => {
 export const query = graphql`
   query {
     articles: allMdx(
-      filter: { fileAbsolutePath: { regex: "/(articles)/.*\\\\.mdx$/" } }
+      filter: { fileAbsolutePath: { regex: "/articles/" } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {

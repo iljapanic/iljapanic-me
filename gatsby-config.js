@@ -28,7 +28,6 @@ module.exports = {
           `/favorites/*`,
           `/services/*`,
           `/projects/*`,
-          `/portfolio/*`,
         ],
       },
     },
@@ -66,29 +65,43 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/articles`,
+        path: `${__dirname}/src/content/articles`,
         name: `articles`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/notes`,
+        path: `${__dirname}/src/content/notes`,
         name: `notes`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/talks`,
+        path: `${__dirname}/src/content/talks`,
         name: `talks`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/projects`,
+        path: `${__dirname}/src/content/projects`,
         name: `projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/workshops`,
+        name: `workshops`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/courses`,
+        name: `courses`,
       },
     },
     {
@@ -189,7 +202,7 @@ module.exports = {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
-        concurrency: 5,
+
         tables: [
           {
             baseId: process.env.AIRTABLE_BASE_LIBRARY,

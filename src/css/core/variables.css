@@ -60,7 +60,8 @@
   --color-accent: #9a2e22;
   --color-accent-tint: #ae584e;
   --color-accent-shade: #7b251b;
-  --color-highlight: rgba(255, 255, 0, 0.25);
+  --color-highlight: rgba(255, 255, 0, 0.45);
+  --color-selected: rgba(186, 82, 74, 0.15);
 
   --color-twitter: #1dcaff;
   --color-linkedin: #007bb5;

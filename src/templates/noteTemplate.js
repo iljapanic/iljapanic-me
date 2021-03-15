@@ -2,28 +2,35 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
-// import dayjs from 'dayjs'
+import Headline from '../components/headline'
 import SEO from '../components/seo'
 
 export default function articleTemplate({ data, location }) {
   const { mdx } = data
-  // const siteUrl = data.site.siteMetadata.siteUrl
-  // const today = dayjs().format('MMMM DD YYYY')
   const { frontmatter, body } = mdx
+  const keywordsString = frontmatter.keywords.join(', ')
 
   return (
     <Layout location={location}>
-      <SEO title={frontmatter.title} />
-      <article className="container">
-        <header>
-          <h1>{frontmatter.title}</h1>
-          {frontmatter.date}
-        </header>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.abstract}
+        keywords={keywordsString}
+      />
 
-        <div className="max-w-2xl mx-auto">
+      <div className="container">
+        <article className="content-column post">
+          <header>
+            <div className="color-dim">{frontmatter.date}</div>
+            <Headline
+              title={frontmatter.title}
+              headline={frontmatter.headline}
+            />
+          </header>
+
           <MDXRenderer>{body}</MDXRenderer>
-        </div>
-      </article>
+        </article>
+      </div>
     </Layout>
   )
 }

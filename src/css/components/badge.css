@@ -1,0 +1,13 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-dim);
+  color: var(--color-secondary);
+  text-decoration: none;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  font-size: var(--size-xs);
+  transition: var(--transition-all);
+  margin-right: var(--spacing-s);
+}

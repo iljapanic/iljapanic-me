@@ -116,8 +116,13 @@ hr {
   border-top: 1px solid var(--color-faint);
 }
 
-::selection {
+mark {
+  color: inherit;
   background-color: var(--color-highlight);
+}
+
+::selection {
+  background-color: var(--color-selected);
 }
 
 @supports (font-size-adjust: 1) {

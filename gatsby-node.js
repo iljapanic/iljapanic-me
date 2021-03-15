@@ -5,10 +5,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const noteTemplate = path.resolve(`./src/templates/noteTemplate.js`)
   const talkTemplate = path.resolve(`./src/templates/talkTemplate.js`)
   const projectTemplate = path.resolve(`./src/templates/projectTemplate.js`)
+  const workshopTemplate = path.resolve(`./src/templates/workshopTemplate.js`)
   const result = await graphql(`
     {
       articles: allMdx(
-        filter: { fileAbsolutePath: { regex: "/(articles)/.*\\\\.mdx$/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/articles/" }
+          frontmatter: { published: { eq: true } }
+        }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
@@ -20,7 +24,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
       notes: allMdx(
-        filter: { fileAbsolutePath: { regex: "/(notes)/.*\\\\.mdx$/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/notes/" }
+          frontmatter: { published: { eq: true } }
+        }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
@@ -32,7 +39,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
       talks: allMdx(
-        filter: { fileAbsolutePath: { regex: "/(talks)/.*\\\\.mdx$/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/talks/" }
+          frontmatter: { published: { eq: true } }
+        }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
@@ -44,7 +54,40 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
       projects: allMdx(
-        filter: { fileAbsolutePath: { regex: "/(projects)/.*\\\\.mdx$/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/projects/" }
+          frontmatter: { published: { eq: true } }
+        }
+        sort: { fields: frontmatter___order, order: ASC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+      workshops: allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/workshops/" }
+          frontmatter: { published: { eq: true } }
+        }
+        sort: { fields: frontmatter___order, order: ASC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+      courses: allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/courses/" }
+          frontmatter: { published: { eq: true } }
+        }
         sort: { fields: frontmatter___order, order: ASC }
       ) {
         edges {
@@ -90,17 +133,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {},
     })
   })
-}
-
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage } = actions
-  // page.matchPath is a special key that's used for matching pages
-  // only on the client.
-  if (page.path.match(/^\/portfolio/)) {
-    page.matchPath = '/portfolio/*'
-    // Update the page.
-    createPage(page)
-  }
+  result.data.workshops.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: workshopTemplate,
+      context: {},
+    })
+  })
+  result.data.courses.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: workshopTemplate,
+      context: {},
+    })
+  })
 }

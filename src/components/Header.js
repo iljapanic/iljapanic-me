@@ -55,7 +55,7 @@ const Header = () => {
           <ListLink to="/bookshelf/" text="Bookshelf" />
           {/* <ListLink to="/toolbox/">Toolbox</ListLink> */}
           <ListLink to="/about/" text="About" />
-          <ListLink to="/now/" text="Now" />
+          {/* <ListLink to="/now/" text="Now" /> */}
           {/* <ListLink to="/feed/">Feed</ListLink> */}
         </ul>
       </nav>

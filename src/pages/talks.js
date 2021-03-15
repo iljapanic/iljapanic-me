@@ -20,7 +20,7 @@ const TalksPage = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title="Articles" />
+      <SEO title="Talks" />
       <section className="container">
         <div className="content-column">
           <Headline
@@ -37,7 +37,7 @@ const TalksPage = ({ data, location }) => {
 export const query = graphql`
   query {
     talks: allMdx(
-      filter: { fileAbsolutePath: { regex: "/(talks)/.*\\\\.mdx$/" } }
+      filter: { fileAbsolutePath: { regex: "/talks/" } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {

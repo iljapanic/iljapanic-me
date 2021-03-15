@@ -29,7 +29,7 @@ const ProjectsPage = ({ data, location }) => {
 export const query = graphql`
   query {
     projects: allMdx(
-      filter: { fileAbsolutePath: { regex: "/(projects)/.*\\\\.mdx$/" } }
+      filter: { fileAbsolutePath: { regex: "/projects/" } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
