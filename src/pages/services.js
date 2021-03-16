@@ -14,16 +14,13 @@ const IndexPage = ({ data, location }) => {
   )
 }
 
-export const query = graphql`
-  query {
-    illustration: file(relativePath: { eq: "hero.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  illustration: file(relativePath: {eq: "hero.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 800, layout: CONSTRAINED)
     }
   }
+}
 `
 
 export default IndexPage

@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { getSrc } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { FaFacebookF, FaGlobe } from 'react-icons/fa'
 
@@ -12,6 +13,7 @@ export default function talkTemplate({ data, location }) {
   const body = mdx.body
   const meta = mdx.frontmatter
   const keywordsString = meta.keywords.join(', ')
+  const coverPath = getSrc(meta.cover)
 
   return (
     <Layout location={location}>
@@ -19,7 +21,7 @@ export default function talkTemplate({ data, location }) {
         title={`${meta.title} [${meta.language}]`}
         description={`${meta.headline} | ${meta.location}`}
         keywords={`talk, presentation, ${keywordsString}`}
-        coverUrl={meta.cover.childImageSharp.fixed.src}
+        previewUrl={coverPath}
       />
       <div className="container">
         <article className="content-column post">
@@ -90,9 +92,7 @@ export const pageQuery = graphql`
         keywords
         cover {
           childImageSharp {
-            fixed(width: 1200) {
-              src
-            }
+            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
           }
         }
       }

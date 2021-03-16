@@ -19,7 +19,7 @@ const Bookshelf = ({ data, location }) => {
         featured={book.featured}
         authors={book.people}
         tags={book.tags}
-        cover={book.cover.localFiles[0].childImageSharp.fluid}
+        cover={book.cover.localFiles[0].childImageSharp.gatsbyImageData}
       />
     )
   })
@@ -37,7 +37,7 @@ const Bookshelf = ({ data, location }) => {
         featured={book.featured}
         authors={book.people}
         tags={book.tags}
-        cover={book.cover.localFiles[0].childImageSharp.fluid}
+        cover={book.cover.localFiles[0].childImageSharp.gatsbyImageData}
       />
     )
   })
@@ -74,7 +74,7 @@ const Bookshelf = ({ data, location }) => {
 }
 
 export const query = graphql`
-  query {
+  {
     nonFiction: allAirtable(
       filter: {
         table: { eq: "books" }
@@ -105,9 +105,11 @@ export const query = graphql`
             cover {
               localFiles {
                 childImageSharp {
-                  fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    width: 400
+                    layout: CONSTRAINED
+                    placeholder: BLURRED
+                  )
                 }
               }
             }
@@ -142,9 +144,11 @@ export const query = graphql`
             cover {
               localFiles {
                 childImageSharp {
-                  fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    width: 400
+                    layout: CONSTRAINED
+                    placeholder: BLURRED
+                  )
                 }
               }
             }

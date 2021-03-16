@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const BookPreview = ({ title, year, url, featured, authors, cover, tags }) => {
   const allAuthors = authors.map((author, i) => (
@@ -22,8 +22,13 @@ const BookPreview = ({ title, year, url, featured, authors, cover, tags }) => {
   return (
     <article className="mt book">
       <div className="image">
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          <Img fluid={cover} />
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <GatsbyImage image={cover} />
         </a>
       </div>
       <div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { getSrc } from 'gatsby-plugin-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -11,6 +12,7 @@ export default function projectTemplate({ data, location }) {
   const body = mdx.body
   const meta = mdx.frontmatter
   const keywordsString = meta.keywords.join(', ')
+  const coverPath = getSrc(meta.cover)
 
   return (
     <Layout location={location}>
@@ -18,7 +20,7 @@ export default function projectTemplate({ data, location }) {
         title={`${meta.title}`}
         description={`${meta.headline}`}
         keywords={`project, ${keywordsString}`}
-        coverUrl={meta.cover.childImageSharp.fixed.src}
+        previewUrl={coverPath}
       />
       <div className="container">
         <article className="content-column post">
@@ -45,9 +47,7 @@ export const pageQuery = graphql`
         keywords
         cover {
           childImageSharp {
-            fixed(width: 1200) {
-              src
-            }
+            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
           }
         }
       }

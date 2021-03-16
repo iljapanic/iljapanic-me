@@ -52,6 +52,7 @@ h4,
   line-height: calc(1ex / 0.37);
   margin-top: calc(1ex / 0.37);
   margin-bottom: 0;
+  font-family: var(--font-sans);
 }
 
 p {

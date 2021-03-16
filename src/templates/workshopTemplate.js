@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout.js'
 import SEO from '../components/seo.js'
-import Headline from '../components/molecules/headline.js'
 
 const Type = ({ type }) => {
   return (
@@ -33,6 +32,7 @@ export default function workshopTemplate({ data, location }) {
             <div>
               <Type type={meta.type} />
             </div>
+
             <h1 className="mt-xs">{meta.title}</h1>
             <p className="mt-s large">{meta.summary}</p>
             <p>

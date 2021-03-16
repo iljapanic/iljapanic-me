@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from './layout'
 import SEO from '../components/seo'
 
-export default ({ children, pageContext, location }) => {
+const LayoutDefault = ({ children, pageContext, location }) => {
   const post = pageContext.frontmatter
 
   var title = post.title
@@ -26,3 +26,5 @@ export default ({ children, pageContext, location }) => {
     </Layout>
   )
 }
+
+export default LayoutDefault
