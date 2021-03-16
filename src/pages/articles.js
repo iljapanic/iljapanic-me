@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import ArticlePreview from '../components/articlePreview'
-import Headline from '../components/headline'
+import Layout from '../components/layout.js'
+import SEO from '../components/seo.js'
+import ArticlePreview from '../components/previews/articlePreview.js'
+import Headline from '../components/molecules/headline.js'
 
 const ArticlesPage = ({ data, location }) => {
   const articles = data.articles.nodes.map((node, index) => (

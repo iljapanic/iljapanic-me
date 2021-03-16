@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+
 import Layout from '../components/layout'
-import Headline from '../components/headline'
+import Headline from '../components/molecules/headline'
 import SEO from '../components/seo'
 
 export default function articleTemplate({ data, location }) {

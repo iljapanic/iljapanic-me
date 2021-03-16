@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Headline from '../components/headline'
-import ProjectPreview from '../components/projectPreview'
+import Headline from '../components/molecules/headline'
+import ProjectPreview from '../components/previews/projectPreview'
 
 const ProjectsPage = ({ data, location }) => {
   const projects = data.projects.nodes.map((node, index) => (

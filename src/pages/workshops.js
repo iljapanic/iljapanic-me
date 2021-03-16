@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../../components/layout'
-import SEO from '../../components/seo'
-import Headline from '../../components/molecules/headline'
-import TeachingPreview from '../../components/previews/teachingPreview'
 
-const TeachingPage = ({ data, location }) => {
-  const teaching = data.teaching.nodes.map((node, index) => {
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Headline from '../components/molecules/headline'
+import TeachingPreview from '../components/previews/teachingPreview'
+
+const WorkshopsPage = ({ data, location }) => {
+  const workshops = data.workshops.nodes.map((node, index) => {
     const meta = node.frontmatter
     return (
       <TeachingPreview
@@ -21,14 +22,14 @@ const TeachingPage = ({ data, location }) => {
   })
   return (
     <Layout location={location}>
-      <SEO title="Teaching" />
+      <SEO title="Workshops" />
       <div className="container">
         <div className="content-column">
           <Headline
-            title="Teaching"
-            headline="Courses and workshops that I offer"
+            title="Workshops"
+            headline="Practical learning for groups & individuals"
           />
-          <section>{teaching}</section>
+          <section>{workshops}</section>
         </div>
       </div>
     </Layout>
@@ -37,9 +38,9 @@ const TeachingPage = ({ data, location }) => {
 
 export const query = graphql`
   query {
-    teaching: allMdx(
+    workshops: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/(workshops|courses)/" }
+        fileAbsolutePath: { regex: "/(workshops)/" }
         frontmatter: { published: { eq: true } }
       }
       sort: { fields: frontmatter___order, order: ASC }
@@ -57,4 +58,4 @@ export const query = graphql`
   }
 `
 
-export default TeachingPage
+export default WorkshopsPage

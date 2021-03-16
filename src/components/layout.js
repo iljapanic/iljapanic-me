@@ -7,9 +7,9 @@ import '../css/index.css'
 /* components available in .mdx pages */
 import Quote from './molecules/quote'
 import Newsletter from './molecules/newsletter'
-import Headline from './headline'
+import Headline from './molecules/headline'
 import Soundcloud from './molecules/soundcloud'
-import CV from './cv'
+import CV from './staticContent/cv'
 const shortcodes = { Quote, Headline, Newsletter, CV, Soundcloud }
 
 const Layout = ({ children, location }) => {

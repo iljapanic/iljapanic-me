@@ -1,10 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import SEO from '../components/seo'
-import Headline from '../components/headline'
 import dayjs from 'dayjs'
+
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Headline from '../components/molecules/headline'
 
 export default function articleTemplate({ data, location }) {
   const { mdx } = data

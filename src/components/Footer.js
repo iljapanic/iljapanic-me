@@ -1,6 +1,6 @@
 import React from 'react'
 import Newsletter from './molecules/newsletter'
-import Social from './social'
+import Social from './staticContent/social'
 
 const Footer = () => {
   return (

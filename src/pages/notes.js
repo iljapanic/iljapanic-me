@@ -1,13 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Note from '../components/note'
-import Headline from '../components/headline'
+import NotePreview from '../components/previews/notePreview'
+import Headline from '../components/molecules/headline'
 
 const NotesPage = ({ data, location }) => {
   const notes = data.notes.nodes.map((node, index) => (
-    <Note
+    <NotePreview
       title={node.frontmatter.title}
       date={node.frontmatter.date}
       path={node.frontmatter.path}

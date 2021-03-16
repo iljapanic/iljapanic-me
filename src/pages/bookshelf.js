@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import BookPreview from '../components/previews/bookPreview'
-import Headline from '../components/headline'
+import Layout from '../components/layout.js'
+import SEO from '../components/seo.js'
+import BookPreview from '../components/previews/bookPreview.js'
+import Headline from '../components/molecules/headline.js'
 
 const Bookshelf = ({ data, location }) => {
   // const nonFiction = data.nonFiction.edges.map((item) => {

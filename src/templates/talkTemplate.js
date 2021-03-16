@@ -1,10 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import SEO from '../components/seo'
-import Headline from '../components/headline'
 import { FaFacebookF, FaGlobe } from 'react-icons/fa'
+
+import Headline from '../components/molecules/headline'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 export default function talkTemplate({ data, location }) {
   const { mdx } = data

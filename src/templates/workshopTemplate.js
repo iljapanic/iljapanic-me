@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import SEO from '../components/seo'
-import Headline from '../components/headline'
+import Layout from '../components/layout.js'
+import SEO from '../components/seo.js'
+import Headline from '../components/molecules/headline.js'
 
 const Type = ({ type }) => {
   return (

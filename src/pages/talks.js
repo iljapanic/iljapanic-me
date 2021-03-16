@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import TalkPreview from '../components/talkPreview'
-import Headline from '../components/headline'
+import TalkPreview from '../components/previews/talkPreview'
+import Headline from '../components/molecules/headline'
 
 const TalksPage = ({ data, location }) => {
   const talks = data.talks.nodes.map((node, index) => (
