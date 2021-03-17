@@ -122,6 +122,16 @@ mark {
   background-color: var(--color-highlight);
 }
 
+p code,
+li code {
+  background-color: var(--color-faint);
+  font-family: var(--font-sans);
+  padding: 0 0.25em;
+  border-radius: var(--radius);
+  font-weight: var(--fw-medium);
+  color: rgba(var(--color-base-rgb), 0.75);
+}
+
 ::selection {
   background-color: var(--color-selected);
 }
