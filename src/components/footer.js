@@ -11,9 +11,9 @@ const Footer = () => {
           <div className="footer-box">
             <h2 className="base fw-medium sans mt-0">Let’s stay in touch</h2>
             <p className="mt-s small">
-              Feel free to connect with me on social media or sign up for my
-              mailing list to get occasional updates about new stuff I'm working
-              on. No spam, ever{' '}
+              Connect with me on social media or sign up for my mailing list to
+              get occasional updates about new stuff I'm working on. No spam,
+              ever{' '}
               <span role="img" aria-label="fingers crossed">
                 🤞
               </span>

@@ -31,13 +31,13 @@ export default function workshopTemplate({ data, location }) {
           <header>
             <div>
               <Type type={meta.type} />
+              <span className="color-secondary small ml-xs">
+                {meta.duration}
+              </span>
             </div>
 
             <h1 className="mt-xs">{meta.title}</h1>
             <p className="mt-s large">{meta.summary}</p>
-            <p>
-              <strong>Duration:</strong> {meta.duration}
-            </p>
           </header>
           <hr />
           <MDXRenderer>{body}</MDXRenderer>
