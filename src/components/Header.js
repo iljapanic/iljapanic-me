@@ -53,6 +53,7 @@ const Header = () => {
           {/* <ListLink to="/notes/">Notes</ListLink> */}
           <ListLink to="/articles/" text="Articles" />
           <ListLink to="/bookshelf/" text="Bookshelf" />
+          <ListLink to="/feed/" text="Feed" />
           {/* <ListLink to="/toolbox/">Toolbox</ListLink> */}
           <ListLink to="/about/" text="About" />
           {/* <ListLink to="/now/" text="Now" /> */}

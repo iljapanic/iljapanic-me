@@ -202,7 +202,6 @@ module.exports = {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
-
         tables: [
           {
             baseId: process.env.AIRTABLE_BASE_LIBRARY,
@@ -225,6 +224,20 @@ module.exports = {
             tableView: `tagsBooks`,
             queryName: `tagsBooks`,
             tableLinks: [`books`],
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_FEED,
+            tableName: `feed`,
+            tableView: `published`,
+            queryName: `feed`,
+            tableLinks: [`tags`],
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_FEED,
+            tableName: `tags`,
+            tableView: `sorted`,
+            queryName: `tagsFeed`,
+            tableLinks: [`feed`],
           },
         ],
       },
