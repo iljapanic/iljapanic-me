@@ -8,7 +8,7 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion'
 
-import Work from './work'
+// import Work from './work'
 import Education from './education'
 import Competences from './competences'
 import Stack from './stack'
@@ -32,9 +32,9 @@ export default function CV() {
       allowMultipleExpanded={true}
       allowZeroExpanded={true}
     >
-      <Item title="Work highlights">
+      {/* <Item title="Work highlights">
         <Work />
-      </Item>
+      </Item> */}
       <Item title="Education">
         <Education />
       </Item>

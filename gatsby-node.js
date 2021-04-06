@@ -102,30 +102,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      feed: allAirtable(
-        filter: { table: { eq: "feed" } }
-        sort: { fields: data___created, order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            data {
-              title
-              category
-              url
-              notes
-              slug
-              created
-              tags {
-                data {
-                  name
-                  slug
-                }
-              }
-            }
-          }
-        }
-      }
     }
   `)
   // Handle errors
@@ -173,33 +149,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: node.frontmatter.path,
       component: workshopTemplate,
       context: {},
-    })
-  })
-
-  result.data.feed.edges.forEach(({ node }) => {
-    createPage({
-      path: `/feed/${node.data.slug}`,
-      component: feedTemplate,
-      context: {
-        slug: node.data.slug,
-      },
-    })
-  })
-
-  const feedPosts = result.data.feed.edges
-  const feedPostsPerPage = 4
-  const feedNumPages = Math.ceil(feedPosts.length / feedPostsPerPage)
-
-  Array.from({ length: feedNumPages }).forEach((_, i) => {
-    createPage({
-      path: i === 0 ? `/feed` : `/feed/${i + 1}`,
-      component: feedListTemplate,
-      context: {
-        limit: feedPostsPerPage,
-        skip: i * feedPostsPerPage,
-        feedNumPages,
-        currentPage: i + 1,
-      },
     })
   })
 }
