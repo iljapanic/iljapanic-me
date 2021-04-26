@@ -9,8 +9,9 @@ import Quote from './molecules/quote'
 import Newsletter from './molecules/newsletter'
 import Headline from './molecules/headline'
 import Soundcloud from './molecules/soundcloud'
+import Video from './molecules/video'
 import CV from './staticContent/cv'
-const shortcodes = { Quote, Headline, Newsletter, CV, Soundcloud }
+const shortcodes = { Quote, Headline, Newsletter, CV, Soundcloud, Video }
 
 const Layout = ({ children, location }) => {
   return (

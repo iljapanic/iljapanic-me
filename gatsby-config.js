@@ -6,7 +6,8 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     title: 'Ilja Panić',
-    description: 'Ilja is a design technologist researching complex systems.',
+    description:
+      'Ilja is a design technologist researching complex systems. He helps people and organizations understand technology.',
     author: '@iljapanic',
     siteUrl: `https://iljapanic.com`,
   },
@@ -120,7 +121,6 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           `gatsby-remark-smartypants`,
-          `gatsby-remark-embed-video`,
           `gatsby-remark-responsive-iframe`,
           `gatsby-remark-relative-images`,
           `gatsby-remark-copy-linked-files`,
@@ -152,10 +152,10 @@ module.exports = {
           //   options: {
           //     usePrefix: ['embed', 'video', 'oembed'],
           //     providers: {
-          //       include: ['Twitter', 'SpeakerDeck', 'Vimeo', 'YouTube'],
+          //       include: ['Twitter', 'Youtube', 'SpeakerDeck', 'Vimeo'],
           //       settings: {
           //         // Ex. Show all Twitter embeds with the dark theme
-          //         // Twitter: { theme: 'dark' },
+          //         // Twtiter: { theme: 'dark' },
           //         // Ex. Hide all Instagram comments by default
           //         // Instagram: { hidecaption: true },
           //       },
