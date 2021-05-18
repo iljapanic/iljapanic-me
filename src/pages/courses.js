@@ -6,8 +6,8 @@ import SEO from '../components/seo'
 import Headline from '../components/molecules/headline'
 import TeachingPreview from '../components/previews/teachingPreview'
 
-const WorkshopsPage = ({ data, location }) => {
-  const workshops = data.workshops.nodes.map((node, index) => {
+const CoursesPage = ({ data, location }) => {
+  const courses = data.courses.nodes.map((node, index) => {
     const meta = node.frontmatter
     return (
       <TeachingPreview
@@ -22,14 +22,14 @@ const WorkshopsPage = ({ data, location }) => {
   })
   return (
     <Layout location={location}>
-      <SEO title="Workshops" />
+      <SEO title="Courses & Workshops" />
       <div className="container">
         <div className="content-column">
           <Headline
-            title="Workshops"
+            title="Courses & Workshops"
             headline="Practical learning for groups & individuals"
           />
-          <section>{workshops}</section>
+          <section>{courses}</section>
         </div>
       </div>
     </Layout>
@@ -38,9 +38,9 @@ const WorkshopsPage = ({ data, location }) => {
 
 export const query = graphql`
   query {
-    workshops: allMdx(
+    courses: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/(workshops)/" }
+        fileAbsolutePath: { regex: "/(courses)/" }
         frontmatter: { published: { eq: true } }
       }
       sort: { fields: frontmatter___order, order: ASC }
@@ -58,4 +58,4 @@ export const query = graphql`
   }
 `
 
-export default WorkshopsPage
+export default CoursesPage
