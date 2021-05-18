@@ -1,6 +1,10 @@
 [build]
-  command = "gatsby build"
   publish = "public/"
+  command = "gatsby build"
+
+[dev]
+  publish = "public/"
+  command = "npm run serve"
 
 [[plugins]]
 package = "netlify-plugin-gatsby-cache"

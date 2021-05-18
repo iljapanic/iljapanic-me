@@ -2,3 +2,5 @@
 /music  /listen
 
 /articles /essays
+
+/articles/* /essays/*
