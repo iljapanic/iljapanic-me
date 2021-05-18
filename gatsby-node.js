@@ -4,6 +4,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const articleTemplate = path.resolve(`./src/templates/articleTemplate.js`)
+  const gardenTemplate = path.resolve(`./src/templates/gardenTemplate.js`)
   const noteTemplate = path.resolve(`./src/templates/noteTemplate.js`)
   const talkTemplate = path.resolve(`./src/templates/talkTemplate.js`)
   const projectTemplate = path.resolve(`./src/templates/projectTemplate.js`)
@@ -21,6 +22,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               path
+            }
+          }
+        }
+      }
+      garden: allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/garden/" }
+          frontmatter: { published: { eq: true } }
+        }
+        sort: { fields: frontmatter___title, order: ASC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              slug
             }
           }
         }
@@ -97,6 +113,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: node.frontmatter.path,
       component: articleTemplate,
       context: {},
+    })
+  })
+  result.data.garden.edges.forEach(({ node }) => {
+    createPage({
+      path: `/garden/${node.frontmatter.slug}/`,
+      component: gardenTemplate,
+      context: {
+        slug: node.frontmatter.slug,
+      },
     })
   })
   result.data.notes.edges.forEach(({ node }) => {

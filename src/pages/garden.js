@@ -2,30 +2,33 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout.js'
 import SEO from '../components/seo.js'
-import ArticlePreview from '../components/previews/articlePreview.js'
+import GardenPreview from '../components/previews/gardenPreview.js'
 import Headline from '../components/molecules/headline.js'
 
 const GardenPage = ({ data, location }) => {
-  const essays = data.essays.nodes.map((node, index) => (
-    <ArticlePreview
-      title={node.frontmatter.title}
-      headline={node.frontmatter.headline}
-      date={node.frontmatter.date}
-      abstract={node.frontmatter.abstract}
-      keywords={node.frontmatter.keywords}
-      path={node.frontmatter.path}
-      affiliation={node.frontmatter.affiliation}
-      timeToRead={node.timeToRead}
-    />
-  ))
+  const garden = data.garden.nodes.map((node, index) => {
+    const meta = node.frontmatter
+
+    return (
+      <GardenPreview
+        key={`garden-${index}`}
+        title={meta.title}
+        started={meta.date}
+        slug={meta.slug}
+      />
+    )
+  })
 
   return (
     <Layout location={location}>
-      <SEO title="Essays" />
+      <SEO title="Digital Garden" />
       <section className="container">
         <div className="content-column">
-          <Headline title="Essays" headline="Long-form pieces of writting" />
-          {essays}
+          <Headline
+            title="Garden"
+            headline="Loosely tended collection of evergreen notes"
+          />
+          {garden}
         </div>
       </section>
     </Layout>
@@ -34,16 +37,15 @@ const GardenPage = ({ data, location }) => {
 
 export const query = graphql`
   query {
-    essays: allMdx(
-      filter: { fileAbsolutePath: { regex: "/essays/" } }
-      sort: { fields: frontmatter___date, order: DESC }
+    garden: allMdx(
+      filter: { fileAbsolutePath: { regex: "/garden/" } }
+      sort: { fields: frontmatter___title, order: ASC }
     ) {
       nodes {
         frontmatter {
           title
-          headline
-          date(formatString: "MMMM YYYY")
-          path
+          started(formatString: "D MMMM YYYY")
+          slug
         }
       }
     }
