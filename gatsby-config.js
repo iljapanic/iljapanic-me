@@ -56,8 +56,50 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: `${__dirname}/src/content/`,
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/essays`,
+        name: `essays`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/notes`,
+        name: `notes`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/talks`,
+        name: `talks`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/projects`,
+        name: `projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/garden`,
+        name: `garden`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/courses`,
+        name: `courses`,
       },
     },
     {
@@ -102,24 +144,10 @@ module.exports = {
               quality: 85,
             },
           },
-          // {
-          //   resolve: `@raae/gatsby-remark-oembed`,
-          //   options: {
-          //     usePrefix: ['embed', 'video', 'oembed'],
-          //     providers: {
-          //       include: ['Twitter', 'Youtube', 'SpeakerDeck', 'Vimeo'],
-          //       settings: {
-          //         // Ex. Show all Twitter embeds with the dark theme
-          //         // Twtiter: { theme: 'dark' },
-          //         // Ex. Hide all Instagram comments by default
-          //         // Instagram: { hidecaption: true },
-          //       },
-          //     },
-          //   },
-          // },
         ],
       },
     },
+    `gatsby-plugin-mdx-embed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

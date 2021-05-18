@@ -280,6 +280,10 @@
   margin: var(--spacing) auto;
 }
 
+.mdx-embed {
+  margin: var(--spacing) auto;
+}
+
 
 .player-wrapper {
   position: relative;

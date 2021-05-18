@@ -24,7 +24,7 @@ const EssaysPage = ({ data, location }) => {
       <SEO title="Essays" />
       <section className="container">
         <div className="content-column">
-          <Headline title="Essays" headline="Long-form pieces of writting" />
+          <Headline title="Essays" headline="Coherent thoughts in long-form" />
           {essays}
         </div>
       </section>

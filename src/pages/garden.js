@@ -13,8 +13,9 @@ const GardenPage = ({ data, location }) => {
       <GardenPreview
         key={`garden-${index}`}
         title={meta.title}
-        started={meta.date}
+        started={meta.started}
         slug={meta.slug}
+        type={meta.type}
       />
     )
   })
@@ -46,6 +47,7 @@ export const query = graphql`
           title
           started(formatString: "D MMMM YYYY")
           slug
+          type
         }
       }
     }
