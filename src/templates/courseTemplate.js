@@ -13,7 +13,7 @@ const Type = ({ type }) => {
   )
 }
 
-export default function workshopTemplate({ data, location }) {
+export default function courseTemplate({ data, location }) {
   const { mdx } = data
   const body = mdx.body
   const meta = mdx.frontmatter

@@ -7,14 +7,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const noteTemplate = path.resolve(`./src/templates/noteTemplate.js`)
   const talkTemplate = path.resolve(`./src/templates/talkTemplate.js`)
   const projectTemplate = path.resolve(`./src/templates/projectTemplate.js`)
-  const workshopTemplate = path.resolve(`./src/templates/workshopTemplate.js`)
-  const feedTemplate = path.resolve(`./src/templates/feedTemplate.js`)
-  const feedListTemplate = path.resolve(`./src/templates/feedListTemplate.js`)
+  const courseTemplate = path.resolve(`./src/templates/courseTemplate.js`)
   const result = await graphql(`
     {
-      articles: allMdx(
+      essays: allMdx(
         filter: {
-          fileAbsolutePath: { regex: "/articles/" }
+          fileAbsolutePath: { regex: "/essays/" }
           frontmatter: { published: { eq: true } }
         }
         sort: { fields: frontmatter___date, order: DESC }
@@ -94,7 +92,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
-  result.data.articles.edges.forEach(({ node }) => {
+  result.data.essays.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: articleTemplate,
@@ -125,7 +123,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.courses.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
-      component: workshopTemplate,
+      component: courseTemplate,
       context: {},
     })
   })

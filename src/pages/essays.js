@@ -5,8 +5,8 @@ import SEO from '../components/seo.js'
 import ArticlePreview from '../components/previews/articlePreview.js'
 import Headline from '../components/molecules/headline.js'
 
-const ArticlesPage = ({ data, location }) => {
-  const articles = data.articles.nodes.map((node, index) => (
+const EssaysPage = ({ data, location }) => {
+  const essays = data.essays.nodes.map((node, index) => (
     <ArticlePreview
       title={node.frontmatter.title}
       headline={node.frontmatter.headline}
@@ -21,14 +21,11 @@ const ArticlesPage = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title="Articles" />
+      <SEO title="Essays" />
       <section className="container">
         <div className="content-column">
-          <Headline
-            title="Articles"
-            headline="Papers and essays written during various studies"
-          />
-          {articles}
+          <Headline title="Essays" headline="Long-form pieces of writting" />
+          {essays}
         </div>
       </section>
     </Layout>
@@ -37,8 +34,8 @@ const ArticlesPage = ({ data, location }) => {
 
 export const query = graphql`
   query {
-    articles: allMdx(
-      filter: { fileAbsolutePath: { regex: "/articles/" } }
+    essays: allMdx(
+      filter: { fileAbsolutePath: { regex: "/essays/" } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
@@ -53,4 +50,4 @@ export const query = graphql`
   }
 `
 
-export default ArticlesPage
+export default EssaysPage

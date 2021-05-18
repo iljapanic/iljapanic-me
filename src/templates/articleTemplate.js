@@ -69,7 +69,6 @@ export const pageQuery = graphql`
         headline
         abstract
         keywords
-        facebookUrl
       }
       timeToRead
     }

@@ -15,15 +15,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-dark-mode`,
-    // `gatsby-plugin-feed-mdx`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [
-          `/music`,
+        excludes: [
           `/notes/*`,
           `/feed/*`,
           `/favorites/*`,
@@ -59,50 +56,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/articles`,
-        name: `articles`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/notes`,
-        name: `notes`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/talks`,
-        name: `talks`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/projects`,
-        name: `projects`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/workshops`,
-        name: `workshops`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/courses`,
-        name: `courses`,
+        name: `content`,
+        path: `${__dirname}/src/content/`,
       },
     },
     {
@@ -177,6 +132,7 @@ module.exports = {
         icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
