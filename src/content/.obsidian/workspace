@@ -1,0 +1,113 @@
+{
+  "main": {
+    "id": "09689ae04cb92df9",
+    "type": "split",
+    "children": [
+      {
+        "id": "389be6f578d730b1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "garden/networked-note-taking.mdx",
+            "mode": "source"
+          }
+        },
+        "group": "036b7ce95424e8c2"
+      },
+      {
+        "id": "5646267d18e005d7",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "garden/networked-note-taking.mdx",
+            "mode": "preview"
+          }
+        },
+        "group": "036b7ce95424e8c2"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "285e926e19747384",
+    "type": "split",
+    "children": [
+      {
+        "id": "25386cee3e305276",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3a6a6d0abd1f1442",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a9c17b690ae45e26",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d292ad97001debf6",
+    "type": "split",
+    "children": [
+      {
+        "id": "1ca944d9698f3266",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b596cf9dca868a1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "garden/networked-note-taking.mdx",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "389be6f578d730b1",
+  "lastOpenFiles": [
+    "garden/networked-note-taking.mdx",
+    "talks/2020/2020-09-29-sachta/index.mdx",
+    "notes/2020-07-19-quiet-ai.mdx",
+    "essays/2019-cyberbiomes/index.mdx",
+    "garden/digital-gardening.mdx",
+    "garden/tools-for-thought.mdx",
+    "garden/networked-note-taking 1.mdx",
+    "garden/Untitled.md"
+  ]
+}
