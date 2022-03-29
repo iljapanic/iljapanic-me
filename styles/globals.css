@@ -1,0 +1,247 @@
+@import './prism-material-light.css';
+@import './prism-material-oceanic.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Tiempos Headline';
+  src: url('/fonts/test-tiempos-headline-regular.woff2');
+}
+
+@font-face {
+  font-family: 'Recoleta';
+  src: url('/fonts/recoleta.woff2');
+}
+
+@font-face {
+  font-family: 'New Spirit';
+  src: url('/fonts/NewSpirit-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'New Spirit';
+  src: url('/fonts/NewSpirit-Medium.woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'New Spirit';
+  src: url('/fonts/NewSpirit-SemiBold.woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'New Spirit';
+  src: url('/fonts/NewSpirit-Bold.woff2');
+  font-weight: 700;
+}
+
+
+@font-face {
+  font-family: 'iA Quatro';
+  src: url('/fonts/iAWriterQuattroS-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'iA Quatro';
+  src: url('/fonts/iAWriterQuattroS-Bold.woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'iA Quatro';
+  src: url('/fonts/iAWriterQuattroS-BoldItalic.woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'iA Quatro';
+  src: url('/fonts/iAWriterQuattroS-Italic.woff2');
+  font-style: italic;
+}
+
+
+
+
+@layer base {
+  body {
+    @apply bg-bg text-base text-gray-900 px-4 lg:px-0 dark:bg-bg-dark dark:text-gray-50;
+  }
+
+  a {
+    @apply text-accent underline hover:text-accent-secondary transition-colors duration-200;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+
+  h1 {
+    @apply text-2xl mb-8;
+  }
+
+  h2 {
+    @apply text-xl mb-6 mt-12;
+  }
+
+  h3 {
+    @apply text-lg mb-4;
+  }
+
+  h4 {
+    @apply text-base font-bold uppercase tracking-wide mb-4;
+  }
+
+  p {
+    @apply text-base mb-8;
+  }
+
+  p + ul, p + ol {
+    @apply -mt-4;
+  }
+
+  pre {
+    @apply overflow-x-auto rounded-lg mb-12 font-mono text-sm;
+  }
+
+  mark {
+    @apply bg-yellow-200 px-1 py-0.5 rounded-sm;
+  }
+
+  blockquote {
+    @apply italic mb-8 border-l-4 border-gray-200 pl-4 text-gray-600 dark:text-gray-400  dark:border-gray-700;
+  }
+
+  hr {
+    @apply my-16 border-dim dark:border-dim-dark;
+  }
+
+}
+
+p code {
+  @apply bg-gray-200 px-2 py-1 text-sm rounded font-mono dark:bg-gray-800;
+}
+
+.post ul {
+  @apply pl-8 mb-8;
+}
+
+.post ol {
+  @apply pl-16 mb-8;
+}
+
+.post ul li {
+  @apply list-item list-disc pl-3 mb-2;
+}
+
+.post ul li::marker {
+  content: '→';
+}
+
+.post ol li {
+  @apply list-item list-decimal;
+}
+
+/* CUSTOM UTILITIES */
+.text-secondary {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+
+.border-secondary {
+  @apply border-gray-600 dark:border-gray-400;
+}
+
+.wrap {
+  @apply max-w-4xl mx-auto;
+}
+
+.player-wrapper {
+  @apply aspect-video relative;
+}
+
+.footer:before {
+  content: "* * *";
+  @apply text-center mb-20 block text-lg text-gray-500;
+}
+
+
+/* Prism */
+
+.code-highlight {
+  @apply float-left min-w-full;
+}
+
+.code-line {
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-left-width: 4px;
+  border-left-color: rgba(31, 41, 55, 0); /* Set code block color */
+}
+
+.code-line.inserted {
+  background-color: rgba(16, 185, 129, 0.2); /* Set inserted line (+) color */
+}
+
+.code-line.deleted {
+  background-color: rgba(239, 68, 68, 0.2); /* Set deleted line (-) color */
+}
+
+.highlight-line {
+  margin-left: -16px;
+  margin-right: -16px;
+  background-color: rgba(55, 65, 81, 0.5); /* Set highlight bg color */
+  border-left-width: 4px;
+  border-left-color: rgb(59, 130, 246); /* Set highlight accent border color */
+}
+
+.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  margin-right: 16px;
+  margin-left: -8px;
+  color: rgb(156, 163, 175); /* Line number color */
+  content: attr(line);
+}
+
+.highlight-line {
+  @apply bg-gray-200/70 dark:bg-gray-900/40;
+}
+
+.rehype-code-title {
+  @apply text-right relative text-xs pt-2 font-mono font-bold text-secondary pr-4 rounded-t-lg z-10;
+  background: #fafafa;
+}
+
+.dark .rehype-code-title {
+  background: #263238;
+}
+
+.rehype-code-title + pre {
+  @apply rounded-t-none -mt-6;
+}
+
+
+.image-container {
+
+  width: 100%;
+
+  > div {
+    position: unset !important;
+  }
+
+  .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+}
