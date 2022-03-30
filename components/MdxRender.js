@@ -1,7 +1,9 @@
 // import Image from 'next/image'
 import * as React from 'react'
 import { useMemo } from 'react'
-import { getMDXComponent } from 'mdx-bundler/client'
+// import { getMDXComponent } from 'mdx-bundler/client'
+import { MDXRemote } from 'next-mdx-remote'
+import Image from 'next/image'
 
 import Figure from './mdx/Figure'
 import Headline from './Headline'
@@ -32,14 +34,18 @@ const components = {
   Tab,
   Tabs,
   Video,
-  Img,
+  // Img,
+  img: (props) => <Image {...props} alt={props.alt} layout="responsive" />,
+  // img: <div>aflhalfafa</div>,
+  // Img,
   // Image
   // p: Paragraph,
   // img: (props) => <Image {...props} />,
 }
 
 export default function MdxRender({ code }) {
-  const Component = useMemo(() => getMDXComponent(code), [code])
+  // const Component = useMemo(() => getMDXComponent(code), [code])
 
-  return <Component components={components} />
+  // return <Component components={components} />
+  return <MDXRemote {...code} components={components} />
 }
