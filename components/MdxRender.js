@@ -5,10 +5,10 @@ import { getMDXComponent } from 'mdx-bundler/client'
 
 import Figure from './mdx/Figure'
 import Headline from './Headline'
-import Image from './mdx/Image'
+import Img from './mdx/Img'
 import Quote from './mdx/Quote'
 import Soundcloud from './mdx/Soundcloud'
-import Tabs from './Tabs'
+import { Tabs, Tab } from './Tabs'
 import Video from './mdx/Video'
 
 // function Paragraph({ ...props }) {
@@ -29,8 +29,10 @@ const components = {
   Headline,
   Quote,
   Soundcloud,
+  Tab,
   Tabs,
   Video,
+  Img,
   // Image
   // p: Paragraph,
   // img: (props) => <Image {...props} />,

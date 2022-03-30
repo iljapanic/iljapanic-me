@@ -5,8 +5,8 @@ import BookPreview from '../components/BookPreview'
 
 import { getBooks } from '../lib/getBooks'
 
-export default function Library({ booksAll }) {
-  console.log(booksAll)
+export default function Library({ booksNonFiction, booksFiction }) {
+  // console.log(booksAll)
 
   return (
     <Layout title="Library" wrapped={false}>
@@ -17,10 +17,30 @@ export default function Library({ booksAll }) {
         />
       </div>
       <section>
-        <h2 className="wrap">Non-fiction</h2>
+        <h2 className="wrap text-center">Non-fiction</h2>
 
-        <BooksGrid className="mt-12">
-          {booksAll.map((book, _idx) => {
+        <BooksGrid className="mt-20">
+          {booksNonFiction.map((book, _idx) => {
+            return (
+              <BookPreview
+                key={book.id}
+                title={book.title}
+                year={book.year}
+                authorsArray={book.authorsArray}
+                url={book.url}
+                coverUrl={book.coverUrl}
+                cover={book.cover}
+              />
+            )
+          })}
+        </BooksGrid>
+
+        <hr className="wrap" />
+
+        <h2 className="wrap text-center">Fiction</h2>
+
+        <BooksGrid className="mt-20">
+          {booksFiction.map((book, _idx) => {
             return (
               <BookPreview
                 key={book.id}
@@ -40,7 +60,8 @@ export default function Library({ booksAll }) {
 }
 
 export async function getStaticProps() {
-  const booksAll = await getBooks()
+  const booksNonFiction = await getBooks('non-fiction')
+  const booksFiction = await getBooks('fiction')
 
-  return { props: { booksAll } }
+  return { props: { booksNonFiction, booksFiction } }
 }

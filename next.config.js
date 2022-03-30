@@ -3,7 +3,6 @@ module.exports = {
     domains: ['dl.airtable.com'],
   },
 }
-
 // module.exports = {
 //   reactStrictMode: true,
 // }

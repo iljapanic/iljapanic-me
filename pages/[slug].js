@@ -11,9 +11,6 @@ export default function CourseSlug({ code, frontmatter }) {
         <PostWrapper>
           <Headline title={frontmatter.title} summary={frontmatter.summary} />
           <MdxRender code={code} />
-          <span className="font-mono">
-            Page last updated on: {frontmatter.updatedOn}
-          </span>
         </PostWrapper>
       </Layout>
     </>

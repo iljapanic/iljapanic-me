@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { getIcon } from '../lib/getIcon'
+import { newHeight } from '../lib/newHeight'
 
 export default function BookPreview({ title, year, cover, authorsArray, url }) {
   const authors = authorsArray.map((author, i, arr) => {
@@ -9,6 +10,8 @@ export default function BookPreview({ title, year, cover, authorsArray, url }) {
       return author + ', '
     }
   })
+
+  const coverWidth = 280
 
   return (
     <article className="relative transition-all duration-300 ease-in-out hover:scale-105">
@@ -29,8 +32,8 @@ export default function BookPreview({ title, year, cover, authorsArray, url }) {
         src={cover.url}
         alt={title + ' (book cover)'}
         layout="responsive"
-        width={cover.width}
-        height={cover.height}
+        width={coverWidth}
+        height={newHeight(cover.width, cover.height, coverWidth)}
         placeholder="blur"
         blurDataURL="data:..."
         className="rounded"
