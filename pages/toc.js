@@ -3,20 +3,20 @@ import Link from 'next/link'
 
 import { getAllFrontmatter } from '../lib/mdx'
 
-export default function TOC({ essays, notes, courses, projects, talks }) {
+export default function TOC({ articles, notes, courses, projects, talks }) {
   return (
     <>
       <Layout title="Table of Contents">
         <section>
-          <h2 className="mt-4 text-2xl">Essays</h2>
-          {essays.map((item, _idx) => {
+          <h2 className="mt-4 text-2xl">Articles</h2>
+          {articles.map((item, _idx) => {
             return (
               <TocItem
                 key={item.slug}
                 title={item.title}
                 published={item.published}
                 updated={item.updated}
-                href={`/essays/${item.slug}`}
+                href={`/articles/${item.slug}`}
               />
             )
           })}
@@ -101,7 +101,7 @@ export async function getStaticProps() {
   const courses = await getAllFrontmatter('courses', 'title')
   const projects = await getAllFrontmatter('projects', 'title')
   const talks = await getAllFrontmatter('talks', 'title')
-  const essays = await getAllFrontmatter('essays', 'title')
+  const articles = await getAllFrontmatter('articles', 'title')
 
-  return { props: { essays, notes, courses, projects, talks } }
+  return { props: { articles, notes, courses, projects, talks } }
 }

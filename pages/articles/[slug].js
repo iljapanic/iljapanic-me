@@ -3,20 +3,23 @@ import PostWrapper from '../../components/PostWrapper'
 import MdxRender from '../../components/MdxRender'
 import { getPostByFilename, getAllFiles } from '../../lib/mdx'
 
-export default function CourseSlug({ code, frontmatter }) {
+import Headline from '../../components/Headline'
+import Abstract from '../../components/Abstract'
+
+export default function ArticleSlug({ code, frontmatter }) {
   return (
     <>
-      <Layout title={frontmatter.title}>
+      <Layout title={frontmatter.title} summary={frontmatter.summary}>
         <PostWrapper>
-          <h1>{frontmatter.title}</h1>
-          <div className="flex items-center space-x-3">
-            <p className="text-purple-500 rounded-full bg-gray-100 px-3 py-1 text-sm">
-              {frontmatter.readingTime.text}
-            </p>
-            <p className="text-purple-500 rounded-full bg-gray-100 px-3 py-1 text-sm">
-              Date : {frontmatter.publishedOn}
-            </p>
-          </div>
+          <Headline
+            title={frontmatter.title}
+            summary={frontmatter.headline}
+            date={frontmatter.publishedOn}
+            postType="Article"
+            readingTime={frontmatter.readingTime.text}
+          />
+
+          <Abstract text={frontmatter.abstract} />
 
           <article>
             <MdxRender code={code} />
@@ -30,7 +33,7 @@ export default function CourseSlug({ code, frontmatter }) {
 // we will generate all the blogs at build time.
 
 export async function getStaticPaths() {
-  const posts = await getAllFiles('essays')
+  const posts = await getAllFiles('articles')
 
   let pathList = await posts.map((p) => {
     const fileSlug = p.replace(/\.mdx/, '')
@@ -45,7 +48,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = await getPostByFilename(params.slug, 'essays')
+  const post = await getPostByFilename(params.slug, 'articles')
 
   return { props: { ...post } }
 }

@@ -17,8 +17,6 @@ export default function CourseSlug({ code, frontmatter }) {
   )
 }
 
-// we will generate all the blogs at build time.
-
 export async function getStaticPaths() {
   const posts = await getAllFiles('pages')
 

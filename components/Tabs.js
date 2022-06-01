@@ -1,19 +1,10 @@
 import { Tab as TabHeadless } from '@headlessui/react'
 import classNames from 'classnames'
 
-const tabs = [
-  { name: 'My Account', href: '#', current: false },
-  { name: 'Company', href: '#', current: false },
-  { name: 'Team Members', href: '#', current: true },
-  { name: 'Billing', href: '#', current: false },
-]
-
 export function Tabs({ children }) {
-  // console.log(children)
-
   return (
     <TabHeadless.Group>
-      <TabHeadless.List className="mb-6 flex space-x-4 md:space-x-12">
+      <TabHeadless.List className="mb-6 flex space-x-4 md:space-x-8">
         {children.map((child) => {
           const { label } = child.props
 
@@ -22,8 +13,8 @@ export function Tabs({ children }) {
               key={label}
               className={({ selected }) =>
                 classNames('uppercase tracking-wide text-xs md:text-sm', {
-                  'border-b-2 border-accent font-bold': selected,
-                  'border-b-2 border-dim hover:border-secondary': !selected,
+                  'border-b-2 border-accent font-medium': selected,
+                  'border-dim hover:border-secondary border-b-2': !selected,
                 })
               }
             >

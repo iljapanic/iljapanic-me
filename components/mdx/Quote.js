@@ -16,13 +16,11 @@ const Quote = ({ text, author, url, pull }) => {
   }
 
   return (
-    <blockquote
-      className={`mb-8 border-l-4 border-gray-200 pl-4 dark:border-gray-700 ${
-        pull ? 'quote-pull' : ''
-      }`}
-    >
-      <p className="text-secondary mb-2 italic">”{text}”</p>
-      <footer className="text-secondary text-base">
+    <blockquote className={`mb-8 border-none pl-0 ${pull ? 'quote-pull' : ''}`}>
+      <p className="mb-2 border-l-4 border-gray-200 pl-4 italic text-secondary dark:border-gray-700 dark:text-secondary-dark">
+        ”{text}”
+      </p>
+      <footer className="-mt-1 text-right text-secondary ">
         <cite>— {authorEl}</cite>
       </footer>
     </blockquote>

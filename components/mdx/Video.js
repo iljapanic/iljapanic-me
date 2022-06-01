@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player/lazy'
 
 export default function Video({ url }) {
   return (
-    <div className="player-wrapper">
+    <div className="player-wrapper mb-8">
       <ReactPlayer
         url={url}
         controls={true}

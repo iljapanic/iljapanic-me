@@ -5,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: 'Tiempos Headline';
   src: url('/fonts/test-tiempos-headline-regular.woff2');
 }
@@ -64,6 +64,115 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Editorial New';
+  src: url('/fonts/PPEditorialNew-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Editorial New';
+  src: url('/fonts/PPEditorialNew-Ultrabold.otf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Editorial New';
+  src: url('/fonts/PPEditorialNew-Italic.otf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Woodland';
+  src: url('/fonts/PPWoodland-Bold.otf.otf');
+  font-weight: 700;
+}
+
+
+@font-face {
+  font-family: 'Object Sans';
+  src: url('/fonts/PPObjectSans-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Pangram Sans';
+  src: url('/fonts/PPPangramSans-CompactRegular.otf');
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: 'Mori';
+  src: url('/fonts/PPMori-Regular.otf');
+  font-weight: 400;
+} */
+
+
+
+/* *********************** */
+/* *********************** */
+/* *********************** */
+/* *********************** */
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Thin.woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-ThinItalic.woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Light.woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Book.woff2');
+  font-weight: 350;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Italic.woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Medium.woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Bold.woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-BoldItalic.woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
 
 
 
@@ -73,11 +182,11 @@
   }
 
   a {
-    @apply text-accent underline hover:text-accent-secondary transition-colors duration-200;
+    @apply text-accent underline transition-colors duration-200 hover:text-accent-secondary dark:hover:text-accent-secondary;
   }
 
   h1, h2, h3 {
-    @apply font-serif;
+    @apply font-sans font-bold text-gray-800 dark:text-gray-100;
   }
 
   h1 {
@@ -85,7 +194,7 @@
   }
 
   h2 {
-    @apply text-xl mb-6 mt-12;
+    @apply text-xl mb-4 mt-12;
   }
 
   h3 {
@@ -116,8 +225,12 @@
     @apply italic mb-8 border-l-4 border-gray-200 pl-4 text-gray-600 dark:text-gray-400  dark:border-gray-700;
   }
 
+  small {
+    @apply text-sm;
+  }
+
   hr {
-    @apply my-16 border-dim dark:border-dim-dark;
+    @apply my-16 border-gray-300 dark:border-gray-700;
   }
 
 }
@@ -151,13 +264,20 @@ p code {
   @apply text-gray-600 dark:text-gray-400;
 }
 
+.text-dim {
+  @apply text-gray-400 dark:text-gray-500;
+}
 
 .border-secondary {
-  @apply border-gray-600 dark:border-gray-400;
+  @apply border-gray-400 dark:border-gray-600;
+}
+
+.border-dim {
+  @apply border-gray-200 dark:border-gray-700;
 }
 
 .wrap {
-  @apply max-w-4xl mx-auto;
+  @apply max-w-wrap mx-auto;
 }
 
 .player-wrapper {
@@ -244,4 +364,15 @@ p code {
     position: relative !important;
     height: unset !important;
   }
+}
+
+
+/* react hamburger hover effect */
+
+.closed .hamburger-react:hover div:first-of-type div {
+  @apply transition-all -mt-0.5
+}
+
+.closed .hamburger-react:hover div:last-of-type div {
+  @apply transition-all mt-0.5
 }

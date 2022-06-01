@@ -2,10 +2,8 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
-import ThemeToggle from './ThemeToggle'
 
 const siteName = 'Ilja Panić'
-
 export default function Layout({
   children,
   title,

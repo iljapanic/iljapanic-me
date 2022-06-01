@@ -1,7 +1,6 @@
 import Layout from '../components/Layout'
-import Link from 'next/link'
-
 import Headline from '../components/Headline'
+import PostPreview from '../components/PostPreview'
 import { getAllFrontmatter } from '../lib/mdx'
 
 export default function Garden({ notes }) {
@@ -15,11 +14,10 @@ export default function Garden({ notes }) {
 
         {notes.map((item, _idx) => {
           return (
-            <TocItem
+            <PostPreview
               key={item.slug}
               title={item.title}
-              published={item.publishedOn}
-              updated={item.updatedOn}
+              date={item.publishedOn}
               href={`/garden/${item.slug}`}
             />
           )
@@ -28,20 +26,6 @@ export default function Garden({ notes }) {
     </>
   )
 }
-
-const TocItem = ({ title, published, updated, href }) => (
-  <article className="list-none">
-    <h2 className="font-sans text-lg">
-      <Link href={href} passHref>
-        <a>{title}</a>
-      </Link>
-    </h2>
-    <div className="meta">
-      <span>{published}</span>
-      <span>{updated}</span>
-    </div>
-  </article>
-)
 
 export async function getStaticProps() {
   const notes = await getAllFrontmatter('notes', 'title')

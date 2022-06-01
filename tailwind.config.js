@@ -13,10 +13,10 @@ module.exports = {
       // works only with unitless numbers
       // This numbers are the defaults settings
       settings: {
-        fontSizeMin: 1.125, // 1.125rem === 18px
-        fontSizeMax: 1.375, // 1.25rem === 20px
+        fontSizeMin: 1, // 1.125rem === 18px
+        fontSizeMax: 1.3125, // 1.3125rem === 20px
         ratioMin: 1.125, // Multiplicator Min
-        ratioMax: 1.5, // Multiplicator Max
+        ratioMax: 1.35, // Multiplicator Max
         screenMin: 20, // 20rem === 320px
         screenMax: 96, // 96rem === 1536px
         unit: 'rem', // default is rem but it's also possible to use 'px'
@@ -24,8 +24,12 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['iA Quatro', ...defaultTheme.fontFamily.sans],
-      serif: ['Recoleta', ...defaultTheme.fontFamily.serif],
+      // sans: [...defaultTheme.fontFamily.sans],
+      // sans: ['Mori', ...defaultTheme.fontFamily.sans],
+      sans: ['Neue Montreal', ...defaultTheme.fontFamily.sans],
+      // sans: ['iA Quatro', ...defaultTheme.fontFamily.sans],
+      serif: ['Woodland', ...defaultTheme.fontFamily.serif],
+      // serif: ['Recoleta', ...defaultTheme.fontFamily.serif],
       mono: ['iA Mono', ...defaultTheme.fontFamily.mono],
     },
     container: {
@@ -51,13 +55,16 @@ module.exports = {
       yellow: colors.yellow,
 
       /* USAGE-BASED COLORS */
-      accent: '#9d8e60',
-      'accent-secondary': '#887b53',
-      secondary: colors.stone[600],
-      'secondary-dark': colors.stone[400],
-      dim: colors.stone[300],
-      'dim-dark': colors.stone[700],
-      bg: colors.stone[100],
+      accent: colors.stone[700],
+      'accent-secondary': colors.stone[600],
+      // accent: '#9d8e60',
+      // 'accent-secondary': '#887b53',
+      // secondary: colors.stone[600],
+      // 'secondary-dark': colors.stone[400],
+      // dim: colors.stone[300],
+      // 'dim-dark': colors.stone[700],
+      // bg: colors.stone[50],
+      bg: colors.stone[50],
       'bg-dark': colors.neutral[900],
       // accent: colors.stone[300],
       // 'accent-secondary': colors.stone[400],
@@ -73,6 +80,12 @@ module.exports = {
       facebook: '#3b5998',
     },
     extend: {
+      maxWidth: {
+        wrap: '48rem',
+      },
+      gridTemplateColumns: {
+        wrap: 'auto 48rem auto',
+      },
       // fontSize: {
       //   '4xl': ['5.007rem', '6rem'],
       //   '3xl': ['4.005rem', '6rem'],

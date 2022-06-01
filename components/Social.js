@@ -35,11 +35,13 @@ const SocialLink = ({ label, url, last, color = 'secondary' }) => (
       href={url}
       target="_blank"
       rel="noreferrer"
-      className={`text-${color} tracking-wider no-underline text-sm`}
+      className={`text-${color} tracking-wider no-underline text-xs`}
     >
       {/* {getIcon(iconName, 'h-5 w-5 text-secondary hover:text-accent')} */}
       <span className="mr-3 inline-block">{label}</span>
     </a>
-    {!last && <span className="text-gray-400">|</span>}
+    {!last && (
+      <span className="text-gray-300 text-xs dark:text-gray-500">|</span>
+    )}
   </li>
 )
