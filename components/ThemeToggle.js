@@ -14,7 +14,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="text-secondary"
+      className="text-secondary text-sm"
       aria-label={`Switch to ${switchingTo} mode`}
       title={`Switch to ${switchingTo} mode`}
     >

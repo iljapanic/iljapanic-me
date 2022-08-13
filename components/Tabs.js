@@ -4,7 +4,7 @@ import classNames from 'classnames'
 export function Tabs({ children }) {
   return (
     <TabHeadless.Group>
-      <TabHeadless.List className="mb-6 flex space-x-4 md:space-x-8">
+      <TabHeadless.List className="flex mb-6 space-x-4 md:space-x-8">
         {children.map((child) => {
           const { label } = child.props
 
@@ -12,10 +12,13 @@ export function Tabs({ children }) {
             <TabHeadless
               key={label}
               className={({ selected }) =>
-                classNames('uppercase tracking-wide text-xs md:text-sm', {
-                  'border-b-2 border-accent font-medium': selected,
-                  'border-dim hover:border-secondary border-b-2': !selected,
-                })
+                classNames(
+                  'uppercase tracking-wide text-xs focus:outline-none md:text-sm',
+                  {
+                    'border-b-2 border-accent font-medium': selected,
+                    'border-dim hover:border-secondary border-b-2': !selected,
+                  },
+                )
               }
             >
               {label}

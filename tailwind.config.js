@@ -14,7 +14,7 @@ module.exports = {
       // This numbers are the defaults settings
       settings: {
         fontSizeMin: 1, // 1.125rem === 18px
-        fontSizeMax: 1.3125, // 1.3125rem === 20px
+        fontSizeMax: 1.4375, // 1.3125rem === 20px
         ratioMin: 1.125, // Multiplicator Min
         ratioMax: 1.35, // Multiplicator Max
         screenMin: 20, // 20rem === 320px

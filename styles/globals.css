@@ -5,111 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: 'Tiempos Headline';
-  src: url('/fonts/test-tiempos-headline-regular.woff2');
-}
-
-@font-face {
-  font-family: 'Recoleta';
-  src: url('/fonts/recoleta.woff2');
-}
-
-@font-face {
-  font-family: 'New Spirit';
-  src: url('/fonts/NewSpirit-Regular.woff2');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'New Spirit';
-  src: url('/fonts/NewSpirit-Medium.woff2');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'New Spirit';
-  src: url('/fonts/NewSpirit-SemiBold.woff2');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'New Spirit';
-  src: url('/fonts/NewSpirit-Bold.woff2');
-  font-weight: 700;
-}
-
-
-@font-face {
-  font-family: 'iA Quatro';
-  src: url('/fonts/iAWriterQuattroS-Regular.woff2');
-}
-
-@font-face {
-  font-family: 'iA Quatro';
-  src: url('/fonts/iAWriterQuattroS-Bold.woff2');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'iA Quatro';
-  src: url('/fonts/iAWriterQuattroS-BoldItalic.woff2');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'iA Quatro';
-  src: url('/fonts/iAWriterQuattroS-Italic.woff2');
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Editorial New';
-  src: url('/fonts/PPEditorialNew-Regular.otf');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Editorial New';
-  src: url('/fonts/PPEditorialNew-Ultrabold.otf');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Editorial New';
-  src: url('/fonts/PPEditorialNew-Italic.otf');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Woodland';
-  src: url('/fonts/PPWoodland-Bold.otf.otf');
-  font-weight: 700;
-}
-
-
-@font-face {
-  font-family: 'Object Sans';
-  src: url('/fonts/PPObjectSans-Regular.otf');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Pangram Sans';
-  src: url('/fonts/PPPangramSans-CompactRegular.otf');
-  font-weight: 400;
-}
-
-
-@font-face {
-  font-family: 'Mori';
-  src: url('/fonts/PPMori-Regular.otf');
-  font-weight: 400;
-} */
-
-
 
 /* *********************** */
 /* *********************** */
@@ -284,6 +179,10 @@ p code {
   @apply aspect-video relative;
 }
 
+.player-wrapper .react-player__preview {
+  @apply relative -z-10;
+}
+
 .footer:before {
   content: "* * *";
   @apply text-center mb-20 block text-lg text-gray-500;
@@ -376,3 +275,65 @@ p code {
 .closed .hamburger-react:hover div:last-of-type div {
   @apply transition-all mt-0.5
 }
+
+/* sticky header */
+
+/* .header-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: rgba(247, 247, 247, 0.9);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 99;
+} */
+
+/* @media screen and (max-width: 480px) {
+  #header-container.is-open {
+    overflow-y: hidden;
+    height: 100vh;
+  }
+} */
+
+/* .headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+} */
+
+
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  zIndex: 1;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+  transform: translateY(-100%);
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+
+
+
+
+/* .headroom {
+  @apply sticky w-full top-0 bg-bg/90 py-1 backdrop-blur-sm dark:bg-bg-dark/90 lg:mt-0 lg:py-2;
+} */
