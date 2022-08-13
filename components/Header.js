@@ -15,14 +15,14 @@ export default function Header() {
     <header>
       {/* top part */}
       <Headroom disableInlineStyles>
-        <div className="sticky top-0 z-50 bg-bg/90 py-1 backdrop-blur-sm dark:bg-bg-dark/90 lg:mt-0 lg:py-2">
-          <div className="mx-auto max-w-4xl">
+        <div className="relative top-0 z-50 py-1 bg-bg/90 backdrop-blur-sm dark:bg-bg-dark/90 lg:mt-0 lg:py-2">
+          <div className="max-w-4xl mx-auto">
             <ul className="hidden lg:flex lg:justify-between">
               <li>
                 <Link href="/">
                   <a className={`inline-block align-middle no-underline`}>
-                    <div className="flex h-5 w-5 items-center justify-center rounded-sm bg-gray-700 hover:bg-black dark:bg-gray-100 dark:hover:bg-white">
-                      <span className="font-medium uppercase leading-none tracking-wide text-white text-xs dark:text-black">
+                    <div className="flex items-center justify-center w-5 h-5 bg-gray-700 rounded-sm hover:bg-black dark:bg-gray-100 dark:hover:bg-white">
+                      <span className="text-xs font-medium leading-none tracking-wide text-white uppercase dark:text-black">
                         IP
                       </span>
                     </div>
@@ -82,7 +82,7 @@ const NavLink = ({ href, label }) => {
   return (
     <li className="">
       <Link href={href}>
-        <a className="text-secondary dark:text-secondary-dark font-medium no-underline text-sm hover:text-black dark:hover:text-white">
+        <a className="text-sm font-medium no-underline text-secondary dark:text-secondary-dark hover:text-black dark:hover:text-white">
           {label}
         </a>
       </Link>

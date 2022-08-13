@@ -37,7 +37,14 @@ const components = {
   Video,
   Img,
   Box,
-  img: (props) => <Image {...props} alt={props.alt} layout="responsive" />,
+  img: (props) => (
+    <Image
+      {...props}
+      alt={props.alt}
+      layout="responsive"
+      className="relative -z-10"
+    />
+  ),
   // p: Paragraph,
 }
 
