@@ -5,14 +5,14 @@ import { getMDXComponent } from 'mdx-bundler/client'
 // import { MDXRemote } from 'next-mdx-remote'
 import Image from 'next/image'
 
+import Box from './mdx/Box'
 import Figure from './mdx/Figure'
 import Headline from './Headline'
 import Img from './mdx/Img'
 import Quote from './mdx/Quote'
 import Soundcloud from './mdx/Soundcloud'
-import { Tabs, Tab } from './Tabs'
 import Video from './mdx/Video'
-import Box from './mdx/Box'
+import { Tabs, Tab } from './Tabs'
 
 // function Paragraph({ ...props }) {
 //   if (
