@@ -1,9 +1,10 @@
 import { ThemeProvider } from 'next-themes'
+import PlausibleProvider from 'next-plausible'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <PlausibleProvider domain="iljapanic.com">
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
@@ -11,7 +12,7 @@ function MyApp({ Component, pageProps }) {
       >
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
+    </PlausibleProvider>
   )
 }
 

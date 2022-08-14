@@ -20,7 +20,9 @@ export default function Header() {
             <ul className="hidden lg:flex lg:justify-between">
               <li>
                 <Link href="/">
-                  <a className={`inline-block align-middle no-underline`}>
+                  <a
+                    className={`inline-block align-middle no-underline hover:no-underline`}
+                  >
                     <div className="flex items-center justify-center w-5 h-5 bg-gray-700 rounded-sm hover:bg-black dark:bg-gray-100 dark:hover:bg-white">
                       <span className="text-xs font-medium leading-none tracking-wide text-white uppercase dark:text-black">
                         IP
@@ -82,7 +84,7 @@ const NavLink = ({ href, label }) => {
   return (
     <li className="">
       <Link href={href}>
-        <a className="text-sm font-medium no-underline text-secondary dark:text-secondary-dark hover:text-black dark:hover:text-white">
+        <a className="text-sm font-medium no-underline text-secondary hover:text-black hover:no-underline dark:text-secondary-dark dark:hover:text-white">
           {label}
         </a>
       </Link>

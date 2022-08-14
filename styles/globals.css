@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* *********************** */
 /* *********************** */
 /* *********************** */
@@ -68,56 +67,56 @@
   font-style: italic;
 }
 
-
-
-
 @layer base {
   body {
-    @apply bg-bg text-base text-gray-900 px-4 lg:px-0 dark:bg-bg-dark dark:text-gray-50;
+    @apply bg-bg px-4 text-gray-900 text-base dark:bg-bg-dark dark:text-gray-50 lg:px-0;
   }
 
   a {
-    @apply text-accent underline transition-colors duration-200 hover:text-accent-secondary dark:hover:text-accent-secondary;
+    @apply text-accent underline decoration-gray-400 underline-offset-2 transition-colors duration-200 hover:text-accent-secondary hover:underline dark:hover:text-accent-secondary;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @apply font-sans font-bold text-gray-800 dark:text-gray-100;
   }
 
   h1 {
-    @apply text-2xl mb-8;
+    @apply mb-8 text-2xl;
   }
 
   h2 {
-    @apply text-xl mb-4 mt-12;
+    @apply mb-4 mt-12 text-xl;
   }
 
   h3 {
-    @apply text-lg mb-4;
+    @apply mb-4 text-lg;
   }
 
   h4 {
-    @apply text-base font-bold uppercase tracking-wide mb-4;
+    @apply mb-4 font-bold uppercase tracking-wide text-base;
   }
 
   p {
-    @apply text-base mb-8;
+    @apply mb-8 text-base;
   }
 
-  p + ul, p + ol {
+  p + ul,
+  p + ol {
     @apply -mt-4;
   }
 
   pre {
-    @apply overflow-x-auto rounded-lg mb-12 font-mono text-sm;
+    @apply mb-12 overflow-x-auto rounded-lg font-mono text-sm;
   }
 
   mark {
-    @apply bg-yellow-200 px-1 py-0.5 rounded dark:bg-yellow-200;
+    @apply rounded bg-yellow-200 px-1 py-0.5 dark:bg-yellow-200;
   }
 
   blockquote {
-    @apply italic mb-8 border-l-4 border-gray-200 pl-4 text-gray-600 dark:text-gray-400  dark:border-gray-700;
+    @apply mb-8 border-l-4 border-gray-200 pl-4 italic text-gray-600 dark:border-gray-700  dark:text-gray-400;
   }
 
   small {
@@ -127,23 +126,22 @@
   hr {
     @apply my-16 border-gray-300 dark:border-gray-700;
   }
-
 }
 
 p code {
-  @apply bg-gray-200 px-2 py-1 text-sm rounded font-mono dark:bg-gray-800;
+  @apply rounded bg-gray-200 px-2 py-1 font-mono text-sm dark:bg-gray-800;
 }
 
 .post ul {
-  @apply pl-8 mb-8;
+  @apply mb-8 pl-8;
 }
 
 .post ol {
-  @apply pl-16 mb-8;
+  @apply mb-8 pl-16;
 }
 
 .post ul li {
-  @apply list-item list-disc pl-3 mb-2;
+  @apply mb-2 list-item list-disc pl-3;
 }
 
 .post ul li::marker {
@@ -172,11 +170,11 @@ p code {
 }
 
 .wrap {
-  @apply max-w-wrap mx-auto;
+  @apply mx-auto max-w-wrap;
 }
 
 .player-wrapper {
-  @apply aspect-video relative;
+  @apply relative aspect-video;
 }
 
 .player-wrapper .react-player__preview {
@@ -184,10 +182,9 @@ p code {
 }
 
 .footer:before {
-  content: "* * *";
-  @apply text-center mb-20 block text-lg text-gray-500;
+  content: '* * *';
+  @apply mb-20 block text-center text-gray-500 text-lg;
 }
-
 
 /* Prism */
 
@@ -236,7 +233,7 @@ p code {
 }
 
 .rehype-code-title {
-  @apply text-right relative text-xs pt-2 font-mono font-bold text-secondary pr-4 rounded-t-lg z-10;
+  @apply relative z-10 rounded-t-lg pt-2 pr-4 text-right font-mono font-bold text-secondary text-xs;
   background: #fafafa;
 }
 
@@ -245,12 +242,10 @@ p code {
 }
 
 .rehype-code-title + pre {
-  @apply rounded-t-none -mt-6;
+  @apply -mt-6 rounded-t-none;
 }
 
-
 .image-container {
-
   width: 100%;
 
   > div {
@@ -265,15 +260,14 @@ p code {
   }
 }
 
-
 /* react hamburger hover effect */
 
 .closed .hamburger-react:hover div:first-of-type div {
-  @apply transition-all -mt-0.5
+  @apply -mt-0.5 transition-all;
 }
 
 .closed .hamburger-react:hover div:last-of-type div {
-  @apply transition-all mt-0.5
+  @apply mt-0.5 transition-all;
 }
 
 /* sticky header */
@@ -307,12 +301,11 @@ p code {
   transform: translateY(-100%);
 } */
 
-
 .headroom {
   top: 0;
   left: 0;
   right: 0;
-  zIndex: 1;
+  zindex: 1;
 }
 .headroom--unfixed {
   position: relative;
@@ -330,9 +323,6 @@ p code {
   position: fixed;
   transform: translateY(0%);
 }
-
-
-
 
 /* .headroom {
   @apply sticky w-full top-0 bg-bg/90 py-1 backdrop-blur-sm dark:bg-bg-dark/90 lg:mt-0 lg:py-2;

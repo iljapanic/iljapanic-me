@@ -6,9 +6,9 @@ import { getPostByFilename, getAllFiles } from '../../lib/mdx'
 export default function TalkSlug({ code, frontmatter }) {
   return (
     <>
-      <Layout title={frontmatter.title}>
+      <Layout title={frontmatter.title} summary={frontmatter.summary}>
         <PostWrapper>
-          <h2 className="text-6xl font-black text-gray-800 mt-20">
+          <h2 className="mt-20 text-6xl font-black text-gray-800">
             {frontmatter.title}
           </h2>
           <div className="flex items-center space-x-3">

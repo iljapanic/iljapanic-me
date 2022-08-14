@@ -7,7 +7,7 @@ import Headline from '../components/Headline'
 export default function CourseSlug({ code, frontmatter }) {
   return (
     <>
-      <Layout title={frontmatter.title}>
+      <Layout title={frontmatter.title} summary={frontmatter.summary}>
         <PostWrapper>
           <Headline title={frontmatter.title} summary={frontmatter.summary} />
           <MdxRender code={code} />

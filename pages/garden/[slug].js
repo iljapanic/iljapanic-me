@@ -7,7 +7,7 @@ import PostType from '../../components/PostType'
 export default function GardenSlug({ code, frontmatter }) {
   return (
     <>
-      <Layout title={frontmatter.title}>
+      <Layout title={frontmatter.title} summary={frontmatter.summary}>
         <PostWrapper>
           <PostType type="garden" />
           <h1>{frontmatter.title}</h1>

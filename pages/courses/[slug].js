@@ -8,7 +8,7 @@ import PostType from '../../components/PostType'
 export default function CourseSlug({ code, frontmatter }) {
   return (
     <>
-      <Layout title={frontmatter.title}>
+      <Layout title={frontmatter.title} summary={frontmatter.summary}>
         <PostWrapper>
           <PostType type="course" />
           <h1>{frontmatter.title}</h1>
