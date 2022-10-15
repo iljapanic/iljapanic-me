@@ -12,7 +12,7 @@ export default function Footer({ className }) {
         <div className="lg:col-span-2">
           <Newsletter />
 
-          {/* <div className="btn-group mt-6 text-center">
+          {/* <div className="mt-6 text-center btn-group">
             <Button
               type="externalLink"
               text="Subscribe to email updates"
@@ -31,7 +31,7 @@ export default function Footer({ className }) {
         </div>
 
         {/* Navigation */}
-        <nav className="mt-24 text-center text-sm">
+        <nav className="mt-24 text-sm text-center">
           {/* main nav */}
           <ul>
             <NavLink label="Articles" href="/articles" />
@@ -55,7 +55,7 @@ export default function Footer({ className }) {
         </nav>
 
         <div className="mt-8 text-center">
-          {/* <p className="text-secondary text-sm">
+          {/* <p className="text-sm text-secondary">
             or connect with me on social media
           </p> */}
           <Social size="small" />
@@ -66,9 +66,9 @@ export default function Footer({ className }) {
 }
 
 const NavLink = ({ ...props }) => (
-  <li className="mr-8 inline-block font-medium last-of-type:mr-0">
+  <li className="inline-block mr-8 font-medium last-of-type:mr-0">
     <Link href={props.href}>
-      <a className="text-secondary no-underline dark:text-secondary-dark">
+      <a className="no-underline text-secondary dark:text-secondary-dark">
         {props.label}
       </a>
     </Link>

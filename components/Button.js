@@ -62,6 +62,14 @@ export default function Button({
         </a>
       </Link>
     )
+  } else if (submit) {
+    /* SUBMIT */
+    return (
+      <button type="submit" className={btnStyles}>
+        {iconName && icon}
+        {text}
+      </button>
+    )
   } else {
     /* REGULAR BUTTON (does nothing atm) */
     return (
