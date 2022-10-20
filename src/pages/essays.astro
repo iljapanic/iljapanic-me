@@ -1,0 +1,39 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import Headline from '@components/Headline.astro'
+import { displayDate } from '@utils/displayDate'
+
+let allPosts = await Astro.glob('../data/essays/*.mdx')
+
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishedDate).valueOf() -
+    new Date(a.frontmatter.publishedDate).valueOf(),
+)
+
+const title = 'Essays'
+---
+
+<BaseLayout title={title}>
+  <Headline title="Essays" summary="Academic texts written over the years" />
+
+  {
+    allPosts.map((post, index) => {
+      const href = `/essays/${post.file.split('/').pop().split('.').shift()}`
+      const meta = post.frontmatter
+      return (
+        <article class="post-item mt-12">
+          <span class="post-item-date text-sm text-secondary">
+            {displayDate(meta.publishedDate)}
+          </span>
+          <h2 class="text-lg mt-2">
+            <a href={href} class="no-underline">
+              {meta.title}
+            </a>
+          </h2>
+          <p class="mt-2">{meta.headline}</p>
+        </article>
+      )
+    })
+  }
+</BaseLayout>

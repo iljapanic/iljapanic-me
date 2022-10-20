@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+let allPosts = await Astro.glob('../data/essays/*.mdx')
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf(),
+)
+
+const title = 'Essays'
+---
+
+<BaseLayout title={title}>
+  {
+    allPosts.map((post, index) => {
+      const href = `/essays/${post.file.split('/').pop().split('.').shift()}`
+      return (
+        <article>
+          <h2>
+            <a href={href}>{post.frontmatter.title}</a>
+          </h2>
+          <p>{post.frontmatter.headline}</p>
+          <div class="post-item-footer">
+            <span class="post-item-date">— {post.frontmatter.publishDate}</span>
+          </div>
+        </article>
+      )
+    })
+  }
+</BaseLayout>

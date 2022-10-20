@@ -1,0 +1,15 @@
+---
+const { src } = Astro.props
+let alt: string = ''
+if (Astro.slots.has('default')) {
+  alt = await Astro.slots.render('default')
+  alt = alt.replace(/(<([^>]+)>)/gi, '')
+}
+---
+
+<figure>
+  <img src={src} alt={alt} />
+  <figcaption>
+    <slot />
+  </figcaption>
+</figure>

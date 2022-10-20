@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import getPostData from '../../utils/getPostData'
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../../data/essays/*.mdx')
+  return posts.map((p) => ({
+    params: { slug: p.file.split('/').pop().split('.').shift() },
+    props: { post: p },
+  }))
+}
+
+const { Content, frontmatter } = Astro.props.post
+const { title, publishDate, abstract, headline } = frontmatter
+const { slug } = getPostData(Astro.props.post)
+---
+
+<BaseLayout title={title} description={headline} current="essays">
+  <header>
+    <p>{publishDate}</p>
+    <h1>{title}</h1>
+  </header>
+
+  <article>
+    <div class="abstract bg-secondary mt-8 rounded">
+      <h2 class="mt-0 text-sm uppercase tracking-wide text-secondary">
+        Abstract
+      </h2>
+      <p class="mt-1 text-sm">{abstract}</p>
+    </div>
+    <Content />
+  </article>
+</BaseLayout>
+
+<style>
+  .abstract {
+    padding: var(--spacing-4) var(--spacing-6);
+  }
+</style>

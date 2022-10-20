@@ -1,0 +1,188 @@
+html {
+  background-color: var(--bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0 0.75rem;
+  color: var(--text);
+  font-size: var(--font-size-base);
+  /* line-height: 1.5; */
+  /* line-height: calc(1.1em + (1vh + 1vw) / 2); */
+  line-height: var(--line-height-base);
+  font-family: var(--sans-font);
+}
+
+p,
+ul,
+ol {
+  /* margin-bottom: 1.5em; */
+  margin: var(--spacing-8) 0 0 0;
+}
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* margin: 1.5em 0 0.5em; */
+  margin: var(--spacing-16) 0 0 0;
+}
+
+h1 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-xxs);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xs);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-sm);
+}
+
+h4 {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+h5 {
+  font-size: var(--font-size-sm);
+}
+
+h6 {
+  font-size: var(--font-size-xs);
+}
+
+/* Prevent long strings from overflowing container */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Fix line height when title wraps */
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* separators */
+hr {
+  border: none;
+  border-top: 1px solid var(--text-tertiary);
+}
+
+/* figures */
+figure {
+  margin: var(--spacing-8) 0 0 0;
+}
+
+figcaption {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+figcaption p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* blockquotes */
+blockquote {
+  margin: 1.5rem 0 0 0;
+  border-left: 4px solid var(--text-tertiary);
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+}
+
+blockquote p {
+  margin: 0 auto;
+  font-style: italic;
+}
+
+blockquote cite {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+/* iframes & embeds */
+iframe {
+  border: none;
+}
+
+.embed,
+lite-vimeo {
+  margin-top: var(--spacing-8);
+}
+
+/* Format links & buttons */
+a,
+a:visited {
+  color: var(--accent);
+  text-decoration-line: underline;
+  /* text-decoration-color: var(--accent-secondary); */
+  text-decoration-thickness: 0.05rem;
+  text-underline-offset: 0.125rem;
+}
+
+a:hover {
+  /* text-decoration: none; */
+  color: var(--accent-secondary);
+  text-decoration-thickness: 0.1rem;
+}
+
+/* Format navigation */
+header nav {
+  font-size: var(--font-size-sm);
+}
+
+header > nav a,
+header > nav a:visited {
+  display: inline-block;
+  margin: 0 var(--spacing-6) 0 0;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+header > nav a:hover {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-decoration-color: var(--text-tertiary);
+  text-underline-offset: var(--spacing-05);
+}
+
+header > nav a.active {
+  color: var(--text);
+  /* font-weight: var(--fw-semibold); */
+  text-decoration: underline;
+  text-decoration-color: var(--text-tertiary);
+  text-underline-offset: var(--spacing-05);
+}
+
+/* Reduce nav side on mobile */
+/* @media only screen and (max-width: 720px) {
+  header > nav a {
+    border: none;
+    padding: 0;
+    line-height: 1;
+    text-decoration: underline;
+  }
+} */
