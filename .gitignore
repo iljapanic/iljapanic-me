@@ -70,3 +70,4 @@ yarn-error.log
 
 # Obsidian
 src/content/.obsidian/
+.obsidian
