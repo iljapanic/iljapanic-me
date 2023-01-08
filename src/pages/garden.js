@@ -27,7 +27,7 @@ const GardenPage = ({ data, location }) => {
         <div className="content-column">
           <Headline
             title="Garden"
-            headline="Loosely tended collection of evergreen notes"
+            headline="Loosely tended collection of notes"
           />
           {garden}
         </div>
