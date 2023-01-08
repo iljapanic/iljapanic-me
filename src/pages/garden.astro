@@ -1,30 +1,39 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
-let allPosts = await Astro.glob('../data/essays/*.mdx')
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import Headline from '@components/Headline.astro'
+let allPosts = await Astro.glob('../data/notes/*.mdx')
+allPosts = allPosts.filter(function (post) {
+  return !post.frontmatter.draft
+})
 allPosts = allPosts.sort(
   (a, b) =>
     new Date(b.frontmatter.publishDate).valueOf() -
     new Date(a.frontmatter.publishDate).valueOf(),
 )
 
-const title = 'Essays'
+const title = 'Digital Garden 🌱'
+const summary =
+  'A loosely tended collection of living notes, concepts, and half-baked ideas'
 ---
 
-<BaseLayout title={title}>
-  {
-    allPosts.map((post, index) => {
-      const href = `/essays/${post.file.split('/').pop().split('.').shift()}`
-      return (
-        <article>
-          <h2>
-            <a href={href}>{post.frontmatter.title}</a>
-          </h2>
-          <p>{post.frontmatter.headline}</p>
-          <div class="post-item-footer">
-            <span class="post-item-date">— {post.frontmatter.publishDate}</span>
-          </div>
-        </article>
-      )
-    })
-  }
-</BaseLayout>
+<DefaultLayout title={title} description={summary}>
+  <Headline title={title} summary={summary} />
+
+  <section class="mt-12">
+    {
+      allPosts.map((post, index) => {
+        const href = `/${post.file.split('/').pop().split('.').shift()}`
+
+        return (
+          <article>
+            <h2 class="text-base mt-8">
+              <a href={href} class="no-underline">
+                {post.frontmatter.title}
+              </a>
+            </h2>
+          </article>
+        )
+      })
+    }
+  </section>
+</DefaultLayout>

@@ -1,5 +1,12 @@
-@import './fonts.css';
+@import './utils/fonts.css';
 @import './variables.css';
-@import './normalize.css';
-@import './base.css';
-@import './utilities.css';
+
+@import './utils/normalize.css';
+
+@import './utils/base.css';
+@import './utils/layout.css';
+@import './utils/utilities.css';
+@import './utils/shadow.css';
+
+@import './components/button.css';
+@import './components/books.css';

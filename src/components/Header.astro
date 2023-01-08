@@ -3,24 +3,28 @@ const pathname = new URL(Astro.request.url).pathname
 const currentPath = pathname.slice(1) // remove the first "/"
 ---
 
-<header class="container">
-  <a href="/" class="logo">IP</a>
+<header>
+  <div class="container">
+    <div class="inner">
+      <a href="/" class="logo">IP</a>
 
-  <nav>
-    <a class={currentPath.includes('garden') ? 'active' : ''} href="/garden"
-      >Garden</a
-    >
-    <a class={currentPath.includes('essays') ? 'active' : ''} href="/essays"
-      >Essays</a
-    >
-    <a
-      class={currentPath.includes('bookshelf') ? 'active' : ''}
-      href="/bookshelf">Bookshelf</a
-    >
-    <a class={currentPath.includes('about') ? 'active' : ''} href="/about"
-      >About</a
-    >
-  </nav>
+      <nav>
+        <a class={currentPath.includes('garden') ? 'active' : ''} href="/garden"
+          >Garden</a
+        >
+        <a class={currentPath.includes('essays') ? 'active' : ''} href="/essays"
+          >Essays</a
+        >
+        <a
+          class={currentPath.includes('bookshelf') ? 'active' : ''}
+          href="/bookshelf">Bookshelf</a
+        >
+        <a class={currentPath.includes('about') ? 'active' : ''} href="/about"
+          >About</a
+        >
+      </nav>
+    </div>
+  </div>
 </header>
 
 <style>
@@ -44,9 +48,19 @@ const currentPath = pathname.slice(1) // remove the first "/"
     background-color: var(--bg-tertiary);
   }
 
-  header {
+  .inner {
     display: flex;
     align-items: center;
-    padding: var(--spacing-6) 0;
+    padding: var(--spacing-4) 0 var(--spacing-4) 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+    margin-top: var(--spacing-8);
+    margin-bottom: var(--spacing-12);
+    background-color: rgba(var(--bg-rgb), 0.85);
   }
 </style>

@@ -1,12 +1,7 @@
 ---
-// import Image from 'next/image'
-// import { getIcon } from '../lib/getIcon'
-// import { newHeight } from '../lib/newHeight'
 import { Picture } from 'astro-imagetools/components'
-import { newHeight } from '@utils/newHeight'
 
 const { title, year, cover, authorsArray, url } = Astro.props
-
 const authors = authorsArray.map((author, i, arr) => {
   if (arr.length - 1 === i) {
     return author
@@ -14,40 +9,47 @@ const authors = authorsArray.map((author, i, arr) => {
     return author + ', '
   }
 })
-
-const coverWidth = 280
 ---
 
-<article
-  class="relative transition-all duration-300 ease-in-out hover:scale-105"
->
+<article class="book mt-12">
   {/* link overlay */}
-  <a
-    href={url}
-    target="_blank"
-    rel="noreferrer"
-    class="absolute top-0 left-0 z-10 flex h-full w-full items-center justify-center bg-gray-100/40 text-center no-underline opacity-0 transition-all duration-200 hover:opacity-100 dark:bg-gray-900/40"
-  >
-    <span
-      class="mb-20 inline-flex items-center rounded-lg bg-white/95 py-1 px-4 shadow-lg text-sm"
+
+  <div class="cover">
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer"
+      title={'Open ' + title + ' on Goodreads'}
     >
-      View on Goodreads
-      <!-- {getIcon('externalLink', 'h-4 w-4 ml-2')} -->
-    </span>
-  </a>
-  <div class="overflow-hidden rounded shadow">
-    <Picture src={cover} alt={title + ' (book cover)'} />
-
-    <!-- <img
-      src={cover}
-      alt={title + ' (book cover)'}
-      width={coverWidth}
-      height={newHeight(cover.width, cover.height, coverWidth)}
-      class=""
-    /> -->
+      <div class="shadow-lg">
+        <Picture src={cover} alt={title + ' (book cover)'} layout="fullWidth" />
+      </div>
+    </a>
   </div>
-
-  <h3 class="mt-4 mb-0 leading-tight text-base">{title}</h3>
-  {/* <span class="text-xs">{year}</span> */}
-  <div class="text-xs">{authors}</div>
+  <div>
+    {/* <span class="text-xs">{year}</span> */}
+    <h3 class="text-xs leading-2xs mt-4 fw-medium">{title}</h3>
+    <div class="text-2xs mt-1 text-secondary">{authors}</div>
+  </div>
 </article>
+
+<style>
+  .cover {
+    opacity: 0.9;
+  }
+
+  .cover {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .cover:hover {
+    transform: scale(1.005);
+    opacity: 1;
+  }
+
+  .cover:hover .link {
+    opacity: 1;
+  }
+</style>
+
+<!-- mb-20 inline-flex items-center rounded-lg bg-white/95 py-1 px-4 shadow-lg text-sm -->

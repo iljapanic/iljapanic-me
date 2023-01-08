@@ -17,6 +17,8 @@ export default defineConfig({
         './src/components/mdx/Figure.astro',
         './src/components/mdx/Quote.astro',
         './src/components/mdx/Soundcloud.astro',
+        './src/components/mdx/BigHeading.astro',
+        './src/components/Headline.astro',
         {
           'astro-embed': ['Tweet', 'YouTube', 'Vimeo'],
         },
@@ -28,5 +30,10 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [[m2dx, m2dxOptions]],
     extendDefaultPlugins: true,
+  },
+  vite: {
+    ssr: {
+      external: ['svgo'],
+    },
   },
 })

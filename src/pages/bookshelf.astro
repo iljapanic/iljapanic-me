@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
+import WideLayout from '@layouts/WideLayout.astro'
 import Headline from '@components/Headline.astro'
 import { getBooks } from '../utils/getBooks'
 import BookPreview from '@components/BookPreview.astro'
@@ -10,28 +10,26 @@ const title = 'Bookshelf'
 const summary = 'Books that have shaped my thinking over the years'
 ---
 
-<BaseLayout title={title} description={summary}>
-  <Headline title={title} summary={summary} />
+<WideLayout title={title} description={summary}>
+  <div class="container">
+    <Headline title={title} summary={summary} />
 
-  <section class="books">
-    {
-      nonFiction.map((book, index) => {
-        return (
-          <BookPreview
-            title={book.title}
-            year={book.year}
-            cover={book.coverUrl}
-            authorsArray={book.authorsArray}
-            url={book.url}
-          />
-        )
-      })
-    }
-  </section>
-</BaseLayout>
-
-<style>
-  .books {
-    display: grid;
-  }
-</style>
+    <section class="bleed-sm">
+      <div class="books">
+        {
+          nonFiction.map((book, index) => {
+            return (
+              <BookPreview
+                title={book.title}
+                year={book.year}
+                cover={book.coverUrl}
+                authorsArray={book.authorsArray}
+                url={book.url}
+              />
+            )
+          })
+        }
+      </div>
+    </section>
+  </div>
+</WideLayout>

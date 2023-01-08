@@ -1,4 +1,4 @@
-export function displayDate(inputDate) {
+export default function displayDate(inputDate) {
   const date = new Date(inputDate)
   return date.toLocaleDateString('en-US', {
     // weekday: 'long', // possible values: 'long', 'short', 'narrow'

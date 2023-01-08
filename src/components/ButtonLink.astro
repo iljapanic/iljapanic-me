@@ -1,0 +1,37 @@
+---
+const {
+  href,
+  newTab = false,
+  rounded = false,
+  variant = 'default',
+  link = false,
+} = Astro.props
+
+let classes = 'btn'
+
+if (rounded) {
+  classes += ' btn-rounded'
+}
+
+if (variant == 'rss') {
+  classes += ' btn-rss'
+}
+---
+
+{
+  link ? (
+    newTab ? (
+      <a href={href} target="_blank" class={classes}>
+        <slot />
+      </a>
+    ) : (
+      <a href={href} class={classes}>
+        <slot />
+      </a>
+    )
+  ) : (
+    <button class={classes}>
+      <slot />
+    </button>
+  )
+}

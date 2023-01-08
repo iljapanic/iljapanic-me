@@ -1,0 +1,17 @@
+.books {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-12);
+}
+
+@media (--md) {
+  .books {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (--lg) {
+  .books {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

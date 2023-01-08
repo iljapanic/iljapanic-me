@@ -1,0 +1,66 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import getPostData from '@utils/getPostData'
+import displayDate from '@utils/displayDate'
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('./../data/*/*.mdx')
+  return posts.map((p) => ({
+    params: { slug: p.file.split('/').pop().split('.').shift() },
+    props: { post: p },
+  }))
+}
+
+const { Content, frontmatter } = Astro.props.post
+const { title, updatedDate, publishedDate, abstract, summary, type } =
+  frontmatter
+const { slug } = getPostData(Astro.props.post)
+---
+
+<DefaultLayout title={title} description={summary}>
+  {
+    type == 'note' && (
+      <div>
+        <header>
+          <span class="post-item-date text-sm text-secondary">
+            Last tended on {displayDate(updatedDate)}
+          </span>
+          <h1 class="mt-2">{title}</h1>
+        </header>
+
+        <article>
+          <Content />
+        </article>
+      </div>
+    )
+  }
+
+  {
+    type == 'essay' && (
+      <div>
+        <header>
+          <span class="post-item-date text-sm text-secondary">
+            {displayDate(publishedDate)}
+          </span>
+          <h1 class="mt-2">{title}</h1>
+        </header>
+
+        <article>
+          <div class="abstract bg-secondary mt-8 rounded">
+            <h2 class="mt-0 text-sm uppercase tracking-wide text-secondary">
+              Abstract
+            </h2>
+            <p class="mt-1 text-sm">{abstract}</p>
+          </div>
+          <Content />
+        </article>
+      </div>
+    )
+  }
+</DefaultLayout>
+
+<style>
+  .abstract {
+    padding: var(--spacing-4) var(--spacing-6);
+  }
+</style>

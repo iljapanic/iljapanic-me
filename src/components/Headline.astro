@@ -3,4 +3,16 @@ const { title, summary } = Astro.props
 ---
 
 <h1>{title}</h1>
-{summary ? <p class="mt-2 text-secondary text-lg">{summary}</p> : ''}
+{
+  summary ? (
+    <p class="mt-4 text-secondary text-md leading-2xs">{summary}</p>
+  ) : (
+    ''
+  )
+}
+
+<style>
+  p {
+    max-width: 38ch;
+  }
+</style>
