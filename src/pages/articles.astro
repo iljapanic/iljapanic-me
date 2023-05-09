@@ -3,7 +3,7 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 import Headline from '@components/Headline.astro'
 import displayDate from '@utils/displayDate'
 
-let allPosts = await Astro.glob('../data/essays/*.mdx')
+let allPosts = await Astro.glob('../data/articles/*.mdx')
 allPosts = allPosts.filter(function (post) {
   return !post.frontmatter.draft
 })
@@ -14,7 +14,7 @@ allPosts = allPosts.sort(
     new Date(a.frontmatter.publishedDate).valueOf(),
 )
 
-const title = 'Essays'
+const title = 'Articles'
 const summary = 'Academic texts written over the course of several studies'
 ---
 

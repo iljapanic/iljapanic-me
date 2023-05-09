@@ -14,8 +14,10 @@ const summary = 'Books that have shaped my thinking over the years'
   <div class="container">
     <Headline title={title} summary={summary} />
 
-    <section class="bleed-sm">
-      <div class="books">
+    <section>
+      <div
+        class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+      >
         {
           nonFiction.map((book, index) => {
             return (

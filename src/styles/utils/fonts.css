@@ -1,4 +1,21 @@
 @font-face {
+  font-named-instance: 'Regular';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+  font-family: 'Inter var';
+  font-display: swap;
+}
+@font-face {
+  font-named-instance: 'Italic';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
+  font-family: 'Inter var';
+  font-display: swap;
+}
+
+/* @font-face {
   font-family: 'Neue Montreal';
   src: url('/fonts/PPNeueMontreal-Thin.woff2');
   font-weight: 200;
@@ -53,4 +70,4 @@
   src: url('/fonts/PPNeueMontreal-BoldItalic.woff2');
   font-weight: 700;
   font-style: italic;
-}
+} */

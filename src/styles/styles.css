@@ -1,4 +1,4 @@
-@import './utils/fonts.css';
+/* @import './utils/fonts.css';
 @import './variables.css';
 
 @import './utils/normalize.css';
@@ -9,4 +9,66 @@
 @import './utils/shadow.css';
 
 @import './components/button.css';
-@import './components/books.css';
+@import './components/books.css'; */
+
+/* globals */
+
+/* @import './utils/base.css'; */
+
+@import './utils/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-bg font-sans text-base font-light;
+  }
+
+  p {
+    /* @apply mt-4; */
+  }
+
+  a,
+  a:visited {
+    @apply text-accent-600 underline decoration-accent-200 decoration-1 underline-offset-2 transition-all duration-200;
+  }
+
+  a:hover {
+    @apply text-accent-600 decoration-accent-600 decoration-2;
+  }
+
+  /* h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  } */
+}
+
+@layer components {
+  .post {
+    @apply mx-auto max-w-[72ch];
+  }
+
+  .post h1 {
+    @apply font-medium fluid-3xl;
+  }
+
+  .post h2 {
+    @apply mt-8 mb-2 font-medium fluid-2xl;
+  }
+
+  .post h3 {
+    @apply mt-6 mb-2 fluid-xl;
+  }
+
+  .post p {
+    @apply mb-4 fluid-base;
+  }
+
+  .post figcaption p {
+    @apply fluid-sm;
+  }
+}

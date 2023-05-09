@@ -1,15 +1,17 @@
+// https://astro.build/config
+
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import m2dx from 'astro-m2dx'
 import { astroImageTools } from 'astro-imagetools'
 import AutoImport from 'astro-auto-import'
 // import remarkMark from 'remark-mark-plus'
+import tailwind from '@astrojs/tailwind'
 
 const m2dxOptions = {
   relativeImages: true,
 }
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [
     AutoImport({
@@ -26,6 +28,9 @@ export default defineConfig({
     }),
     mdx(),
     astroImageTools,
+    tailwind({
+      config: { applyBaseStyles: false },
+    }),
   ],
   markdown: {
     remarkPlugins: [[m2dx, m2dxOptions]],
