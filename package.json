@@ -43,7 +43,7 @@
     "gatsby-remark-smartypants": "^4.7.0",
     "gatsby-source-airtable": "^2.2.1",
     "gatsby-source-filesystem": "^3.10.0",
-    "gatsby-transformer-remark": "^4.7.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.10.0",
     "lodash": "^4.17.21",
     "mdx-embed": "^0.0.19",
