@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border-dim;
+  }
+
+  body {
+    @apply bg-bg font-serif text-primary text-base;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  /* typography */
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-sans;
+  }
+
+  h1 {
+    @apply font-medium text-3xl;
+    line-height: 1.1;
+  }
+
+  h2 {
+    @apply font-medium text-2xl;
+    line-height: 1.2;
+  }
+
+  h3 {
+    @apply font-medium text-xl;
+    line-height: 1.2;
+  }
+
+  h4 {
+    @apply font-medium text-lg;
+    line-height: 1.2;
+  }
+
+  /* basic post elements */
+
+  p {
+    line-height: 1.6;
+  }
+
+  /* links */
+  a {
+    @apply text-gray-600 underline decoration-gray-300 underline-offset-4 transition-all duration-200 hover:text-gray-700 hover:decoration-gray-500;
+  }
+}
+
+@layer components {
+  .post {
+    max-width: 64ch;
+  }
+
+  .post-wrapper {
+    max-width: 64ch;
+  }
+
+  /* .post h1, .post h2, .post h3, .post h4 {
+    @apply text-center;
+  } */
+
+  .post h1 {
+    @apply mb-6;
+  }
+
+  .post h2 {
+    @apply mt-6;
+  }
+
+  .post h3 {
+    @apply mt-6;
+  }
+
+  .post h4 {
+    @apply mt-4;
+  }
+
+  .post p {
+    @apply mt-2;
+  }
+
+  .post p + p {
+    @apply mt-4;
+  }
+
+  .post ul {
+    @apply mt-2 list-disc pl-8;
+    /* line-height: 1.6; */
+  }
+
+  .post li {
+    @apply mt-2;
+    line-height: 1.5;
+  }
+}
+
+/* 3rd party helpers */
+
+.player-wrapper {
+  @apply relative aspect-video w-full;
+}
+
+.player-wrapper .react-player__preview {
+  @apply relative z-10;
+}
+
+.headroom--pinned {
+  @apply shadow-sm;
+}
