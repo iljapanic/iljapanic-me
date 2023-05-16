@@ -1,28 +1,28 @@
 ---
 title: MDX Sample
-summary: "A sample MDX page showcasing all the styles"
-publishedOn: "2022-03-11"
-updatedOn: "2022-03-11"
-type: page
-published: true
+description: 'A sample MDX page showcasing all the styles'
 slug: 'mdx'
+dateUpdated: '2022-03-11'
+published: true
 ---
 
 # h1 Heading
+
 ## h2 Heading
+
 ### h3 Heading
+
 #### h4 Heading
 
 ## Paragraph
 
 Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
 
-
 ## Emphasis
 
 **This is bold text**
 
-*This is italic text*
+_This is italic text_
 
 ~~Strikethrough~~
 
@@ -32,17 +32,13 @@ Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at 
 
 <mark>Marked text</mark>
 
-
 ## Blockquotes
-
 
 > Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
 
-
 ## Horizontal Rules
 
-___
-
+---
 
 ## Lists
 
@@ -61,9 +57,7 @@ ___
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
 
-
 ## Code
-
 
 Here is some `inline code`
 
@@ -84,7 +78,7 @@ export default function Figure({ src, caption }) {
   return (
     <figure className="w-full max-w-full">
       <Image alt={caption} src={src} layout="fill" />
-      <figcaption className="text-secondary text-center italic">
+      <figcaption className="text-center italic text-secondary">
         {caption}
       </figcaption>
     </figure>

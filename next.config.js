@@ -1,5 +1,6 @@
 const withMDX = require('@next/mdx')()
 const { withContentlayer } = require('next-contentlayer')
+const redirects = require('./redirects')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -17,6 +18,9 @@ const nextConfig = {
         pathname: '**',
       },
     ],
+  },
+  async redirects() {
+    return redirects
   },
 }
 

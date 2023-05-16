@@ -1,15 +1,26 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { Button } from '@/app/components/ui/button'
 
-export const ThemeToggle = () => {
+const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false)
   const { setTheme, resolvedTheme } = useTheme()
 
   useEffect(() => setMounted(true), [])
 
-  if (!mounted) return null
+  if (!mounted)
+    return (
+      <Button
+        variant="ghost"
+        size="sm"
+        aria-label="Toggle theme"
+        className="text-tertiary hover:text-primary"
+      >
+        <span className="rotate-45">◐</span>
+      </Button>
+    )
 
   const isLight = resolvedTheme === `light`
   const oppositeTheme = isLight ? `dark` : `light`
@@ -17,6 +28,16 @@ export const ThemeToggle = () => {
   const toggleTheme = () => setTheme(oppositeTheme)
 
   return (
-    <button onClick={toggleTheme}>{`Switch to ${oppositeTheme} mode`}</button>
+    <Button
+      variant="ghost"
+      size="sm"
+      aria-label="Toggle theme"
+      onClick={toggleTheme}
+      className="text-tertiary transition-none hover:text-primary"
+    >
+      <span className="rotate-45 ">◐</span>
+    </Button>
   )
 }
+
+export default ThemeToggle

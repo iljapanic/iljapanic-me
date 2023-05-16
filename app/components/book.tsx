@@ -24,16 +24,16 @@ const Book: React.FC<BookProps> = ({ title, year, authors, cover, url }) => {
             width={cover.width}
             height={cover.height}
             alt={title}
-            className="w-full opacity-80 saturate-[0.75] transition-all duration-300 group-hover:opacity-100 group-hover:saturate-100"
+            className="w-full opacity-80 saturate-[0.75] transition-all duration-300 group-hover:opacity-100 group-hover:saturate-100 dark:saturate-[0.6]"
           />
         </div>
         {/* <div>{year}</div> */}
-        <h3 className="mb-1 mt-2 leading-tight text-primary text-sm">
+        <h3 className="mb-1 mt-1.5 leading-tight text-secondary text-xs">
           {title}
         </h3>
 
         {/* authors */}
-        <div className="text-tertiary text-xs">
+        <div className="font-sans text-tertiary text-xs">
           {authors.map((author, index) => {
             const isLastAuthor = index === authors.length - 1
             return (

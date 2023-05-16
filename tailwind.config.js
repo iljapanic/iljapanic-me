@@ -18,16 +18,15 @@ const theme = new Theme({
   /* design tokens */
 
   // text
-  primary: colors.gray[900],
-  secondary: colors.gray[500],
-  tertiary: colors.gray[400],
-  dim: colors.gray[400],
+  primary: '#000000',
+  secondary: '#3B3A38',
+  tertiary: '#93918F',
+  dim: '#C9C5C1',
 
   // bg
   bg: {
-    DEFAULT: colors.gray[50],
-    secondary: colors.gray[100],
-    tertiary: colors.gray[200],
+    DEFAULT: '#F8F6F5',
+    secondary: '#EDEBE9',
   },
 
   // button (primary)
@@ -35,47 +34,29 @@ const theme = new Theme({
     bg: colors.gray[900],
     text: colors.gray[50],
   },
-
-  // accent
-  accent: {
-    DEFAULT: colors.brand[400],
-    lighter: colors.brand[300],
-    darker: colors.brand[500],
-  },
-
-  // border
-  border: {
-    DEFAULT: colors.gray[600],
-    secondary: colors.gray[400],
-    dim: colors.gray[300],
-  },
 })
 
 const darkMode = theme.variant(
   {
+    /* design tokens */
+
     // text
-    primary: colors.gray[900],
-    secondary: colors.gray[600],
-    dim: colors.gray[300],
+    primary: '#F8F6F5',
+    secondary: '#BAB6B1',
+    tertiary: '#797673',
+    dim: '#494745',
 
     // bg
-    bgPrimary: colors.gray[50],
-    bgSecondary: colors.gray[200],
+    bg: {
+      DEFAULT: '#232120',
+      secondary: '#2D2B29',
+    },
 
     // button (primary)
-    btnBg: colors.gray[900],
-    btnBgHover: colors.gray[700],
-    btnText: colors.gray[50],
-
-    // accent
-    accent: colors.brand[400],
-    accentLighter: colors.brand[300],
-    accentDarker: colors.brand[500],
-
-    // border
-    borderPrimary: colors.gray[600],
-    borderSecondary: colors.gray[400],
-    borderDim: colors.gray[200],
+    btn: {
+      bg: '#ffffff',
+      text: colors.gray[900],
+    },
   },
   {
     selector: '.dark',
@@ -94,8 +75,9 @@ module.exports = {
     extend: {
       fontFamily: {
         // sans: ['var(--font-sans)', ...fontFamily.sans],
-        sans: ['system-ui', 'sans-serif'],
+        sans: ['ui-sans-serif', 'system-ui', 'sans-serif'],
         serif: [
+          'ui-serif',
           'Charter',
           'Bitstream Charter',
           'Sitka Text',
@@ -151,8 +133,8 @@ module.exports = {
       // works only with unitless numbers
       // This numbers are the defaults settings
       settings: {
-        fontSizeMin: 1.125, // 1.125rem === 18px
-        fontSizeMax: 1.25, // 1.25rem === 20px
+        fontSizeMin: 1, // 1.125rem === 18px
+        fontSizeMax: 1.125, // 1.25rem === 20px
         ratioMin: 1.125, // Multiplicator Min
         ratioMax: 1.2, // Multiplicator Max
         screenMin: 20, // 20rem === 320px

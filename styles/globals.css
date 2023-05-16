@@ -4,11 +4,11 @@
 
 @layer base {
   * {
-    @apply border-border-dim;
+    @apply border-dim;
   }
 
   body {
-    @apply bg-bg font-serif text-primary text-base;
+    @apply bg-bg font-serif text-secondary text-base;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 
@@ -18,28 +18,29 @@
   h2,
   h3,
   h4 {
-    @apply font-sans;
+    @apply font-sans font-medium text-primary;
+    line-height: 1.6;
   }
 
-  h1 {
-    @apply font-medium text-3xl;
+  /* h1 {
+    @apply font-medium text-base;
     line-height: 1.1;
   }
 
   h2 {
-    @apply font-medium text-2xl;
+    @apply font-medium text-base;
     line-height: 1.2;
   }
 
   h3 {
-    @apply font-medium text-xl;
+    @apply font-medium text-base;
     line-height: 1.2;
   }
 
   h4 {
-    @apply font-medium text-lg;
+    @apply font-medium text-sm;
     line-height: 1.2;
-  }
+  } */
 
   /* basic post elements */
 
@@ -47,9 +48,20 @@
     line-height: 1.6;
   }
 
-  /* links */
   a {
-    @apply text-gray-600 underline decoration-gray-300 underline-offset-4 transition-all duration-200 hover:text-gray-700 hover:decoration-gray-500;
+    @apply text-secondary underline decoration-dim underline-offset-4 transition-all duration-200 hover:text-primary hover:decoration-secondary;
+  }
+
+  hr {
+    @apply mx-auto my-12 w-1/2 border-t-2 border-dim;
+  }
+
+  p > code {
+    @apply rounded-sm bg-bg-secondary px-1 py-0.5 text-sm;
+  }
+
+  pre {
+    @apply max-w-full overflow-scroll rounded-sm bg-bg-secondary px-2 py-2 text-sm;
   }
 }
 
@@ -60,6 +72,10 @@
 
   .post-wrapper {
     max-width: 64ch;
+  }
+
+  .post-wider-wrapper {
+    max-width: 84ch;
   }
 
   /* .post h1, .post h2, .post h3, .post h4 {
@@ -98,6 +114,14 @@
   .post li {
     @apply mt-2;
     line-height: 1.5;
+  }
+
+  .post blockquote {
+    @apply my-6 border-l-4 border-dim pl-4 italic;
+  }
+
+  .post pre {
+    @apply my-4;
   }
 }
 

@@ -5,18 +5,19 @@ import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import { Squeeze as Hamburger } from 'hamburger-react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import useSize from '@react-hook/size'
 
+import ThemeToggle from '@/app/theme/theme-toggle'
 import { cn } from '@/lib/utils'
-import { useElementSize } from '@/hooks/useElementSize'
 
 /* show scroll debugger */
-import { createPortal } from 'react-dom'
-const showDebugger = true
+// import { createPortal } from 'react-dom'
+// const showDebugger = true
 
 /* links */
 const links = [
   { href: '/articles', label: 'Articles' },
-  { href: '/notes', label: 'Notes' },
+  // { href: '/notes', label: 'Notes' },
   { href: '/bookshelf', label: 'Bookshelf' },
   { href: '/about', label: 'About' },
 ]
@@ -26,8 +27,11 @@ export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false)
 
   /* scroll direction */
-  const [scrollDirection, setScrollDirection] = useState()
-  const scrollDirectionOffset = 50
+  const [scrollDirection, setScrollDirection] = useState<string | undefined>(
+    undefined,
+  )
+
+  const scrollDirectionOffset = 0
 
   /* secondary header */
   const [secondaryHeader, setSecondaryHeader] = useState(false)
@@ -35,26 +39,16 @@ export default function Header() {
 
   /* scroll references */
   const positionsStore = PositionStore()
-  const viewportRef = useRef<HTMLDivElement>(null)
 
   /* header height */
-  const [headerRef, { height: headerHeight }] = useElementSize()
+  const headerRef = useRef<HTMLElement | null>(null)
+  const [, headerHeight] = useSize(headerRef)
   const headerOffset = scrollDirection === 'down' ? -headerHeight : 0
 
   const showSecondaryHeader =
     scrollDirection === 'up' && positionsStore.getViewportY() > 100
       ? true
       : false
-
-  // const headerPosition = useRef({ x: 10, y: 150 })
-  // const viewportPosition = useRef({ x: 0, y: 0 })
-  // let throttleTimeout = null
-
-  // const [windowYOffset, setWindowYOffset] = useState(0)
-  // const [expandedHeight, setExpandedHeight] = useState(0)
-
-  // const scrollDirection = useScrollDirection()
-  // const {scrollDirection} = useScrollDirection()
 
   /* Viewport scroll position */
   useScrollPosition(
@@ -65,7 +59,7 @@ export default function Header() {
       )
     },
     [positionsStore],
-    null,
+    undefined,
     true,
   )
 
@@ -73,7 +67,7 @@ export default function Header() {
   useScrollPosition(
     ({ currPos }) => positionsStore.setHeaderPosition(currPos),
     [],
-    headerRef,
+    headerRef as React.MutableRefObject<HTMLElement>,
     false,
     300,
   )
@@ -91,7 +85,7 @@ export default function Header() {
       }
     },
     [scrollDirection],
-    false,
+    undefined,
     false,
     300,
   )
@@ -100,76 +94,71 @@ export default function Header() {
     () => (
       <header
         ref={headerRef}
-        className={
-          cn(
-            '' /* default positioning */,
-            'bg-bg bg-opacity-80 backdrop-blur transition-all duration-500',
-            showSecondaryHeader && 'sticky top-0 z-30',
-            // showSecondaryHeader: 'bg-red-200'
-            // secondaryHeader && 'shadow' /* secondary header */,
-          )
-          // 'sticky z-20 bg-bg bg-opacity-80 py-6 backdrop-blur transition-all duration-500 lg:py-12',
-          // secondaryHeader ? 'py-2 shadow lg:py-3' : '',
-          // headerBgStyles,
-          // 'h-20 lg:h-32',
-          // scrollDirection === 'up' ?? 'py-2',
-          // isMenuOpen ? 'h-auto' : 'top-0 h-20',
-          // 'top-0',
-        }
-        // style={{ top: `${headerOffset}px` }}
+        className={cn(
+          'sticky z-30' /* default positioning */,
+          'bg-bg bg-opacity-80 backdrop-blur transition-[top] duration-500',
+          showSecondaryHeader && 'shadow',
+        )}
+        style={{ top: `${headerOffset}px` }}
       >
-        <nav className="container py-8">
-          <div className="flex items-center justify-between">
-            <NavLink href="/" className="font-medium text-secondary">
-              Ilja Panić
-            </NavLink>
+        <nav className="container mt-2 py-2 lg:mt-8 lg:py-1">
+          <div className="post-wrapper mx-auto">
+            {/* header row 1 */}
+            <div className="flex items-center justify-between">
+              <NavLink href="/" className="">
+                <div className="flex h-6 w-6 items-center justify-center rounded-sm bg-bg-secondary text-xs">
+                  IP
+                </div>
+              </NavLink>
 
-            {/* MOBILE nav trigger */}
-            <div className="text-secondary lg:hidden">
-              <Hamburger
-                toggled={isMenuOpen}
-                toggle={setMenuOpen}
-                size={24}
-                label="Show menu"
-                onToggle={(toggled) => {
-                  if (toggled) {
-                  } else {
-                    // close a menu
-                  }
-                }}
-              />
+              {/* MOBILE nav trigger */}
+              <div className="text-secondary lg:hidden">
+                <Hamburger
+                  toggled={isMenuOpen}
+                  toggle={setMenuOpen}
+                  size={24}
+                  label="Show menu"
+                  onToggle={(toggled) => {
+                    if (toggled) {
+                    } else {
+                      // close a menu
+                    }
+                  }}
+                />
+              </div>
+
+              {/* DESKTOP nav */}
+              <ul className="hidden lg:flex lg:items-center lg:gap-4">
+                {links.map(({ href, label }) => (
+                  <li key={href}>
+                    <NavLink href={href}>{label}</NavLink>
+                  </li>
+                ))}
+                <li>
+                  <ThemeToggle />
+                </li>
+              </ul>
             </div>
+            {/* end main nav section */}
 
-            {/* DESKTOP nav */}
-            <ul className="hidden lg:flex lg:items-center lg:gap-6">
-              {links.map(({ href, label }) => (
-                <li key={href}>
-                  <NavLink href={href}>{label}</NavLink>
+            {/* MOBILE nav */}
+            <div className="lg:hidden">
+              <ul className={cn(isMenuOpen ? 'block' : 'hidden')}>
+                {links.map(({ href, label }) => (
+                  <li key={href} className="mb-2">
+                    <NavLink href={href} setMenuOpen={setMenuOpen}>
+                      {label}
+                    </NavLink>
+                  </li>
+                ))}
+                <li>
+                  <ThemeToggle />
                 </li>
-              ))}
-            </ul>
-          </div>
-          {/* end main nav section */}
-
-          {/* MOBILE nav */}
-          <div className="lg:hidden">
-            <ul className={cn(isMenuOpen ? 'block' : 'hidden')}>
-              {links.map(({ href, label }) => (
-                <li key={href} className="mb-2">
-                  <NavLink href={href} setMenuOpen={setMenuOpen}>
-                    {label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+              </ul>
+            </div>
           </div>
         </nav>
-        {/* scroll debugger */}
-        {/* {createPortal(
-    <p>This child is placed in the document body.</p>,
-    document.body
-  )} */}
-        {showDebugger &&
+        {/* {showDebugger &&
           createPortal(
             <div className="fixed bottom-4 right-4 z-20 border-2 border-white bg-gray-900 p-4 font-mono text-white text-sm">
               <div>Viewport Y: {positionsStore.getViewportY()}</div>
@@ -181,7 +170,7 @@ export default function Header() {
               <div>Header secondary: {String(secondaryHeader)}</div>
             </div>,
             document.body,
-          )}
+          )} */}
       </header>
     ),
     [positionsStore],
@@ -206,7 +195,7 @@ function NavLink({
     <Link
       href={href}
       className={cn(
-        'font-sans text-tertiary no-underline text-sm hover:text-secondary',
+        'font-sans text-tertiary no-underline text-sm hover:text-primary',
         isActive && 'border-b text-primary',
         className,
       )}

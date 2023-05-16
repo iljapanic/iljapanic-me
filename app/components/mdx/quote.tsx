@@ -22,10 +22,8 @@ const Quote: React.FC<QuoteProps> = ({ children, author, url }) => {
   }
 
   return (
-    <blockquote className={`my-8 border-none pl-0`}>
-      <div className="border-borderSecondary border-l-4 pl-4 italic text-secondary">
-        {children}
-      </div>
+    <blockquote className={`my-8 border-l-4 border-border-secondary pl-4 `}>
+      <div className="italic text-secondary">{children}</div>
       <footer className="mt-1 text-right text-secondary">
         <cite className="not-italic">— {authorEl}</cite>
       </footer>

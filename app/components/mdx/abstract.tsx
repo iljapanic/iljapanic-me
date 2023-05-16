@@ -6,11 +6,9 @@ interface AbstractProps {
 
 const Abstract: React.FC<AbstractProps> = ({ abstract }) => {
   return (
-    <div className="rounded-sm bg-bg-secondary px-4 py-4">
-      <h2 className="leading-none text-base">Abstract</h2>
-      <p className="mt-1 font-sans leading-snug text-secondary text-sm">
-        {abstract}
-      </p>
+    <div className="">
+      <h2 className="leading-none text-sm">Abstract</h2>
+      <p className="mt-1 italic leading-snug text-sm">{abstract}</p>
     </div>
   )
 }

@@ -27,6 +27,11 @@ export const Article = defineDocumentType(() => ({
       description: 'The date of the post',
       required: true,
     },
+    dateUpdated: {
+      type: 'date',
+      description: 'The date the post was last updated',
+      required: true,
+    },
     slug: {
       type: 'string',
       description: 'The slug for generating post URL',
@@ -35,6 +40,15 @@ export const Article = defineDocumentType(() => ({
     published: {
       type: 'boolean',
       description: 'Whether the post is published',
+      required: false,
+    },
+    affiliation: {
+      type: 'string',
+      required: false,
+    },
+    keywords: {
+      type: 'list',
+      of: { type: 'string' },
       required: false,
     },
   },
@@ -61,6 +75,11 @@ export const Note = defineDocumentType(() => ({
       description: 'The date of the post',
       required: true,
     },
+    dateUpdated: {
+      type: 'date',
+      description: 'The date the post was last updated',
+      required: true,
+    },
     slug: {
       type: 'string',
       description: 'The slug for generating post URL',
@@ -69,6 +88,16 @@ export const Note = defineDocumentType(() => ({
     published: {
       type: 'boolean',
       description: 'Whether the post is published',
+      required: false,
+    },
+    keywords: {
+      type: 'list',
+      of: { type: 'string' },
+      required: false,
+    },
+    description: {
+      type: 'string',
+      description: 'The description of the post',
       required: false,
     },
   },
@@ -100,6 +129,26 @@ export const Page = defineDocumentType(() => ({
       description: 'Whether the post is published',
       required: false,
     },
+    description: {
+      type: 'string',
+      description: 'The description of the post',
+      required: true,
+    },
+    date: {
+      type: 'date',
+      description: 'The date the post was created',
+      required: false,
+    },
+    dateUpdated: {
+      type: 'date',
+      description: 'The date the post was last updated',
+      required: true,
+    },
+    keywords: {
+      type: 'list',
+      of: { type: 'string' },
+      required: false,
+    },
   },
   computedFields: {
     url: {
@@ -111,5 +160,6 @@ export const Page = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'content',
+  contentDirExclude: ['pages/_drafts', 'notes/_drafts', 'articles/_drafts'],
   documentTypes: [Article, Note, Page],
 })
