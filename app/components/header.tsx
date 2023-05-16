@@ -30,8 +30,7 @@ export default function Header() {
   const [scrollDirection, setScrollDirection] = useState<string | undefined>(
     undefined,
   )
-
-  const scrollDirectionOffset = 0
+  const scrollDirectionOffset = 40
 
   /* secondary header */
   const [secondaryHeader, setSecondaryHeader] = useState(false)
@@ -142,19 +141,21 @@ export default function Header() {
             {/* end main nav section */}
 
             {/* MOBILE nav */}
-            <div className="lg:hidden">
-              <ul className={cn(isMenuOpen ? 'block' : 'hidden')}>
-                {links.map(({ href, label }) => (
-                  <li key={href} className="mb-2">
-                    <NavLink href={href} setMenuOpen={setMenuOpen}>
-                      {label}
-                    </NavLink>
+            <div className={cn(isMenuOpen ? 'block' : 'hidden')}>
+              <div>
+                <ul className="flex items-center gap-6">
+                  {links.map(({ href, label }) => (
+                    <li key={href}>
+                      <NavLink href={href} setMenuOpen={setMenuOpen}>
+                        {label}
+                      </NavLink>
+                    </li>
+                  ))}
+                  <li>
+                    <ThemeToggle />
                   </li>
-                ))}
-                <li>
-                  <ThemeToggle />
-                </li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div>
         </nav>
