@@ -1,5 +1,6 @@
 const withMDX = require('@next/mdx')()
 const { withContentlayer } = require('next-contentlayer')
+const { withPlausibleProxy } = require('next-plausible')
 const redirects = require('./redirects')
 
 /** @type {import('next').NextConfig} */
@@ -28,4 +29,4 @@ if (process.env.NODE_ENV === 'development') {
   console.log('info  - lanUrl:', `http://${require('address').ip()}:3000`)
 }
 
-module.exports = withMDX(withContentlayer(nextConfig))
+module.exports = withPlausibleProxy()(withMDX(withContentlayer(nextConfig)))
