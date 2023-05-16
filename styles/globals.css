@@ -68,6 +68,10 @@
 @layer components {
   .post {
     max-width: 64ch;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
   }
 
   .post-wrapper {

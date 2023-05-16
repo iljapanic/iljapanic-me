@@ -24,24 +24,26 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="post-wrapper mx-auto pb-24 pt-32">
-      <nav className="flex items-center justify-between font-sans text-sm">
-        <div className="flex gap-4 lg:gap-8">
-          {socials.map(({ href, label, icon }) => (
-            <SocialLink
-              key={`footer-social-link-${label}`}
-              href={href}
-              label={label}
-              icon={icon}
-            />
-          ))}
-        </div>
-        <div className="flex items-center gap-2 text-tertiary">
-          <div>Prague, {currentYear}</div>
-          {/* <div>|</div>
+    <footer className="container pb-16 pt-16 lg:pb-24 lg:pt-32">
+      <div className="post-wrapper mx-auto">
+        <nav className="font-sans text-sm md:flex md:items-center md:justify-between">
+          <div className="flex gap-4 lg:gap-8">
+            {socials.map(({ href, label, icon }) => (
+              <SocialLink
+                key={`footer-social-link-${label}`}
+                href={href}
+                label={label}
+                icon={icon}
+              />
+            ))}
+          </div>
+          <div className="mt-6 flex items-center gap-2 text-tertiary md:mt-0">
+            <div>Prague, {currentYear}</div>
+            {/* <div>|</div>
           <NavLink href="/colophon">Colophon</NavLink> */}
-        </div>
-      </nav>
+          </div>
+        </nav>
+      </div>
     </footer>
   )
 }
