@@ -49,6 +49,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "address": "^1.2.2",
     "prettier-plugin-tailwindcss": "^0.2.8"
   }
 }

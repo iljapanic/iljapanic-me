@@ -143,7 +143,7 @@ export default function Header() {
             {/* MOBILE nav */}
             <div className={cn(isMenuOpen ? 'block' : 'hidden')}>
               <div>
-                <ul className="flex items-center gap-6">
+                <ul className="flex items-center gap-6 pb-1">
                   {links.map(({ href, label }) => (
                     <li key={href}>
                       <NavLink href={href} setMenuOpen={setMenuOpen}>
