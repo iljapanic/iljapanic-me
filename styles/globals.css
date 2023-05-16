@@ -87,11 +87,11 @@
   } */
 
   .post h1 {
-    @apply mb-6;
+    @apply mb-10;
   }
 
   .post h2 {
-    @apply mt-6;
+    @apply mt-8;
   }
 
   .post h3 {

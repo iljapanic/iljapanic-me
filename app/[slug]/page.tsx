@@ -121,7 +121,7 @@ const PostLayout = ({ params: { slug } }: { params: { slug: string } }) => {
             <Abstract abstract={post.abstract} />
             {post.affiliation && (
               <div className="mt-4 font-sans text-tertiary text-sm">
-                Written at <span>{post.affiliation}</span>
+                <span>{post.affiliation}</span>
               </div>
             )}
             <hr />

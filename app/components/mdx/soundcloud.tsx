@@ -29,7 +29,7 @@ const Soundcloud: React.FC<SoundcloudProps> = ({ url }) => {
       width={width}
       height={height}
       src={src}
-      className="mb-12"
+      className="mb-8 mt-4"
     />
   )
 }
