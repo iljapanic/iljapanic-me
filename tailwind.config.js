@@ -75,9 +75,15 @@ module.exports = {
     extend: {
       fontFamily: {
         // sans: ['var(--font-sans)', ...fontFamily.sans],
-        sans: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['system-ui', 'sans-serif'],
+        // serif: [
+        //   'Iowan Old Style',
+        //   'Palatino Linotype',
+        //   'URW Palladio L',
+        //   'P052',
+        //   'serif',
+        // ],
         serif: [
-          'ui-serif',
           'Charter',
           'Bitstream Charter',
           'Sitka Text',
