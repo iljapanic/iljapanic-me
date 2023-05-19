@@ -1,26 +1,41 @@
 ---
 title: Colophon
-description: A fancy way to say how this site was made
+description: A few notes on how this site was made
 slug: 'colophon'
 dateUpdated: '2023-05-13'
 published: true
 ---
 
-This personal site is an ongoing learning experience.
+I've designed and built this site myself. It's seriously overengineered for a personal website. But playing around with transient web technologies is a hobby I like to indulge in the evenings. 
 
-Therfore it's seriously overengineered given the scope and the purpose of the site.
+The [code is available on Github](https://github.com/iljapanic/iljapanic-com) if you'd like to poke around.
 
-Things will likely change and sometimes even break.
+I've started building the current iteration early 2023 and tinker on it regularly. So things might change suddenty and sometimes even break.
 
 As it goes with the personal sites it's a never ending endevour. I typically go througt several iterations, experimenting with unusual designs and approaches, just to end up at the clean and minimal style.
 
-## Next.js
+## Build system
+Build using Next.js with /app directory structure, leveraging server components.
 
 ## Typography
 
 Body fonts uses `ui-serif` and headings are set in `ui-sans-serif`. Using system fonts improves performance and results in smaller footprint. Also, it makes the site look more native to the operating system. Check out ??? to se what renders on different operating systems.
 
+Headings and UI elements are set in `system-ui` font 
+
+Body text is set in transitional typefaces based on the OS
+
+> Transitional typefaces are a mix between Old Style and Modern typefaces that was developed during The Enlightenment. One of the most famous examples of a Transitional typeface is Times New Roman, which was developed for the Times of London newspaper.
+
+```css
+font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+```
+
+
+
 Font sizes are fluid and scale with the viewport width. I've used the [tailwindcss-fluid-type](https://github.com/davidhellmann/tailwindcss-fluid-type) to achieve this.
+
+
 
 ## Authoring
 

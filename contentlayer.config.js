@@ -1,6 +1,8 @@
 // contentlayer.config.js
-
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import highlight from 'rehype-highlight'
+import remarkPrism from 'remark-prism'
+import remarkGfm from 'remark-gfm'
 
 export const Article = defineDocumentType(() => ({
   name: 'Article',
@@ -158,8 +160,31 @@ export const Page = defineDocumentType(() => ({
   },
 }))
 
-export default makeSource({
+const contentLayerConfig = makeSource({
   contentDirPath: 'content',
   contentDirExclude: ['pages/_drafts', 'notes/_drafts', 'articles/_drafts'],
   documentTypes: [Article, Note, Page],
+  mdx: {
+    remarkPlugins: [
+      remarkGfm,
+      [
+        remarkPrism,
+        {
+          plugins: [
+            'autolinker',
+            // 'command-line',
+            // 'data-uri-highlight',
+            // 'diff-highlight',
+            'inline-color',
+            'keep-markup',
+            'line-numbers',
+            'show-invisibles',
+            // 'treeview',
+          ],
+        },
+      ],
+    ],
+  },
 })
+
+export default contentLayerConfig
