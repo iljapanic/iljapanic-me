@@ -14,9 +14,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'v5.airtableusercontent.com',
-        port: '',
+        hostname: '**.airtableusercontent.com',
         pathname: '**',
+        // port: '',
       },
     ],
   },
