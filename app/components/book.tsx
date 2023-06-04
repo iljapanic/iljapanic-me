@@ -7,23 +7,25 @@ interface BookProps {
   year: number
   authors: string[]
   url: string
-  cover: {
-    url: string
-    width: number
-    height: number
-  }
+  coverFilename: string
 }
 
-const Book: React.FC<BookProps> = ({ title, year, authors, cover, url }) => {
+export default async function Book({
+  title,
+  year,
+  coverFilename,
+  authors,
+  url,
+}: BookProps) {
+  const imageSrc = await import(`@/public/images/books/${coverFilename}`)
   return (
     <article className="group">
       <a href={url} target="_blank" rel="noreferrer" className="no-underline">
         <div>
           <Image
-            src={cover.url}
-            width={cover.width}
-            height={cover.height}
+            src={imageSrc}
             alt={title}
+            placeholder="blur"
             className="w-full opacity-80 saturate-[0.75] transition-all duration-300 group-hover:opacity-100 group-hover:saturate-100 dark:saturate-[0.6]"
           />
         </div>
@@ -48,5 +50,3 @@ const Book: React.FC<BookProps> = ({ title, year, authors, cover, url }) => {
     </article>
   )
 }
-
-export default Book

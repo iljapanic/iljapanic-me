@@ -18,6 +18,18 @@ const nextConfig = {
         pathname: '**',
         // port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'iljapanic-com.s3.eu-central-1.amazonaws.com',
+        pathname: '**',
+        // port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.supabase.co',
+        pathname: '**',
+        // port: '',
+      },
     ],
   },
   async redirects() {
