@@ -11,7 +11,7 @@ export default function NotFound() {
   return (
     <>
       <Headline title="404 – Page Not Found" />
-      <article className="post">
+      <article className="post mx-auto">
         <p>
           You just hit a route that doesn&#39;t seem to exist on this site. I
           may have moved things around during a redesign. I hope you find what

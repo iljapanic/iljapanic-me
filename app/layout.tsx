@@ -6,8 +6,11 @@ import Footer from './components/footer'
 import '@/styles/globals.css'
 import { ThemeProvider } from '@/app/theme/theme-provider'
 
-// import { Inter } from 'next/font/google'
-// const inter = Inter({ subsets: ['latin'] })
+import { Inter } from 'next/font/google'
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 export const metadata = {
   title: {
@@ -37,7 +40,7 @@ export default function RootLayout({
       <head>
         <PlausibleProvider domain="iljapanic.com" />
       </head>
-      <body>
+      <body className={`${inter.variable}`}>
         <ThemeProvider>
           <Header />
           <main className="container mt-12">{children}</main>

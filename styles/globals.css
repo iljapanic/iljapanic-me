@@ -21,7 +21,7 @@
   h3,
   h4 {
     @apply font-sans font-medium text-primary;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   /* h1 {
@@ -47,7 +47,7 @@
   /* basic post elements */
 
   p {
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   a {

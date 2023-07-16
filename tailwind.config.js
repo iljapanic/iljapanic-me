@@ -75,7 +75,15 @@ module.exports = {
     extend: {
       fontFamily: {
         // sans: ['var(--font-sans)', ...fontFamily.sans],
-        sans: ['system-ui', 'sans-serif'],
+        sans: [
+          'var(--font-inter)',
+          // 'Fakt Pro',
+          // 'Atlas Grotesk',
+          // 'Test Untitled Sans',
+          'Helvetica Neue',
+          'system-ui',
+          'sans-serif',
+        ],
         // serif: [
         //   'Iowan Old Style',
         //   'Palatino Linotype',
