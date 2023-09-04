@@ -22,7 +22,7 @@ const contact = [
   },
   {
     name: 'LinkedIn',
-    text: '@iljapanic',
+    text: 'in/iljapanic',
     url: 'https://www.linkedin.com/in/iljapanic/',
   },
 ]

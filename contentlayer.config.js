@@ -1,6 +1,8 @@
 // contentlayer.config.js
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import highlight from 'rehype-highlight'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import remarkPrism from 'remark-prism'
 import remarkGfm from 'remark-gfm'
 
@@ -165,6 +167,17 @@ const contentLayerConfig = makeSource({
   contentDirExclude: ['pages/_drafts', 'notes/_drafts', 'articles/_drafts'],
   documentTypes: [Article, Note, Page],
   mdx: {
+    rehypePlugins: [
+      rehypeSlug,
+      [
+        rehypeAutolinkHeadings,
+        {
+          properties: {
+            className: ['anchor'],
+          },
+        },
+      ],
+    ],
     remarkPlugins: [
       remarkGfm,
       [

@@ -175,7 +175,7 @@ export default function Header() {
                     <Link
                       href={href}
                       className={cn(
-                        'relative z-20 block font-sans leading-none no-underline transition-none text-sm',
+                        'relative z-20 block font-sans text-sm leading-none no-underline transition-none',
                         activeTab === href
                           ? 'text-primary'
                           : 'text-secondary hover:text-primary',
@@ -260,7 +260,7 @@ function NavLink({
     <Link
       href={href}
       className={cn(
-        'font-sans text-tertiary no-underline text-sm hover:text-primary',
+        'font-sans text-sm text-tertiary no-underline hover:text-primary',
         isActive && 'border-b text-primary',
         className,
       )}
