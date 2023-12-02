@@ -1,4 +1,12 @@
 module.exports = [
+  /* external */
+  {
+    source: '/wishlist',
+    destination:
+      'https://iljapanic.notion.site/Wishlist-76cb8cb1f45843d5818f4a3f107f6993?pvs=4',
+    permanent: false,
+  },
+
   /* pages */
   {
     source: '/music',
