@@ -11,6 +11,16 @@ module.exports = [
     destination: 'https://cal.com/iljapanic/meet',
     permanent: false,
   },
+  {
+    source: '/x',
+    destination: 'https://twitter.com/iljapanic',
+    permanent: false,
+  },
+  {
+    source: '/linkedin',
+    destination: 'https://www.linkedin.com/in/iljapanic/',
+    permanent: false,
+  },
 
   /* pages */
   {
