@@ -3,7 +3,7 @@ module.exports = [
   {
     source: '/wishlist',
     destination:
-      'https://iljapanic.notion.site/Wishlist-76cb8cb1f45843d5818f4a3f107f6993?pvs=4',
+      'https://iljapanic.notion.site/de8064e9359e4906b8e4571fa90361bc?v=9c13a84e76f2483cb03b3d30c155b997&pvs=4',
     permanent: false,
   },
   {
