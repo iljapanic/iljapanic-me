@@ -1,0 +1,90 @@
+@layer base {
+	* {
+		@apply border-border;
+	}
+
+	body {
+		@apply bg-background font-sans text-base text-foreground antialiased;
+		text-rendering: optimizeLegibility;
+		scroll-behavior: smooth;
+	}
+
+	/* typography */
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply font-sans font-medium text-foreground;
+		line-height: 1.25;
+	}
+
+	h1 {
+		@apply mb-12 font-medium;
+	}
+
+	p {
+		@apply mt-4;
+		line-height: 1.65;
+	}
+
+	h2 {
+		@apply mb-6 mt-12;
+	}
+
+	p + h3 {
+		@apply mt-6 font-medium;
+	}
+
+	p + h4 {
+		@apply mt-6 font-medium;
+	}
+
+	/* basic post elements */
+
+	a {
+		@apply underline decoration-muted-foreground underline-offset-2 transition-colors duration-200 hover:decoration-foreground;
+	}
+
+	em {
+		@apply font-serif;
+	}
+
+	strong {
+		@apply font-medium;
+	}
+
+	hr {
+		@apply mx-auto my-20 w-1/2 border-t-2 border-border/50;
+	}
+
+	p > code {
+		@apply rounded-sm bg-muted px-1 py-0.5 text-sm;
+	}
+
+	pre {
+		@apply max-w-full overflow-scroll rounded-sm bg-muted px-2 py-2 text-sm;
+	}
+
+	blockquote {
+		@apply my-6 border-l-2 border-border pl-4 font-serif text-base italic text-foreground/50;
+	}
+
+	::selection {
+		@apply bg-highlight/30 dark:bg-highlight/10;
+	}
+}
+
+/* 3rd party helpers */
+
+.player-wrapper {
+	@apply relative aspect-video w-full;
+}
+
+.player-wrapper .react-player__preview {
+	@apply relative z-10;
+}
+
+.headroom--pinned {
+	@apply shadow-sm;
+}

@@ -1,0 +1,39 @@
+@layer components {
+	.post {
+		max-width: var(--post-width);
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		/* Instead use this non-standard one: */
+		word-break: break-word;
+	}
+
+	.post-wrapper {
+		max-width: var(--post-width);
+	}
+
+	.post-wide-wrapper {
+		max-width: var(--post-wide-width);
+	}
+
+	/* .post h1, .post h2, .post h3, .post h4 {
+    @apply text-center;
+  } */
+
+	.post ul {
+		@apply mt-2 list-none;
+		/* line-height: 1.6; */
+	}
+
+	.post li {
+		@apply mt-2 flex gap-2;
+	}
+
+	.post ul li::before {
+		content: '–';
+		@apply inline-block;
+	}
+
+	.post pre {
+		@apply my-4;
+	}
+}

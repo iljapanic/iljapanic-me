@@ -1,14 +1,10 @@
 ---
 title: MDX Sample
-description: A sample MDX page showcasing all the styles
-slug: mdx
-dateUpdated: 2023-07-29
-published: true
-dateCreated: 2023-05-16
+publishedAt: 2024-03-01
+isPublished: true
 ---
 
 # h1 Heading
-
 
 ## h2 Heading
 
@@ -67,7 +63,7 @@ Here is a `.js` code sample with syntax highlighting:
 
 ```js
 export default function PostWrapper({ children }) {
-  return <article className="post">{children}</article>
+	return <article className="post">{children}</article>
 }
 ```
 
@@ -77,14 +73,14 @@ You can also include line numbers (and highlight desired lines):
 import Image from 'next/image'
 
 export default function Figure({ src, caption }) {
-  return (
-    <figure className="w-full max-w-full">
-      <Image alt={caption} src={src} layout="fill" />
-      <figcaption className="text-center italic text-secondary">
-        {caption}
-      </figcaption>
-    </figure>
-  )
+	return (
+		<figure className="w-full max-w-full">
+			<Image alt={caption} src={src} layout="fill" />
+			<figcaption className="text-center italic text-secondary">
+				{caption}
+			</figcaption>
+		</figure>
+	)
 }
 ```
 

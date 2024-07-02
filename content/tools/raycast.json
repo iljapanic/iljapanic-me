@@ -1,0 +1,9 @@
+{
+  "name": "Raycast",
+  "description": "The everything tool",
+  "url": "https://www.raycast.com/",
+  "simpleIconSlug": "raycast",
+  "type": [
+    "mac"
+  ]
+}

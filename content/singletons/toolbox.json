@@ -1,0 +1,18 @@
+{
+  "sections": [
+    {
+      "sectionTitle": "Daily drivers",
+      "tools": [
+        "arc",
+        "raycast"
+      ]
+    },
+    {
+      "sectionTitle": "Chrome extensions",
+      "tools": [
+        "arc",
+        "raycast"
+      ]
+    }
+  ]
+}
