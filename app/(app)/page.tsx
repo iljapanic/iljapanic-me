@@ -72,15 +72,16 @@ function SectionLink({
 	className?: string
 }) {
 	return (
-		<Link
-			href={href}
-			className={cn(
-				'group mt-10 inline-flex items-center gap-1 font-serif font-medium italic text-muted-foreground no-underline hover:text-foreground',
-				className,
-			)}
-		>
-			{children}{' '}
-			<CaretRightIcon className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[2px]" />
-		</Link>
+		<div className={cn('mt-10 text-center', className)}>
+			<Link
+				href={href}
+				className={cn(
+					'group inline-flex items-center gap-1 font-medium text-muted-foreground no-underline hover:text-foreground',
+				)}
+			>
+				{children}{' '}
+				<CaretRightIcon className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[2px]" />
+			</Link>
+		</div>
 	)
 }
