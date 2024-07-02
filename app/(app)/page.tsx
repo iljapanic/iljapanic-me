@@ -11,7 +11,7 @@ import { BooksGrid } from '@/components/books/books-grid'
 import { cn } from '@/lib/utils'
 import { CaretRightIcon } from '@radix-ui/react-icons'
 
-const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic'
 
 export default async function Page() {
 	const articles = await allArticles
