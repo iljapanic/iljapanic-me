@@ -7,11 +7,7 @@ import { toolboxSingleton } from '@/schema/keystatic/toolbox-singleton'
 
 export default config({
 	storage: {
-		kind: 'github',
-		repo: {
-			owner: 'iljapanic',
-			name: 'iljapanic-com',
-		},
+		kind: 'local',
 	},
 	ui: {
 		brand: { name: 'iljapanic' },

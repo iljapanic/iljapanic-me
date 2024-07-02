@@ -11,8 +11,6 @@ import { BooksGrid } from '@/components/books/books-grid'
 import { cn } from '@/lib/utils'
 import { CaretRightIcon } from '@radix-ui/react-icons'
 
-export const dynamic = 'force-dynamic'
-
 export default async function Page() {
 	const articles = await allArticles
 		.filter((article) => article.isPublished)
@@ -22,9 +20,7 @@ export default async function Page() {
 
 	const books = await keystaticReader.singletons.bookshelf.read()
 	const firstSection = books?.sections[0]
-	const randomBooks = [...(firstSection?.books ?? [])]
-		.sort(() => 0.5 - Math.random())
-		.slice(0, 4)
+	const randomBooks = [...(firstSection?.books ?? [])].slice(0, 4)
 
 	return (
 		<div className="post-wrapper mx-auto">
