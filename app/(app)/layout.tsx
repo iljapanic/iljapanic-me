@@ -26,7 +26,7 @@ export default function SiteLayout({
 	return (
 		<SharedLayout>
 			{/* top gradient  */}
-			<div className="pointer-events-none sticky top-0 z-20 h-16 w-full bg-gradient-to-b from-background from-10% to-transparent"></div>
+			<div className="sticky top-0 z-20 h-16 w-full bg-gradient-to-b from-background from-10% to-transparent"></div>
 
 			{/* header */}
 			<Header />
@@ -38,7 +38,7 @@ export default function SiteLayout({
 			<Footer />
 
 			{/* bottom gradient  */}
-			<div className="pointer-events-none sticky bottom-0 z-20 h-8 w-full bg-gradient-to-t from-background from-10% to-transparent"></div>
+			<div className="sticky bottom-0 z-20 h-8 w-full bg-gradient-to-t from-background from-10% to-transparent"></div>
 		</SharedLayout>
 	)
 }

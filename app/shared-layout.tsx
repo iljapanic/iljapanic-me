@@ -1,5 +1,6 @@
 import PlausibleProvider from 'next-plausible'
-import { Newsreader, Inter } from 'next/font/google'
+import { Newsreader } from 'next/font/google'
+import localFont from 'next/font/local'
 
 import { ThemeProvider } from '@/components/globals/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
@@ -13,15 +14,24 @@ const serifFont = Newsreader({
 	style: ['normal', 'italic'],
 })
 
-const sansFont = Inter({
-	subsets: ['latin-ext'],
-	variable: '--font-sans',
+const innovatorGrotesk = localFont({
+	src: '../styles/fonts/InnovatorGroteskVF-Thin.woff2',
 	display: 'swap',
+	variable: '--font-sans',
 })
+
+// const inter = Inter({
+// 	subsets: ['latin-ext'],
+// 	variable: '--font-sans',
+// 	display: 'swap',
+// })
+
+// const sansFont = inter
+const sansFont = innovatorGrotesk
 
 export function SharedLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<head>
 				<PlausibleProvider domain="iljapanic.com" />
 			</head>

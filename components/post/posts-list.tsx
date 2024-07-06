@@ -7,7 +7,7 @@ export function PostsList({ posts }: { posts: any[] }) {
 			{posts.map((post) => (
 				<Link
 					href={`/${post.slug}`}
-					className="-mx-3 block rounded-md p-3 text-inherit no-underline hover:bg-muted"
+					className="-mx-3 block cursor-pointer rounded-md p-3 text-inherit no-underline hover:bg-muted"
 				>
 					<div key={post.slug} className="space-y-1">
 						<header className="flex items-center justify-between">
