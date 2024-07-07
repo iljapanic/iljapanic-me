@@ -29,8 +29,7 @@ export default async function Page() {
 					Crafting bespoke software and product experiences.
 				</p>
 				<p className="mt-1 font-serif italic">
-					Exploring at the intersection of people, technologies and living
-					systems.
+					Exploring the intersection of people, technologies and living systems.
 				</p>
 			</section>
 
