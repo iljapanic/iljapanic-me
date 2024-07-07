@@ -52,7 +52,7 @@ export function Newsletter({ className }: { className?: string }) {
 	return (
 		<div className={cn(className)}>
 			<p>
-				Musings about people, design and technology and occasional updates about
+				Musings about people, design and technology. Occasional updates about
 				new content I publish.
 			</p>
 			<form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-2">
