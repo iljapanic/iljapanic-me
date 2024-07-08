@@ -6,6 +6,102 @@
 	:root,
 	.light,
 	.light-theme {
+		--sage-1: 150deg 33.3% 98.8%;
+		--sage-2: 150deg 14.3% 97.3%;
+		--sage-3: 160deg 9.7% 93.9%;
+		--sage-4: 160deg 6.4% 90.8%;
+		--sage-5: 140deg 4.9% 88%;
+		--sage-6: 160deg 3.9% 84.9%;
+		--sage-7: 150deg 4% 80.4%;
+		--sage-8: 150deg 2.9% 72.9%;
+		--sage-9: 157deg 3.4% 54.1%;
+		--sage-10: 157deg 3.1% 50.2%;
+		--sage-11: 160deg 3.1% 38.4%;
+		--sage-12: 154deg 11.9% 11.6%;
+	}
+	.dark,
+	.dark-theme {
+		--sage-1: 150deg 5.9% 6.7%;
+		--sage-2: 150deg 4.2% 9.4%;
+		--sage-3: 150deg 3% 12.9%;
+		--sage-4: 160deg 3.7% 15.9%;
+		--sage-5: 160deg 3.2% 18.6%;
+		--sage-6: 150deg 3.5% 22.4%;
+		--sage-7: 156deg 3.5% 27.6%;
+		--sage-8: 154deg 3.7% 37.1%;
+		--sage-9: 157deg 6.2% 41.4%;
+		--sage-10: 160deg 5% 46.7%;
+		--sage-11: 157deg 5.1% 69.4%;
+		--sage-12: 150deg 5.6% 92.9%;
+	}
+
+	:root,
+	.light,
+	.light-theme {
+		--mauve-1: 300deg 20% 99%;
+		--mauve-2: 270deg 20% 98%;
+		--mauve-3: 285deg 14.3% 94.5%;
+		--mauve-4: 276deg 11.6% 91.6%;
+		--mauve-5: 274deg 12.3% 88.8%;
+		--mauve-6: 262deg 11.4% 86.3%;
+		--mauve-7: 258deg 11.1% 82.4%;
+		--mauve-8: 249deg 10.4% 75.5%;
+		--mauve-9: 249deg 6% 57.5%;
+		--mauve-10: 250deg 5% 53.3%;
+		--mauve-11: 252deg 4.8% 40.8%;
+		--mauve-12: 257deg 10.1% 13.5%;
+	}
+	.dark,
+	.dark-theme {
+		--mauve-1: 270deg 5.6% 7.1%;
+		--mauve-2: 270deg 3.8% 10.2%;
+		--mauve-3: 260deg 4.2% 13.9%;
+		--mauve-4: 270deg 4.7% 16.9%;
+		--mauve-5: 264deg 5% 19.8%;
+		--mauve-6: 270deg 5% 23.5%;
+		--mauve-7: 257deg 4.7% 29.2%;
+		--mauve-8: 258deg 5% 39.2%;
+		--mauve-9: 251deg 4.8% 44.9%;
+		--mauve-10: 251deg 4.3% 50%;
+		--mauve-11: 258deg 6.9% 71.8%;
+		--mauve-12: 240deg 6.2% 93.7%;
+	}
+
+	:root,
+	.light,
+	.light-theme {
+		--olive-1: 120deg 20% 99%;
+		--olive-2: 120deg 16.7% 97.6%;
+		--olive-3: 120deg 6.7% 94.1%;
+		--olive-4: 120deg 4.3% 91%;
+		--olive-5: 120deg 4.9% 88%;
+		--olive-6: 120deg 3.9% 84.9%;
+		--olive-7: 120deg 3% 80.6%;
+		--olive-8: 105deg 2.9% 72.9%;
+		--olive-9: 103deg 3% 54.3%;
+		--olive-10: 103deg 2.8% 50.4%;
+		--olive-11: 110deg 3.1% 38.4%;
+		--olive-12: 108deg 8.2% 12%;
+	}
+	.dark,
+	.dark-theme {
+		--olive-1: 90deg 5.9% 6.7%;
+		--olive-2: 90deg 4.2% 9.4%;
+		--olive-3: 90deg 3% 12.9%;
+		--olive-4: 100deg 3.7% 15.9%;
+		--olive-5: 100deg 3.2% 18.6%;
+		--olive-6: 90deg 3.6% 22%;
+		--olive-7: 96deg 3.6% 27.3%;
+		--olive-8: 111deg 3.7% 37.1%;
+		--olive-9: 108deg 4.7% 42%;
+		--olive-10: 107deg 3.7% 47.3%;
+		--olive-11: 105deg 5.1% 69.4%;
+		--olive-12: 120deg 5.6% 92.9%;
+	}
+
+	:root,
+	.light,
+	.light-theme {
 		--sand-1: 60deg 20% 99%;
 		--sand-2: 60deg 7.7% 97.5%;
 		--sand-3: 30deg 6.7% 94.1%;
@@ -88,7 +184,7 @@
 	}
 
 	:root {
-		--background: var(--sand-3);
+		--background: var(--sand-4);
 		--foreground: var(--sand-12);
 		--card: var(--sand-2);
 		--card-foreground: var(--sand-11);
@@ -96,9 +192,9 @@
 		--popover-foreground: var(--sand-11);
 		--primary: var(--sand-12);
 		--primary-foreground: var(--sand-1);
-		--secondary: var(--sand-4);
+		--secondary: var(--sand-7);
 		--secondary-foreground: var(--sand-11);
-		--muted: var(--sand-5);
+		--muted: var(--sand-6);
 		--muted-foreground: var(--sand-9);
 		--accent: var(--sand-4);
 		--accent-foreground: var(--sand-11);
