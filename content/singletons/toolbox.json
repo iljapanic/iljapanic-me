@@ -4,14 +4,18 @@
       "sectionTitle": "Daily drivers",
       "tools": [
         "arc",
-        "raycast"
+        "raycast",
+        "obsidian",
+        "cursor",
+        "superhuman",
+        "1password"
       ]
     },
     {
       "sectionTitle": "Chrome extensions",
       "tools": [
-        "arc",
-        "raycast"
+        "u-block-origin",
+        "unclutter"
       ]
     }
   ]

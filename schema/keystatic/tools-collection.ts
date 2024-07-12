@@ -23,6 +23,7 @@ export const toolsCollection = collection({
 				{ label: 'Mac', value: 'mac' },
 				{ label: 'iOS', value: 'ios' },
 				{ label: 'Chrome', value: 'chrome' },
+				{ label: 'Multi-platform', value: 'multiplatform' },
 			],
 			defaultValue: ['web'],
 		}),

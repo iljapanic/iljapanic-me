@@ -16,7 +16,7 @@ export function Footer() {
 
 				<div className="mt-20 flex items-center justify-between">
 					<div className="text-sm text-muted-foreground">
-						Prague, {currentYear}
+						With care and gusto, from Prague
 					</div>
 					<div className="-mx-2">
 						<ThemeToggle />

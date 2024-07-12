@@ -1,4 +1,4 @@
-import { Tool } from '@/components/mdx/tool'
+import { Tool } from '@/components/tools/tool'
 import { PostHeader } from '@/components/post/post-header'
 import { keystaticReader } from '@/lib/keystatic-reader'
 
@@ -27,9 +27,11 @@ export default async function Page() {
 					tools.sections.map((section) => (
 						<div key={section.sectionTitle}>
 							<h2>{section.sectionTitle}</h2>
-							{section.tools.map((tool) => (
-								<Tool key={tool} slug={tool} />
-							))}
+							<div className="space-y-4">
+								{section.tools.map((tool) => (
+									<Tool key={tool} slug={tool} />
+								))}
+							</div>
 						</div>
 					))}
 			</div>
