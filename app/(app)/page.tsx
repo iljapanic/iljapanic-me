@@ -34,20 +34,13 @@ export default async function Page() {
 			</section>
 
 			<section className="mt-20">
-				<h2>About</h2>
-				<AboutMdx />
-			</section>
-
-			<section className="mt-20">
 				<h2>Now</h2>
 				<NowMdx />
 			</section>
 
 			<section className="mt-20">
-				<h2>Academic writing</h2>
-				<div className="mt-4">
-					{articles && articles.length > 0 && <PostsList posts={articles} />}
-				</div>
+				<h2>About</h2>
+				<AboutMdx />
 			</section>
 
 			<section className="mt-20">
@@ -56,6 +49,13 @@ export default async function Page() {
 				<BooksGrid books={randomBooks} />
 
 				<SectionLink href="/bookshelf">Browse the entire bookshelf</SectionLink>
+			</section>
+
+			<section className="mt-20">
+				<h2>Academic writing</h2>
+				<div className="mt-4">
+					{articles && articles.length > 0 && <PostsList posts={articles} />}
+				</div>
 			</section>
 		</div>
 	)

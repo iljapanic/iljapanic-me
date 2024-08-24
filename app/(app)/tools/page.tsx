@@ -27,7 +27,7 @@ export default async function Page() {
 					tools.sections.map((section) => (
 						<div key={section.sectionTitle}>
 							<h2>{section.sectionTitle}</h2>
-							<div className="space-y-4">
+							<div className="space-y-6">
 								{section.tools.map((tool) => (
 									<Tool key={tool} slug={tool} />
 								))}
